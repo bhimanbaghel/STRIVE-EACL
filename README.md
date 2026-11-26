@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/EACL_2027-Main_Conference-6842A8" alt="Accepted to EACL 2027 Main Conference">
   <a href="https://arxiv.org/abs/2608.04567"><img src="https://img.shields.io/badge/arXiv-2608.04567-B31B1B?logo=arxiv" alt="arXiv paper 2608.04567"></a>
   <a href="#quick-start"><img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&amp;logoColor=white" alt="Python 3.12 or newer"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2F855A" alt="MIT license for the code"></a>
 </p>
 
 <p align="center">
@@ -198,6 +199,14 @@ directly. Fresh visual survey, sentence-only AAT, and surprisal runs use 30
 historical generation inputs. The release includes four of them. Supply the other 26 for fresh runs using
 [the survey input list](slurm_jobs/survey_items.tsv). The bundled judgments are
 sufficient for the analyses above.
+
+## License
+
+The source code and software documentation are available under the
+[MIT License](LICENSE). Figures reproduced from the
+[STRIVE preprint](https://arxiv.org/abs/2608.04567) retain their
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license. For reuse
+of the bundled survey data and experiment outputs, contact the authors.
 
 ## Citation
 
