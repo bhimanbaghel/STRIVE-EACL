@@ -1,0 +1,205 @@
+{
+  "verb": "paint",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met: four human professions, only agent varies, all could physically perform the action.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A house painter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Painting a house wall with a roller is the core duty of a house painter and the most prototypical agent for this suburban street scene. Viewers would instantly accept this as the default, professional scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that homeowners or general construction workers also often paint their own houses, so a dedicated \u2018house painter\u2019 might not be strictly necessary at every painted house, making the role seem slightly less unique to the action.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: House painters are specifically paid to paint building exteriors and interiors; painting a house wall is central to their job description.\",\n        \"removal_test\": \"YES: In professional house-painting contexts on suburban streets, removing house painters would largely eliminate this service; others may occasionally paint, but they are not the standard professional providers.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A construction worker\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Construction workers can plausibly be found on suburban house sites and sometimes perform painting as part of broader building or renovation tasks, but painting is not their core specialty. The event is believable yet less typical than with a dedicated painter.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"On smaller construction crews, workers often handle multiple finishing tasks including painting, so a construction worker painting an exterior wall could be seen as fairly routine and thus close to prototypical.\",\n        \"argument_for_lower\": \"A construction worker is primarily associated with structural work rather than finishing surfaces, so one could argue they are somewhat out-of-role for detailed painting and belong nearer to an implausible_hard \u2018wrong but related trade\u2019 category.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A firefighter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Firefighters do not paint houses as part of their professional duties, so the scene is wrong for their role, yet they are associated with residential buildings and suburban streets in emergency contexts, giving a noticeable but insufficient overlap with the painter scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Firefighters sometimes engage in community service or post-disaster recovery efforts and could conceivably help repaint homes, so one might imagine a fringe scenario where a firefighter participates in painting.\",\n        \"argument_for_lower\": \"Because firefighters never paint in the course of firefighting and would almost never wear full turnout gear while painting, a viewer might reject the image very quickly as absurd, placing it alongside clearly unrelated roles like performers.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": false,\n          \"reasoning\": \"House painters are in construction/home-improvement trades, whereas firefighters are in emergency services/public safety, which are distinct domains.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both are often seen around residential houses and on suburban streets, frequently working on or near private homes.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Painters use rollers, brushes, and paint; firefighters use hoses, axes, and breathing apparatus\u2014no shared typical tools.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act on houses/building structures (painters coat walls; firefighters act on buildings during fires or rescues).\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Painting involves controlled coating motions; firefighting involves extinguishing, breaking, carrying, and rescue actions, which are qualitatively different despite both being manual labor.\"\n        },\n        \"overlap_count\": 2,\n        \"sufficient\": true,\n        \"negative_test\": \"Even without considering the verb \u2018paint\u2019, firefighters are strongly associated with house exteriors and suburban streets (responding to house fires), so the connection to the scene persists beyond the shared action.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballet dancer in stage or studio attire painting a house wall on a suburban street is from a completely unrelated domain and would not naturally be present in this context; the mismatch is immediate and extreme.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a ballet dancer painting their own home as a private person, but in that case they would wear ordinary work clothes rather than a tutu and pointe shoes, so the professional role and outfit remain clearly out of place.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"White paint-splattered overalls, painter\u2019s cap, and related gear make a house painter readily recognizable.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Hard hat, high-visibility vest, tool belt, and work boots are iconic construction worker markers.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Turnout gear with reflective stripes and a firefighter helmet is highly distinctive of firefighters.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Tutu or leotard, tights, pointe shoes, and a tight bun clearly signal a ballet dancer.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically wears white or light-colored overalls or coveralls splattered with paint, work boots, possibly a painter\u2019s cap, and may have a paint bucket or roller tray and ladder.\",\n      \"plausible_hard\": \"Wears a hard hat, high-visibility safety vest over rugged work clothes, tool belt with construction tools, and heavy work boots.\",\n      \"implausible_hard\": \"Wears bulky turnout/bunker gear with reflective stripes, a distinctive firefighter helmet, heavy protective boots, and may carry hoses or other firefighting equipment.\",\n      \"implausible_easy\": \"Wears a classical ballet outfit such as a tutu or fitted leotard with tights, ballet slippers or pointe shoes, and has hair styled neatly in a bun.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Painter\u2019s white, paint-splattered overalls contrast with the construction worker\u2019s hard hat and high-visibility vest.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Light overalls and light gear of the painter differ strongly from the bulky, dark turnout gear and helmet of the firefighter.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Work overalls vs. ballet costumes (tutu/leotard) are visually opposite in style and function.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Construction worker\u2019s slimmer vest and hard hat differ from the firefighter\u2019s thick bunker gear with strong reflective striping and specialized helmet.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"High-visibility construction clothing is very different from delicate ballet attire.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Bulky firefighter gear and helmet are readily distinguished from the light, form-fitting outfit of a ballet dancer.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four roles are well-placed across the plausibility gradient, and if replacements were needed one could readily find other fitting roles (e.g., homeowner or handyman for plausible_hard; window washer or roofer for implausible_hard), indicating the scene itself robustly supports the full gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The action, instrument, and suburban house setting are coherent with a clear prototypical agent (house painter). The other agents span a well-ordered plausibility gradient, and the scenario is easily depicted in a single image.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"This scene yields a clean plausibility gradient: a prototypical house painter, a plausible construction worker, a related-but-wrong firefighter, and a clearly unrelated ballet dancer. All professions are visually identifiable and distinct in typical attire, and the house-wall-painting scenario with a roller on a suburban street is concrete, imageable, and well-suited for the experimental task.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met: four human professions, only agent varies, all could physically perform the action."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A house painter",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Painting a house wall with a roller is the core duty of a house painter and the most prototypical agent for this suburban street scene. Viewers would instantly accept this as the default, professional scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that homeowners or general construction workers also often paint their own houses, so a dedicated \u2018house painter\u2019 might not be strictly necessary at every painted house, making the role seem slightly less unique to the action."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: House painters are specifically paid to paint building exteriors and interiors; painting a house wall is central to their job description.",
+          "removal_test": "YES: In professional house-painting contexts on suburban streets, removing house painters would largely eliminate this service; others may occasionally paint, but they are not the standard professional providers."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A construction worker",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Construction workers can plausibly be found on suburban house sites and sometimes perform painting as part of broader building or renovation tasks, but painting is not their core specialty. The event is believable yet less typical than with a dedicated painter.",
+        "counter_arguments": {
+          "argument_for_higher": "On smaller construction crews, workers often handle multiple finishing tasks including painting, so a construction worker painting an exterior wall could be seen as fairly routine and thus close to prototypical.",
+          "argument_for_lower": "A construction worker is primarily associated with structural work rather than finishing surfaces, so one could argue they are somewhat out-of-role for detailed painting and belong nearer to an implausible_hard \u2018wrong but related trade\u2019 category."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A firefighter",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Firefighters do not paint houses as part of their professional duties, so the scene is wrong for their role, yet they are associated with residential buildings and suburban streets in emergency contexts, giving a noticeable but insufficient overlap with the painter scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "Firefighters sometimes engage in community service or post-disaster recovery efforts and could conceivably help repaint homes, so one might imagine a fringe scenario where a firefighter participates in painting.",
+          "argument_for_lower": "Because firefighters never paint in the course of firefighting and would almost never wear full turnout gear while painting, a viewer might reject the image very quickly as absurd, placing it alongside clearly unrelated roles like performers."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": false,
+            "reasoning": "House painters are in construction/home-improvement trades, whereas firefighters are in emergency services/public safety, which are distinct domains."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both are often seen around residential houses and on suburban streets, frequently working on or near private homes."
+          },
+          "tools_instruments": {
+            "overlaps": false,
+            "reasoning": "Painters use rollers, brushes, and paint; firefighters use hoses, axes, and breathing apparatus\u2014no shared typical tools."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act on houses/building structures (painters coat walls; firefighters act on buildings during fires or rescues)."
+          },
+          "physical_actions": {
+            "overlaps": false,
+            "reasoning": "Painting involves controlled coating motions; firefighting involves extinguishing, breaking, carrying, and rescue actions, which are qualitatively different despite both being manual labor."
+          },
+          "overlap_count": 2,
+          "sufficient": true,
+          "negative_test": "Even without considering the verb \u2018paint\u2019, firefighters are strongly associated with house exteriors and suburban streets (responding to house fires), so the connection to the scene persists beyond the shared action."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballet dancer in stage or studio attire painting a house wall on a suburban street is from a completely unrelated domain and would not naturally be present in this context; the mismatch is immediate and extreme.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a ballet dancer painting their own home as a private person, but in that case they would wear ordinary work clothes rather than a tutu and pointe shoes, so the professional role and outfit remain clearly out of place.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "White paint-splattered overalls, painter\u2019s cap, and related gear make a house painter readily recognizable."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Hard hat, high-visibility vest, tool belt, and work boots are iconic construction worker markers."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Turnout gear with reflective stripes and a firefighter helmet is highly distinctive of firefighters."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Tutu or leotard, tights, pointe shoes, and a tight bun clearly signal a ballet dancer."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically wears white or light-colored overalls or coveralls splattered with paint, work boots, possibly a painter\u2019s cap, and may have a paint bucket or roller tray and ladder.",
+        "plausible_hard": "Wears a hard hat, high-visibility safety vest over rugged work clothes, tool belt with construction tools, and heavy work boots.",
+        "implausible_hard": "Wears bulky turnout/bunker gear with reflective stripes, a distinctive firefighter helmet, heavy protective boots, and may carry hoses or other firefighting equipment.",
+        "implausible_easy": "Wears a classical ballet outfit such as a tutu or fitted leotard with tights, ballet slippers or pointe shoes, and has hair styled neatly in a bun."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Painter\u2019s white, paint-splattered overalls contrast with the construction worker\u2019s hard hat and high-visibility vest."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Light overalls and light gear of the painter differ strongly from the bulky, dark turnout gear and helmet of the firefighter."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Work overalls vs. ballet costumes (tutu/leotard) are visually opposite in style and function."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Construction worker\u2019s slimmer vest and hard hat differ from the firefighter\u2019s thick bunker gear with strong reflective striping and specialized helmet."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "High-visibility construction clothing is very different from delicate ballet attire."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Bulky firefighter gear and helmet are readily distinguished from the light, form-fitting outfit of a ballet dancer."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four roles are well-placed across the plausibility gradient, and if replacements were needed one could readily find other fitting roles (e.g., homeowner or handyman for plausible_hard; window washer or roofer for implausible_hard), indicating the scene itself robustly supports the full gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The action, instrument, and suburban house setting are coherent with a clear prototypical agent (house painter). The other agents span a well-ordered plausibility gradient, and the scenario is easily depicted in a single image."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "This scene yields a clean plausibility gradient: a prototypical house painter, a plausible construction worker, a related-but-wrong firefighter, and a clearly unrelated ballet dancer. All professions are visually identifiable and distinct in typical attire, and the house-wall-painting scenario with a roller on a suburban street is concrete, imageable, and well-suited for the experimental task."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 2,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even without considering the verb \u2018paint\u2019, firefighters are strongly associated with house exteriors and suburban streets (responding to house fires), so the connection to the scene persists beyond the shared action.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 81.85819493234158,
+  "token_info": {
+    "input_tokens": 5633,
+    "output_tokens": 5253,
+    "cached_tokens": 0
+  },
+  "success": true
+}

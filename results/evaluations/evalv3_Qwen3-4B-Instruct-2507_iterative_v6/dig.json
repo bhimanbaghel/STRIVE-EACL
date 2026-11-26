@@ -1,0 +1,200 @@
+{
+  "verb": "dig",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met: four human professional/social roles, only the agent varies, and plausibility is based on role\u2013action mismatch rather than physical ability.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A gardener\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"A gardener is the canonical professional for preparing and maintaining garden beds, and manually digging with a shovel in a backyard is central, routine work for this role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level.\",\n        \"argument_for_lower\": \"One could argue for plausible_hard by noting that many homeowners dig their own garden beds, so a generic homeowner might be the overall default agent; however, among professional roles, a gardener is clearly the prototypical fit, so this counter-argument is weak.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A landscape architect\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A landscape architect primarily designs outdoor spaces but can naturally be present in a backyard and may occasionally participate in or demonstrate installation tasks, including some digging, even though this is not their core duty. This yields a moderate, \\\"unsure but acceptable\\\" level of plausibility compared to a gardener.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In small design\u2013build practices, a landscape architect might personally handle both design and installation, including digging beds, so a layperson could treat them as nearly as expected as a gardener, which pushes toward plausible_easy.\",\n        \"argument_for_lower\": \"In many professional contexts, a landscape architect would only observe, plan, or direct a crew and would not usually do manual shovel work, so seeing them dig could feel mismatched with their status, nudging them toward a related-but-wrong, implausible_hard role; however, their natural presence in the backyard and the non-exotic nature of the action keep them plausibly in plausible_hard.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A greenhouse technician\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A greenhouse technician works with plants and soil but usually in controlled greenhouse facilities rather than private backyards, so while they share a horticultural domain with a gardener, being the person digging a backyard garden bed is unlikely and feels out of place. This yields low but non-zero thematic fit consistent with implausible_hard.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Some greenhouse staff may help install outdoor trial beds or assist in demonstration gardens, so one could imagine a scenario where a greenhouse technician does some digging outdoors, which could support a plausible_hard classification.\",\n        \"argument_for_lower\": \"For many viewers, the specific title \\\"greenhouse technician\\\" may be unfamiliar, and in the clearly domestic backyard context the role could feel almost as unrelated as any random non-gardening job, suggesting an implausible_easy judgment; however, the strong plant/soil domain overlap makes this counter-argument weaker than the assigned low-but-related placement.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both the gardener and the greenhouse technician are horticultural professionals whose work centers on plant and soil care.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both typically work in plant-focused growing environments (gardens, nurseries, greenhouses), even though the gardener is usually outdoors and the technician is often in a controlled greenhouse.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely use small hand tools for working with plants and soil (e.g., trowels, pruners, pots), even if gardeners more often use larger shovels.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both primarily act on plants and soil substrates as their objects of work.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both perform manual plant-care actions involving handling soil, planting, transplanting, and related manipulations, even if the technician does less heavy digging.\"\n          },\n          \"overlap_count\": 5,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the specific action of digging, a greenhouse technician is still strongly associated with caring for plants and soil in plant-production environments, which clearly relates to the gardener\u2019s horticultural domain; thus the association persists beyond the shared verb.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballet dancer belongs to the performing arts with no role-based connection to gardening, manual outdoor labor, or backyard work, so seeing a dancer in full ballet attire digging a garden bed is immediately rejected as role-inappropriate and maximally implausible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a dancer gardening at home as a private hobby, which could make the action itself physically reasonable despite the outfit, but this relies on treating them as a generic person rather than in their professional role, so as a professional ballet dancer the event remains clearly implausible.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level.\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None (gardener and landscape architect are relatively close in plausibility but still separable as core vs secondary agents for this scene).\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Typical gardening clothes (hat, vest/apron, gloves, boots) with a shovel suggest a gardener or landscaper very directly.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A person in a professional jacket with a hard hat, boots, and clipboard/blueprints clearly signals an architect/engineer/site manager, but it may not be obvious that they are specifically a landscape architect.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A blue work uniform with an apron, gloves, goggles, and a soil-testing kit suggests some kind of horticulture or lab technician, but the specific role of \\\"greenhouse technician\\\" is not visually standardized and could be confused with a generic gardener or agricultural worker.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A pink tutu, pointe shoes, and a ballet bun are a strong, conventional visual stereotype of a ballet dancer.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"A gardener typically wears casual outdoor work clothes such as a wide-brimmed hat, gardening vest or apron, durable pants, gloves, and work boots, often holding a shovel or other garden tools.\",\n      \"plausible_hard\": \"A landscape architect often appears in smart-casual or professional attire with a hard hat on site, carrying a clipboard or rolled plans with landscape drawings, and wearing sturdy boots suitable for construction areas.\",\n      \"implausible_hard\": \"A greenhouse technician usually wears practical work clothes or a simple uniform, possibly with an apron, gloves, and safety goggles, sometimes carrying small plant-care tools or a soil-testing kit associated with greenhouse work.\",\n      \"implausible_easy\": \"A ballet dancer is typically seen in a leotard and tights with a tutu, pointe shoes, and hair in a tight bun, sometimes with a small dance bag or warm-up wrap.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"The gardener\u2019s casual garden attire and sun hat contrast with the landscape architect\u2019s hard hat, professional jacket, and clipboard/blueprints.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Both are plant-related workers, but the gardener has outdoor gardening gear (hat, larger shovel, vest) while the greenhouse technician wears a more uniform-like outfit with apron, goggles, and a soil-testing kit, making them visually different though somewhat similar in broad category.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Gardening clothes versus a tutu and pointe shoes are starkly different visual categories.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"The landscape architect\u2019s hard hat and plans/clipboard differ from the greenhouse technician\u2019s apron, goggles, and plant-lab tools.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A professional in site gear (helmet, plans) is clearly distinct from a ballet dancer in stage costume.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A uniformed plant technician with tools is visually very different from a ballet dancer in classical dancewear.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None (gardener and greenhouse technician are the closest pair but still visually differentiable via clothing style and accessories).\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four agents were judged to occupy their intended plausibility levels correctly, and the action of digging a garden bed with a shovel in a backyard has an obvious prototype (gardener) plus several other professional roles that can naturally populate the intermediate and low-fit conditions. Thus, the scene itself robustly supports the full plausibility gradient; any future adjustments would be at the level of agent choice or visual design, not the event structure.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The backyard garden-bed digging scene with a shovel is concrete, prototypically linked to a gardener, and easily captured in a single image. It supports clear gradation from a core gardening professional through a related design professional, to a related-but-wrong horticultural worker, down to a completely unrelated performing artist.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematic plausibility assignments for all four agents are well-matched to their intended conditions, with strong overlap for the implausible_hard case and a maximally unrelated ballet dancer for implausible_easy. Visually, all roles are distinguishable in principle, though the landscape architect and greenhouse technician are only ambiguously identifiable as specific professions. The underlying scene is well-designed and fully supports the desired plausibility gradient; any further refinements would focus on choosing even more visually stereotyped intermediate agents if needed.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met: four human professional/social roles, only the agent varies, and plausibility is based on role\u2013action mismatch rather than physical ability."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A gardener",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "A gardener is the canonical professional for preparing and maintaining garden beds, and manually digging with a shovel in a backyard is central, routine work for this role.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level.",
+          "argument_for_lower": "One could argue for plausible_hard by noting that many homeowners dig their own garden beds, so a generic homeowner might be the overall default agent; however, among professional roles, a gardener is clearly the prototypical fit, so this counter-argument is weak."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A landscape architect",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A landscape architect primarily designs outdoor spaces but can naturally be present in a backyard and may occasionally participate in or demonstrate installation tasks, including some digging, even though this is not their core duty. This yields a moderate, \"unsure but acceptable\" level of plausibility compared to a gardener.",
+        "counter_arguments": {
+          "argument_for_higher": "In small design\u2013build practices, a landscape architect might personally handle both design and installation, including digging beds, so a layperson could treat them as nearly as expected as a gardener, which pushes toward plausible_easy.",
+          "argument_for_lower": "In many professional contexts, a landscape architect would only observe, plan, or direct a crew and would not usually do manual shovel work, so seeing them dig could feel mismatched with their status, nudging them toward a related-but-wrong, implausible_hard role; however, their natural presence in the backyard and the non-exotic nature of the action keep them plausibly in plausible_hard."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A greenhouse technician",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A greenhouse technician works with plants and soil but usually in controlled greenhouse facilities rather than private backyards, so while they share a horticultural domain with a gardener, being the person digging a backyard garden bed is unlikely and feels out of place. This yields low but non-zero thematic fit consistent with implausible_hard.",
+        "counter_arguments": {
+          "argument_for_higher": "Some greenhouse staff may help install outdoor trial beds or assist in demonstration gardens, so one could imagine a scenario where a greenhouse technician does some digging outdoors, which could support a plausible_hard classification.",
+          "argument_for_lower": "For many viewers, the specific title \"greenhouse technician\" may be unfamiliar, and in the clearly domestic backyard context the role could feel almost as unrelated as any random non-gardening job, suggesting an implausible_easy judgment; however, the strong plant/soil domain overlap makes this counter-argument weaker than the assigned low-but-related placement.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both the gardener and the greenhouse technician are horticultural professionals whose work centers on plant and soil care."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both typically work in plant-focused growing environments (gardens, nurseries, greenhouses), even though the gardener is usually outdoors and the technician is often in a controlled greenhouse."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both routinely use small hand tools for working with plants and soil (e.g., trowels, pruners, pots), even if gardeners more often use larger shovels."
+            },
+            "patient_object_type": {
+              "overlaps": true,
+              "reasoning": "Both primarily act on plants and soil substrates as their objects of work."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both perform manual plant-care actions involving handling soil, planting, transplanting, and related manipulations, even if the technician does less heavy digging."
+            },
+            "overlap_count": 5,
+            "sufficient": true,
+            "negative_test": "Even ignoring the specific action of digging, a greenhouse technician is still strongly associated with caring for plants and soil in plant-production environments, which clearly relates to the gardener\u2019s horticultural domain; thus the association persists beyond the shared verb."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballet dancer belongs to the performing arts with no role-based connection to gardening, manual outdoor labor, or backyard work, so seeing a dancer in full ballet attire digging a garden bed is immediately rejected as role-inappropriate and maximally implausible.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a dancer gardening at home as a private hobby, which could make the action itself physically reasonable despite the outfit, but this relies on treating them as a generic person rather than in their professional role, so as a professional ballet dancer the event remains clearly implausible.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level."
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None (gardener and landscape architect are relatively close in plausibility but still separable as core vs secondary agents for this scene)."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Typical gardening clothes (hat, vest/apron, gloves, boots) with a shovel suggest a gardener or landscaper very directly."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A person in a professional jacket with a hard hat, boots, and clipboard/blueprints clearly signals an architect/engineer/site manager, but it may not be obvious that they are specifically a landscape architect."
+        },
+        "implausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A blue work uniform with an apron, gloves, goggles, and a soil-testing kit suggests some kind of horticulture or lab technician, but the specific role of \"greenhouse technician\" is not visually standardized and could be confused with a generic gardener or agricultural worker."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A pink tutu, pointe shoes, and a ballet bun are a strong, conventional visual stereotype of a ballet dancer."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "A gardener typically wears casual outdoor work clothes such as a wide-brimmed hat, gardening vest or apron, durable pants, gloves, and work boots, often holding a shovel or other garden tools.",
+        "plausible_hard": "A landscape architect often appears in smart-casual or professional attire with a hard hat on site, carrying a clipboard or rolled plans with landscape drawings, and wearing sturdy boots suitable for construction areas.",
+        "implausible_hard": "A greenhouse technician usually wears practical work clothes or a simple uniform, possibly with an apron, gloves, and safety goggles, sometimes carrying small plant-care tools or a soil-testing kit associated with greenhouse work.",
+        "implausible_easy": "A ballet dancer is typically seen in a leotard and tights with a tutu, pointe shoes, and hair in a tight bun, sometimes with a small dance bag or warm-up wrap."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "The gardener\u2019s casual garden attire and sun hat contrast with the landscape architect\u2019s hard hat, professional jacket, and clipboard/blueprints."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Both are plant-related workers, but the gardener has outdoor gardening gear (hat, larger shovel, vest) while the greenhouse technician wears a more uniform-like outfit with apron, goggles, and a soil-testing kit, making them visually different though somewhat similar in broad category."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Gardening clothes versus a tutu and pointe shoes are starkly different visual categories."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "The landscape architect\u2019s hard hat and plans/clipboard differ from the greenhouse technician\u2019s apron, goggles, and plant-lab tools."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "A professional in site gear (helmet, plans) is clearly distinct from a ballet dancer in stage costume."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A uniformed plant technician with tools is visually very different from a ballet dancer in classical dancewear."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None (gardener and greenhouse technician are the closest pair but still visually differentiable via clothing style and accessories).",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four agents were judged to occupy their intended plausibility levels correctly, and the action of digging a garden bed with a shovel in a backyard has an obvious prototype (gardener) plus several other professional roles that can naturally populate the intermediate and low-fit conditions. Thus, the scene itself robustly supports the full plausibility gradient; any future adjustments would be at the level of agent choice or visual design, not the event structure.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The backyard garden-bed digging scene with a shovel is concrete, prototypically linked to a gardener, and easily captured in a single image. It supports clear gradation from a core gardening professional through a related design professional, to a related-but-wrong horticultural worker, down to a completely unrelated performing artist."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematic plausibility assignments for all four agents are well-matched to their intended conditions, with strong overlap for the implausible_hard case and a maximally unrelated ballet dancer for implausible_easy. Visually, all roles are distinguishable in principle, though the landscape architect and greenhouse technician are only ambiguously identifiable as specific professions. The underlying scene is well-designed and fully supports the desired plausibility gradient; any further refinements would focus on choosing even more visually stereotyped intermediate agents if needed."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "AMBIGUOUS"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 748.1381055228412,
+  "token_info": {
+    "input_tokens": 6313,
+    "output_tokens": 10996
+  },
+  "success": true
+}

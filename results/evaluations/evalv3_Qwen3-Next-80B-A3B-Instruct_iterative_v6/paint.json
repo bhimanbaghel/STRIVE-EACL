@@ -1,0 +1,200 @@
+{
+  "verb": "paint",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met: four human professional roles, only the agent varies, and plausibility differences are based on role-action mismatch rather than physical ability.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"An artist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"For painting a large canvas with a paintbrush in a studio, an artist is the canonical, default agent and fits the scene perfectly. This is their core professional activity in the prototypical setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that because many different people (e.g., art students, hobbyists) can paint canvases in studios, an artist is not uniquely prototypical and might be grouped with other plausible agents. However, in ordinary expectations, \u2018artist painting a canvas in a studio\u2019 is still the single most stereotypical combination, so this argument is weaker than treating it as the clear prototype.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"An art teacher\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"An art teacher is strongly associated with painting and with studio-like environments, but their primary role is teaching rather than producing their own large canvases. The event feels natural but slightly secondary compared to a full-time artist, fitting a moderate (unsure-yes) plausibility level.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Because art teachers often demonstrate techniques and may maintain their own artistic practice, one could argue that painting a large canvas in a studio is also highly typical for them, making them nearly as prototypical as an artist.\",\n        \"argument_for_lower\": \"One might argue that school-based art teachers usually work in classrooms with students and smaller exercises, so seeing an art teacher alone in a dedicated studio painting a large canvas could feel somewhat off-domain and closer to a misfit. However, art teachers clearly belong to the art/painting domain and commonly paint for demonstrations or personal work, so this lower placement is less convincing than treating them as a plausible but secondary agent.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"An architect\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Architects are visual design professionals who sketch and render, so they share substantial domain and action overlap with artists, yet their job does not normally involve painting expressive canvases in an art studio. The scene is conceivable but feels like the wrong kind of visual professional for this specific activity and setting, matching an \u201cunsure no.\u201d\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could argue that architects sometimes produce artistic renderings of buildings and might conceivably work on large presentation pieces, making an architect painting a canvas vaguely plausible in a studio-like environment and thus a candidate for plausible_hard.\",\n        \"argument_for_lower\": \"Alternatively, someone might claim that architects now primarily use computers and technical drawings, so seeing one painting a canvas is so far from their typical work that it seems wholly unrelated, warranting implausible_easy. However, this ignores their clear overlap with art and drawing; the similarity in domain and skills makes them more related than a maximally distant profession.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both artists and architects work in visual design/creative fields, producing visual representations as a core part of their professions.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both commonly work in indoor studio- or office-like creative spaces, often referred to as studios, with drafting tables, drawings, and design materials.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely use manual drawing tools such as pencils, markers, paper, and rulers, even though only artists typically use paintbrushes on canvas.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": false,\n            \"reasoning\": \"Artists work on canvases and artworks, whereas architects work on buildings, plans, models, and technical drawings rather than art canvases.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both perform fine-motor, visually guided hand movements (drawing, sketching, rendering) as a routine part of their work.\"\n          },\n          \"overlap_count\": 4,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the verb 'paint', architects and artists are both visual design professionals who work in studio-like indoor spaces using drawing tools and precise sketching, so there remains a substantial association between architect and this broader design-studio scene, even though an architect is not expected to paint an art canvas there.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Chefs work in kitchens preparing food and have no natural role in painting large canvases with art brushes in an art studio. The domain, tools, setting, and object acted upon are all clearly unrelated, making this an obvious mismatch.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might note that chefs sometimes 'paint' plates with sauces or use brushes to apply glazes, suggesting a very loose overlap in fine-motor brush use. However, this occurs in a kitchen on food, not on canvases in art studios, so the connection is far too weak and contextually different to justify implausible_hard.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"An artist depicted with a paint-splattered smock, beret, palette, and brush is a highly stereotyped and easily recognized visual identity.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"An art teacher has no standardized uniform; casual clothes plus a clipboard or glasses suggest a teacher-like role but could be confused with many other professionals.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"An architect in business-casual clothing holding blueprints or a tablet suggests someone in architecture/engineering/construction but can be mistaken for a generic business or technical professional.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A chef\u2019s white jacket and tall toque hat form a very distinctive, widely recognized uniform.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Usually shown in a paint-splattered smock or apron, often with a beret or beanie, messy or bohemian clothing, holding a palette and brush near an easel.\",\n      \"plausible_hard\": \"Typically a casually dressed adult (jeans, turtleneck or cardigan), possibly with glasses, sometimes carrying a clipboard or papers; in context often near student work but no unique outfit on a blank background.\",\n      \"implausible_hard\": \"Business-casual attire such as blazer and button-down shirt, often with thin-rimmed glasses and rolled-up blueprints or design plans, sometimes a tablet or scale ruler.\",\n      \"implausible_easy\": \"White double-breasted chef\u2019s jacket, white toque hat, and apron, sometimes with a kitchen towel or utensil.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"The artist\u2019s paint-splattered smock and palette contrast with the art teacher\u2019s cleaner casual clothes and clipboard/teacher-like accessories.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"An artist in messy art gear looks clearly different from an architect in a blazer with blueprints or a tablet.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Artist attire (smock, beret, palette) and chef uniform (jacket, toque) are visually very distinct.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Both can wear smart-casual clothes, but the architect\u2019s blueprints/business styling contrasts with the art teacher\u2019s more relaxed, teacherly look with a clipboard and no technical plans.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A casually dressed teacher with a clipboard looks very different from a chef in a crisp white jacket and toque.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"An architect in a blazer with blueprints is easily distinguished from a chef in full kitchen whites and hat.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four conditions were judged thematically correct. The scene has a very clear prototype (artist painting a canvas in a studio). For the ambiguous slots, alternative roles such as an art student for plausible_hard or a graphic designer/photographer for implausible_hard are easy to imagine, indicating the scene itself readily supports a full plausibility gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The 'painting a large canvas with a paintbrush in a studio' scene is concrete, visually imageable, and centers on a strong prototype (artist). Related professionals can be placed at varying plausibility levels, so the gradient is supported by the scene rather than stretched by it.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematically, the four agents form a well-ordered gradient from a prototypical artist through a related art teacher to a related-but-wrong architect and a clearly unrelated chef. Visually, artist and chef are strongly identifiable, while art teacher and architect are more ambiguous but still distinguishable from each other and from the others. The studio\u2013canvas\u2013paintbrush scene is well chosen, with an appropriate instrument and a clear professional prototype, and it can robustly support the intended plausibility manipulations.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met: four human professional roles, only the agent varies, and plausibility differences are based on role-action mismatch rather than physical ability."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "An artist",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "For painting a large canvas with a paintbrush in a studio, an artist is the canonical, default agent and fits the scene perfectly. This is their core professional activity in the prototypical setting.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that because many different people (e.g., art students, hobbyists) can paint canvases in studios, an artist is not uniquely prototypical and might be grouped with other plausible agents. However, in ordinary expectations, \u2018artist painting a canvas in a studio\u2019 is still the single most stereotypical combination, so this argument is weaker than treating it as the clear prototype."
+        }
+      },
+      "plausible_hard": {
+        "agent": "An art teacher",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "An art teacher is strongly associated with painting and with studio-like environments, but their primary role is teaching rather than producing their own large canvases. The event feels natural but slightly secondary compared to a full-time artist, fitting a moderate (unsure-yes) plausibility level.",
+        "counter_arguments": {
+          "argument_for_higher": "Because art teachers often demonstrate techniques and may maintain their own artistic practice, one could argue that painting a large canvas in a studio is also highly typical for them, making them nearly as prototypical as an artist.",
+          "argument_for_lower": "One might argue that school-based art teachers usually work in classrooms with students and smaller exercises, so seeing an art teacher alone in a dedicated studio painting a large canvas could feel somewhat off-domain and closer to a misfit. However, art teachers clearly belong to the art/painting domain and commonly paint for demonstrations or personal work, so this lower placement is less convincing than treating them as a plausible but secondary agent."
+        }
+      },
+      "implausible_hard": {
+        "agent": "An architect",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Architects are visual design professionals who sketch and render, so they share substantial domain and action overlap with artists, yet their job does not normally involve painting expressive canvases in an art studio. The scene is conceivable but feels like the wrong kind of visual professional for this specific activity and setting, matching an \u201cunsure no.\u201d",
+        "counter_arguments": {
+          "argument_for_higher": "One could argue that architects sometimes produce artistic renderings of buildings and might conceivably work on large presentation pieces, making an architect painting a canvas vaguely plausible in a studio-like environment and thus a candidate for plausible_hard.",
+          "argument_for_lower": "Alternatively, someone might claim that architects now primarily use computers and technical drawings, so seeing one painting a canvas is so far from their typical work that it seems wholly unrelated, warranting implausible_easy. However, this ignores their clear overlap with art and drawing; the similarity in domain and skills makes them more related than a maximally distant profession.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both artists and architects work in visual design/creative fields, producing visual representations as a core part of their professions."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both commonly work in indoor studio- or office-like creative spaces, often referred to as studios, with drafting tables, drawings, and design materials."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both routinely use manual drawing tools such as pencils, markers, paper, and rulers, even though only artists typically use paintbrushes on canvas."
+            },
+            "patient_object_type": {
+              "overlaps": false,
+              "reasoning": "Artists work on canvases and artworks, whereas architects work on buildings, plans, models, and technical drawings rather than art canvases."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both perform fine-motor, visually guided hand movements (drawing, sketching, rendering) as a routine part of their work."
+            },
+            "overlap_count": 4,
+            "sufficient": true,
+            "negative_test": "Even ignoring the verb 'paint', architects and artists are both visual design professionals who work in studio-like indoor spaces using drawing tools and precise sketching, so there remains a substantial association between architect and this broader design-studio scene, even though an architect is not expected to paint an art canvas there."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A chef",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Chefs work in kitchens preparing food and have no natural role in painting large canvases with art brushes in an art studio. The domain, tools, setting, and object acted upon are all clearly unrelated, making this an obvious mismatch.",
+        "counter_arguments": {
+          "argument_for_higher": "One might note that chefs sometimes 'paint' plates with sauces or use brushes to apply glazes, suggesting a very loose overlap in fine-motor brush use. However, this occurs in a kitchen on food, not on canvases in art studios, so the connection is far too weak and contextually different to justify implausible_hard.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "An artist depicted with a paint-splattered smock, beret, palette, and brush is a highly stereotyped and easily recognized visual identity."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "An art teacher has no standardized uniform; casual clothes plus a clipboard or glasses suggest a teacher-like role but could be confused with many other professionals."
+        },
+        "implausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "An architect in business-casual clothing holding blueprints or a tablet suggests someone in architecture/engineering/construction but can be mistaken for a generic business or technical professional."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A chef\u2019s white jacket and tall toque hat form a very distinctive, widely recognized uniform."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Usually shown in a paint-splattered smock or apron, often with a beret or beanie, messy or bohemian clothing, holding a palette and brush near an easel.",
+        "plausible_hard": "Typically a casually dressed adult (jeans, turtleneck or cardigan), possibly with glasses, sometimes carrying a clipboard or papers; in context often near student work but no unique outfit on a blank background.",
+        "implausible_hard": "Business-casual attire such as blazer and button-down shirt, often with thin-rimmed glasses and rolled-up blueprints or design plans, sometimes a tablet or scale ruler.",
+        "implausible_easy": "White double-breasted chef\u2019s jacket, white toque hat, and apron, sometimes with a kitchen towel or utensil."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "The artist\u2019s paint-splattered smock and palette contrast with the art teacher\u2019s cleaner casual clothes and clipboard/teacher-like accessories."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "An artist in messy art gear looks clearly different from an architect in a blazer with blueprints or a tablet."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Artist attire (smock, beret, palette) and chef uniform (jacket, toque) are visually very distinct."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Both can wear smart-casual clothes, but the architect\u2019s blueprints/business styling contrasts with the art teacher\u2019s more relaxed, teacherly look with a clipboard and no technical plans."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "A casually dressed teacher with a clipboard looks very different from a chef in a crisp white jacket and toque."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "An architect in a blazer with blueprints is easily distinguished from a chef in full kitchen whites and hat."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four conditions were judged thematically correct. The scene has a very clear prototype (artist painting a canvas in a studio). For the ambiguous slots, alternative roles such as an art student for plausible_hard or a graphic designer/photographer for implausible_hard are easy to imagine, indicating the scene itself readily supports a full plausibility gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The 'painting a large canvas with a paintbrush in a studio' scene is concrete, visually imageable, and centers on a strong prototype (artist). Related professionals can be placed at varying plausibility levels, so the gradient is supported by the scene rather than stretched by it."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematically, the four agents form a well-ordered gradient from a prototypical artist through a related art teacher to a related-but-wrong architect and a clearly unrelated chef. Visually, artist and chef are strongly identifiable, while art teacher and architect are more ambiguous but still distinguishable from each other and from the others. The studio\u2013canvas\u2013paintbrush scene is well chosen, with an appropriate instrument and a clear professional prototype, and it can robustly support the intended plausibility manipulations."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "AMBIGUOUS"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 150.34479476884007,
+  "token_info": {
+    "input_tokens": 6152,
+    "output_tokens": 14079
+  },
+  "success": true
+}

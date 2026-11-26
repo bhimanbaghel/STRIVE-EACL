@@ -1,0 +1,200 @@
+{
+  "verb": "wash",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professional/social roles, only the agent varies across sentences, and (im)plausibility is based on role appropriateness rather than physical ability.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A housekeeper\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"In hospitals, housekeeping/environmental services staff are the canonical agents responsible for disinfecting beds between patients; this is exactly their core duty in a patient room. A viewer would very quickly accept this as the default, highly typical scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that 'housekeeper' sounds more like a hotel or domestic role, so some might initially expect a more explicitly medical-sounding job title (e.g., nurse\u2019s aide) and treat this as just a generally plausible cleaner rather than the single most prototypical agent.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A hospital orderly\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Orderlies/patient transporters routinely work inside hospital patient rooms and assist with beds (moving, adjusting, changing linens), and may occasionally wipe down a bed during transfers, but systematic disinfection is not their primary responsibility. This makes the event clearly possible yet somewhat secondary to their main logistical role, matching an 'unsure yes'.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In some hospitals, ancillary staff like orderlies or nurse\u2019s aides may be heavily involved in turnover tasks, including wiping beds, so a viewer familiar with that workflow might see them as nearly as prototypical as housekeeping for bed cleaning.\",\n        \"argument_for_lower\": \"One could argue that deep disinfection of beds is strictly an environmental services task, and that orderlies focus on moving patients and equipment; from that perspective, seeing an orderly doing detailed bed disinfection could feel odd enough to be judged more as a role violation (implausible_hard) than a plausible extension of duties.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A paramedic\",\n      \"verdict\": \"BORDERLINE\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Paramedics are clearly medical professionals who use disinfectants and PPE and sometimes interact with stretchers and beds, but their work is primarily pre-hospital or in emergency departments, not cleaning inpatient beds in patient rooms. The scene is physically possible yet noticeably wrong, with some hospital/medical overlap but not a strong association with this specific task or setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might argue that paramedics must follow strict infection-control protocols and routinely disinfect their stretchers and equipment, so extending this behavior to cleaning a bed after a messy transfer could be seen as an unusual but still plausible emergency-related action rather than outright implausible.\",\n        \"argument_for_lower\": \"Conversely, because paramedics typically hand patients over in the emergency department and do not work on inpatient wards or clean hospital property, a viewer might feel there is almost no reason for a paramedic to be wiping a hospital bed in a patient room, classifying them closer to a clearly wrong agent like the ballet dancer (implausible_easy).\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": false,\n          \"reasoning\": \"The housekeeper\u2019s domain is environmental cleaning/maintenance, whereas the paramedic\u2019s domain is emergency medical care; they are different broad fields.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both roles spend substantial time in medical facilities: housekeepers on inpatient wards, paramedics in emergency departments and hospital intake areas, so both are associated with hospital environments.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use disinfectants, wipes, gloves, and other PPE as part of infection-control practices, even though they use them for different immediate purposes.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Housekeepers primarily act on rooms, furniture, and equipment (including beds), while paramedics primarily act on patients\u2019 bodies and their own stretchers; overlap on the specific object \u2018hospital bed\u2019 is incidental rather than typical for the paramedic.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both engage in manual, physically demanding work in hospitals, including pushing beds/stretchers and occasionally wiping or disinfecting surfaces, even if for paramedics this is a secondary aspect of their role.\"\n        },\n        \"overlap_count\": 3,\n        \"sufficient\": true,\n        \"negative_test\": \"If we ignore the specific verb 'wash', housekeepers and paramedics are still both uniformed staff who operate in hospital environments and use disinfectants/PPE around beds and stretchers, so there remains a nontrivial association beyond the shared cleaning action, though this link is weaker than for a purely environmental-services role.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Ballet dancers belong to the performing arts domain and work in studios and theaters, not hospitals; they have no natural professional connection to hospital beds, disinfectant cloths, or patient rooms. Seeing a ballet dancer in full dance attire disinfecting a hospital bed would be instantly rejected as unrelated.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine an ad-hoc charitable or volunteer situation where a dancer happens to help clean a room, but this would not stem from their role as a dancer and would require a highly contrived backstory.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A housekeeper/cleaner in a plain uniform with a cleaning cart or bucket and supplies is a standard, easily recognized cleaning staff role.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A hospital orderly typically wears generic scrubs and a badge, which mark them as hospital staff but are easily confused with nurses, techs, or other clinical roles; viewers would recognize 'hospital worker' but not necessarily 'orderly' specifically.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A paramedic in a dark EMS uniform with reflective strips, patches, radio, and medical bag has a highly distinctive, recognizable look.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A ballet dancer in a leotard, tights, pointe shoes, and hair in a bun is visually prototypical and readily recognized as a dancer.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Hospital cleaning staff/housekeeper in a solid-color or lightly patterned uniform (top and pants), possibly an apron, name badge, and a cleaning cart or bucket with sprays and cloths.\",\n      \"plausible_hard\": \"Hospital orderly in blue or green scrubs with a name badge, comfortable shoes, and no medical instruments like a stethoscope; appears as non-clinical support staff.\",\n      \"implausible_hard\": \"Paramedic in a dark blue or black EMS uniform with reflective strips, EMS patches, sturdy boots, and possibly a radio and medical response bag.\",\n      \"implausible_easy\": \"Ballet dancer wearing a pink or neutral leotard, tights, and pointe shoes, with hair pulled into a tight bun and a dancer\u2019s posture/physique.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Housekeeper\u2019s cleaning uniform and cart differ from an orderly\u2019s plain scrubs and lack of cleaning equipment.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Cleaning uniform and cart versus dark EMS uniform with reflective strips and medical gear are visually very different.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Cleaning staff attire is clearly different from a ballet leotard and pointe shoes.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Scrubs without high-visibility elements contrast with a paramedic\u2019s heavy, marked EMS uniform with reflective strips and patches.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Hospital scrubs are visually distinct from ballet attire.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"An EMS uniform and a ballet outfit are maximally distinct visually.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The disinfectant cloth is an appropriate instrument for washing/disinfecting a hospital bed, and housekeeping staff provide a clear prototype. The paramedic in implausible_hard is borderline but still has some hospital/infection-control overlap; if needed, a more clearly overlapping but wrong agent (e.g., a surgeon or physical therapist, who clearly belongs in hospital rooms but does not clean beds) could replace the paramedic, showing that the scene itself can support a full gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The hospital-bed-disinfection scene is concrete, easily photographed, and has a strong prototypical agent. It supports a clear plausible vs. implausible contrast, with room for fine-grained manipulation of related medical or cleaning roles for the intermediate conditions.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 1,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"The scene and most agents support a clear plausibility gradient, with the housekeeper (plausible_easy), hospital orderly (plausible_hard), and ballet dancer (implausible_easy) well placed. The paramedic as implausible_hard is borderline but has sufficient overlap with the housekeeper to function as an 'unsure no', and all roles are visually distinguishable, though the orderly\u2019s appearance is somewhat ambiguous among hospital staff.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professional/social roles, only the agent varies across sentences, and (im)plausibility is based on role appropriateness rather than physical ability."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A housekeeper",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "In hospitals, housekeeping/environmental services staff are the canonical agents responsible for disinfecting beds between patients; this is exactly their core duty in a patient room. A viewer would very quickly accept this as the default, highly typical scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that 'housekeeper' sounds more like a hotel or domestic role, so some might initially expect a more explicitly medical-sounding job title (e.g., nurse\u2019s aide) and treat this as just a generally plausible cleaner rather than the single most prototypical agent."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A hospital orderly",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Orderlies/patient transporters routinely work inside hospital patient rooms and assist with beds (moving, adjusting, changing linens), and may occasionally wipe down a bed during transfers, but systematic disinfection is not their primary responsibility. This makes the event clearly possible yet somewhat secondary to their main logistical role, matching an 'unsure yes'.",
+        "counter_arguments": {
+          "argument_for_higher": "In some hospitals, ancillary staff like orderlies or nurse\u2019s aides may be heavily involved in turnover tasks, including wiping beds, so a viewer familiar with that workflow might see them as nearly as prototypical as housekeeping for bed cleaning.",
+          "argument_for_lower": "One could argue that deep disinfection of beds is strictly an environmental services task, and that orderlies focus on moving patients and equipment; from that perspective, seeing an orderly doing detailed bed disinfection could feel odd enough to be judged more as a role violation (implausible_hard) than a plausible extension of duties."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A paramedic",
+        "verdict": "BORDERLINE",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Paramedics are clearly medical professionals who use disinfectants and PPE and sometimes interact with stretchers and beds, but their work is primarily pre-hospital or in emergency departments, not cleaning inpatient beds in patient rooms. The scene is physically possible yet noticeably wrong, with some hospital/medical overlap but not a strong association with this specific task or setting.",
+        "counter_arguments": {
+          "argument_for_higher": "One might argue that paramedics must follow strict infection-control protocols and routinely disinfect their stretchers and equipment, so extending this behavior to cleaning a bed after a messy transfer could be seen as an unusual but still plausible emergency-related action rather than outright implausible.",
+          "argument_for_lower": "Conversely, because paramedics typically hand patients over in the emergency department and do not work on inpatient wards or clean hospital property, a viewer might feel there is almost no reason for a paramedic to be wiping a hospital bed in a patient room, classifying them closer to a clearly wrong agent like the ballet dancer (implausible_easy)."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": false,
+            "reasoning": "The housekeeper\u2019s domain is environmental cleaning/maintenance, whereas the paramedic\u2019s domain is emergency medical care; they are different broad fields."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both roles spend substantial time in medical facilities: housekeepers on inpatient wards, paramedics in emergency departments and hospital intake areas, so both are associated with hospital environments."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use disinfectants, wipes, gloves, and other PPE as part of infection-control practices, even though they use them for different immediate purposes."
+          },
+          "patient_object_type": {
+            "overlaps": false,
+            "reasoning": "Housekeepers primarily act on rooms, furniture, and equipment (including beds), while paramedics primarily act on patients\u2019 bodies and their own stretchers; overlap on the specific object \u2018hospital bed\u2019 is incidental rather than typical for the paramedic."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both engage in manual, physically demanding work in hospitals, including pushing beds/stretchers and occasionally wiping or disinfecting surfaces, even if for paramedics this is a secondary aspect of their role."
+          },
+          "overlap_count": 3,
+          "sufficient": true,
+          "negative_test": "If we ignore the specific verb 'wash', housekeepers and paramedics are still both uniformed staff who operate in hospital environments and use disinfectants/PPE around beds and stretchers, so there remains a nontrivial association beyond the shared cleaning action, though this link is weaker than for a purely environmental-services role."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Ballet dancers belong to the performing arts domain and work in studios and theaters, not hospitals; they have no natural professional connection to hospital beds, disinfectant cloths, or patient rooms. Seeing a ballet dancer in full dance attire disinfecting a hospital bed would be instantly rejected as unrelated.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine an ad-hoc charitable or volunteer situation where a dancer happens to help clean a room, but this would not stem from their role as a dancer and would require a highly contrived backstory.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A housekeeper/cleaner in a plain uniform with a cleaning cart or bucket and supplies is a standard, easily recognized cleaning staff role."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A hospital orderly typically wears generic scrubs and a badge, which mark them as hospital staff but are easily confused with nurses, techs, or other clinical roles; viewers would recognize 'hospital worker' but not necessarily 'orderly' specifically."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A paramedic in a dark EMS uniform with reflective strips, patches, radio, and medical bag has a highly distinctive, recognizable look."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A ballet dancer in a leotard, tights, pointe shoes, and hair in a bun is visually prototypical and readily recognized as a dancer."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Hospital cleaning staff/housekeeper in a solid-color or lightly patterned uniform (top and pants), possibly an apron, name badge, and a cleaning cart or bucket with sprays and cloths.",
+        "plausible_hard": "Hospital orderly in blue or green scrubs with a name badge, comfortable shoes, and no medical instruments like a stethoscope; appears as non-clinical support staff.",
+        "implausible_hard": "Paramedic in a dark blue or black EMS uniform with reflective strips, EMS patches, sturdy boots, and possibly a radio and medical response bag.",
+        "implausible_easy": "Ballet dancer wearing a pink or neutral leotard, tights, and pointe shoes, with hair pulled into a tight bun and a dancer\u2019s posture/physique."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Housekeeper\u2019s cleaning uniform and cart differ from an orderly\u2019s plain scrubs and lack of cleaning equipment."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Cleaning uniform and cart versus dark EMS uniform with reflective strips and medical gear are visually very different."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Cleaning staff attire is clearly different from a ballet leotard and pointe shoes."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Scrubs without high-visibility elements contrast with a paramedic\u2019s heavy, marked EMS uniform with reflective strips and patches."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Hospital scrubs are visually distinct from ballet attire."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "An EMS uniform and a ballet outfit are maximally distinct visually."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The disinfectant cloth is an appropriate instrument for washing/disinfecting a hospital bed, and housekeeping staff provide a clear prototype. The paramedic in implausible_hard is borderline but still has some hospital/infection-control overlap; if needed, a more clearly overlapping but wrong agent (e.g., a surgeon or physical therapist, who clearly belongs in hospital rooms but does not clean beds) could replace the paramedic, showing that the scene itself can support a full gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The hospital-bed-disinfection scene is concrete, easily photographed, and has a strong prototypical agent. It supports a clear plausible vs. implausible contrast, with room for fine-grained manipulation of related medical or cleaning roles for the intermediate conditions."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 1,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "The scene and most agents support a clear plausibility gradient, with the housekeeper (plausible_easy), hospital orderly (plausible_hard), and ballet dancer (implausible_easy) well placed. The paramedic as implausible_hard is borderline but has sufficient overlap with the housekeeper to function as an 'unsure no', and all roles are visually distinguishable, though the orderly\u2019s appearance is somewhat ambiguous among hospital staff."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 1,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "BORDERLINE",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.5,
+    "overlap_count": 3,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "If we ignore the specific verb 'wash', housekeepers and paramedics are still both uniformed staff who operate in hospital environments and use disinfectants/PPE around beds and stretchers, so there remains a nontrivial association beyond the shared cleaning action, though this link is weaker than for a purely environmental-services role.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 141.59120712801814,
+  "token_info": {
+    "input_tokens": 6118,
+    "output_tokens": 11406
+  },
+  "success": true
+}

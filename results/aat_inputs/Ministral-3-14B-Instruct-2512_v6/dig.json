@@ -1,0 +1,25 @@
+{
+  "verb": "dig",
+  "parsed": {
+    "scene": {
+      "verb_form": "is digging",
+      "patient": "a hole",
+      "instrument": "with a shovel",
+      "location": "in the backyard"
+    },
+    "agents": {
+      "plausible_easy": {"agent": "A landscaper"},
+      "plausible_hard": {"agent": "A gardener"},
+      "implausible_hard": {"agent": "An archaeologist"},
+      "implausible_easy": {"agent": "A chef"}
+    },
+    "sentences": {
+      "plausible_easy": "A landscaper is digging a hole with a shovel in the backyard.",
+      "plausible_hard": "A gardener is digging a hole with a shovel in the backyard.",
+      "implausible_hard": "An archaeologist is digging a hole with a shovel in the backyard.",
+      "implausible_easy": "A chef is digging a hole with a shovel in the backyard."
+    }
+  },
+  "validation_errors": [],
+  "success": true
+}

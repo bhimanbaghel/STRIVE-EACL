@@ -1,0 +1,25 @@
+{
+  "verb": "open",
+  "parsed": {
+    "scene": {
+      "verb_form": "is opening",
+      "patient": "a sealed envelope",
+      "instrument": "with a letter opener",
+      "location": "on a wooden desk in an office"
+    },
+    "agents": {
+      "plausible_easy": {"agent": "A secretary"},
+      "plausible_hard": {"agent": "A receptionist"},
+      "implausible_hard": {"agent": "A mail carrier"},
+      "implausible_easy": {"agent": "A chef"}
+    },
+    "sentences": {
+      "plausible_easy": "A secretary is opening a sealed envelope with a letter opener on a wooden desk in an office.",
+      "plausible_hard": "A receptionist is opening a sealed envelope with a letter opener on a wooden desk in an office.",
+      "implausible_hard": "A mail carrier is opening a sealed envelope with a letter opener on a wooden desk in an office.",
+      "implausible_easy": "A chef is opening a sealed envelope with a letter opener on a wooden desk in an office."
+    }
+  },
+  "validation_errors": [],
+  "success": true
+}

@@ -1,0 +1,200 @@
+{
+  "verb": "touch",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met: four human professional/social roles; only the agent varies; all agents are physically capable of the action and differences are role-based.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A family doctor\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Family doctors routinely palpate patients\u2019 abdomens with gloved hands in examination rooms; this is a textbook primary-care exam. They are the default professional one expects in this exact scene.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that in some clinics nurses or nurse practitioners perform many routine abdominal exams, so a family doctor is not the only expected examiner; this slightly weakens the exclusivity but not enough to dislodge them as the prototypical agent.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A medical student\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Medical students often participate in physical exams under supervision and may touch a patient\u2019s abdomen with gloved hands in an exam room, but examining patients is training rather than their core professional duty. They are plausible but clearly less prototypical than a family doctor.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In teaching hospitals, patients are frequently examined primarily by medical students, so a student palpating an abdomen may feel nearly as expected as a doctor in that specific institutional context.\",\n        \"argument_for_lower\": \"Outside of teaching settings, many exam rooms never have medical students present, and a solo student examining a patient might seem atypical or even inappropriate, suggesting a lower plausibility if one assumes a non-teaching clinic.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A dentist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Dentists are medical professionals who wear gloves and examine patients in clinical rooms, but they focus on the mouth in dental operatories, not on abdominal exams in a general medical examination room. The overlap with a family doctor is strong, yet this specific event is wrong for their role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a hospital-based oral surgeon or dentist performing a preoperative screening or helping in an emergency where they briefly examine areas beyond the mouth, making the abdominal touch barely plausible in an unusual setting.\",\n        \"argument_for_lower\": \"From lay expectations, dentists are strongly tied to teeth and dental chairs; seeing one palpate an abdomen in a standard exam room might feel so category-violating that a viewer quickly rejects it as just as implausible as a completely unrelated profession.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both the family doctor and the dentist are healthcare professionals providing clinical care to patients.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both work in clinical examination environments (treatment rooms with medical equipment), even if one is medical and the other dental.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely use disposable gloves and medical instruments while examining patients.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both act on human patients as their primary focus.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both perform close manual examinations involving palpation or probing of body tissues (though in different body regions).\"\n          },\n          \"overlap_count\": 5,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the verb 'touch', a dentist is still strongly associated with gloved, close-up examination of a patient in a clinical room; this creates a clear connection to the family doctor scene despite the mismatch in body area and type of exam room.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A wedding photographer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Wedding photographers work in event and photography contexts and have no professional reason to wear gloves or palpate a patient\u2019s abdomen in a medical examination room. The domain, setting, and typical actions are maximally distant from this medical exam scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a contrived scenario where a wedding photographer is documenting a patient\u2019s hospital wedding or maternity session and briefly positions a subject\u2019s abdomen, but gloves, a medical exam room, and the term 'patient' make this far-fetched and still strongly implausible.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"The plausible_easy (family doctor) and plausible_hard (medical student) conditions are very close in plausibility and may be perceived as nearly equivalent by viewers, potentially collapsing this pair.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A family doctor can be shown in a white coat with a stethoscope and professional attire, which is widely recognized as 'doctor'.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A medical student typically also wears a white coat and stethoscope; visually they would look like a generic doctor or healthcare worker rather than specifically a 'medical student'.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A dentist can be portrayed in scrubs with a mask, dental loupes, and small dental instruments, which strongly cues 'dentist/dental professional'.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A wedding photographer carrying a professional camera, lenses, and possibly dressed in semi-formal event attire is clearly recognizable as a photographer.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Family doctor: white coat over business-casual clothes, stethoscope around the neck, ID badge, possibly a blood pressure cuff or clipboard nearby.\",\n      \"plausible_hard\": \"Medical student: young adult in a white coat over casual or business-casual clothes, possibly with a stethoscope and ID badge; visually very similar to a junior doctor.\",\n      \"implausible_hard\": \"Dentist: wearing scrubs or a dental tunic, mask, possibly dental loupes or headlamp, and holding small dental tools such as a mirror or probe.\",\n      \"implausible_easy\": \"Wedding photographer: dressed in smart-casual or semi-formal clothing, holding a large DSLR or mirrorless camera with a zoom lens, maybe with a camera strap and equipment bag.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": false,\n        \"note\": \"Both the family doctor and medical student would likely appear in nearly identical white coats with stethoscopes, differing mainly in age, which is not a reliable visual cue for distinct roles.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"The family doctor in a white coat and stethoscope contrasts with the dentist in scrubs, mask, and dental tools.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A white-coated doctor looks clearly different from a photographer carrying a camera and dressed for events.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A white-coated medical student differs visually from a scrub-wearing, masked dentist with dental instruments.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A medical student in medical attire is visually distinct from a photographer with camera gear.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A dentist in scrubs and mask is clearly different from a photographer carrying cameras and lenses.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"plausible_easy vs plausible_hard\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four conditions are thematically well-placed. Even if one wanted more visual separation at the top of the gradient, the same scene could easily use alternative agents (e.g., nurse or physician assistant for plausible_hard, surgeon or physical therapist for implausible_hard, an unrelated non-medical worker for implausible_easy), so any issues are about agent choice, not the scene itself.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The medical abdominal exam in an examination room with a gloved hand is a clear, imageable prototype with a strong core profession. The scene readily supports a full plausibility gradient; the main limitation is that a medical student is visually too similar to a family doctor, which affects visual distinctiveness rather than scene viability.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematically, all four agents are correctly placed along the plausibility gradient for a gloved abdominal exam in a medical examination room, with strong overlap making the dentist a solid implausible_hard choice and the wedding photographer a clearly unrelated implausible_easy agent. Visually, three professions are clearly identifiable, but the family doctor and medical student would look nearly identical, risking a collapsed distinction at the top of the gradient. The underlying scene is strong and supports the intended gradient; refining the plausible_hard agent to a more visually distinct role would optimize experimental robustness.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met: four human professional/social roles; only the agent varies; all agents are physically capable of the action and differences are role-based."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A family doctor",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Family doctors routinely palpate patients\u2019 abdomens with gloved hands in examination rooms; this is a textbook primary-care exam. They are the default professional one expects in this exact scene.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that in some clinics nurses or nurse practitioners perform many routine abdominal exams, so a family doctor is not the only expected examiner; this slightly weakens the exclusivity but not enough to dislodge them as the prototypical agent."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A medical student",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Medical students often participate in physical exams under supervision and may touch a patient\u2019s abdomen with gloved hands in an exam room, but examining patients is training rather than their core professional duty. They are plausible but clearly less prototypical than a family doctor.",
+        "counter_arguments": {
+          "argument_for_higher": "In teaching hospitals, patients are frequently examined primarily by medical students, so a student palpating an abdomen may feel nearly as expected as a doctor in that specific institutional context.",
+          "argument_for_lower": "Outside of teaching settings, many exam rooms never have medical students present, and a solo student examining a patient might seem atypical or even inappropriate, suggesting a lower plausibility if one assumes a non-teaching clinic."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A dentist",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Dentists are medical professionals who wear gloves and examine patients in clinical rooms, but they focus on the mouth in dental operatories, not on abdominal exams in a general medical examination room. The overlap with a family doctor is strong, yet this specific event is wrong for their role.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a hospital-based oral surgeon or dentist performing a preoperative screening or helping in an emergency where they briefly examine areas beyond the mouth, making the abdominal touch barely plausible in an unusual setting.",
+          "argument_for_lower": "From lay expectations, dentists are strongly tied to teeth and dental chairs; seeing one palpate an abdomen in a standard exam room might feel so category-violating that a viewer quickly rejects it as just as implausible as a completely unrelated profession.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both the family doctor and the dentist are healthcare professionals providing clinical care to patients."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both work in clinical examination environments (treatment rooms with medical equipment), even if one is medical and the other dental."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both routinely use disposable gloves and medical instruments while examining patients."
+            },
+            "patient_object_type": {
+              "overlaps": true,
+              "reasoning": "Both act on human patients as their primary focus."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both perform close manual examinations involving palpation or probing of body tissues (though in different body regions)."
+            },
+            "overlap_count": 5,
+            "sufficient": true,
+            "negative_test": "Even ignoring the verb 'touch', a dentist is still strongly associated with gloved, close-up examination of a patient in a clinical room; this creates a clear connection to the family doctor scene despite the mismatch in body area and type of exam room."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A wedding photographer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Wedding photographers work in event and photography contexts and have no professional reason to wear gloves or palpate a patient\u2019s abdomen in a medical examination room. The domain, setting, and typical actions are maximally distant from this medical exam scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a contrived scenario where a wedding photographer is documenting a patient\u2019s hospital wedding or maternity session and briefly positions a subject\u2019s abdomen, but gloves, a medical exam room, and the term 'patient' make this far-fetched and still strongly implausible.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "The plausible_easy (family doctor) and plausible_hard (medical student) conditions are very close in plausibility and may be perceived as nearly equivalent by viewers, potentially collapsing this pair."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A family doctor can be shown in a white coat with a stethoscope and professional attire, which is widely recognized as 'doctor'."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A medical student typically also wears a white coat and stethoscope; visually they would look like a generic doctor or healthcare worker rather than specifically a 'medical student'."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A dentist can be portrayed in scrubs with a mask, dental loupes, and small dental instruments, which strongly cues 'dentist/dental professional'."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A wedding photographer carrying a professional camera, lenses, and possibly dressed in semi-formal event attire is clearly recognizable as a photographer."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Family doctor: white coat over business-casual clothes, stethoscope around the neck, ID badge, possibly a blood pressure cuff or clipboard nearby.",
+        "plausible_hard": "Medical student: young adult in a white coat over casual or business-casual clothes, possibly with a stethoscope and ID badge; visually very similar to a junior doctor.",
+        "implausible_hard": "Dentist: wearing scrubs or a dental tunic, mask, possibly dental loupes or headlamp, and holding small dental tools such as a mirror or probe.",
+        "implausible_easy": "Wedding photographer: dressed in smart-casual or semi-formal clothing, holding a large DSLR or mirrorless camera with a zoom lens, maybe with a camera strap and equipment bag."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": false,
+          "note": "Both the family doctor and medical student would likely appear in nearly identical white coats with stethoscopes, differing mainly in age, which is not a reliable visual cue for distinct roles."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "The family doctor in a white coat and stethoscope contrasts with the dentist in scrubs, mask, and dental tools."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "A white-coated doctor looks clearly different from a photographer carrying a camera and dressed for events."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "A white-coated medical student differs visually from a scrub-wearing, masked dentist with dental instruments."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "A medical student in medical attire is visually distinct from a photographer with camera gear."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A dentist in scrubs and mask is clearly different from a photographer carrying cameras and lenses."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "plausible_easy vs plausible_hard",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four conditions are thematically well-placed. Even if one wanted more visual separation at the top of the gradient, the same scene could easily use alternative agents (e.g., nurse or physician assistant for plausible_hard, surgeon or physical therapist for implausible_hard, an unrelated non-medical worker for implausible_easy), so any issues are about agent choice, not the scene itself.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The medical abdominal exam in an examination room with a gloved hand is a clear, imageable prototype with a strong core profession. The scene readily supports a full plausibility gradient; the main limitation is that a medical student is visually too similar to a family doctor, which affects visual distinctiveness rather than scene viability."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematically, all four agents are correctly placed along the plausibility gradient for a gloved abdominal exam in a medical examination room, with strong overlap making the dentist a solid implausible_hard choice and the wedding photographer a clearly unrelated implausible_easy agent. Visually, three professions are clearly identifiable, but the family doctor and medical student would look nearly identical, risking a collapsed distinction at the top of the gradient. The underlying scene is strong and supports the intended gradient; refining the plausible_hard agent to a more visually distinct role would optimize experimental robustness."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 109.36886966601014,
+  "token_info": {
+    "input_tokens": 5825,
+    "output_tokens": 8530
+  },
+  "success": true
+}

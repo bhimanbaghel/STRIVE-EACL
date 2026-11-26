@@ -1,0 +1,200 @@
+{
+  "verb": "eat",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professional roles, only the agent varies, and all plausibility differences stem from role typicality rather than physical ability.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A waiter\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A waiter is strongly associated with restaurant dining areas but their prototypical action there is serving, not eating; staff usually eat away from guest tables. The scene is plausible, but not the default or core event for this role, so it fits better as a moderate (plausible_hard) case than as a clear yes prototype.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"Waiters\u2019 core duty in the dining room is to serve customers, not to sit and eat a plated meal at a guest table in full uniform, so a viewer may pause before accepting this as normal and see it more as a break-time exception than a default scenario.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Chefs are tightly linked to restaurant food and certainly eat pasta, but typically do so in the kitchen or staff area rather than sitting at a guest table in full chef attire. This makes the scene somewhat unusual yet still easy to imagine (staff meal, tasting a finished dish), matching an \u2018unsure but ultimately yes\u2019 level of plausibility.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Chefs are the professionals most directly responsible for the pasta itself, and tasting what they cook is central to their role; one might argue that seeing a chef actually eating the dish, even at a table, is a very natural extension of their job and could serve as the default professional in this food-focused scene.\",\n        \"argument_for_lower\": \"Chefs typically remain in the kitchen and rarely sit in the dining room in full uniform to eat a full plated meal, so some viewers could find this odd enough to lean toward \u2018no\u2019 rather than \u2018yes\u2019, treating it as a setting where the chef does not quite belong while eating.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A fast-food worker\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A fast-food worker in uniform eating pasta at a restaurant table is easily interpretable as an off-duty employee grabbing a meal elsewhere, which is entirely realistic and not role-inappropriate. The strong food-service overlap with the scene makes this too plausible for an \u2018unsure no\u2019 category; it functions better as a non-core but acceptable eater (plausible_hard).\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Fast-food workers are food-service staff who routinely handle meals and work in restaurant-like environments; seeing one eat a plated dish at a table can feel like a straightforward, everyday occurrence (an employee grabbing dinner after a shift), supporting a plausible_hard placement rather than an implausible one.\",\n        \"argument_for_lower\": \"One might argue that the branding and casual counter-service uniform looks out of place in a full-service restaurant with plated pasta, so a viewer might regard this as contextually wrong for that specific type of restaurant and push it toward a low-fit, implausible_hard placement.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both waiter and fast-food worker are food-service occupations whose work centers on serving prepared food to customers.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both typically work in restaurant environments with customers eating at tables or counters, even if the service style (full service vs fast food) differs.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both use trays, point-of-sale systems, and handle plates/packaging and utensils as part of serving food.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both handle ready-to-eat human food as the central object of their work.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both roles involve carrying food to customers, clearing tables, and moving around dining areas performing service tasks.\"\n          },\n          \"overlap_count\": 5,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the verb \u2018eat\u2019, a fast-food worker is still strongly associated with restaurant-style environments and serving food, so the connection to a restaurant table and a plated meal remains. However, because any person (including a fast-food worker) can naturally be a diner, this overlap does not produce a strong sense of \u2018wrongness\u2019 for them eating there; hence they are too plausible for the implausible_hard category despite the high overlap.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A firefighter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A firefighter in full turnout gear eating a plated pasta meal at a restaurant table is strongly out of domain: firefighting has no intrinsic connection to restaurant dining, pasta, or table service. Visually, this looks like emergency gear in a calm dining context, which a viewer would quickly judge as odd and not a normal professional activity, fitting a clear \u2018no\u2019 case from a maximally different domain.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Firefighters, like anyone else, need to eat and can sometimes be seen having meals outside the fire station, so one could argue this is simply a firefighter on a break, making the situation at least marginally plausible despite the gear.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The plausible_easy agent (waiter) actually fits plausible_hard, and the implausible_hard agent (fast-food worker) is also best classified as plausible_hard, collapsing the intended distinction between plausible_hard and implausible_hard.\",\n    \"collapsed_pairs\": \"The plausible_easy, plausible_hard, and implausible_hard conditions all involve agents who can quite realistically be diners at a restaurant table, making their plausibility levels too similar to reliably distinguish.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A waiter in standard serving attire (white shirt, dark pants, apron/vest, possibly a bow tie and order pad) is readily recognized as restaurant waitstaff even against a plain background.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A chef in a white jacket and tall toque is a canonical, highly recognizable professional image.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A fast-food worker in a branded polo or T-shirt with matching cap/visor and name tag clearly suggests a quick-service restaurant employee.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A firefighter in full turnout gear with helmet and reflective stripes is one of the most visually distinctive professions.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"White button-up shirt, black trousers, black vest or apron, possibly a bow tie, carrying or near an order pad or serving tray.\",\n      \"plausible_hard\": \"White chef\u2019s jacket, tall white chef\u2019s hat (toque), dark or checkered pants, apron, possibly with a kitchen towel.\",\n      \"implausible_hard\": \"Branded polo shirt or T-shirt, matching cap or visor with a fast-food logo, name tag, simple uniform pants, possibly a drive-thru headset.\",\n      \"implausible_easy\": \"Heavy fire-resistant jacket and pants with reflective stripes, large helmet, bulky boots, possibly with visible firefighting tools like a hose or axe.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Waiter and chef have clearly different uniforms (dark server attire vs white jacket and toque).\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Waiter\u2019s formal restaurant attire contrasts with the branded casual fast-food uniform.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Server clothing is entirely different from bulky firefighter turnout gear.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef whites and hat are very different in style and color from a logoed polo and cap.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef uniform and firefighter gear have different colors, bulk, and equipment.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A light fast-food uniform looks nothing like heavy firefighting gear.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": false,\n    \"imageable\": true,\n    \"gradient_supportable\": false,\n    \"gradient_support_reasoning\": \"Two conditions (waiter as plausible_easy and fast-food worker as implausible_hard) are misclassified, and the underlying problem is that \u2018eating pasta at a restaurant table\u2019 is a very generic human activity with no single profession whose core, prototypical job is to sit and eat in this way. While roles like \u2018food critic\u2019 could conceptually serve as a prototype eater, they lack a distinctive, widely recognized visual uniform and so fail the experiment\u2019s identifiability requirement. For implausible_hard, any profession from the food or hospitality domain (e.g., bartender, cafeteria worker, barista) can very naturally appear as a diner off duty, making them too plausible for \u2018unsure no\u2019 despite multi-dimensional overlap. Because it is hard to populate all four conditions with visually identifiable agents that produce a clear plausibility gradient, the scene itself does not robustly support the required four-level structure.\",\n    \"scene_verdict\": \"NEEDS_REDESIGN\",\n    \"scene_notes\": \"The basic action and instrument are fine and easily photographed, but \u2018eating pasta at a restaurant table\u2019 is too generic an action to anchor a strong role-based plausibility gradient with visually distinctive professions. As a result, several agents cluster at moderate plausibility and it is difficult to find a truly prototypical professional eater or a related-but-wrong agent that is genuinely implausible without relying on subtle off-duty interpretations.\"\n  },\n  \"overall\": {\n    \"score\": \"2/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"NEEDS_REDESIGN\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"Visually, all four professions are clearly identifiable and distinct, so image generation is straightforward. However, thematically, \u2018eating pasta at a restaurant table\u2019 is a general human activity, so the waiter and fast-food worker are both too plausible for their assigned positions and the three upper conditions collapse into similar plausibility. Because no visually distinctive profession is a strong prototype for this action and it is hard to find a related-but-wrong agent that is truly implausible, the scene needs conceptual redesign to support a reliable four-level plausibility gradient.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professional roles, only the agent varies, and all plausibility differences stem from role typicality rather than physical ability."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A waiter",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A waiter is strongly associated with restaurant dining areas but their prototypical action there is serving, not eating; staff usually eat away from guest tables. The scene is plausible, but not the default or core event for this role, so it fits better as a moderate (plausible_hard) case than as a clear yes prototype.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "Waiters\u2019 core duty in the dining room is to serve customers, not to sit and eat a plated meal at a guest table in full uniform, so a viewer may pause before accepting this as normal and see it more as a break-time exception than a default scenario."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A chef",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Chefs are tightly linked to restaurant food and certainly eat pasta, but typically do so in the kitchen or staff area rather than sitting at a guest table in full chef attire. This makes the scene somewhat unusual yet still easy to imagine (staff meal, tasting a finished dish), matching an \u2018unsure but ultimately yes\u2019 level of plausibility.",
+        "counter_arguments": {
+          "argument_for_higher": "Chefs are the professionals most directly responsible for the pasta itself, and tasting what they cook is central to their role; one might argue that seeing a chef actually eating the dish, even at a table, is a very natural extension of their job and could serve as the default professional in this food-focused scene.",
+          "argument_for_lower": "Chefs typically remain in the kitchen and rarely sit in the dining room in full uniform to eat a full plated meal, so some viewers could find this odd enough to lean toward \u2018no\u2019 rather than \u2018yes\u2019, treating it as a setting where the chef does not quite belong while eating."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A fast-food worker",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A fast-food worker in uniform eating pasta at a restaurant table is easily interpretable as an off-duty employee grabbing a meal elsewhere, which is entirely realistic and not role-inappropriate. The strong food-service overlap with the scene makes this too plausible for an \u2018unsure no\u2019 category; it functions better as a non-core but acceptable eater (plausible_hard).",
+        "counter_arguments": {
+          "argument_for_higher": "Fast-food workers are food-service staff who routinely handle meals and work in restaurant-like environments; seeing one eat a plated dish at a table can feel like a straightforward, everyday occurrence (an employee grabbing dinner after a shift), supporting a plausible_hard placement rather than an implausible one.",
+          "argument_for_lower": "One might argue that the branding and casual counter-service uniform looks out of place in a full-service restaurant with plated pasta, so a viewer might regard this as contextually wrong for that specific type of restaurant and push it toward a low-fit, implausible_hard placement.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both waiter and fast-food worker are food-service occupations whose work centers on serving prepared food to customers."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both typically work in restaurant environments with customers eating at tables or counters, even if the service style (full service vs fast food) differs."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both use trays, point-of-sale systems, and handle plates/packaging and utensils as part of serving food."
+            },
+            "patient_object_type": {
+              "overlaps": true,
+              "reasoning": "Both handle ready-to-eat human food as the central object of their work."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both roles involve carrying food to customers, clearing tables, and moving around dining areas performing service tasks."
+            },
+            "overlap_count": 5,
+            "sufficient": true,
+            "negative_test": "Even ignoring the verb \u2018eat\u2019, a fast-food worker is still strongly associated with restaurant-style environments and serving food, so the connection to a restaurant table and a plated meal remains. However, because any person (including a fast-food worker) can naturally be a diner, this overlap does not produce a strong sense of \u2018wrongness\u2019 for them eating there; hence they are too plausible for the implausible_hard category despite the high overlap."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A firefighter",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A firefighter in full turnout gear eating a plated pasta meal at a restaurant table is strongly out of domain: firefighting has no intrinsic connection to restaurant dining, pasta, or table service. Visually, this looks like emergency gear in a calm dining context, which a viewer would quickly judge as odd and not a normal professional activity, fitting a clear \u2018no\u2019 case from a maximally different domain.",
+        "counter_arguments": {
+          "argument_for_higher": "Firefighters, like anyone else, need to eat and can sometimes be seen having meals outside the fire station, so one could argue this is simply a firefighter on a break, making the situation at least marginally plausible despite the gear.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The plausible_easy agent (waiter) actually fits plausible_hard, and the implausible_hard agent (fast-food worker) is also best classified as plausible_hard, collapsing the intended distinction between plausible_hard and implausible_hard.",
+      "collapsed_pairs": "The plausible_easy, plausible_hard, and implausible_hard conditions all involve agents who can quite realistically be diners at a restaurant table, making their plausibility levels too similar to reliably distinguish."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A waiter in standard serving attire (white shirt, dark pants, apron/vest, possibly a bow tie and order pad) is readily recognized as restaurant waitstaff even against a plain background."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A chef in a white jacket and tall toque is a canonical, highly recognizable professional image."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A fast-food worker in a branded polo or T-shirt with matching cap/visor and name tag clearly suggests a quick-service restaurant employee."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A firefighter in full turnout gear with helmet and reflective stripes is one of the most visually distinctive professions."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "White button-up shirt, black trousers, black vest or apron, possibly a bow tie, carrying or near an order pad or serving tray.",
+        "plausible_hard": "White chef\u2019s jacket, tall white chef\u2019s hat (toque), dark or checkered pants, apron, possibly with a kitchen towel.",
+        "implausible_hard": "Branded polo shirt or T-shirt, matching cap or visor with a fast-food logo, name tag, simple uniform pants, possibly a drive-thru headset.",
+        "implausible_easy": "Heavy fire-resistant jacket and pants with reflective stripes, large helmet, bulky boots, possibly with visible firefighting tools like a hose or axe."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Waiter and chef have clearly different uniforms (dark server attire vs white jacket and toque)."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Waiter\u2019s formal restaurant attire contrasts with the branded casual fast-food uniform."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Server clothing is entirely different from bulky firefighter turnout gear."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Chef whites and hat are very different in style and color from a logoed polo and cap."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Chef uniform and firefighter gear have different colors, bulk, and equipment."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A light fast-food uniform looks nothing like heavy firefighting gear."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": false,
+      "imageable": true,
+      "gradient_supportable": false,
+      "gradient_support_reasoning": "Two conditions (waiter as plausible_easy and fast-food worker as implausible_hard) are misclassified, and the underlying problem is that \u2018eating pasta at a restaurant table\u2019 is a very generic human activity with no single profession whose core, prototypical job is to sit and eat in this way. While roles like \u2018food critic\u2019 could conceptually serve as a prototype eater, they lack a distinctive, widely recognized visual uniform and so fail the experiment\u2019s identifiability requirement. For implausible_hard, any profession from the food or hospitality domain (e.g., bartender, cafeteria worker, barista) can very naturally appear as a diner off duty, making them too plausible for \u2018unsure no\u2019 despite multi-dimensional overlap. Because it is hard to populate all four conditions with visually identifiable agents that produce a clear plausibility gradient, the scene itself does not robustly support the required four-level structure.",
+      "scene_verdict": "NEEDS_REDESIGN",
+      "scene_notes": "The basic action and instrument are fine and easily photographed, but \u2018eating pasta at a restaurant table\u2019 is too generic an action to anchor a strong role-based plausibility gradient with visually distinctive professions. As a result, several agents cluster at moderate plausibility and it is difficult to find a truly prototypical professional eater or a related-but-wrong agent that is genuinely implausible without relying on subtle off-duty interpretations."
+    },
+    "overall": {
+      "score": "2/4",
+      "borderline_count": 0,
+      "scene_verdict": "NEEDS_REDESIGN",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "Visually, all four professions are clearly identifiable and distinct, so image generation is straightforward. However, thematically, \u2018eating pasta at a restaurant table\u2019 is a general human activity, so the waiter and fast-food worker are both too plausible for their assigned positions and the three upper conditions collapse into similar plausibility. Because no visually distinctive profession is a strong prototype for this action and it is hard to find a related-but-wrong agent that is truly implausible, the scene needs conceptual redesign to support a reliable four-level plausibility gradient."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 2,
+    "borderline_count": 0,
+    "incorrect_count": 2,
+    "has_scene_error": true,
+    "scene_verdict": "NEEDS_REDESIGN",
+    "gradient_supportable": false,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard"
+      }
+    },
+    "score_strict": 2,
+    "score_lenient": 2.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 167.88635957241058,
+  "token_info": {
+    "input_tokens": 5961,
+    "output_tokens": 15040
+  },
+  "success": true
+}

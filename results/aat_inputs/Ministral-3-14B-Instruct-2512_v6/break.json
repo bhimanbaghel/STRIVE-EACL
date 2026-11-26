@@ -1,0 +1,25 @@
+{
+  "verb": "break",
+  "parsed": {
+    "scene": {
+      "verb_form": "breaks",
+      "patient": "a wooden chair",
+      "instrument": "with an axe",
+      "location": "in a forest clearing"
+    },
+    "agents": {
+      "plausible_easy": {"agent": "A lumberjack"},
+      "plausible_hard": {"agent": "A carpenter"},
+      "implausible_hard": {"agent": "A blacksmith"},
+      "implausible_easy": {"agent": "A ballerina"}
+    },
+    "sentences": {
+      "plausible_easy": "A lumberjack breaks a wooden chair with an axe in a forest clearing.",
+      "plausible_hard": "A carpenter breaks a wooden chair with an axe in a forest clearing.",
+      "implausible_hard": "A blacksmith breaks a wooden chair with an axe in a forest clearing.",
+      "implausible_easy": "A ballerina breaks a wooden chair with an axe in a forest clearing."
+    }
+  },
+  "validation_errors": [],
+  "success": true
+}

@@ -1,0 +1,25 @@
+{
+  "verb": "shoot",
+  "parsed": {
+    "scene": {
+      "verb_form": "shoots",
+      "patient": "a target",
+      "instrument": "with a rifle",
+      "location": "at the shooting range"
+    },
+    "agents": {
+      "plausible_easy": {"agent": "A competitive marksman"},
+      "plausible_hard": {"agent": "A police officer"},
+      "implausible_hard": {"agent": "A sniper"},
+      "implausible_easy": {"agent": "A florist"}
+    },
+    "sentences": {
+      "plausible_easy": "A competitive marksman shoots a target with a rifle at the shooting range.",
+      "plausible_hard": "A police officer shoots a target with a rifle at the shooting range.",
+      "implausible_hard": "A sniper shoots a target with a rifle at the shooting range.",
+      "implausible_easy": "A florist shoots a target with a rifle at the shooting range."
+    }
+  },
+  "validation_errors": [],
+  "success": true
+}

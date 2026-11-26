@@ -1,0 +1,200 @@
+{
+  "verb": "cut",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met; only the agent varies while verb form, patient, instrument, and location are constant across sentences.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A surgeon\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"A surgeon cutting tissue with surgical scissors in an operating room is the canonical, most expected scenario for this event. This action is central to surgeons\u2019 core duties and strongly matches lay expectations.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that viewers may think more generically of a 'doctor' in surgery and not distinguish surgeon from other medical staff, slightly weakening the prototype status, but among realistic agents the surgeon is still clearly the default for doing the cutting.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A nurse\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Nurses are naturally present in operating rooms and can assist with or occasionally perform minor cutting tasks, but their primary role is patient care and assistance rather than leading the cutting of flesh. This makes the event believable yet not prototypical, fitting a moderate thematic fit.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In some contexts, advanced practice nurses or nurse practitioners perform minor surgical procedures, so a viewer thinking of such roles might find a nurse cutting tissue nearly as normal as a surgeon, pushing it toward plausible_easy.\",\n        \"argument_for_lower\": \"A na\u00efve observer might believe nurses never perform cutting themselves and only hand instruments to surgeons, which could make a nurse doing the cutting feel wrong rather than merely atypical, nudging it toward an implausible_hard judgment.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A dentist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A dentist is a healthcare professional who performs precise, often invasive procedures on human tissue using specialized instruments, but is typically associated with dental offices and teeth/gums rather than a hospital operating room cutting a generic piece of flesh with surgical scissors. This strong domain overlap plus the wrong setting and object yields a hesitant 'no', matching implausible_hard.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Because dentists are doctors who operate on human tissue, some viewers might generalize and see any doctor wielding surgical tools in a clinical space as acceptable, treating the dentist as another kind of surgeon and thus as an unusual but still plausible presence in the OR (plausible_hard).\",\n        \"argument_for_lower\": \"Other viewers may associate dentists exclusively with teeth and dental offices, so seeing a dentist in full surgical garb cutting a generic piece of flesh in an operating room could feel entirely out of place, more like a clear 'no' similar to the ballet dancer (implausible_easy).\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both surgeon and dentist are medical/healthcare professionals treating human patients.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Surgeons typically work in hospital operating rooms, whereas dentists typically work in dental clinics or offices.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use specialized metal instruments for invasive procedures, even though the specific tools (surgical scissors vs dental drills/scalers) differ.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both work directly on parts of the human body and living tissue (surgeons on organs/soft tissue, dentists on teeth and gums).\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform fine, precise manual procedures involving cutting, scraping, or manipulating tissue.\"\n        },\n        \"overlap_count\": 4,\n        \"sufficient\": true,\n        \"negative_test\": \"Even if we ignore that both can 'cut', a dentist remains conceptually linked to a surgeon as a healthcare provider performing invasive procedures on human tissue with specialized instruments, so the association with the surgical scene persists while still feeling inappropriate for this specific OR context.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballet dancer belongs to the performing-arts domain and is not associated with medical settings, surgical tools, or handling raw flesh, so the scene is instantly rejected as bizarre. There is effectively no meaningful semantic connection between this role and the operating-room cutting event.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might very abstractly note that dancers, like surgeons, require precise motor control, but this similarity in body skill does not connect them to medicine, operating rooms, or surgical instruments and is far too weak to justify implausible_hard.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Surgical scrubs, sterile gown, cap, and mask are a very stereotyped look that laypeople readily label as a surgeon or operating-room doctor.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Scrubs with a name badge and possibly a stethoscope form a standard, easily recognized nurse/medical-staff uniform.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A white coat or scrubs combined with a dental mask and small dental instruments (mirror or drill) forms a classic, easily recognized dentist appearance.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A leotard with tutu and pointe shoes is iconic of a ballet dancer and is rarely confused with other professions.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"A surgeon typically wears colored scrubs under a sterile surgical gown, with a surgical cap, mask, and gloves, often holding surgical instruments such as scissors or a scalpel.\",\n      \"plausible_hard\": \"A nurse usually wears scrubs (often in solid colors), comfortable shoes, a name badge, and sometimes a stethoscope or carries a clipboard, with no sterile gown or full OR gear in typical representations.\",\n      \"implausible_hard\": \"A dentist commonly wears a white coat or clinic scrubs, a surgical mask, possibly magnifying loupes, and holds a dental mirror or drill, often associated with dental practice equipment.\",\n      \"implausible_easy\": \"A ballet dancer typically wears a leotard with a tutu or other ballet costume, tights, and pointe shoes, often with hair in a bun and a poised dance stance.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"The surgeon\u2019s sterile gown, cap, and full OR setup contrasts with the nurse\u2019s simpler scrubs-and-stethoscope look, producing different silhouettes and accessories.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"The surgeon is shown in full operating-room attire, while the dentist is in a clinic-style white coat or dental scrubs with dental instruments such as a mirror or drill; both are medical but with distinct uniforms and tools.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A surgeon in surgical gear looks entirely different from a ballet dancer in a tutu and pointe shoes.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A nurse in plain scrubs with a stethoscope or chart differs visually from a dentist with a white coat and dental instruments, despite both being healthcare workers.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Nursing scrubs and medical accessories are visually very different from ballet attire and posture.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A dentist\u2019s clinical clothing and tools contrast sharply with a ballet dancer\u2019s tutu and dance shoes.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four conditions were judged CORRECT, and the operating-room cutting scenario naturally affords clear roles with different plausibility levels (e.g., surgeon as core prototype, nurse as atypically plausible, dentist as related-but-wrong, and non-medical roles as clearly unrelated). This indicates the scene itself robustly supports the full plausibility gradient without needing redesign.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The medical operating-room scene with a piece of flesh and surgical scissors is concrete, easily photographed, has a strong prototypical agent (surgeon), and supports distinct plausible and implausible agents with varying thematic fit.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"The operating-room scene with cutting a piece of flesh using surgical scissors yields a strong, well-ordered plausibility gradient: surgeon (clear yes), nurse (atypical but plausible), dentist (related but wrong), and ballet dancer (clearly wrong). All four roles have distinctive, easily recognizable visual identities and are mutually distinguishable, making the stimuli suitable for rapid plausibility judgments without textual cues. No agent or scene redesign is required.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met; only the agent varies while verb form, patient, instrument, and location are constant across sentences."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A surgeon",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "A surgeon cutting tissue with surgical scissors in an operating room is the canonical, most expected scenario for this event. This action is central to surgeons\u2019 core duties and strongly matches lay expectations.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that viewers may think more generically of a 'doctor' in surgery and not distinguish surgeon from other medical staff, slightly weakening the prototype status, but among realistic agents the surgeon is still clearly the default for doing the cutting."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A nurse",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Nurses are naturally present in operating rooms and can assist with or occasionally perform minor cutting tasks, but their primary role is patient care and assistance rather than leading the cutting of flesh. This makes the event believable yet not prototypical, fitting a moderate thematic fit.",
+        "counter_arguments": {
+          "argument_for_higher": "In some contexts, advanced practice nurses or nurse practitioners perform minor surgical procedures, so a viewer thinking of such roles might find a nurse cutting tissue nearly as normal as a surgeon, pushing it toward plausible_easy.",
+          "argument_for_lower": "A na\u00efve observer might believe nurses never perform cutting themselves and only hand instruments to surgeons, which could make a nurse doing the cutting feel wrong rather than merely atypical, nudging it toward an implausible_hard judgment."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A dentist",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A dentist is a healthcare professional who performs precise, often invasive procedures on human tissue using specialized instruments, but is typically associated with dental offices and teeth/gums rather than a hospital operating room cutting a generic piece of flesh with surgical scissors. This strong domain overlap plus the wrong setting and object yields a hesitant 'no', matching implausible_hard.",
+        "counter_arguments": {
+          "argument_for_higher": "Because dentists are doctors who operate on human tissue, some viewers might generalize and see any doctor wielding surgical tools in a clinical space as acceptable, treating the dentist as another kind of surgeon and thus as an unusual but still plausible presence in the OR (plausible_hard).",
+          "argument_for_lower": "Other viewers may associate dentists exclusively with teeth and dental offices, so seeing a dentist in full surgical garb cutting a generic piece of flesh in an operating room could feel entirely out of place, more like a clear 'no' similar to the ballet dancer (implausible_easy)."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both surgeon and dentist are medical/healthcare professionals treating human patients."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Surgeons typically work in hospital operating rooms, whereas dentists typically work in dental clinics or offices."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use specialized metal instruments for invasive procedures, even though the specific tools (surgical scissors vs dental drills/scalers) differ."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both work directly on parts of the human body and living tissue (surgeons on organs/soft tissue, dentists on teeth and gums)."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform fine, precise manual procedures involving cutting, scraping, or manipulating tissue."
+          },
+          "overlap_count": 4,
+          "sufficient": true,
+          "negative_test": "Even if we ignore that both can 'cut', a dentist remains conceptually linked to a surgeon as a healthcare provider performing invasive procedures on human tissue with specialized instruments, so the association with the surgical scene persists while still feeling inappropriate for this specific OR context."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballet dancer belongs to the performing-arts domain and is not associated with medical settings, surgical tools, or handling raw flesh, so the scene is instantly rejected as bizarre. There is effectively no meaningful semantic connection between this role and the operating-room cutting event.",
+        "counter_arguments": {
+          "argument_for_higher": "One might very abstractly note that dancers, like surgeons, require precise motor control, but this similarity in body skill does not connect them to medicine, operating rooms, or surgical instruments and is far too weak to justify implausible_hard.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Surgical scrubs, sterile gown, cap, and mask are a very stereotyped look that laypeople readily label as a surgeon or operating-room doctor."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Scrubs with a name badge and possibly a stethoscope form a standard, easily recognized nurse/medical-staff uniform."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A white coat or scrubs combined with a dental mask and small dental instruments (mirror or drill) forms a classic, easily recognized dentist appearance."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A leotard with tutu and pointe shoes is iconic of a ballet dancer and is rarely confused with other professions."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "A surgeon typically wears colored scrubs under a sterile surgical gown, with a surgical cap, mask, and gloves, often holding surgical instruments such as scissors or a scalpel.",
+        "plausible_hard": "A nurse usually wears scrubs (often in solid colors), comfortable shoes, a name badge, and sometimes a stethoscope or carries a clipboard, with no sterile gown or full OR gear in typical representations.",
+        "implausible_hard": "A dentist commonly wears a white coat or clinic scrubs, a surgical mask, possibly magnifying loupes, and holds a dental mirror or drill, often associated with dental practice equipment.",
+        "implausible_easy": "A ballet dancer typically wears a leotard with a tutu or other ballet costume, tights, and pointe shoes, often with hair in a bun and a poised dance stance."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "The surgeon\u2019s sterile gown, cap, and full OR setup contrasts with the nurse\u2019s simpler scrubs-and-stethoscope look, producing different silhouettes and accessories."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "The surgeon is shown in full operating-room attire, while the dentist is in a clinic-style white coat or dental scrubs with dental instruments such as a mirror or drill; both are medical but with distinct uniforms and tools."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "A surgeon in surgical gear looks entirely different from a ballet dancer in a tutu and pointe shoes."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "A nurse in plain scrubs with a stethoscope or chart differs visually from a dentist with a white coat and dental instruments, despite both being healthcare workers."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Nursing scrubs and medical accessories are visually very different from ballet attire and posture."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A dentist\u2019s clinical clothing and tools contrast sharply with a ballet dancer\u2019s tutu and dance shoes."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four conditions were judged CORRECT, and the operating-room cutting scenario naturally affords clear roles with different plausibility levels (e.g., surgeon as core prototype, nurse as atypically plausible, dentist as related-but-wrong, and non-medical roles as clearly unrelated). This indicates the scene itself robustly supports the full plausibility gradient without needing redesign.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The medical operating-room scene with a piece of flesh and surgical scissors is concrete, easily photographed, has a strong prototypical agent (surgeon), and supports distinct plausible and implausible agents with varying thematic fit."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "The operating-room scene with cutting a piece of flesh using surgical scissors yields a strong, well-ordered plausibility gradient: surgeon (clear yes), nurse (atypical but plausible), dentist (related but wrong), and ballet dancer (clearly wrong). All four roles have distinctive, easily recognizable visual identities and are mutually distinguishable, making the stimuli suitable for rapid plausibility judgments without textual cues. No agent or scene redesign is required."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 4,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even if we ignore that both can 'cut', a dentist remains conceptually linked to a surgeon as a healthcare provider performing invasive procedures on human tissue with specialized instruments, so the association with the surgical scene persists while still feeling inappropriate for this specific OR context.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 122.84497365355492,
+  "token_info": {
+    "input_tokens": 6280,
+    "output_tokens": 10554
+  },
+  "success": true
+}

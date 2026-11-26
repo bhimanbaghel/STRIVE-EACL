@@ -1,0 +1,205 @@
+{
+  "verb": "dig",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A groundskeeper\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Groundskeepers routinely dig holes as part of grounds and yard maintenance, and it is natural to see them doing this in a backyard, making them the most expected professional digger among the four.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"Backyards at private homes more typically involve homeowners or independent gardeners rather than institutional groundskeepers, so one might argue the groundskeeper is just one plausible professional among several and thus fits better as plausible_hard.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Digging holes for planting, installing posts, and other landscaping tasks is a routine part of a groundskeeper\u2019s primary duties.\",\n        \"removal_test\": \"NO: Even without groundskeepers, people such as homeowners or other landscaping professionals would still dig holes in backyards, so the action is not exclusive to this profession.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A utility worker\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Utility workers do dig holes to access buried cables and pipes and can realistically work in a residential backyard when needed, but this is less stereotypical for a backyard than general grounds or landscaping work.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Digging into the ground to reach underground utilities is central to many utility workers\u2019 jobs, so one could argue they are just as prototypical for digging holes on residential property as a grounds-focused worker.\",\n        \"argument_for_lower\": \"Utility workers are more strongly associated with streets, sidewalks, and easements than with private backyards, so their presence in a backyard could feel odd enough to push them toward implausible_hard relative to a groundskeeper.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A miner\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Miners are strongly associated with digging and earth-moving using similar tools, but their typical work context is a mine or industrial site, not a residential backyard, making this feel wrong despite clear domain overlap.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"If one focuses on the idea of a professional digger rather than the specific setting, a miner could seem like an alternative kind of earthworker who might plausibly be shown digging a generic hole outdoors.\",\n        \"argument_for_lower\": \"Miners normally work deep underground or at remote extraction sites; seeing someone in full mining gear with a headlamp digging in a suburban backyard would strike many viewers as clearly bizarre, closer to the immediate rejection given to the ballet dancer.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both are manual labor roles centered on working with land/earth, even though they belong to different specific industries (landscaping vs extraction).\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Groundskeepers work on lawns, gardens, parks, and similar open grounds, whereas miners are typically in mines or heavy industrial sites, not residential yards.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both commonly use shovels and other digging tools, and miners also use pickaxes which can plausibly appear next to a shovel.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act on soil, earth, and rock\u2014moving or removing ground material.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely perform digging, shoveling, and lifting earth or debris.\"\n        },\n        \"overlap_count\": 4,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the specific verb \u2018dig\u2019, both professions are earth-working manual labor roles that handle soil/rock with similar tools, so there is still a conceptual association, though a miner in a small backyard setting feels clearly out of place.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballet dancer in full dance attire has no professional or contextual link to digging a hole in a backyard, so the event is instantly rejected as out of role and setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"A person who happens to be a ballet dancer could physically dig a hole in their own backyard in everyday clothes, so the action is not impossible in principle.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Uniform-style green/khaki clothing with logo, outdoor hat, boots, and yard tools clearly mark a grounds/landscaping worker.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"High-visibility vest, hard hat, and tool belt are iconic for utility/construction-type workers.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A hard hat with headlamp, dusty coveralls, harness, and pickaxe are distinctive visual markers of a miner.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Leotard, tights, ballet slippers, and hair in a bun are iconic and strongly associated with a ballet dancer.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Groundskeeper wearing a green or khaki work uniform with an embroidered logo, sturdy boots, a wide-brimmed sun hat, and carrying a metal shovel and other small yard tools on a belt.\",\n      \"plausible_hard\": \"Utility worker in a bright orange high-visibility vest over work clothes, hard hat, work boots, and a tool belt with utility-specific tools, with a compact shovel nearby.\",\n      \"implausible_hard\": \"Miner dressed in dusty, dark coveralls, heavy boots, a hard hat with an attached headlamp, possibly a safety harness, and a pickaxe resting beside a shovel.\",\n      \"implausible_easy\": \"Ballet dancer in a pink leotard and tights with ballet slippers, hair pulled back into a tight bun, possibly with a light wrap or robe over the shoulders.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Groundskeeper\u2019s green/khaki uniform and wide-brimmed hat contrast with the utility worker\u2019s bright high-visibility vest and hard hat.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Groundskeeper appears in clean yard-maintenance attire, whereas the miner has a hard hat with headlamp and dusty coveralls.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Work clothes with shovel are visually very different from ballet attire with leotard and slippers.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Utility worker\u2019s high-visibility vest and standard hard hat differ from the miner\u2019s dirt-covered coveralls, headlamp helmet, and mining gear.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Utility/construction gear contrasts sharply with ballet costume.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Heavy mining gear and tools are clearly distinct from light ballet clothing and footwear.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four current agents fit their intended plausibility levels. Even if one wanted a stronger prototype, the scene readily allows clearly core professionals (e.g., gardener/landscaper) and various related or unrelated roles to fill each condition, so the gradient is supported by the scene rather than being inherently limited.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The scene of digging a hole with a shovel in a backyard is concrete and easy to depict, has a clear earth-working professional prototype, and supports a full plausibility gradient with visually distinct, role-appropriate and role-inappropriate agents.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"All agents are valid human professions, and their role-based fit to digging a hole in a backyard spans the intended plausibility gradient appropriately. Visual identities are clear and distinct, enabling reliable recognition from images alone. The scene is simple, instrumentally correct, and well-suited for generating images that probe semantic plausibility judgments.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A groundskeeper",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Groundskeepers routinely dig holes as part of grounds and yard maintenance, and it is natural to see them doing this in a backyard, making them the most expected professional digger among the four.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "Backyards at private homes more typically involve homeowners or independent gardeners rather than institutional groundskeepers, so one might argue the groundskeeper is just one plausible professional among several and thus fits better as plausible_hard."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Digging holes for planting, installing posts, and other landscaping tasks is a routine part of a groundskeeper\u2019s primary duties.",
+          "removal_test": "NO: Even without groundskeepers, people such as homeowners or other landscaping professionals would still dig holes in backyards, so the action is not exclusive to this profession."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A utility worker",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Utility workers do dig holes to access buried cables and pipes and can realistically work in a residential backyard when needed, but this is less stereotypical for a backyard than general grounds or landscaping work.",
+        "counter_arguments": {
+          "argument_for_higher": "Digging into the ground to reach underground utilities is central to many utility workers\u2019 jobs, so one could argue they are just as prototypical for digging holes on residential property as a grounds-focused worker.",
+          "argument_for_lower": "Utility workers are more strongly associated with streets, sidewalks, and easements than with private backyards, so their presence in a backyard could feel odd enough to push them toward implausible_hard relative to a groundskeeper."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A miner",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Miners are strongly associated with digging and earth-moving using similar tools, but their typical work context is a mine or industrial site, not a residential backyard, making this feel wrong despite clear domain overlap.",
+        "counter_arguments": {
+          "argument_for_higher": "If one focuses on the idea of a professional digger rather than the specific setting, a miner could seem like an alternative kind of earthworker who might plausibly be shown digging a generic hole outdoors.",
+          "argument_for_lower": "Miners normally work deep underground or at remote extraction sites; seeing someone in full mining gear with a headlamp digging in a suburban backyard would strike many viewers as clearly bizarre, closer to the immediate rejection given to the ballet dancer."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both are manual labor roles centered on working with land/earth, even though they belong to different specific industries (landscaping vs extraction)."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Groundskeepers work on lawns, gardens, parks, and similar open grounds, whereas miners are typically in mines or heavy industrial sites, not residential yards."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both commonly use shovels and other digging tools, and miners also use pickaxes which can plausibly appear next to a shovel."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act on soil, earth, and rock\u2014moving or removing ground material."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both routinely perform digging, shoveling, and lifting earth or debris."
+          },
+          "overlap_count": 4,
+          "sufficient": true,
+          "negative_test": "Even ignoring the specific verb \u2018dig\u2019, both professions are earth-working manual labor roles that handle soil/rock with similar tools, so there is still a conceptual association, though a miner in a small backyard setting feels clearly out of place."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballet dancer in full dance attire has no professional or contextual link to digging a hole in a backyard, so the event is instantly rejected as out of role and setting.",
+        "counter_arguments": {
+          "argument_for_higher": "A person who happens to be a ballet dancer could physically dig a hole in their own backyard in everyday clothes, so the action is not impossible in principle.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Uniform-style green/khaki clothing with logo, outdoor hat, boots, and yard tools clearly mark a grounds/landscaping worker."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "High-visibility vest, hard hat, and tool belt are iconic for utility/construction-type workers."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A hard hat with headlamp, dusty coveralls, harness, and pickaxe are distinctive visual markers of a miner."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Leotard, tights, ballet slippers, and hair in a bun are iconic and strongly associated with a ballet dancer."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Groundskeeper wearing a green or khaki work uniform with an embroidered logo, sturdy boots, a wide-brimmed sun hat, and carrying a metal shovel and other small yard tools on a belt.",
+        "plausible_hard": "Utility worker in a bright orange high-visibility vest over work clothes, hard hat, work boots, and a tool belt with utility-specific tools, with a compact shovel nearby.",
+        "implausible_hard": "Miner dressed in dusty, dark coveralls, heavy boots, a hard hat with an attached headlamp, possibly a safety harness, and a pickaxe resting beside a shovel.",
+        "implausible_easy": "Ballet dancer in a pink leotard and tights with ballet slippers, hair pulled back into a tight bun, possibly with a light wrap or robe over the shoulders."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Groundskeeper\u2019s green/khaki uniform and wide-brimmed hat contrast with the utility worker\u2019s bright high-visibility vest and hard hat."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Groundskeeper appears in clean yard-maintenance attire, whereas the miner has a hard hat with headlamp and dusty coveralls."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Work clothes with shovel are visually very different from ballet attire with leotard and slippers."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Utility worker\u2019s high-visibility vest and standard hard hat differ from the miner\u2019s dirt-covered coveralls, headlamp helmet, and mining gear."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Utility/construction gear contrasts sharply with ballet costume."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Heavy mining gear and tools are clearly distinct from light ballet clothing and footwear."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four current agents fit their intended plausibility levels. Even if one wanted a stronger prototype, the scene readily allows clearly core professionals (e.g., gardener/landscaper) and various related or unrelated roles to fill each condition, so the gradient is supported by the scene rather than being inherently limited.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The scene of digging a hole with a shovel in a backyard is concrete and easy to depict, has a clear earth-working professional prototype, and supports a full plausibility gradient with visually distinct, role-appropriate and role-inappropriate agents."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "All agents are valid human professions, and their role-based fit to digging a hole in a backyard spans the intended plausibility gradient appropriately. Visual identities are clear and distinct, enabling reliable recognition from images alone. The scene is simple, instrumentally correct, and well-suited for generating images that probe semantic plausibility judgments."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 4,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the specific verb \u2018dig\u2019, both professions are earth-working manual labor roles that handle soil/rock with similar tools, so there is still a conceptual association, though a miner in a small backyard setting feels clearly out of place.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 152.5574184767902,
+  "token_info": {
+    "input_tokens": 5644,
+    "output_tokens": 9235,
+    "cached_tokens": 0
+  },
+  "success": true
+}

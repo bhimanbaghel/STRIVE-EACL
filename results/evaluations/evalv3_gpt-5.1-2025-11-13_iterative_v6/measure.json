@@ -1,0 +1,200 @@
+{
+  "verb": "measure",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professional or social roles; only the agent varies across sentences; all can physically perform the action, so plausibility depends on role\u2013action mismatch.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A nurse\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Measuring blood pressure with a cuff in a medical examination room is a canonical nursing task and likely the default expectation in this setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that in some practices doctors or medical assistants also take vitals, so a nurse is only one of several plausible professionals rather than uniquely prototypical; however, in many healthcare systems, nurses (or nurse-like roles) are strongly associated with taking blood pressure in exam rooms, so they remain the best choice for the highest plausibility level.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A paramedic\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Paramedics routinely measure blood pressure but are more typically associated with ambulances and emergency scenes than with routine medical examination rooms, making this a plausible but less expected scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Since paramedics are trained medical professionals who frequently measure blood pressure, some viewers may treat any clinical-looking room as an acceptable setting and see this as almost as normal as a nurse performing the task.\",\n        \"argument_for_lower\": \"One could argue that paramedics normally operate in ambulances or emergency departments, so encountering one in a quiet examination room taking a routine blood pressure might feel odd enough to reject as unrealistic; however, paramedics can reasonably appear in hospital/clinic rooms during transfers or emergencies, so the event remains ultimately acceptable rather than clearly wrong.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A dentist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A dentist is a clinical professional who treats human patients but typically works in a dental operatory and focuses on oral health, so seeing a dentist in a generic medical examination room taking blood pressure with a cuff feels related yet wrong for this specific scene.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Dentists receive medical training and in some practices check patients\u2019 blood pressure before procedures, so one might argue that extending this behavior to a more generic exam-room context is not entirely unreasonable and could be judged as an unusual but plausible clinical scenario.\",\n        \"argument_for_lower\": \"From a lay perspective, dentists are strongly associated with teeth and dental chairs, not with arm cuffs or general medical examination rooms, so a viewer might instantly reject the scene as absurd without much hesitation, especially if the image highlights distinctly dental gear.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both nurses and dentists are healthcare professionals working in human medicine/clinical care.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both normally work in small clinical rooms with medical equipment, cabinets, and examination or procedure chairs, even if one is a dental operatory and the other a general exam room.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely use medical disposables (gloves, masks), sometimes syringes and monitoring devices, even though their specialized tools (dental drill vs. BP cuff) differ.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both treat human patients directly, performing procedures on the body (general vs. oral).\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both perform close, hands-on examinations and precise manual procedures on patients, often while standing beside a seated or reclined patient.\"\n          },\n          \"overlap_count\": 5,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the act of measuring, a dentist in a clinical room with a patient has a clear association with the healthcare domain and patient-care context; the mismatch is that this is a general medical exam room and a blood-pressure task rather than a dental operatory and oral procedure, so the association persists but remains specifically wrong for this scene.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballet dancer has no professional connection to medical examinations, blood pressure monitoring, or clinical environments, so this combination is immediately implausible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a dancer who has received some basic first-aid training and happens to help measure someone\u2019s blood pressure, but this is highly contrived and not part of the ballet dancer role itself.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Scrubs, ID badge, and stethoscope form a highly recognizable \u2018nurse/medical staff\u2019 appearance.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"An EMS-style uniform with reflective strips and patches is strongly associated with paramedics/EMTs.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A white dental coat, mask, loupes or headlamp, and a small dental mirror make \u2018dentist\u2019 readily guessable.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Leotard, tights, ballet slippers or pointe shoes, and a hair bun clearly signal a ballet dancer.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically wears solid-colored medical scrubs, comfortable clinical shoes, possibly an ID badge and a stethoscope around the neck, giving a generic nurse/clinical staff look.\",\n      \"plausible_hard\": \"Wears a dark EMS uniform with reflective stripes, service patches, duty belt or radio, and may carry or stand near an emergency medical bag.\",\n      \"implausible_hard\": \"Wears a white dental coat over scrubs or dress clothes, with a surgical mask (on face or pulled down), protective glasses or loupes, possibly a headlamp and a small dental mirror in hand.\",\n      \"implausible_easy\": \"Wears a fitted leotard with tights, ballet slippers or pointe shoes, hair in a tight bun, and optionally a light wrap skirt or warm-up sweater.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Nurse in scrubs vs paramedic in dark EMS uniform with reflective strips and patches are visually distinct types of medical attire.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Scrubs with stethoscope differ from a white dental coat with mask, loupes, and dental mirror.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Clinical scrubs versus ballet attire (leotard, tights, pointe shoes) are drastically different.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A dark EMS uniform with high-visibility elements is clearly distinct from a white-coated dentist with dental-specific gear.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Paramedic uniform contrasts sharply with ballet performance clothing.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Dental coat, mask, and instruments are entirely different from a ballet dancer\u2019s leotard and pointe shoes.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four agents were judged CORRECT for their assigned conditions, so no replacement agents are needed. The scene\u2014a medical examination room with a blood pressure cuff\u2014has a clear prototype (nurse), can accommodate a moderately plausible but less typical medical professional (paramedic), a related but wrong-domain clinician (dentist), and a completely unrelated role (ballet dancer).\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The blood-pressure measurement in a medical examination room is concrete and easy to depict, with a strong prototypical agent and enough domain structure to support the full plausibility gradient without relying on subtle or abstract reasoning.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"This set cleanly instantiates the intended plausibility gradient for measuring blood pressure in a medical examination room, with a nurse as the prototypical agent, a paramedic as a less typical but plausible alternative, a dentist as a related but wrong clinician, and a ballet dancer as a clearly unrelated role. All four professions have strong, visually distinctive appearances, and the scene is straightforward to image and well-suited for the experiment\u2019s rapid plausibility judgments.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professional or social roles; only the agent varies across sentences; all can physically perform the action, so plausibility depends on role\u2013action mismatch."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A nurse",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Measuring blood pressure with a cuff in a medical examination room is a canonical nursing task and likely the default expectation in this setting.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that in some practices doctors or medical assistants also take vitals, so a nurse is only one of several plausible professionals rather than uniquely prototypical; however, in many healthcare systems, nurses (or nurse-like roles) are strongly associated with taking blood pressure in exam rooms, so they remain the best choice for the highest plausibility level."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A paramedic",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Paramedics routinely measure blood pressure but are more typically associated with ambulances and emergency scenes than with routine medical examination rooms, making this a plausible but less expected scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "Since paramedics are trained medical professionals who frequently measure blood pressure, some viewers may treat any clinical-looking room as an acceptable setting and see this as almost as normal as a nurse performing the task.",
+          "argument_for_lower": "One could argue that paramedics normally operate in ambulances or emergency departments, so encountering one in a quiet examination room taking a routine blood pressure might feel odd enough to reject as unrealistic; however, paramedics can reasonably appear in hospital/clinic rooms during transfers or emergencies, so the event remains ultimately acceptable rather than clearly wrong."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A dentist",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A dentist is a clinical professional who treats human patients but typically works in a dental operatory and focuses on oral health, so seeing a dentist in a generic medical examination room taking blood pressure with a cuff feels related yet wrong for this specific scene.",
+        "counter_arguments": {
+          "argument_for_higher": "Dentists receive medical training and in some practices check patients\u2019 blood pressure before procedures, so one might argue that extending this behavior to a more generic exam-room context is not entirely unreasonable and could be judged as an unusual but plausible clinical scenario.",
+          "argument_for_lower": "From a lay perspective, dentists are strongly associated with teeth and dental chairs, not with arm cuffs or general medical examination rooms, so a viewer might instantly reject the scene as absurd without much hesitation, especially if the image highlights distinctly dental gear.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both nurses and dentists are healthcare professionals working in human medicine/clinical care."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both normally work in small clinical rooms with medical equipment, cabinets, and examination or procedure chairs, even if one is a dental operatory and the other a general exam room."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both routinely use medical disposables (gloves, masks), sometimes syringes and monitoring devices, even though their specialized tools (dental drill vs. BP cuff) differ."
+            },
+            "patient_object_type": {
+              "overlaps": true,
+              "reasoning": "Both treat human patients directly, performing procedures on the body (general vs. oral)."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both perform close, hands-on examinations and precise manual procedures on patients, often while standing beside a seated or reclined patient."
+            },
+            "overlap_count": 5,
+            "sufficient": true,
+            "negative_test": "Even ignoring the act of measuring, a dentist in a clinical room with a patient has a clear association with the healthcare domain and patient-care context; the mismatch is that this is a general medical exam room and a blood-pressure task rather than a dental operatory and oral procedure, so the association persists but remains specifically wrong for this scene."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballet dancer has no professional connection to medical examinations, blood pressure monitoring, or clinical environments, so this combination is immediately implausible.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a dancer who has received some basic first-aid training and happens to help measure someone\u2019s blood pressure, but this is highly contrived and not part of the ballet dancer role itself.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Scrubs, ID badge, and stethoscope form a highly recognizable \u2018nurse/medical staff\u2019 appearance."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "An EMS-style uniform with reflective strips and patches is strongly associated with paramedics/EMTs."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A white dental coat, mask, loupes or headlamp, and a small dental mirror make \u2018dentist\u2019 readily guessable."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Leotard, tights, ballet slippers or pointe shoes, and a hair bun clearly signal a ballet dancer."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically wears solid-colored medical scrubs, comfortable clinical shoes, possibly an ID badge and a stethoscope around the neck, giving a generic nurse/clinical staff look.",
+        "plausible_hard": "Wears a dark EMS uniform with reflective stripes, service patches, duty belt or radio, and may carry or stand near an emergency medical bag.",
+        "implausible_hard": "Wears a white dental coat over scrubs or dress clothes, with a surgical mask (on face or pulled down), protective glasses or loupes, possibly a headlamp and a small dental mirror in hand.",
+        "implausible_easy": "Wears a fitted leotard with tights, ballet slippers or pointe shoes, hair in a tight bun, and optionally a light wrap skirt or warm-up sweater."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Nurse in scrubs vs paramedic in dark EMS uniform with reflective strips and patches are visually distinct types of medical attire."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Scrubs with stethoscope differ from a white dental coat with mask, loupes, and dental mirror."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Clinical scrubs versus ballet attire (leotard, tights, pointe shoes) are drastically different."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "A dark EMS uniform with high-visibility elements is clearly distinct from a white-coated dentist with dental-specific gear."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Paramedic uniform contrasts sharply with ballet performance clothing."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Dental coat, mask, and instruments are entirely different from a ballet dancer\u2019s leotard and pointe shoes."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four agents were judged CORRECT for their assigned conditions, so no replacement agents are needed. The scene\u2014a medical examination room with a blood pressure cuff\u2014has a clear prototype (nurse), can accommodate a moderately plausible but less typical medical professional (paramedic), a related but wrong-domain clinician (dentist), and a completely unrelated role (ballet dancer).",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The blood-pressure measurement in a medical examination room is concrete and easy to depict, with a strong prototypical agent and enough domain structure to support the full plausibility gradient without relying on subtle or abstract reasoning."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "This set cleanly instantiates the intended plausibility gradient for measuring blood pressure in a medical examination room, with a nurse as the prototypical agent, a paramedic as a less typical but plausible alternative, a dentist as a related but wrong clinician, and a ballet dancer as a clearly unrelated role. All four professions have strong, visually distinctive appearances, and the scene is straightforward to image and well-suited for the experiment\u2019s rapid plausibility judgments."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 74.53750120103359,
+  "token_info": {
+    "input_tokens": 6070,
+    "output_tokens": 7396
+  },
+  "success": true
+}

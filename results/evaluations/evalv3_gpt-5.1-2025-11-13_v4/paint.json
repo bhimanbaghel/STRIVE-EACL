@@ -1,0 +1,200 @@
+{
+  "verb": "paint",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"An artist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Painting a portrait with a fine brush in an art studio is a canonical task for an artist; this is the default profession people expect in this scene.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"The label 'artist' is broad and can include non-painters (e.g., musicians, digital artists), so one could argue that only a 'painter' or 'portrait artist' is truly prototypical; however, in the context of an easel and brush, people strongly and quickly interpret 'artist' as a painter.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A photography teacher\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A photography teacher works in the visual arts and can naturally be present in an art-school environment; it is easy to imagine them painting a portrait in a studio as part of mixed-media teaching or personal artistic practice, though this is not their core duty.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Many photography teachers have fine-arts training and may paint regularly, so one could view them as nearly as expected in an art studio as a generic 'artist', pushing them toward plausible_easy.\",\n        \"argument_for_lower\": \"Their primary tools and teaching focus are cameras and digital equipment, not brushes and canvases, so one could argue that seeing them painting a portrait in an art studio feels like the wrong subdomain of visual art and therefore belongs in an implausible_hard category.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A makeup artist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A makeup artist shares artistic, brush-based, face-focused work with painters but typically operates in salons, backstage areas, or on sets rather than fine-art studios; this creates noticeable domain overlap with the artist yet makes them feel out of place painting canvas portraits in an art studio.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Because makeup artists already use fine brushes, color theory, and work on detailed facial representations, one could see painting portraits on canvas as a natural extension of their skills, making the scene feel like an unusual but still plausible side of their work (plausible_hard).\",\n        \"argument_for_lower\": \"For most observers, makeup artists are tightly associated with beauty salons, film/theatre sets, and personal grooming rather than with art studios or canvas work, so some might treat them as just as unrelated to this setting as any random profession (implausible_easy).\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both are creative professionals concerned with visual/aesthetic outcomes and appearance.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Artists commonly work in art studios; makeup artists usually work in salons, backstage, or on set, not in painting studios.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use fine brushes and pigment palettes to apply and blend colors.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Artists work primarily on canvases or similar surfaces, whereas makeup artists work directly on human skin and faces; the substrates differ despite both involving faces conceptually.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform precise, small-scale brush strokes and detailed hand movements to create or adjust visual features.\"\n        },\n        \"overlap_count\": 3,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb 'paint', both roles are 'artists' using brushes and color to produce detailed visual effects (often on faces), so there remains a clear association in terms of creative, brush-based, appearance-focused work beyond the shared verb.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"An airline pilot\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"An airline pilot\u2019s professional domain, tools, and settings are entirely in aviation, with no natural link to painting portraits in an art studio, so a uniformed pilot painting on canvas feels immediately out of place despite being physically possible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a pilot who paints as a hobby and rents an art studio after work, which would make the situation personally plausible, but this depends on idiosyncratic backstory rather than role-based expectations and so is too weak for implausible_hard or higher.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A painter-style artist with smock, palette, and brushes has a widely recognized visual stereotype.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A photography teacher would likely be depicted as a person with a camera and perhaps subtle teaching cues, which could be mistaken for a generic photographer or hobbyist.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A makeup artist with an apron or belt full of brushes and cosmetics is a standard, recognizable look for this profession.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"An airline pilot\u2019s uniform with cap and epaulettes is highly distinctive and immediately signals the profession.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Usually shown wearing a paint-splattered smock or apron, possibly a beret, holding a wooden palette and brushes, standing near an easel.\",\n      \"plausible_hard\": \"Casually dressed instructor with a camera hanging from a neck strap or in hand, perhaps with a lanyard, notebook, or teaching pointer.\",\n      \"implausible_hard\": \"Person in dark, salon-style clothing wearing an apron or belt loaded with makeup brushes and tools, holding a small brush and cosmetic palette.\",\n      \"implausible_easy\": \"Person in a formal airline pilot uniform with jacket, tie, peaked cap, and shoulder epaulettes showing rank.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Painter\u2019s smock and palette contrast with a camera-carrying photography teacher.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Fine-arts painter gear differs from a makeup artist\u2019s brush belt and cosmetic kit.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Artist attire is very different from a structured airline pilot uniform.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A person with a camera and teaching cues looks different from someone in salon-style clothing with a makeup brush belt and cosmetics.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Casual photographer/teacher clothing is clearly distinct from a formal pilot uniform.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A makeup artist\u2019s black clothing and cosmetic tools contrast strongly with an airline pilot\u2019s uniform and cap.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"No conditions were rated INCORRECT or BORDERLINE; the artist is a clear prototype, and related roles like photography teacher and makeup artist support intermediate plausibility levels while unrelated roles like airline pilot support a clear implausible case. Other professions (e.g., sculptor, graphic designer, dentist) could also be slotted into various levels if needed, indicating the scene is flexible and well-structured.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The 'painting a portrait in an art studio with a fine brush' scene is prototypical and easy to depict, with a strong core profession and enough semantic structure to support a full plausibility gradient using visually distinct human roles.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"All four agents satisfy the intended plausibility levels relative to painting a portrait in an art studio, with a clear prototype (artist) and well-ordered gradient down to a highly implausible airline pilot. Visually, all roles have recognizable attire or gear, though the photography teacher is somewhat ambiguous compared to a generic photographer. The scene itself is concrete, easily photographable, and robustly supports the required plausibility gradient.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "An artist",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Painting a portrait with a fine brush in an art studio is a canonical task for an artist; this is the default profession people expect in this scene.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "The label 'artist' is broad and can include non-painters (e.g., musicians, digital artists), so one could argue that only a 'painter' or 'portrait artist' is truly prototypical; however, in the context of an easel and brush, people strongly and quickly interpret 'artist' as a painter."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A photography teacher",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A photography teacher works in the visual arts and can naturally be present in an art-school environment; it is easy to imagine them painting a portrait in a studio as part of mixed-media teaching or personal artistic practice, though this is not their core duty.",
+        "counter_arguments": {
+          "argument_for_higher": "Many photography teachers have fine-arts training and may paint regularly, so one could view them as nearly as expected in an art studio as a generic 'artist', pushing them toward plausible_easy.",
+          "argument_for_lower": "Their primary tools and teaching focus are cameras and digital equipment, not brushes and canvases, so one could argue that seeing them painting a portrait in an art studio feels like the wrong subdomain of visual art and therefore belongs in an implausible_hard category."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A makeup artist",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A makeup artist shares artistic, brush-based, face-focused work with painters but typically operates in salons, backstage areas, or on sets rather than fine-art studios; this creates noticeable domain overlap with the artist yet makes them feel out of place painting canvas portraits in an art studio.",
+        "counter_arguments": {
+          "argument_for_higher": "Because makeup artists already use fine brushes, color theory, and work on detailed facial representations, one could see painting portraits on canvas as a natural extension of their skills, making the scene feel like an unusual but still plausible side of their work (plausible_hard).",
+          "argument_for_lower": "For most observers, makeup artists are tightly associated with beauty salons, film/theatre sets, and personal grooming rather than with art studios or canvas work, so some might treat them as just as unrelated to this setting as any random profession (implausible_easy)."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both are creative professionals concerned with visual/aesthetic outcomes and appearance."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Artists commonly work in art studios; makeup artists usually work in salons, backstage, or on set, not in painting studios."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use fine brushes and pigment palettes to apply and blend colors."
+          },
+          "patient_object_type": {
+            "overlaps": false,
+            "reasoning": "Artists work primarily on canvases or similar surfaces, whereas makeup artists work directly on human skin and faces; the substrates differ despite both involving faces conceptually."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform precise, small-scale brush strokes and detailed hand movements to create or adjust visual features."
+          },
+          "overlap_count": 3,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb 'paint', both roles are 'artists' using brushes and color to produce detailed visual effects (often on faces), so there remains a clear association in terms of creative, brush-based, appearance-focused work beyond the shared verb."
+        }
+      },
+      "implausible_easy": {
+        "agent": "An airline pilot",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "An airline pilot\u2019s professional domain, tools, and settings are entirely in aviation, with no natural link to painting portraits in an art studio, so a uniformed pilot painting on canvas feels immediately out of place despite being physically possible.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a pilot who paints as a hobby and rents an art studio after work, which would make the situation personally plausible, but this depends on idiosyncratic backstory rather than role-based expectations and so is too weak for implausible_hard or higher.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A painter-style artist with smock, palette, and brushes has a widely recognized visual stereotype."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A photography teacher would likely be depicted as a person with a camera and perhaps subtle teaching cues, which could be mistaken for a generic photographer or hobbyist."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A makeup artist with an apron or belt full of brushes and cosmetics is a standard, recognizable look for this profession."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "An airline pilot\u2019s uniform with cap and epaulettes is highly distinctive and immediately signals the profession."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Usually shown wearing a paint-splattered smock or apron, possibly a beret, holding a wooden palette and brushes, standing near an easel.",
+        "plausible_hard": "Casually dressed instructor with a camera hanging from a neck strap or in hand, perhaps with a lanyard, notebook, or teaching pointer.",
+        "implausible_hard": "Person in dark, salon-style clothing wearing an apron or belt loaded with makeup brushes and tools, holding a small brush and cosmetic palette.",
+        "implausible_easy": "Person in a formal airline pilot uniform with jacket, tie, peaked cap, and shoulder epaulettes showing rank."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Painter\u2019s smock and palette contrast with a camera-carrying photography teacher."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Fine-arts painter gear differs from a makeup artist\u2019s brush belt and cosmetic kit."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Artist attire is very different from a structured airline pilot uniform."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "A person with a camera and teaching cues looks different from someone in salon-style clothing with a makeup brush belt and cosmetics."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Casual photographer/teacher clothing is clearly distinct from a formal pilot uniform."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A makeup artist\u2019s black clothing and cosmetic tools contrast strongly with an airline pilot\u2019s uniform and cap."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "No conditions were rated INCORRECT or BORDERLINE; the artist is a clear prototype, and related roles like photography teacher and makeup artist support intermediate plausibility levels while unrelated roles like airline pilot support a clear implausible case. Other professions (e.g., sculptor, graphic designer, dentist) could also be slotted into various levels if needed, indicating the scene is flexible and well-structured.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The 'painting a portrait in an art studio with a fine brush' scene is prototypical and easy to depict, with a strong core profession and enough semantic structure to support a full plausibility gradient using visually distinct human roles."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "All four agents satisfy the intended plausibility levels relative to painting a portrait in an art studio, with a clear prototype (artist) and well-ordered gradient down to a highly implausible airline pilot. Visually, all roles have recognizable attire or gear, though the photography teacher is somewhat ambiguous compared to a generic photographer. The scene itself is concrete, easily photographable, and robustly supports the required plausibility gradient."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 3,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb 'paint', both roles are 'artists' using brushes and color to produce detailed visual effects (often on faces), so there remains a clear association in terms of creative, brush-based, appearance-focused work beyond the shared verb.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 177.15102736651897,
+  "token_info": {
+    "input_tokens": 5793,
+    "output_tokens": 13120
+  },
+  "success": true
+}

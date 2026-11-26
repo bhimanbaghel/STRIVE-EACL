@@ -1,0 +1,205 @@
+{
+  "verb": "erase",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met: four human professional roles; verb, patient, instrument, and location are constant across sentences.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A schoolteacher\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"In a classroom with a math equation on a chalkboard, a schoolteacher is the default agent who writes and erases equations during instruction. This is central to their teaching role and is immediately accepted as normal.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue this is only moderately plausible because erasing might be seen as generic cleaning that could be done by anyone present (students, janitor), so the teacher is not uniquely tied to erasing per se, only to teaching.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Writing and then erasing math equations on the board during lessons is a core, routine part of a schoolteacher\u2019s instructional duties.\",\n        \"removal_test\": \"YES: If there were no schoolteachers in the classroom, the typical event of math equations being written and then erased as part of teaching would largely cease; any remaining erasing would be incidental cleaning, not this teaching-related action.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A school janitor\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A school janitor is naturally present in the school and often responsible for cleaning chalkboards, so erasing a math equation in a classroom is plausible but not the canonical teaching action. Their primary duty is cleaning, not interacting with math content.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could argue that cleaning chalkboards is part of a school janitor\u2019s core responsibilities, so erasing an equation might be seen as a prototypical cleaning task, pushing them toward plausible_easy.\",\n        \"argument_for_lower\": \"Conversely, one might argue janitors usually clean when students and teachers are gone and might hose or wipe the whole board rather than precisely erasing a specific equation, making this scenario feel somewhat off and more like an implausible_hard case.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A university professor\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"A university professor routinely teaches in classrooms or lecture rooms using chalkboards or whiteboards, writing and erasing equations as part of their core job. This scene is highly natural for them and should be classified as clearly plausible, not implausible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"The strongest argument is that this is actually a textbook plausible_easy case: teaching mathematics with a chalkboard and erasing equations is central to many professors\u2019 roles, in a setting virtually indistinguishable from a school classroom.\",\n        \"argument_for_lower\": \"To argue for implausible_easy, one might claim that professors belong only in university lecture halls, not generic \u2018classrooms,\u2019 and therefore look out of place in what is implicitly a K\u201312 environment; but many real universities call their spaces classrooms, so this argument is weak.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both schoolteachers and university professors are educators whose main domain is teaching/education.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both typically work in instructional rooms (classrooms/lecture halls) with boards at the front.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use chalk, markers, erasers, and boards as key tools of the trade.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act on written educational content such as equations and diagrams on boards.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both habitually write on and erase boards while lecturing or explaining material.\"\n        },\n        \"overlap_count\": 5,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb \u2018erasing,\u2019 a university professor is still strongly associated with math equations on a board in a classroom-like setting; the association with this scene clearly persists.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A firefighter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A firefighter in full firefighting gear erasing a math equation on a classroom chalkboard is from a completely unrelated domain and would be instantly judged as out of place except in contrived, unusual scenarios.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a rare fire-safety presentation at a school where the firefighter uses the board and first erases an existing equation, making the event barely plausible but still highly unusual.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The assigned implausible_hard agent (university professor) is actually more plausible than the plausible_hard agent (school janitor) and belongs with plausible_easy.\",\n    \"collapsed_pairs\": \"plausible_easy vs implausible_hard are effectively collapsed because both describe educator roles for whom erasing equations on chalkboards is highly natural.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A schoolteacher in business-casual attire with an eraser or chalk but on a plain white background could be mistaken for many generic office professionals or other educators.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A school janitor in a work uniform with a utility belt or cleaning tools is strongly suggestive of a custodial role and rarely confused with other professions.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A university professor in a blazer and slacks holding books or papers without classroom context would often just look like a generic white-collar professional or \u2018teacher-type,\u2019 not uniquely a professor.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Firefighter turnout gear with helmet and reflective stripes is iconic and immediately recognizable as a firefighter.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Adult in business-casual clothing (cardigan or blazer over shirt, slacks or skirt), possibly holding chalk or an eraser, styled as a typical K\u201312 classroom teacher.\",\n      \"plausible_hard\": \"Person in a matching work uniform (dark pants and shirt), with a key ring or utility belt and perhaps a cleaning cart, mop, or spray bottle indicating custodial work.\",\n      \"implausible_hard\": \"Adult in more formal academic attire (tweed or structured blazer, dress shirt, slacks, often glasses), possibly carrying a stack of books or papers, styled as an academic lecturer.\",\n      \"implausible_easy\": \"Person wearing full firefighter turnout gear: heavy coat and pants with reflective stripes, fire helmet, bulky boots, possibly with an axe or hose.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Teacher\u2019s business-casual clothing contrasts with janitor\u2019s industrial work uniform and cleaning gear.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Teacher can be depicted as somewhat more casual or school-oriented, while professor appears more formal/academic (e.g., tweed blazer, older, more books), allowing visual differentiation.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Business-casual teacher attire is clearly different from bulky firefighter turnout gear.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Janitor\u2019s uniform and cleaning tools differ strongly from professor\u2019s blazer, papers, and academic appearance.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Custodial uniform versus heavy firefighting gear creates a clear visual contrast.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Formal academic dress is visually very different from firefighter protective gear.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The only INCORRECT condition is the implausible_hard agent. A better implausible_hard choice could be an accountant, engineer, or scientist: they work with equations and erasing on boards or paper (overlap in domain, patient type, tools, actions) but do not normally erase equations on a classroom chalkboard, making their presence in this specific school-classroom scene feel related yet wrong. Thus the scene itself can support all four levels; it is an agent-selection issue.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The chalkboard-erasing-in-classroom scene with a felt eraser is concrete, imageable, and has a clear teaching prototype. The main issue is misplacing a university professor into an implausible category even though they are strongly prototypical for this action; replacing this agent can yield a clean plausibility gradient.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematic fit is strong for the teacher, janitor, and firefighter, but the university professor is miscategorized and should be treated as clearly plausible rather than implausible. Visually, all four roles can be made distinct, though the two educator roles are only ambiguously identifiable without context. The scene itself is well-formed and supports a full plausibility gradient once the implausible_hard agent is replaced.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met: four human professional roles; verb, patient, instrument, and location are constant across sentences."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A schoolteacher",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "In a classroom with a math equation on a chalkboard, a schoolteacher is the default agent who writes and erases equations during instruction. This is central to their teaching role and is immediately accepted as normal.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue this is only moderately plausible because erasing might be seen as generic cleaning that could be done by anyone present (students, janitor), so the teacher is not uniquely tied to erasing per se, only to teaching."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Writing and then erasing math equations on the board during lessons is a core, routine part of a schoolteacher\u2019s instructional duties.",
+          "removal_test": "YES: If there were no schoolteachers in the classroom, the typical event of math equations being written and then erased as part of teaching would largely cease; any remaining erasing would be incidental cleaning, not this teaching-related action."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A school janitor",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A school janitor is naturally present in the school and often responsible for cleaning chalkboards, so erasing a math equation in a classroom is plausible but not the canonical teaching action. Their primary duty is cleaning, not interacting with math content.",
+        "counter_arguments": {
+          "argument_for_higher": "One could argue that cleaning chalkboards is part of a school janitor\u2019s core responsibilities, so erasing an equation might be seen as a prototypical cleaning task, pushing them toward plausible_easy.",
+          "argument_for_lower": "Conversely, one might argue janitors usually clean when students and teachers are gone and might hose or wipe the whole board rather than precisely erasing a specific equation, making this scenario feel somewhat off and more like an implausible_hard case."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A university professor",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "A university professor routinely teaches in classrooms or lecture rooms using chalkboards or whiteboards, writing and erasing equations as part of their core job. This scene is highly natural for them and should be classified as clearly plausible, not implausible.",
+        "counter_arguments": {
+          "argument_for_higher": "The strongest argument is that this is actually a textbook plausible_easy case: teaching mathematics with a chalkboard and erasing equations is central to many professors\u2019 roles, in a setting virtually indistinguishable from a school classroom.",
+          "argument_for_lower": "To argue for implausible_easy, one might claim that professors belong only in university lecture halls, not generic \u2018classrooms,\u2019 and therefore look out of place in what is implicitly a K\u201312 environment; but many real universities call their spaces classrooms, so this argument is weak."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both schoolteachers and university professors are educators whose main domain is teaching/education."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both typically work in instructional rooms (classrooms/lecture halls) with boards at the front."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use chalk, markers, erasers, and boards as key tools of the trade."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act on written educational content such as equations and diagrams on boards."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both habitually write on and erase boards while lecturing or explaining material."
+          },
+          "overlap_count": 5,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb \u2018erasing,\u2019 a university professor is still strongly associated with math equations on a board in a classroom-like setting; the association with this scene clearly persists."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A firefighter",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A firefighter in full firefighting gear erasing a math equation on a classroom chalkboard is from a completely unrelated domain and would be instantly judged as out of place except in contrived, unusual scenarios.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a rare fire-safety presentation at a school where the firefighter uses the board and first erases an existing equation, making the event barely plausible but still highly unusual.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The assigned implausible_hard agent (university professor) is actually more plausible than the plausible_hard agent (school janitor) and belongs with plausible_easy.",
+      "collapsed_pairs": "plausible_easy vs implausible_hard are effectively collapsed because both describe educator roles for whom erasing equations on chalkboards is highly natural."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A schoolteacher in business-casual attire with an eraser or chalk but on a plain white background could be mistaken for many generic office professionals or other educators."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A school janitor in a work uniform with a utility belt or cleaning tools is strongly suggestive of a custodial role and rarely confused with other professions."
+        },
+        "implausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A university professor in a blazer and slacks holding books or papers without classroom context would often just look like a generic white-collar professional or \u2018teacher-type,\u2019 not uniquely a professor."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Firefighter turnout gear with helmet and reflective stripes is iconic and immediately recognizable as a firefighter."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Adult in business-casual clothing (cardigan or blazer over shirt, slacks or skirt), possibly holding chalk or an eraser, styled as a typical K\u201312 classroom teacher.",
+        "plausible_hard": "Person in a matching work uniform (dark pants and shirt), with a key ring or utility belt and perhaps a cleaning cart, mop, or spray bottle indicating custodial work.",
+        "implausible_hard": "Adult in more formal academic attire (tweed or structured blazer, dress shirt, slacks, often glasses), possibly carrying a stack of books or papers, styled as an academic lecturer.",
+        "implausible_easy": "Person wearing full firefighter turnout gear: heavy coat and pants with reflective stripes, fire helmet, bulky boots, possibly with an axe or hose."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Teacher\u2019s business-casual clothing contrasts with janitor\u2019s industrial work uniform and cleaning gear."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Teacher can be depicted as somewhat more casual or school-oriented, while professor appears more formal/academic (e.g., tweed blazer, older, more books), allowing visual differentiation."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Business-casual teacher attire is clearly different from bulky firefighter turnout gear."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Janitor\u2019s uniform and cleaning tools differ strongly from professor\u2019s blazer, papers, and academic appearance."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Custodial uniform versus heavy firefighting gear creates a clear visual contrast."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Formal academic dress is visually very different from firefighter protective gear."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The only INCORRECT condition is the implausible_hard agent. A better implausible_hard choice could be an accountant, engineer, or scientist: they work with equations and erasing on boards or paper (overlap in domain, patient type, tools, actions) but do not normally erase equations on a classroom chalkboard, making their presence in this specific school-classroom scene feel related yet wrong. Thus the scene itself can support all four levels; it is an agent-selection issue.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The chalkboard-erasing-in-classroom scene with a felt eraser is concrete, imageable, and has a clear teaching prototype. The main issue is misplacing a university professor into an implausible category even though they are strongly prototypical for this action; replacing this agent can yield a clean plausibility gradient."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematic fit is strong for the teacher, janitor, and firefighter, but the university professor is miscategorized and should be treated as clearly plausible rather than implausible. Visually, all four roles can be made distinct, though the two educator roles are only ambiguously identifiable without context. The scene itself is well-formed and supports a full plausibility gradient once the implausible_hard agent is replaced."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 0,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_easy"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.0,
+    "overlap_count": 5,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb \u2018erasing,\u2019 a university professor is still strongly associated with math equations on a board in a classroom-like setting; the association with this scene clearly persists.",
+    "identifiability": {
+      "plausible_easy": "AMBIGUOUS",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "AMBIGUOUS"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 148.04421307519078,
+  "token_info": {
+    "input_tokens": 5686,
+    "output_tokens": 8997,
+    "cached_tokens": 0
+  },
+  "success": true
+}

@@ -1,0 +1,200 @@
+{
+  "verb": "measure",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A forester\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Measuring tree height in a forest is a core, prototypical task for a forester doing forest inventory or management, and using a tape measure is a natural measuring tool in this context.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue this specific measurement task might more often be done by a specialized researcher (e.g., forest ecologist) rather than a generic forester, making the fit slightly less than maximally prototypical, but in ordinary understanding 'forester measuring a tree in a forest' is clearly default.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A hiker\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Hikers are naturally present in forests, but measuring tree height with a tape measure is not a standard hiking activity; it is unusual yet easy to imagine in a curiosity or hobbyist/citizen-science scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might say nature-enthusiast hikers sometimes systematically document trees (e.g., notable or record-breaking trees), making measurement a somewhat expected side activity and pushing the role closer to forester-like behavior.\",\n        \"argument_for_lower\": \"Conversely, hikers rarely carry tape measures or perform formal measurements, so a viewer might find the scene odd and judge it more like a role-mismatch from a general recreational role, bordering on implausible_hard.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A botanist\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Botanists routinely study plants and do fieldwork in forests, often taking quantitative measurements of plants including trees, so them measuring tree height with a tape measure in a forest is clearly plausible rather than an 'unsure no' case. They are somewhat less prototypical than a forester but still a natural fit.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"A strong case can be made that a botanist is just as prototypical as a forester for measuring tree height in a research context, so some viewers could treat this as plausible_easy rather than merely plausible_hard.\",\n        \"argument_for_lower\": \"To argue for implausible_hard, one could claim botanists primarily study smaller plants in labs or gardens and typically use more specialized instruments (clinometers, calipers), so a forest tape-measure height check might seem slightly off for their usual work, but this is weak given how common field-based plant measurement is in botany.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both foresters and botanists are plant/forest-related professionals working in environmental/biological domains.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both often work outdoors in forests or natural areas during fieldwork.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both use measuring tools such as tapes, calipers, and similar field instruments to collect quantitative data.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act on plants and trees as core objects of their professional activity.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely perform careful observation and physical measurement of plant traits in the field.\"\n        },\n        \"overlap_count\": 5,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb 'measure,' botanists are still strongly associated with studying plants in forests, making their presence with trees in a forest scene very natural; this high overlap actually makes them too plausible for an implausible_hard role.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A magician\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Magicians are stage entertainers with no natural connection to forestry, scientific field measurement, or forest work, so seeing a magician measure a tree in a forest with a tape measure is an obvious role-scene mismatch.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a themed magic show filmed in a forest where a magician uses a tape measure as a prop near a tree, introducing a faint entertainment link, but this is contrived and not a natural professional scenario.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The agent assigned to implausible_hard (a botanist) is actually clearly plausible and belongs in plausible_hard (or even plausible_easy), effectively misplacing that condition.\",\n    \"collapsed_pairs\": \"The intended distinction between plausible_hard and implausible_hard collapses because a botanist measuring tree height in a forest appears as plausible as, or more plausible than, the hiker.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A forester typically wears outdoor or agency-style work clothes that could easily be mistaken for a park ranger, generic outdoor worker, or even a serious hiker on a plain background.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A hiker with trekking clothes, boots, and a substantial backpack (and possibly trekking poles) is a well-recognized visual type.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A botanist would usually look like a generic scientist (lab coat) or generic field researcher, not specifically identifiable as 'botanist' from appearance alone.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A stage magician with tuxedo or tailcoat, cape or top hat, and props like a wand or cards has a highly distinctive and easily recognized visual identity.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"A forester typically wears sturdy outdoor work clothing, such as green or brown uniform-style shirt and pants, work boots, possibly a brimmed hat, and may have an official patch or logo from a forest service.\",\n      \"plausible_hard\": \"A hiker typically wears technical outdoor clothing (weatherproof jacket, hiking pants), sturdy hiking boots, and carries a large backpack and sometimes trekking poles or a hydration pack.\",\n      \"implausible_hard\": \"A botanist is often depicted either in a lab coat with gloves, safety glasses, and plant samples, or in casual field clothes with a notebook, sample bags, and perhaps a hand lens or clipboard.\",\n      \"implausible_easy\": \"A magician often wears a formal tuxedo or tailcoat, sometimes with a bow tie, top hat, cape, and may hold a wand, deck of cards, or other stage props.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"A forester in a uniform-style outfit with official patch and no large backpack can be made visually distinct from a hiker with colorful technical clothing and a big backpack/trekking poles.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A uniformed or work-clothed forester contrasts with a botanist in a lab coat or clear 'scientist' attire.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A rugged outdoor forester looks very different from a formally dressed stage magician with hat and props.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A hiker with large backpack and trekking gear is visually distinct from a botanist in a lab coat or carrying scientific equipment without hiking gear.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Outdoor hiking gear versus a magician\u2019s tuxedo/top hat create a clear visual contrast.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A botanist as scientist (lab coat or field researcher look) is clearly different from a costumed stage magician.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The only incorrect condition is the implausible_hard botanist, who is too plausible; however, it is easy to imagine a better implausible_hard agent for this scene, such as a gardener or landscape architect (plants domain but wrong setting and task) or a wildlife photographer (same forest setting but wrong object of work and tools), so the scene itself can support a full gradient.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The scene of someone measuring a tree with a tape measure in a forest is concrete, imageable, and has a strong prototype (forester). The instrument is appropriate, and with a better-chosen related-but-wrong profession for implausible_hard, the thematic gradient would be robust; the current issue lies only in agent selection.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Three of the four agents match their intended plausibility levels, but the botanist is too plausible to serve as an implausible_hard agent. Visually, all roles can be made distinct in images, though 'forester' and 'botanist' are somewhat ambiguous as specific professions. The underlying scene with a forester measuring tree height in a forest is sound and can support a full plausibility gradient with an alternative implausible_hard agent.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A forester",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Measuring tree height in a forest is a core, prototypical task for a forester doing forest inventory or management, and using a tape measure is a natural measuring tool in this context.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue this specific measurement task might more often be done by a specialized researcher (e.g., forest ecologist) rather than a generic forester, making the fit slightly less than maximally prototypical, but in ordinary understanding 'forester measuring a tree in a forest' is clearly default."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A hiker",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Hikers are naturally present in forests, but measuring tree height with a tape measure is not a standard hiking activity; it is unusual yet easy to imagine in a curiosity or hobbyist/citizen-science scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "One might say nature-enthusiast hikers sometimes systematically document trees (e.g., notable or record-breaking trees), making measurement a somewhat expected side activity and pushing the role closer to forester-like behavior.",
+          "argument_for_lower": "Conversely, hikers rarely carry tape measures or perform formal measurements, so a viewer might find the scene odd and judge it more like a role-mismatch from a general recreational role, bordering on implausible_hard."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A botanist",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Botanists routinely study plants and do fieldwork in forests, often taking quantitative measurements of plants including trees, so them measuring tree height with a tape measure in a forest is clearly plausible rather than an 'unsure no' case. They are somewhat less prototypical than a forester but still a natural fit.",
+        "counter_arguments": {
+          "argument_for_higher": "A strong case can be made that a botanist is just as prototypical as a forester for measuring tree height in a research context, so some viewers could treat this as plausible_easy rather than merely plausible_hard.",
+          "argument_for_lower": "To argue for implausible_hard, one could claim botanists primarily study smaller plants in labs or gardens and typically use more specialized instruments (clinometers, calipers), so a forest tape-measure height check might seem slightly off for their usual work, but this is weak given how common field-based plant measurement is in botany."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both foresters and botanists are plant/forest-related professionals working in environmental/biological domains."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both often work outdoors in forests or natural areas during fieldwork."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both use measuring tools such as tapes, calipers, and similar field instruments to collect quantitative data."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act on plants and trees as core objects of their professional activity."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both routinely perform careful observation and physical measurement of plant traits in the field."
+          },
+          "overlap_count": 5,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb 'measure,' botanists are still strongly associated with studying plants in forests, making their presence with trees in a forest scene very natural; this high overlap actually makes them too plausible for an implausible_hard role."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A magician",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Magicians are stage entertainers with no natural connection to forestry, scientific field measurement, or forest work, so seeing a magician measure a tree in a forest with a tape measure is an obvious role-scene mismatch.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a themed magic show filmed in a forest where a magician uses a tape measure as a prop near a tree, introducing a faint entertainment link, but this is contrived and not a natural professional scenario.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The agent assigned to implausible_hard (a botanist) is actually clearly plausible and belongs in plausible_hard (or even plausible_easy), effectively misplacing that condition.",
+      "collapsed_pairs": "The intended distinction between plausible_hard and implausible_hard collapses because a botanist measuring tree height in a forest appears as plausible as, or more plausible than, the hiker."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A forester typically wears outdoor or agency-style work clothes that could easily be mistaken for a park ranger, generic outdoor worker, or even a serious hiker on a plain background."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A hiker with trekking clothes, boots, and a substantial backpack (and possibly trekking poles) is a well-recognized visual type."
+        },
+        "implausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A botanist would usually look like a generic scientist (lab coat) or generic field researcher, not specifically identifiable as 'botanist' from appearance alone."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A stage magician with tuxedo or tailcoat, cape or top hat, and props like a wand or cards has a highly distinctive and easily recognized visual identity."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "A forester typically wears sturdy outdoor work clothing, such as green or brown uniform-style shirt and pants, work boots, possibly a brimmed hat, and may have an official patch or logo from a forest service.",
+        "plausible_hard": "A hiker typically wears technical outdoor clothing (weatherproof jacket, hiking pants), sturdy hiking boots, and carries a large backpack and sometimes trekking poles or a hydration pack.",
+        "implausible_hard": "A botanist is often depicted either in a lab coat with gloves, safety glasses, and plant samples, or in casual field clothes with a notebook, sample bags, and perhaps a hand lens or clipboard.",
+        "implausible_easy": "A magician often wears a formal tuxedo or tailcoat, sometimes with a bow tie, top hat, cape, and may hold a wand, deck of cards, or other stage props."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "A forester in a uniform-style outfit with official patch and no large backpack can be made visually distinct from a hiker with colorful technical clothing and a big backpack/trekking poles."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "A uniformed or work-clothed forester contrasts with a botanist in a lab coat or clear 'scientist' attire."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "A rugged outdoor forester looks very different from a formally dressed stage magician with hat and props."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "A hiker with large backpack and trekking gear is visually distinct from a botanist in a lab coat or carrying scientific equipment without hiking gear."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Outdoor hiking gear versus a magician\u2019s tuxedo/top hat create a clear visual contrast."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A botanist as scientist (lab coat or field researcher look) is clearly different from a costumed stage magician."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The only incorrect condition is the implausible_hard botanist, who is too plausible; however, it is easy to imagine a better implausible_hard agent for this scene, such as a gardener or landscape architect (plants domain but wrong setting and task) or a wildlife photographer (same forest setting but wrong object of work and tools), so the scene itself can support a full gradient.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The scene of someone measuring a tree with a tape measure in a forest is concrete, imageable, and has a strong prototype (forester). The instrument is appropriate, and with a better-chosen related-but-wrong profession for implausible_hard, the thematic gradient would be robust; the current issue lies only in agent selection."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Three of the four agents match their intended plausibility levels, but the botanist is too plausible to serve as an implausible_hard agent. Visually, all roles can be made distinct in images, though 'forester' and 'botanist' are somewhat ambiguous as specific professions. The underlying scene with a forester measuring tree height in a forest is sound and can support a full plausibility gradient with an alternative implausible_hard agent."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 0,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.0,
+    "overlap_count": 5,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb 'measure,' botanists are still strongly associated with studying plants in forests, making their presence with trees in a forest scene very natural; this high overlap actually makes them too plausible for an implausible_hard role.",
+    "identifiability": {
+      "plausible_easy": "AMBIGUOUS",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "AMBIGUOUS"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 109.89507642388344,
+  "token_info": {
+    "input_tokens": 5844,
+    "output_tokens": 8401
+  },
+  "success": true
+}

@@ -1,0 +1,205 @@
+{
+  "verb": "touch",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professional roles; verb form, patient, instrument, and location are constant across sentences; plausibility differences arise from role\u2013action mismatch, not physical incapacity.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A nurse\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Nurses routinely check patients\u2019 temperature, comfort, and responsiveness by touching the forehead in hospital rooms, making them the prototypical professional for this action and setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that doctors or family members also touch a patient\u2019s forehead, so the behavior is not absolutely unique to nurses and thus might be merely plausible_hard; however, in actual hospital routines nurses are by far the primary professionals performing this specific bedside check, so the lower placement is weaker.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Assessing patients\u2019 condition, including quickly checking for fever or comfort by feeling the forehead, is a core nursing duty.\",\n        \"removal_test\": \"YES: If nurses were absent from the hospital room, routine bedside forehead-touch checks by staff would largely cease, since doctors and visitors do this far less frequently.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A hospital porter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Hospital porters are legitimately present in hospital rooms and may occasionally touch patients (including around the head) when assisting with transport or positioning, but touching the forehead for assessment is not part of their core role, so the event is plausible yet clearly non-prototypical.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might argue that as hospital staff who handle patients, porters could sometimes check if a patient is responsive by touching their head, making the behavior feel routine and thus plausible_easy; however, evaluation and physical examination are not part of a porter\u2019s primary duties, so they are not the default agent for this action.\",\n        \"argument_for_lower\": \"Conversely, one might claim porters rarely, if ever, perform bedside contact like a forehead check, making this more of an implausible_hard case; but porters do interact physically with patients during transfers and could realistically be close enough to lightly touch the forehead in a real scenario, so outright implausibility is too strong.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A hairdresser\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Hairdressers work on people\u2019s heads and regularly touch the head and hair with their hands, but they do so in salons or as mobile stylists, not as medical staff in hospital rooms; seeing a uniformed hairdresser touching a patient\u2019s forehead in a hospital evokes a related-but-wrong domain and feels odd but not maximally bizarre.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"For a higher (more plausible) placement, one could note that some hairdressers provide services to long-term hospital patients, and while adjusting hair or a fringe they might briefly touch the forehead, making the situation conceivable in a special-case scenario; however, grooming in hospitals is exceptional, and the specific gesture of checking the forehead strongly suggests a medical exam, which is not in their role.\",\n        \"argument_for_lower\": \"For a lower (implausible_easy) placement, one could argue that hairdressers almost never work in hospital rooms and have no medical responsibilities, so a fully uniformed hairdresser touching a patient\u2019s forehead there is clearly wrong; yet compared to a completely unrelated profession (like a street musician), the manual work on the head and intimate head contact make hairdressers meaningfully closer to the nurse\u2019s domain, justifying implausible_hard.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Nurses are in healthcare/medical services, whereas hairdressers are in beauty/personal grooming; these are adjacent service sectors but not the same broad professional field.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Nurses typically work in hospitals/clinics; hairdressers typically work in salons or mobile service locations, not hospital rooms.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Nurses use medical tools (stethoscopes, thermometers, syringes), whereas hairdressers use combs, scissors, hairdryers, and styling tools.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act directly on human heads/faces as their primary object of manual work.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use their hands and fingertips to manipulate or touch areas of the head in close contact.\"\n        },\n        \"overlap_count\": 2,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the specific verb \u2018touch\u2019, both professions involve intimate manual work on a person\u2019s head/face; that shared focus makes a hairdresser in close contact with a person\u2019s head feel more related to the scene than a random profession, even though a hospital-room forehead check is clearly outside their proper context.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A street musician\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Street musicians belong to an entertainment/public performance domain and have no professional reason to be in a hospital room or to touch a patient\u2019s forehead, making this an immediately rejected, maximally unrelated pairing.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a musician volunteering to play music in hospitals and perhaps comforting a patient with a touch, making the situation barely plausible; however, such contact is not part of the musician\u2019s role, the hospital room is not their natural work setting, and there is essentially no systematic semantic overlap with nursing, so they remain clearly implausible.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Scrubs, stethoscope, and medical badge strongly cue \u2018nurse\u2019 or bedside medical staff to most viewers.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"Scrubs and a name tag signal generic hospital staff, but without a highly standardized, widely known \u2018porter\u2019 uniform, many viewers may label this person simply as hospital staff or a nurse.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Salon apron, hair tools, and client cape are classic, highly recognizable markers of a hairdresser/barber.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A leather-jacketed person with a guitar case and music stand is strongly and unambiguously associated with a street musician/busker.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Wearing light-colored or blue medical scrubs, with a stethoscope around the neck, hospital ID badge, and hair neatly tied back.\",\n      \"plausible_hard\": \"Wearing solid-colored hospital scrubs (distinct shade from the nurse), comfortable work shoes, a name tag, and possibly standing beside or having just used a cart or trolley, without a stethoscope.\",\n      \"implausible_hard\": \"Wearing a dark salon apron over everyday clothes, possibly a hairnet or cap, holding a comb or brush, with other hairdressing tools visible (e.g., scissors, spray bottle), and a client cape draped nearby.\",\n      \"implausible_easy\": \"Wearing casual or slightly edgy street clothes such as a leather jacket and beanie, carrying or standing next to a guitar case and a portable music stand, possibly with a backpack.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Both wear scrubs, but the nurse\u2019s stethoscope and bedside-clinician styling versus the porter\u2019s lack of stethoscope and association with carts/trolleys provide a strong visual cue difference.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Medical scrubs and stethoscope versus salon apron and hair tools are clearly different visual domains.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Medical uniform versus casual musician clothing with guitar and music stand are visually very distinct.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Scrubs and hospital ID differ sharply from a salon apron and hairdressing tools.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Hospital scrubs and name tag contrast strongly with streetwear and musical equipment.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Hairdressing apron and tools are quite different from a leather jacket, guitar case, and music stand.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four conditions were judged CORRECT: a nurse is a clear prototype for this action; a hospital porter is a realistic but non-core actor; a hairdresser provides related but wrong-domain head contact; and a street musician is maximally unrelated. No condition required replacement to achieve a proper gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The scene\u2014touching a patient\u2019s forehead with fingertips in a hospital room\u2014is concrete, imageable, and has a clear prototypical agent. It supports a clean plausibility gradient with agents from strongly fitting to clearly unrelated, and the instrument and setting are appropriate.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematic fit across agents forms a well-ordered gradient from prototypical (nurse) through related-but-wrong (hairdresser) to clearly unrelated (street musician). Visually, all roles have recognizable attire, though the hospital porter is somewhat ambiguous as a specific profession; nonetheless, all pairs are distinguishable. The scene itself is well-designed, with an appropriate instrument and a clear professional prototype, and is suitable for use in the experiment.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professional roles; verb form, patient, instrument, and location are constant across sentences; plausibility differences arise from role\u2013action mismatch, not physical incapacity."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A nurse",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Nurses routinely check patients\u2019 temperature, comfort, and responsiveness by touching the forehead in hospital rooms, making them the prototypical professional for this action and setting.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that doctors or family members also touch a patient\u2019s forehead, so the behavior is not absolutely unique to nurses and thus might be merely plausible_hard; however, in actual hospital routines nurses are by far the primary professionals performing this specific bedside check, so the lower placement is weaker."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Assessing patients\u2019 condition, including quickly checking for fever or comfort by feeling the forehead, is a core nursing duty.",
+          "removal_test": "YES: If nurses were absent from the hospital room, routine bedside forehead-touch checks by staff would largely cease, since doctors and visitors do this far less frequently."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A hospital porter",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Hospital porters are legitimately present in hospital rooms and may occasionally touch patients (including around the head) when assisting with transport or positioning, but touching the forehead for assessment is not part of their core role, so the event is plausible yet clearly non-prototypical.",
+        "counter_arguments": {
+          "argument_for_higher": "One might argue that as hospital staff who handle patients, porters could sometimes check if a patient is responsive by touching their head, making the behavior feel routine and thus plausible_easy; however, evaluation and physical examination are not part of a porter\u2019s primary duties, so they are not the default agent for this action.",
+          "argument_for_lower": "Conversely, one might claim porters rarely, if ever, perform bedside contact like a forehead check, making this more of an implausible_hard case; but porters do interact physically with patients during transfers and could realistically be close enough to lightly touch the forehead in a real scenario, so outright implausibility is too strong."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A hairdresser",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Hairdressers work on people\u2019s heads and regularly touch the head and hair with their hands, but they do so in salons or as mobile stylists, not as medical staff in hospital rooms; seeing a uniformed hairdresser touching a patient\u2019s forehead in a hospital evokes a related-but-wrong domain and feels odd but not maximally bizarre.",
+        "counter_arguments": {
+          "argument_for_higher": "For a higher (more plausible) placement, one could note that some hairdressers provide services to long-term hospital patients, and while adjusting hair or a fringe they might briefly touch the forehead, making the situation conceivable in a special-case scenario; however, grooming in hospitals is exceptional, and the specific gesture of checking the forehead strongly suggests a medical exam, which is not in their role.",
+          "argument_for_lower": "For a lower (implausible_easy) placement, one could argue that hairdressers almost never work in hospital rooms and have no medical responsibilities, so a fully uniformed hairdresser touching a patient\u2019s forehead there is clearly wrong; yet compared to a completely unrelated profession (like a street musician), the manual work on the head and intimate head contact make hairdressers meaningfully closer to the nurse\u2019s domain, justifying implausible_hard."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": false,
+            "reasoning": "Nurses are in healthcare/medical services, whereas hairdressers are in beauty/personal grooming; these are adjacent service sectors but not the same broad professional field."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Nurses typically work in hospitals/clinics; hairdressers typically work in salons or mobile service locations, not hospital rooms."
+          },
+          "tools_instruments": {
+            "overlaps": false,
+            "reasoning": "Nurses use medical tools (stethoscopes, thermometers, syringes), whereas hairdressers use combs, scissors, hairdryers, and styling tools."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act directly on human heads/faces as their primary object of manual work."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both routinely use their hands and fingertips to manipulate or touch areas of the head in close contact."
+          },
+          "overlap_count": 2,
+          "sufficient": true,
+          "negative_test": "Even ignoring the specific verb \u2018touch\u2019, both professions involve intimate manual work on a person\u2019s head/face; that shared focus makes a hairdresser in close contact with a person\u2019s head feel more related to the scene than a random profession, even though a hospital-room forehead check is clearly outside their proper context."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A street musician",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Street musicians belong to an entertainment/public performance domain and have no professional reason to be in a hospital room or to touch a patient\u2019s forehead, making this an immediately rejected, maximally unrelated pairing.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a musician volunteering to play music in hospitals and perhaps comforting a patient with a touch, making the situation barely plausible; however, such contact is not part of the musician\u2019s role, the hospital room is not their natural work setting, and there is essentially no systematic semantic overlap with nursing, so they remain clearly implausible.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Scrubs, stethoscope, and medical badge strongly cue \u2018nurse\u2019 or bedside medical staff to most viewers."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "Scrubs and a name tag signal generic hospital staff, but without a highly standardized, widely known \u2018porter\u2019 uniform, many viewers may label this person simply as hospital staff or a nurse."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Salon apron, hair tools, and client cape are classic, highly recognizable markers of a hairdresser/barber."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A leather-jacketed person with a guitar case and music stand is strongly and unambiguously associated with a street musician/busker."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Wearing light-colored or blue medical scrubs, with a stethoscope around the neck, hospital ID badge, and hair neatly tied back.",
+        "plausible_hard": "Wearing solid-colored hospital scrubs (distinct shade from the nurse), comfortable work shoes, a name tag, and possibly standing beside or having just used a cart or trolley, without a stethoscope.",
+        "implausible_hard": "Wearing a dark salon apron over everyday clothes, possibly a hairnet or cap, holding a comb or brush, with other hairdressing tools visible (e.g., scissors, spray bottle), and a client cape draped nearby.",
+        "implausible_easy": "Wearing casual or slightly edgy street clothes such as a leather jacket and beanie, carrying or standing next to a guitar case and a portable music stand, possibly with a backpack."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Both wear scrubs, but the nurse\u2019s stethoscope and bedside-clinician styling versus the porter\u2019s lack of stethoscope and association with carts/trolleys provide a strong visual cue difference."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Medical scrubs and stethoscope versus salon apron and hair tools are clearly different visual domains."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Medical uniform versus casual musician clothing with guitar and music stand are visually very distinct."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Scrubs and hospital ID differ sharply from a salon apron and hairdressing tools."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Hospital scrubs and name tag contrast strongly with streetwear and musical equipment."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Hairdressing apron and tools are quite different from a leather jacket, guitar case, and music stand."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four conditions were judged CORRECT: a nurse is a clear prototype for this action; a hospital porter is a realistic but non-core actor; a hairdresser provides related but wrong-domain head contact; and a street musician is maximally unrelated. No condition required replacement to achieve a proper gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The scene\u2014touching a patient\u2019s forehead with fingertips in a hospital room\u2014is concrete, imageable, and has a clear prototypical agent. It supports a clean plausibility gradient with agents from strongly fitting to clearly unrelated, and the instrument and setting are appropriate."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematic fit across agents forms a well-ordered gradient from prototypical (nurse) through related-but-wrong (hairdresser) to clearly unrelated (street musician). Visually, all roles have recognizable attire, though the hospital porter is somewhat ambiguous as a specific profession; nonetheless, all pairs are distinguishable. The scene itself is well-designed, with an appropriate instrument and a clear professional prototype, and is suitable for use in the experiment."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 2,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the specific verb \u2018touch\u2019, both professions involve intimate manual work on a person\u2019s head/face; that shared focus makes a hairdresser in close contact with a person\u2019s head feel more related to the scene than a random profession, even though a hospital-room forehead check is clearly outside their proper context.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 144.80988482758403,
+  "token_info": {
+    "input_tokens": 5622,
+    "output_tokens": 9789,
+    "cached_tokens": 0
+  },
+  "success": true
+}

@@ -1,0 +1,200 @@
+{
+  "verb": "write",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A doctor\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Doctors are the canonical professionals who write prescriptions at hospital desks; this is a core and highly expected part of their role, and the setting, action, and instrument all fit them perfectly.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that in many modern hospitals prescriptions are entered electronically and also by other prescribers such as nurse practitioners, so writing a paper prescription with a pen at a desk might be seen as just one of several professionals' tasks rather than uniquely the doctor's core duty, which would slightly weaken the prototypicality.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A nurse\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Nurses are naturally and frequently present at hospital desks and do substantial paperwork, and in some systems advanced practice nurses prescribe medications, but for many observers prescribing is still more strongly associated with doctors, making this a plausible but non-prototypical fit.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In contexts where nurse practitioners and other advanced practice nurses are common and widely recognized as prescribers, a nurse in scrubs writing a prescription at a hospital desk could seem entirely normal, potentially elevating this to a clear-yes, plausible-easy interpretation.\",\n        \"argument_for_lower\": \"In many countries and lay belief systems, nurses are not permitted to prescribe and are mainly associated with bedside care rather than authoring prescriptions, so a viewer might consider a nurse actually writing a prescription form to be an incorrect role for this specific action, pushing it toward implausible-hard despite the hospital setting being natural.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A paramedic\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Paramedics are clearly medical professionals who administer treatments and medications, but their work is typically field-based, and they do not normally write formal prescriptions at a hospital desk, creating a related-but-wrong, hesitant-no fit rather than a clear no.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Some advanced paramedic roles, especially in certain healthcare systems or remote settings, involve extended practice where they might authorize or document medications in a more formal way, so one could imagine a realistic scenario where a paramedic writes something prescription-like at a desk, nudging it toward plausible-hard.\",\n        \"argument_for_lower\": \"For many people, paramedics are strongly associated with ambulances and on-scene emergency care, not with office-style hospital work, so seeing one seated at a hospital desk writing a prescription could feel so off-domain that it is rejected immediately, similar to a firefighter and thus closer to implausible-easy.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both doctors and paramedics are healthcare professionals in emergency and acute medical care, working within the medical domain.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Doctors mainly work in hospitals and clinics, while paramedics work in ambulances and in the field but regularly interface with hospital emergency departments, so they share emergency medical environments.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use medical instruments such as syringes, monitoring equipment, and medication kits, even if paramedics use more portable versions.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act on human patients, assessing, treating, and stabilizing people with medical problems or injuries.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform hands-on medical procedures such as examinations, administering medications, and other precise clinical actions, differing more in context than in action type.\"\n        },\n        \"overlap_count\": 5,\n        \"sufficient\": true,\n        \"negative_test\": \"Even if we ignore the verb 'write' entirely, paramedics are still strongly associated with doctors through emergency medicine: they treat the same kinds of patients, share clinical tools, and interact with hospital teams, so the association with the doctor/hospital scene clearly persists beyond the shared verb.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A firefighter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Firefighters are associated with fire suppression and rescue, not with hospital-based clinical work or prescription writing, and seeing a firefighter in full turnout gear at a hospital desk writing a prescription would be rejected immediately by most viewers.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Because firefighters are sometimes first responders and may give basic medical aid or be cross-trained, and they also complete incident report paperwork, one could argue there is a thin connection to medical paperwork that might yield a momentary 'wait, maybe' reaction, nudging them slightly toward implausible-hard.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A doctor in a white lab coat with a stethoscope and ID badge is a classic, easily recognized visual stereotype.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A nurse wearing colored scrubs with a hospital badge and nursing accessories is widely recognized as nursing staff.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A paramedic in an EMS uniform with high-visibility markings and medical patches is clearly identifiable as ambulance/emergency medical staff.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A firefighter in heavy turnout gear with reflective stripes and a fire helmet is an unmistakable visual stereotype.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically wears a white lab coat over professional clothing, often with a stethoscope around the neck and a hospital ID badge, sometimes in a consulting room or at a hospital station.\",\n      \"plausible_hard\": \"Typically wears solid-colored medical scrubs with comfortable shoes, possibly a badge clip, penlight, or scissors, and no lab coat, signaling bedside nursing staff.\",\n      \"implausible_hard\": \"Typically wears a dark or high-visibility EMS uniform with reflective strips, service patches (EMS, paramedic), cargo pants, a radio, and may carry a trauma bag, evoking field emergency response.\",\n      \"implausible_easy\": \"Typically wears bulky fire-resistant turnout coat and pants with bright reflective stripes, a fire helmet, heavy boots, and sometimes gloves or an axe or hose, clearly suited for firefighting.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Doctor in a lab coat with stethoscope versus nurse in scrubs without a lab coat are visually distinct medical roles.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Doctor's white coat and indoor clinical look contrast with the paramedic's EMS uniform and high-visibility, field-oriented gear.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Doctor's light clinical attire and stethoscope are very different from the firefighter's bulky turnout gear and helmet.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Nurse scrubs differ clearly from the paramedic's EMS uniform with reflective strips, service patches, and more rugged, tactical styling.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Nurse scrubs are slim and clinical, while firefighter gear is heavy, oversized, and helmeted, making them easy to tell apart.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Paramedic uniforms are lighter-weight with EMS markings, whereas firefighters wear thick turnout gear and a fire helmet, producing a clear visual contrast.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four agents are well placed: the doctor is the clear prototype for writing a prescription at a hospital desk, the nurse is a natural but secondary prescriber or paperwork role, the paramedic provides a strongly related yet role-mismatched medical professional, and the firefighter is clearly out of place. No INCORRECT or BORDERLINE conditions require replacement, showing that the scene can support the full gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The hospital-desk prescription-writing scene is concrete, easily photographed, has a very clear prototypical agent (doctor), and supports a robust plausibility gradient with related medical roles and a clearly mismatched emergency responder.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"The doctor, nurse, paramedic, and firefighter form a coherent plausibility gradient for writing a prescription at a hospital desk, with the doctor as the clear prototype and the firefighter as a clear mismatch. All four professions have strong, stereotyped visual identities and are easily distinguished in images. The pen-at-hospital-desk prescription scene is simple to depict and well suited for the intended plausibility judgment experiment.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A doctor",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Doctors are the canonical professionals who write prescriptions at hospital desks; this is a core and highly expected part of their role, and the setting, action, and instrument all fit them perfectly.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that in many modern hospitals prescriptions are entered electronically and also by other prescribers such as nurse practitioners, so writing a paper prescription with a pen at a desk might be seen as just one of several professionals' tasks rather than uniquely the doctor's core duty, which would slightly weaken the prototypicality."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A nurse",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Nurses are naturally and frequently present at hospital desks and do substantial paperwork, and in some systems advanced practice nurses prescribe medications, but for many observers prescribing is still more strongly associated with doctors, making this a plausible but non-prototypical fit.",
+        "counter_arguments": {
+          "argument_for_higher": "In contexts where nurse practitioners and other advanced practice nurses are common and widely recognized as prescribers, a nurse in scrubs writing a prescription at a hospital desk could seem entirely normal, potentially elevating this to a clear-yes, plausible-easy interpretation.",
+          "argument_for_lower": "In many countries and lay belief systems, nurses are not permitted to prescribe and are mainly associated with bedside care rather than authoring prescriptions, so a viewer might consider a nurse actually writing a prescription form to be an incorrect role for this specific action, pushing it toward implausible-hard despite the hospital setting being natural."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A paramedic",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Paramedics are clearly medical professionals who administer treatments and medications, but their work is typically field-based, and they do not normally write formal prescriptions at a hospital desk, creating a related-but-wrong, hesitant-no fit rather than a clear no.",
+        "counter_arguments": {
+          "argument_for_higher": "Some advanced paramedic roles, especially in certain healthcare systems or remote settings, involve extended practice where they might authorize or document medications in a more formal way, so one could imagine a realistic scenario where a paramedic writes something prescription-like at a desk, nudging it toward plausible-hard.",
+          "argument_for_lower": "For many people, paramedics are strongly associated with ambulances and on-scene emergency care, not with office-style hospital work, so seeing one seated at a hospital desk writing a prescription could feel so off-domain that it is rejected immediately, similar to a firefighter and thus closer to implausible-easy."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both doctors and paramedics are healthcare professionals in emergency and acute medical care, working within the medical domain."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Doctors mainly work in hospitals and clinics, while paramedics work in ambulances and in the field but regularly interface with hospital emergency departments, so they share emergency medical environments."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use medical instruments such as syringes, monitoring equipment, and medication kits, even if paramedics use more portable versions."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act on human patients, assessing, treating, and stabilizing people with medical problems or injuries."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform hands-on medical procedures such as examinations, administering medications, and other precise clinical actions, differing more in context than in action type."
+          },
+          "overlap_count": 5,
+          "sufficient": true,
+          "negative_test": "Even if we ignore the verb 'write' entirely, paramedics are still strongly associated with doctors through emergency medicine: they treat the same kinds of patients, share clinical tools, and interact with hospital teams, so the association with the doctor/hospital scene clearly persists beyond the shared verb."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A firefighter",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Firefighters are associated with fire suppression and rescue, not with hospital-based clinical work or prescription writing, and seeing a firefighter in full turnout gear at a hospital desk writing a prescription would be rejected immediately by most viewers.",
+        "counter_arguments": {
+          "argument_for_higher": "Because firefighters are sometimes first responders and may give basic medical aid or be cross-trained, and they also complete incident report paperwork, one could argue there is a thin connection to medical paperwork that might yield a momentary 'wait, maybe' reaction, nudging them slightly toward implausible-hard.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A doctor in a white lab coat with a stethoscope and ID badge is a classic, easily recognized visual stereotype."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A nurse wearing colored scrubs with a hospital badge and nursing accessories is widely recognized as nursing staff."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A paramedic in an EMS uniform with high-visibility markings and medical patches is clearly identifiable as ambulance/emergency medical staff."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A firefighter in heavy turnout gear with reflective stripes and a fire helmet is an unmistakable visual stereotype."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically wears a white lab coat over professional clothing, often with a stethoscope around the neck and a hospital ID badge, sometimes in a consulting room or at a hospital station.",
+        "plausible_hard": "Typically wears solid-colored medical scrubs with comfortable shoes, possibly a badge clip, penlight, or scissors, and no lab coat, signaling bedside nursing staff.",
+        "implausible_hard": "Typically wears a dark or high-visibility EMS uniform with reflective strips, service patches (EMS, paramedic), cargo pants, a radio, and may carry a trauma bag, evoking field emergency response.",
+        "implausible_easy": "Typically wears bulky fire-resistant turnout coat and pants with bright reflective stripes, a fire helmet, heavy boots, and sometimes gloves or an axe or hose, clearly suited for firefighting."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Doctor in a lab coat with stethoscope versus nurse in scrubs without a lab coat are visually distinct medical roles."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Doctor's white coat and indoor clinical look contrast with the paramedic's EMS uniform and high-visibility, field-oriented gear."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Doctor's light clinical attire and stethoscope are very different from the firefighter's bulky turnout gear and helmet."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Nurse scrubs differ clearly from the paramedic's EMS uniform with reflective strips, service patches, and more rugged, tactical styling."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Nurse scrubs are slim and clinical, while firefighter gear is heavy, oversized, and helmeted, making them easy to tell apart."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Paramedic uniforms are lighter-weight with EMS markings, whereas firefighters wear thick turnout gear and a fire helmet, producing a clear visual contrast."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four agents are well placed: the doctor is the clear prototype for writing a prescription at a hospital desk, the nurse is a natural but secondary prescriber or paperwork role, the paramedic provides a strongly related yet role-mismatched medical professional, and the firefighter is clearly out of place. No INCORRECT or BORDERLINE conditions require replacement, showing that the scene can support the full gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The hospital-desk prescription-writing scene is concrete, easily photographed, has a very clear prototypical agent (doctor), and supports a robust plausibility gradient with related medical roles and a clearly mismatched emergency responder."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "The doctor, nurse, paramedic, and firefighter form a coherent plausibility gradient for writing a prescription at a hospital desk, with the doctor as the clear prototype and the firefighter as a clear mismatch. All four professions have strong, stereotyped visual identities and are easily distinguished in images. The pen-at-hospital-desk prescription scene is simple to depict and well suited for the intended plausibility judgment experiment."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 5,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even if we ignore the verb 'write' entirely, paramedics are still strongly associated with doctors through emergency medicine: they treat the same kinds of patients, share clinical tools, and interact with hospital teams, so the association with the doctor/hospital scene clearly persists beyond the shared verb.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 110.20529772341251,
+  "token_info": {
+    "input_tokens": 6040,
+    "output_tokens": 11356
+  },
+  "success": true
+}

@@ -1,0 +1,205 @@
+{
+  "verb": "shoot",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A competitive marksman\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Shooting targets with a rifle at a shooting range is the core activity of a competitive marksman, making this agent a natural and highly typical fit for the described event.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue this belongs in plausible_hard because many other kinds of shooters (e.g., police or recreational shooters) also frequently use ranges, so competitive marksmen are not the only expected professionals in this setting.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Competing in and practicing precision target shooting with firearms is the primary professional duty of a competitive marksman.\",\n        \"removal_test\": \"YES: If competitive marksmen were removed from shooting ranges, organized competitive target shooting (as a professional sport) would cease, even though casual shooting by other groups might still occur.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A police officer\",\n      \"verdict\": \"BORDERLINE\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Police officers routinely undergo firearms training at shooting ranges, but their primary job is law enforcement rather than target shooting itself, so the thematic fit is moderate though fairly strong and close to prototypical.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Firearms training and qualification are mandatory, recurrent parts of police work, so a police officer shooting a rifle at a range can be seen as central to maintaining their professional competence, pushing this toward plausible_easy.\",\n        \"argument_for_lower\": \"Many officers primarily train with handguns and often use dedicated law-enforcement facilities rather than public shooting ranges, so a uniformed officer firing a rifle at a generic range could be judged sufficiently atypical to verge on implausible_hard.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A sniper\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Snipers are specialized marksmen whose core professional activity is precision rifle shooting and who regularly train on shooting ranges, so this scenario is highly typical rather than implausible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Given that snipers\u2019 roles center on accurate long-range rifle fire, seeing a sniper shooting a target at a range clearly fits their core job and should place them in at least plausible_hard, and more realistically plausible_easy.\",\n        \"argument_for_lower\": \"One might claim snipers usually operate in combat environments rather than civilian-style ranges, so depicting them at a standard shooting range could seem mismatched enough to argue for implausible_easy, but this ignores the extensive range-based training that defines their profession.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both snipers and competitive marksmen are professional firearms specialists focused on high-accuracy shooting.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both regularly use shooting ranges and similar training grounds, even though snipers also operate in combat zones.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use rifles with optics as primary tools.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both frequently fire at non-living practice targets during training, although snipers also shoot at human adversaries in combat.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform careful aiming, stabilizing a rifle, breath control, and precise trigger-pulling.\"\n        },\n        \"overlap_count\": 5,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb 'shoot', snipers and competitive marksmen are strongly associated through shared firearms expertise, use of rifles, and intensive practice on shooting ranges, so the association clearly persists without the shared verb.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A florist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Florists work with flowers and arrangements and have no professional connection to firearms, rifle ranges, or target shooting, so this event is clearly outside their occupational domain and feels like an immediate mismatch.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a florist visiting a shooting range as a recreational shooter, which makes the scene physically possible, but this relies entirely on off-duty hobbies and does not create a meaningful professional link to raise the thematic fit above a clear no.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The implausible_hard agent (sniper) is actually more plausible than the plausible_hard agent (police officer) and belongs with the high-plausibility conditions.\",\n    \"collapsed_pairs\": \"Plausible_easy (competitive marksman) and implausible_hard (sniper) both describe core rifle-shooting professionals at ranges, making these conditions effectively indistinguishable in plausibility.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"Competitive shooting attire with tactical clothing, eye protection, and a rifle could easily be mistaken for a generic soldier, hunter, or recreational shooter; the specific role of competitive marksman lacks a unique standardized look.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A police uniform with badge, duty belt, and other standard gear is highly recognizable to naive viewers.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Camouflage or ghillie suit, long rifle with scope, and tactical gear would readily signal a sniper or military sniper-like role.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"An apron with floral prints and a bouquet or floral tools strongly and uniquely suggests a florist.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically wears shooting or tactical clothing (e.g., fitted pants, a shooting jersey or dark/camouflage shirt), hearing and eye protection, and carries a competition-style rifle, sometimes with sponsor logos.\",\n      \"plausible_hard\": \"Wears a standard police uniform (blue or dark shirt and pants) with a visible badge, duty belt holding holster, handcuffs, and radio, possibly a ballistic vest, and is shown holding a rifle.\",\n      \"implausible_hard\": \"Wears a military or paramilitary camouflage uniform, possibly a ghillie suit and face paint, equipped with a long sniper rifle with scope and additional tactical gear such as a backpack or load-bearing vest.\",\n      \"implausible_easy\": \"Wears everyday clothing covered by a work apron (often with floral designs), possibly gardening gloves, and holds a bouquet or other floral arrangements or tools.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Police uniform with badge and duty belt is visually distinct from more generic competitive shooting attire.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A sniper in heavy camouflage or a ghillie suit with a long scoped rifle would look clearly different from a competitive shooter in simpler range attire.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A rifle-equipped shooter versus a person in a floral apron holding flowers are sharply different visually.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A clean police uniform contrasts strongly with full camouflage or ghillie gear of a sniper.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Police uniform and florist apron with flowers are easily told apart.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A camouflaged sniper with a rifle and a florist with apron and flowers have entirely different appearances.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The core scene of shooting a target with a rifle at a range is well-defined and supports a clear prototype such as a firearms instructor or competitive marksman. The implausible_hard condition is misfilled here (sniper is too plausible), but could be replaced by a related yet wrong-domain professional (e.g., a professional archer whose expertise is target sports at an archery range rather than firearms), which would share multiple dimensions (target sports domain, range-like settings, similar physical aiming actions) while still being atypical with a rifle at a gun range. The borderline status of the police officer in plausible_hard could be stabilized by keeping police there or by substituting another moderately related professional (e.g., security guard or soldier), so the scene itself can support all four levels with better-chosen agents.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The rifle-and-target shooting range scene is concrete, uses an appropriate instrument, and has clear firearms professionals as prototypes, but the chosen implausible_hard agent is misclassified and the police officer sits close to the prototypical level, so revised agent choices are needed to realize a clean plausibility gradient.\"\n  },\n  \"overall\": {\n    \"score\": \"2/4\",\n    \"borderline_count\": 1,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Two of the four agents (competitive marksman and florist) are well-placed, but the sniper is far too plausible for the implausible_hard condition and the police officer is ambiguous between easy and hard plausible. Visually, all roles are distinguishable and identifiable, though the competitive marksman lacks a uniquely standardized appearance. The underlying shooting-range scene is sound and can support a full plausibility gradient if the agents are reselected to better calibrate intermediate and related-but-wrong conditions.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A competitive marksman",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Shooting targets with a rifle at a shooting range is the core activity of a competitive marksman, making this agent a natural and highly typical fit for the described event.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue this belongs in plausible_hard because many other kinds of shooters (e.g., police or recreational shooters) also frequently use ranges, so competitive marksmen are not the only expected professionals in this setting."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Competing in and practicing precision target shooting with firearms is the primary professional duty of a competitive marksman.",
+          "removal_test": "YES: If competitive marksmen were removed from shooting ranges, organized competitive target shooting (as a professional sport) would cease, even though casual shooting by other groups might still occur."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A police officer",
+        "verdict": "BORDERLINE",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Police officers routinely undergo firearms training at shooting ranges, but their primary job is law enforcement rather than target shooting itself, so the thematic fit is moderate though fairly strong and close to prototypical.",
+        "counter_arguments": {
+          "argument_for_higher": "Firearms training and qualification are mandatory, recurrent parts of police work, so a police officer shooting a rifle at a range can be seen as central to maintaining their professional competence, pushing this toward plausible_easy.",
+          "argument_for_lower": "Many officers primarily train with handguns and often use dedicated law-enforcement facilities rather than public shooting ranges, so a uniformed officer firing a rifle at a generic range could be judged sufficiently atypical to verge on implausible_hard."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A sniper",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Snipers are specialized marksmen whose core professional activity is precision rifle shooting and who regularly train on shooting ranges, so this scenario is highly typical rather than implausible.",
+        "counter_arguments": {
+          "argument_for_higher": "Given that snipers\u2019 roles center on accurate long-range rifle fire, seeing a sniper shooting a target at a range clearly fits their core job and should place them in at least plausible_hard, and more realistically plausible_easy.",
+          "argument_for_lower": "One might claim snipers usually operate in combat environments rather than civilian-style ranges, so depicting them at a standard shooting range could seem mismatched enough to argue for implausible_easy, but this ignores the extensive range-based training that defines their profession."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both snipers and competitive marksmen are professional firearms specialists focused on high-accuracy shooting."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both regularly use shooting ranges and similar training grounds, even though snipers also operate in combat zones."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use rifles with optics as primary tools."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both frequently fire at non-living practice targets during training, although snipers also shoot at human adversaries in combat."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform careful aiming, stabilizing a rifle, breath control, and precise trigger-pulling."
+          },
+          "overlap_count": 5,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb 'shoot', snipers and competitive marksmen are strongly associated through shared firearms expertise, use of rifles, and intensive practice on shooting ranges, so the association clearly persists without the shared verb."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A florist",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Florists work with flowers and arrangements and have no professional connection to firearms, rifle ranges, or target shooting, so this event is clearly outside their occupational domain and feels like an immediate mismatch.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a florist visiting a shooting range as a recreational shooter, which makes the scene physically possible, but this relies entirely on off-duty hobbies and does not create a meaningful professional link to raise the thematic fit above a clear no.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The implausible_hard agent (sniper) is actually more plausible than the plausible_hard agent (police officer) and belongs with the high-plausibility conditions.",
+      "collapsed_pairs": "Plausible_easy (competitive marksman) and implausible_hard (sniper) both describe core rifle-shooting professionals at ranges, making these conditions effectively indistinguishable in plausibility."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "Competitive shooting attire with tactical clothing, eye protection, and a rifle could easily be mistaken for a generic soldier, hunter, or recreational shooter; the specific role of competitive marksman lacks a unique standardized look."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A police uniform with badge, duty belt, and other standard gear is highly recognizable to naive viewers."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Camouflage or ghillie suit, long rifle with scope, and tactical gear would readily signal a sniper or military sniper-like role."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "An apron with floral prints and a bouquet or floral tools strongly and uniquely suggests a florist."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically wears shooting or tactical clothing (e.g., fitted pants, a shooting jersey or dark/camouflage shirt), hearing and eye protection, and carries a competition-style rifle, sometimes with sponsor logos.",
+        "plausible_hard": "Wears a standard police uniform (blue or dark shirt and pants) with a visible badge, duty belt holding holster, handcuffs, and radio, possibly a ballistic vest, and is shown holding a rifle.",
+        "implausible_hard": "Wears a military or paramilitary camouflage uniform, possibly a ghillie suit and face paint, equipped with a long sniper rifle with scope and additional tactical gear such as a backpack or load-bearing vest.",
+        "implausible_easy": "Wears everyday clothing covered by a work apron (often with floral designs), possibly gardening gloves, and holds a bouquet or other floral arrangements or tools."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Police uniform with badge and duty belt is visually distinct from more generic competitive shooting attire."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "A sniper in heavy camouflage or a ghillie suit with a long scoped rifle would look clearly different from a competitive shooter in simpler range attire."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "A rifle-equipped shooter versus a person in a floral apron holding flowers are sharply different visually."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "A clean police uniform contrasts strongly with full camouflage or ghillie gear of a sniper."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Police uniform and florist apron with flowers are easily told apart."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A camouflaged sniper with a rifle and a florist with apron and flowers have entirely different appearances."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The core scene of shooting a target with a rifle at a range is well-defined and supports a clear prototype such as a firearms instructor or competitive marksman. The implausible_hard condition is misfilled here (sniper is too plausible), but could be replaced by a related yet wrong-domain professional (e.g., a professional archer whose expertise is target sports at an archery range rather than firearms), which would share multiple dimensions (target sports domain, range-like settings, similar physical aiming actions) while still being atypical with a rifle at a gun range. The borderline status of the police officer in plausible_hard could be stabilized by keeping police there or by substituting another moderately related professional (e.g., security guard or soldier), so the scene itself can support all four levels with better-chosen agents.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The rifle-and-target shooting range scene is concrete, uses an appropriate instrument, and has clear firearms professionals as prototypes, but the chosen implausible_hard agent is misclassified and the police officer sits close to the prototypical level, so revised agent choices are needed to realize a clean plausibility gradient."
+    },
+    "overall": {
+      "score": "2/4",
+      "borderline_count": 1,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Two of the four agents (competitive marksman and florist) are well-placed, but the sniper is far too plausible for the implausible_hard condition and the police officer is ambiguous between easy and hard plausible. Visually, all roles are distinguishable and identifiable, though the competitive marksman lacks a uniquely standardized appearance. The underlying shooting-range scene is sound and can support a full plausibility gradient if the agents are reselected to better calibrate intermediate and related-but-wrong conditions."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 2,
+    "borderline_count": 1,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "BORDERLINE",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_easy"
+      }
+    },
+    "score_strict": 2,
+    "score_lenient": 2.5,
+    "overlap_count": 5,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb 'shoot', snipers and competitive marksmen are strongly associated through shared firearms expertise, use of rifles, and intensive practice on shooting ranges, so the association clearly persists without the shared verb.",
+    "identifiability": {
+      "plausible_easy": "AMBIGUOUS",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 201.79654354974627,
+  "token_info": {
+    "input_tokens": 5628,
+    "output_tokens": 13437,
+    "cached_tokens": 0
+  },
+  "success": true
+}

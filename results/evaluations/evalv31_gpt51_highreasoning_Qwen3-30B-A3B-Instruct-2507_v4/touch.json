@@ -1,0 +1,205 @@
+{
+  "verb": "touch",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professions; verb form, patient, instrument, and location are consistent; plausibility differences are based on role-action mismatch, not physical incapacity.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A neonatal nurse\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Neonatal nurses are core NICU staff whose primary duties include hands-on assessment and comforting of newborns, including gently touching the forehead. This is a prototypical NICU-care action.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue this belongs in plausible_hard because neonatologists and pediatricians also routinely touch newborns in NICUs, so the action is not exclusive to nurses and might be seen as more generally \\\"medical staff\\\" rather than nurse-specific.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Neonatal nurses are explicitly responsible for routine physical contact, monitoring, and soothing of NICU infants, including checking temperature and responsiveness by touching the forehead.\",\n        \"removal_test\": \"YES: Without neonatal nurses, the continuous, routine touching and checking of NICU babies\u2019 foreheads would largely cease; other professionals are present more intermittently and could not sustain this core caregiving function.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A pediatrician\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Pediatricians examine newborns and sometimes see babies in intensive care, so touching a newborn\u2019s forehead in a NICU is plausible but less prototypical than a neonatal nurse, especially given the subspecialty of neonatology.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Pediatricians are doctors for children and newborns; in many hospitals they perform routine newborn exams, including touching the forehead, so one could argue they are as central as nurses to this action and thus plausible_easy.\",\n        \"argument_for_lower\": \"In many NICUs, neonatologists rather than general pediatricians care for critically ill newborns, so a general pediatrician might be seen as somewhat out of place in this specific intensive-care setting, pushing them toward borderline or even implausible_hard for some viewers.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A construction worker\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A construction worker has virtually no professional connection to NICU care or newborns, and would not normally be allowed to approach and touch a baby there; viewers would almost instantly reject this as clearly wrong rather than hesitating.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a rare scenario where a construction worker is doing repairs in a hospital and briefly enters the NICU, perhaps interacting with a colleague\u2019s baby, which could make their mere presence and contact barely conceivable and thus seem like implausible_hard.\",\n        \"argument_for_lower\": \"The construction trade is entirely outside healthcare, and construction workers are not part of NICU operations at all; infection control and access restrictions make them extremely unlikely even to be in the room, so this agent functions as a clear, maximally implausible mismatch (implausible_easy).\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Neonatal nurses are in healthcare; construction workers are in building/trades.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Neonatal nurses typically work in hospitals/NICUs; construction workers typically work on construction sites, not in medical wards.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Neonatal nurses use medical equipment; construction workers use heavy tools and building equipment; occasional shared items like gloves are generic and not profession-defining.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Neonatal nurses act on human infants; construction workers act on buildings and materials.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Neonatal nurses perform fine, gentle caregiving motions; construction workers perform heavy manual labor; the action types are not meaningfully similar.\"\n        },\n        \"overlap_count\": 0,\n        \"sufficient\": false,\n        \"negative_test\": \"Removing the verb \\\"touching\\\" leaves no reason to associate a construction worker with a NICU or newborn care; the professions and settings are entirely unrelated, so the weak connection vanishes.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A professional wrestler\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A professional wrestler comes from an entertainment/combat-sport domain with no connection to NICUs or newborn care, so their presence touching a baby in a NICU would be instantly seen as bizarre and clearly wrong.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a wrestler visiting a hospitalized infant for a charity event or as a parent, making their presence in a hospital barely conceivable and thus nudging them toward implausible_hard, though they would not normally be in ring attire or acting in their professional capacity.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"The implausible_hard (construction worker) and implausible_easy (professional wrestler) conditions are both clear, unrelated \\\"no\\\" cases with essentially no graded difference in plausibility; they collapse into the same very-low-fit category.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A neonatal nurse would appear as a nurse in medical scrubs with hospital ID, which is readily recognized as a nursing role.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A pediatrician would typically wear a white coat and stethoscope or professional medical attire, making them clearly identifiable as a doctor.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A construction worker wearing a hard hat, high-visibility vest, work boots, and possibly a tool belt is strongly recognizable.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A professional wrestler in ring gear (tights, boots, knee pads, possibly a mask) suggests an entertainer or athlete, but many viewers might guess \\\"athlete\\\" or \\\"bodybuilder\\\" rather than specifically \\\"wrestler.\\\"\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically wears colorful medical scrubs, possibly with pediatric patterns, hospital ID badge, comfortable closed-toe shoes, and may have a stethoscope; overall clearly a nurse in a hospital setting.\",\n      \"plausible_hard\": \"Typically wears a white lab coat over business or scrub clothing, with a stethoscope around the neck and a name badge; appearance is that of a medical doctor.\",\n      \"implausible_hard\": \"Typically wears a hard hat, high-visibility safety vest or jacket, rugged work trousers, steel-toe boots, and may carry tools or a tool belt.\",\n      \"implausible_easy\": \"Typically wears muscular, exposed or tight-fitting ring attire such as trunks or tights, wrestling boots, knee pads, and possibly a mask or flashy accessories; physique is athletic and bulky.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Nurse scrubs versus doctor\u2019s white coat and more formal attire allow clear differentiation between nurse and physician.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Medical scrubs differ markedly from hard hat and high-visibility construction gear.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Nurse scrubs are visually distinct from revealing or tight wrestling gear and athletic physique.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"White coat and medical tools are clearly different from construction safety equipment and workwear.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Doctor\u2019s coat and stethoscope contrast strongly with flamboyant wrestling attire and physique.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Construction safety gear (hard hat, vest) looks very different from wrestling ring gear (tights, boots, pads).\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The only INCORRECT condition is the implausible_hard construction worker, who is too unrelated and thus implausible_easy. A suitable implausible_hard agent sharing at least two overlap dimensions with a neonatal nurse is easy to imagine, e.g., a hospital pharmacist, radiologist, or hospital administrator (same healthcare domain and hospital setting but not typically engaged in hands-on infant care). Therefore the scene itself can support all four levels; it only needs better agent selection.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The NICU newborn-forehead-touching scenario is concrete, visually clear, and has a strong prototypical agent (neonatal nurse). The instrument and location are appropriate and imageable. The main weakness is the choice of implausible_hard agent, not the scene itself.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"The neonatal nurse and pediatrician provide a strong plausible vs moderately plausible contrast, and the NICU scene is clear and imageable. The construction worker is too unrelated to function as implausible_hard and instead behaves like a clear no, collapsing with the professional wrestler into the same category. Visual identities are mostly strong, with all professions distinct and only the wrestler somewhat ambiguous, so the scene is sound but needs a better implausible_hard agent.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professions; verb form, patient, instrument, and location are consistent; plausibility differences are based on role-action mismatch, not physical incapacity."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A neonatal nurse",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Neonatal nurses are core NICU staff whose primary duties include hands-on assessment and comforting of newborns, including gently touching the forehead. This is a prototypical NICU-care action.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue this belongs in plausible_hard because neonatologists and pediatricians also routinely touch newborns in NICUs, so the action is not exclusive to nurses and might be seen as more generally \"medical staff\" rather than nurse-specific."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Neonatal nurses are explicitly responsible for routine physical contact, monitoring, and soothing of NICU infants, including checking temperature and responsiveness by touching the forehead.",
+          "removal_test": "YES: Without neonatal nurses, the continuous, routine touching and checking of NICU babies\u2019 foreheads would largely cease; other professionals are present more intermittently and could not sustain this core caregiving function."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A pediatrician",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Pediatricians examine newborns and sometimes see babies in intensive care, so touching a newborn\u2019s forehead in a NICU is plausible but less prototypical than a neonatal nurse, especially given the subspecialty of neonatology.",
+        "counter_arguments": {
+          "argument_for_higher": "Pediatricians are doctors for children and newborns; in many hospitals they perform routine newborn exams, including touching the forehead, so one could argue they are as central as nurses to this action and thus plausible_easy.",
+          "argument_for_lower": "In many NICUs, neonatologists rather than general pediatricians care for critically ill newborns, so a general pediatrician might be seen as somewhat out of place in this specific intensive-care setting, pushing them toward borderline or even implausible_hard for some viewers."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A construction worker",
+        "verdict": "INCORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A construction worker has virtually no professional connection to NICU care or newborns, and would not normally be allowed to approach and touch a baby there; viewers would almost instantly reject this as clearly wrong rather than hesitating.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a rare scenario where a construction worker is doing repairs in a hospital and briefly enters the NICU, perhaps interacting with a colleague\u2019s baby, which could make their mere presence and contact barely conceivable and thus seem like implausible_hard.",
+          "argument_for_lower": "The construction trade is entirely outside healthcare, and construction workers are not part of NICU operations at all; infection control and access restrictions make them extremely unlikely even to be in the room, so this agent functions as a clear, maximally implausible mismatch (implausible_easy)."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": false,
+            "reasoning": "Neonatal nurses are in healthcare; construction workers are in building/trades."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Neonatal nurses typically work in hospitals/NICUs; construction workers typically work on construction sites, not in medical wards."
+          },
+          "tools_instruments": {
+            "overlaps": false,
+            "reasoning": "Neonatal nurses use medical equipment; construction workers use heavy tools and building equipment; occasional shared items like gloves are generic and not profession-defining."
+          },
+          "patient_object_type": {
+            "overlaps": false,
+            "reasoning": "Neonatal nurses act on human infants; construction workers act on buildings and materials."
+          },
+          "physical_actions": {
+            "overlaps": false,
+            "reasoning": "Neonatal nurses perform fine, gentle caregiving motions; construction workers perform heavy manual labor; the action types are not meaningfully similar."
+          },
+          "overlap_count": 0,
+          "sufficient": false,
+          "negative_test": "Removing the verb \"touching\" leaves no reason to associate a construction worker with a NICU or newborn care; the professions and settings are entirely unrelated, so the weak connection vanishes."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A professional wrestler",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A professional wrestler comes from an entertainment/combat-sport domain with no connection to NICUs or newborn care, so their presence touching a baby in a NICU would be instantly seen as bizarre and clearly wrong.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a wrestler visiting a hospitalized infant for a charity event or as a parent, making their presence in a hospital barely conceivable and thus nudging them toward implausible_hard, though they would not normally be in ring attire or acting in their professional capacity.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "The implausible_hard (construction worker) and implausible_easy (professional wrestler) conditions are both clear, unrelated \"no\" cases with essentially no graded difference in plausibility; they collapse into the same very-low-fit category."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A neonatal nurse would appear as a nurse in medical scrubs with hospital ID, which is readily recognized as a nursing role."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A pediatrician would typically wear a white coat and stethoscope or professional medical attire, making them clearly identifiable as a doctor."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A construction worker wearing a hard hat, high-visibility vest, work boots, and possibly a tool belt is strongly recognizable."
+        },
+        "implausible_easy": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A professional wrestler in ring gear (tights, boots, knee pads, possibly a mask) suggests an entertainer or athlete, but many viewers might guess \"athlete\" or \"bodybuilder\" rather than specifically \"wrestler.\""
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically wears colorful medical scrubs, possibly with pediatric patterns, hospital ID badge, comfortable closed-toe shoes, and may have a stethoscope; overall clearly a nurse in a hospital setting.",
+        "plausible_hard": "Typically wears a white lab coat over business or scrub clothing, with a stethoscope around the neck and a name badge; appearance is that of a medical doctor.",
+        "implausible_hard": "Typically wears a hard hat, high-visibility safety vest or jacket, rugged work trousers, steel-toe boots, and may carry tools or a tool belt.",
+        "implausible_easy": "Typically wears muscular, exposed or tight-fitting ring attire such as trunks or tights, wrestling boots, knee pads, and possibly a mask or flashy accessories; physique is athletic and bulky."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Nurse scrubs versus doctor\u2019s white coat and more formal attire allow clear differentiation between nurse and physician."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Medical scrubs differ markedly from hard hat and high-visibility construction gear."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Nurse scrubs are visually distinct from revealing or tight wrestling gear and athletic physique."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "White coat and medical tools are clearly different from construction safety equipment and workwear."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Doctor\u2019s coat and stethoscope contrast strongly with flamboyant wrestling attire and physique."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Construction safety gear (hard hat, vest) looks very different from wrestling ring gear (tights, boots, pads)."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The only INCORRECT condition is the implausible_hard construction worker, who is too unrelated and thus implausible_easy. A suitable implausible_hard agent sharing at least two overlap dimensions with a neonatal nurse is easy to imagine, e.g., a hospital pharmacist, radiologist, or hospital administrator (same healthcare domain and hospital setting but not typically engaged in hands-on infant care). Therefore the scene itself can support all four levels; it only needs better agent selection.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The NICU newborn-forehead-touching scenario is concrete, visually clear, and has a strong prototypical agent (neonatal nurse). The instrument and location are appropriate and imageable. The main weakness is the choice of implausible_hard agent, not the scene itself."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "The neonatal nurse and pediatrician provide a strong plausible vs moderately plausible contrast, and the NICU scene is clear and imageable. The construction worker is too unrelated to function as implausible_hard and instead behaves like a clear no, collapsing with the professional wrestler into the same category. Visual identities are mostly strong, with all professions distinct and only the wrestler somewhat ambiguous, so the scene is sound but needs a better implausible_hard agent."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 0,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "implausible_easy"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.0,
+    "overlap_count": 0,
+    "overlap_sufficient": false,
+    "overlap_negative_test": "Removing the verb \"touching\" leaves no reason to associate a construction worker with a NICU or newborn care; the professions and settings are entirely unrelated, so the weak connection vanishes.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "AMBIGUOUS",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 125.25882199779153,
+  "token_info": {
+    "input_tokens": 5503,
+    "output_tokens": 7489,
+    "cached_tokens": 0
+  },
+  "success": true
+}

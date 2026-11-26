@@ -1,0 +1,202 @@
+{
+  "verb": "paint",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met: all agents are human professions, only the agent varies, and plausibility differences are based on role-action mismatch rather than physical ability.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A carpenter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Carpenters routinely work with wooden doors in workshops and are often responsible for finishing them, including painting, so this is a highly typical and expected event in this setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that surface finishing and painting are more prototypically associated with professional painters than carpenters, making a carpenter slightly less than the perfect prototype and closer to a plausible_hard agent rather than the absolute default.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"An electrician\",\n      \"verdict\": \"BORDERLINE\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"An electrician could naturally be present in a workshop to handle wiring and might plausibly paint a door there as a secondary or personal task, but painting wood is not part of core electrical work, and many people might view this as more thematically wrong than merely atypical.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In small building or renovation businesses, electricians sometimes perform a range of general maintenance tasks, including occasional painting, so an electrician painting a door in their own workshop could feel almost as normal as a carpenter doing so.\",\n        \"argument_for_lower\": \"Electricians are strongly associated with cables, circuits, and panels, not with woodwork or surface finishing; seeing an electrician in full work attire painting a wooden door in a carpentry-style workshop could be judged as role-inappropriate enough to fit an implausible_hard classification.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A plumber\",\n      \"verdict\": \"BORDERLINE\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Plumbers belong to the same broad construction-trade domain as carpenters and share similar manual skills and tools, but they are not expected to work on wooden doors in a carpentry workshop, so the event is low in fit; however, many people could still see it as an odd but acceptable crossover task rather than clearly implausible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"On renovation sites or in small contractor businesses, a plumber might help with general finishing tasks or paint doors in their own workshop, making 'a plumber painting a wooden door in a workshop' a realistic, if secondary, work activity and thus closer to plausible_hard.\",\n        \"argument_for_lower\": \"If viewers do not appreciate the shared construction context and focus instead on the plumber\u2019s association with pipes and bathrooms, they may see no meaningful connection to wooden doors or workshops at all, making the plumber feel almost as unrelated as a librarian and therefore more like an implausible_easy agent.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both carpenters and plumbers are building/construction trades who work on the physical infrastructure of buildings.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both often work on job sites, in basements or utility areas, and may have workshops or garages with tools and materials.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely use hand tools such as drills, saws, wrenches, and other construction equipment, even though specific tools differ.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both act on components of buildings (fixtures, structural elements, fittings), though carpenters focus on wood and plumbers on pipes and water systems.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both perform intensive manual tasks like cutting, fastening, and installing materials in precise locations.\"\n          },\n          \"overlap_count\": 5,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the act of painting, a plumber and a carpenter are both strongly associated with construction environments and working side by side on building projects, so the association with a workshop scene persists without relying on the shared verb.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A librarian\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Librarians are associated with books, information, and quiet indoor environments, not with workshops, wood, or painting; there is essentially no semantic link between their professional role and painting a wooden door in a workshop, making this a very low-fit, clearly role-inappropriate event.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Since any adult, including a librarian, might have a home workshop or help with renovation tasks, some viewers might reinterpret the scene as off-duty DIY and thus see it as an odd but possible everyday activity, pushing it toward implausible_hard or even plausible_hard.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"The plausible_hard (electrician) and implausible_hard (plumber) conditions are quite close in plausibility and may be difficult for some participants to clearly distinguish, risking partial gradient collapse between these two middle levels.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A carpenter in typical work clothes and tool belt would be recognized as some kind of construction worker, but distinguishing 'carpenter' specifically from other trades based on attire alone is not always reliable.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"An electrician\u2019s workwear (logoed polo or coveralls, tool belt) plus small electrical tools can suggest the role, but visually they can be confused with other tradespeople without clear, prominent electrical gear.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A plumber can be made somewhat recognizable with a large pipe wrench and plumbing accessories, but in generic work overalls they are still easily confused with other manual trades.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"UNIDENTIFIABLE\",\n        \"reasoning\": \"Librarians have no standardized uniform; in a photo against a plain background they would look like a generic office worker or teacher, making the specific role essentially impossible to identify.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"A carpenter typically wears sturdy work trousers, a flannel or work shirt, a tool belt with hammer and tape measure, possibly a hard hat, and may be shown near lumber or saws.\",\n      \"plausible_hard\": \"An electrician typically wears branded work overalls or a polo and work pants, a tool belt with insulated screwdrivers and pliers, and may carry a coil of electrical cable or a voltage tester.\",\n      \"implausible_hard\": \"A plumber commonly wears coveralls or durable work clothes, sometimes with knee pads, and carries a large pipe wrench or similar plumbing tools, often with fittings or pipes visible.\",\n      \"implausible_easy\": \"A librarian generally wears smart-casual or business-casual clothing (cardigan, blouse or shirt, slacks or skirt), perhaps glasses and a name badge, but no distinctive uniform or gear.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Carpenter and electrician can be differentiated by wood-focused versus electrical-focused gear (saw and measuring tape vs coil of wire and tester), despite similar work clothing.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Carpenter and plumber can be visually separated by different tools and accessories (saws/wood vs pipe wrench/pipes) and potentially different colored workwear.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A construction-trade carpenter in rugged work gear contrasts clearly with an office-style librarian in smart-casual clothing.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Electrician and plumber can be distinguished by characteristic gear such as electrical cables and testers versus pipe wrenches and plumbing fittings, though both wear generic work clothes.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"An electrician in workwear and tool belt is visually distinct from a librarian dressed like an office professional.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A plumber in work overalls with heavy plumbing tools looks clearly different from a librarian in everyday office attire.\"\n      }\n    },\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"A librarian\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The instrument (brush) is appropriate for painting a wooden door, and a carpenter/woodworker or house painter is a clear prototype in a workshop. The borderline issues lie in agent choice: for plausible_hard, a building custodian or general maintenance worker could be a more natural moderate-fit agent; for implausible_hard, a related craftsperson such as a car mechanic or welder (sharing workshop and tools but not wood/door work) could better instantiate low-fit with clear overlap; for implausible_easy, a maximally unrelated but visually identifiable role such as a nurse, judge, or chef would work well. These alternatives indicate the scene itself can support the full gradient; the current agents are the main limitation.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The scene 'painting a wooden door with a brush in a workshop' is coherent, concrete, and has a strong professional prototype, but the chosen middle agents (electrician, plumber) produce a somewhat weak contrast, and the librarian is not visually identifiable as a profession. Adjusting the agent set to use more visually distinctive and semantically calibrated roles would likely yield a strong gradient.\"\n  },\n  \"overall\": {\n    \"score\": \"2/4\",\n    \"borderline_count\": 2,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"summary\": \"Thematically, the carpenter and librarian occupy the intended ends of the plausibility spectrum, but the electrician and plumber sit close together and are only borderline in their assigned middle positions. Visually, all three trades can be distinguished, but the librarian role is not identifiable from appearance alone, making the current set unsuitable for the intended image-only experiment. The underlying scene is sound and imageable, but it requires revised, more visually distinctive and semantically separated agents to support a robust plausibility gradient.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met: all agents are human professions, only the agent varies, and plausibility differences are based on role-action mismatch rather than physical ability."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A carpenter",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Carpenters routinely work with wooden doors in workshops and are often responsible for finishing them, including painting, so this is a highly typical and expected event in this setting.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that surface finishing and painting are more prototypically associated with professional painters than carpenters, making a carpenter slightly less than the perfect prototype and closer to a plausible_hard agent rather than the absolute default."
+        }
+      },
+      "plausible_hard": {
+        "agent": "An electrician",
+        "verdict": "BORDERLINE",
+        "actual_condition": "plausible_hard",
+        "reasoning": "An electrician could naturally be present in a workshop to handle wiring and might plausibly paint a door there as a secondary or personal task, but painting wood is not part of core electrical work, and many people might view this as more thematically wrong than merely atypical.",
+        "counter_arguments": {
+          "argument_for_higher": "In small building or renovation businesses, electricians sometimes perform a range of general maintenance tasks, including occasional painting, so an electrician painting a door in their own workshop could feel almost as normal as a carpenter doing so.",
+          "argument_for_lower": "Electricians are strongly associated with cables, circuits, and panels, not with woodwork or surface finishing; seeing an electrician in full work attire painting a wooden door in a carpentry-style workshop could be judged as role-inappropriate enough to fit an implausible_hard classification."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A plumber",
+        "verdict": "BORDERLINE",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Plumbers belong to the same broad construction-trade domain as carpenters and share similar manual skills and tools, but they are not expected to work on wooden doors in a carpentry workshop, so the event is low in fit; however, many people could still see it as an odd but acceptable crossover task rather than clearly implausible.",
+        "counter_arguments": {
+          "argument_for_higher": "On renovation sites or in small contractor businesses, a plumber might help with general finishing tasks or paint doors in their own workshop, making 'a plumber painting a wooden door in a workshop' a realistic, if secondary, work activity and thus closer to plausible_hard.",
+          "argument_for_lower": "If viewers do not appreciate the shared construction context and focus instead on the plumber\u2019s association with pipes and bathrooms, they may see no meaningful connection to wooden doors or workshops at all, making the plumber feel almost as unrelated as a librarian and therefore more like an implausible_easy agent.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both carpenters and plumbers are building/construction trades who work on the physical infrastructure of buildings."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both often work on job sites, in basements or utility areas, and may have workshops or garages with tools and materials."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both routinely use hand tools such as drills, saws, wrenches, and other construction equipment, even though specific tools differ."
+            },
+            "patient_object_type": {
+              "overlaps": true,
+              "reasoning": "Both act on components of buildings (fixtures, structural elements, fittings), though carpenters focus on wood and plumbers on pipes and water systems."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both perform intensive manual tasks like cutting, fastening, and installing materials in precise locations."
+            },
+            "overlap_count": 5,
+            "sufficient": true,
+            "negative_test": "Even ignoring the act of painting, a plumber and a carpenter are both strongly associated with construction environments and working side by side on building projects, so the association with a workshop scene persists without relying on the shared verb."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A librarian",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Librarians are associated with books, information, and quiet indoor environments, not with workshops, wood, or painting; there is essentially no semantic link between their professional role and painting a wooden door in a workshop, making this a very low-fit, clearly role-inappropriate event.",
+        "counter_arguments": {
+          "argument_for_higher": "Since any adult, including a librarian, might have a home workshop or help with renovation tasks, some viewers might reinterpret the scene as off-duty DIY and thus see it as an odd but possible everyday activity, pushing it toward implausible_hard or even plausible_hard.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "The plausible_hard (electrician) and implausible_hard (plumber) conditions are quite close in plausibility and may be difficult for some participants to clearly distinguish, risking partial gradient collapse between these two middle levels."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A carpenter in typical work clothes and tool belt would be recognized as some kind of construction worker, but distinguishing 'carpenter' specifically from other trades based on attire alone is not always reliable."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "An electrician\u2019s workwear (logoed polo or coveralls, tool belt) plus small electrical tools can suggest the role, but visually they can be confused with other tradespeople without clear, prominent electrical gear."
+        },
+        "implausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A plumber can be made somewhat recognizable with a large pipe wrench and plumbing accessories, but in generic work overalls they are still easily confused with other manual trades."
+        },
+        "implausible_easy": {
+          "rating": "UNIDENTIFIABLE",
+          "reasoning": "Librarians have no standardized uniform; in a photo against a plain background they would look like a generic office worker or teacher, making the specific role essentially impossible to identify."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "A carpenter typically wears sturdy work trousers, a flannel or work shirt, a tool belt with hammer and tape measure, possibly a hard hat, and may be shown near lumber or saws.",
+        "plausible_hard": "An electrician typically wears branded work overalls or a polo and work pants, a tool belt with insulated screwdrivers and pliers, and may carry a coil of electrical cable or a voltage tester.",
+        "implausible_hard": "A plumber commonly wears coveralls or durable work clothes, sometimes with knee pads, and carries a large pipe wrench or similar plumbing tools, often with fittings or pipes visible.",
+        "implausible_easy": "A librarian generally wears smart-casual or business-casual clothing (cardigan, blouse or shirt, slacks or skirt), perhaps glasses and a name badge, but no distinctive uniform or gear."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Carpenter and electrician can be differentiated by wood-focused versus electrical-focused gear (saw and measuring tape vs coil of wire and tester), despite similar work clothing."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Carpenter and plumber can be visually separated by different tools and accessories (saws/wood vs pipe wrench/pipes) and potentially different colored workwear."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "A construction-trade carpenter in rugged work gear contrasts clearly with an office-style librarian in smart-casual clothing."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Electrician and plumber can be distinguished by characteristic gear such as electrical cables and testers versus pipe wrenches and plumbing fittings, though both wear generic work clothes."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "An electrician in workwear and tool belt is visually distinct from a librarian dressed like an office professional."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A plumber in work overalls with heavy plumbing tools looks clearly different from a librarian in everyday office attire."
+        }
+      },
+      "visual_verdict": "PROBLEMATIC",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "A librarian"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The instrument (brush) is appropriate for painting a wooden door, and a carpenter/woodworker or house painter is a clear prototype in a workshop. The borderline issues lie in agent choice: for plausible_hard, a building custodian or general maintenance worker could be a more natural moderate-fit agent; for implausible_hard, a related craftsperson such as a car mechanic or welder (sharing workshop and tools but not wood/door work) could better instantiate low-fit with clear overlap; for implausible_easy, a maximally unrelated but visually identifiable role such as a nurse, judge, or chef would work well. These alternatives indicate the scene itself can support the full gradient; the current agents are the main limitation.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The scene 'painting a wooden door with a brush in a workshop' is coherent, concrete, and has a strong professional prototype, but the chosen middle agents (electrician, plumber) produce a somewhat weak contrast, and the librarian is not visually identifiable as a profession. Adjusting the agent set to use more visually distinctive and semantically calibrated roles would likely yield a strong gradient."
+    },
+    "overall": {
+      "score": "2/4",
+      "borderline_count": 2,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "PROBLEMATIC",
+      "summary": "Thematically, the carpenter and librarian occupy the intended ends of the plausibility spectrum, but the electrician and plumber sit close together and are only borderline in their assigned middle positions. Visually, all three trades can be distinguished, but the librarian role is not identifiable from appearance alone, making the current set unsuitable for the intended image-only experiment. The underlying scene is sound and imageable, but it requires revised, more visually distinctive and semantically separated agents to support a robust plausibility gradient."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 2,
+    "borderline_count": 2,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "BORDERLINE",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "BORDERLINE",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 2,
+    "score_lenient": 3.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "AMBIGUOUS",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "UNIDENTIFIABLE",
+      "implausible_hard": "AMBIGUOUS"
+    },
+    "unidentifiable_agents": [
+      "implausible_easy"
+    ]
+  },
+  "elapsed": 219.2702124863863,
+  "token_info": {
+    "input_tokens": 5739,
+    "output_tokens": 17788
+  },
+  "success": true
+}

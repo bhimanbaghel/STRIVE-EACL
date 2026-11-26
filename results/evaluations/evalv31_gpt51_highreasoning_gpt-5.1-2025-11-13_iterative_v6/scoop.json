@@ -1,0 +1,205 @@
+{
+  "verb": "scoop",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met: four human professional roles, only the agent varies, and plausibility differences arise from role\u2013action mismatch rather than physical (in)ability.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"An ice cream vendor\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Serving and scooping ice cream at an ice cream counter is the core, prototypical duty of an ice cream vendor, and this is exactly the canonical setting for that role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue this might be any generic shop employee rather than specifically an ice cream vendor, but the phrase and appearance clearly target the dedicated professional whose main job is scooping and serving ice cream.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Scooping and serving ice cream at a counter is the central, routine duty of an ice cream vendor.\",\n        \"removal_test\": \"YES: If the ice cream vendor were removed from the ice cream counter, the activity of scooping and serving ice cream there would normally stop because they are the primary person responsible for it.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A fast food worker\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Fast food workers often prepare and serve desserts, including ice cream, but scooping ice cream at a dedicated ice cream counter is not their core, defining duty, making the event plausible but less prototypical than with an ice cream vendor.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In some fast food chains, employees routinely serve ice cream or sundaes, so one could argue that for those establishments scooping ice cream is a regular part of the job and thus highly plausible.\",\n        \"argument_for_lower\": \"The term 'ice cream counter' evokes a specialized ice cream parlor, and a branded fast food uniform might feel slightly out of place there, suggesting the role is somewhat mismatched to this specific setting and could verge on implausible_hard.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A butcher\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A butcher works in food retail behind refrigerated counters and portions food for customers, but they belong at a meat counter, not an ice cream counter, so the domain overlap is strong yet their presence here feels wrong.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In a small grocery or market where staff cover multiple counters, a butcher might occasionally help at another food counter, so one could imagine a rare situation where they scoop ice cream, making the scene marginally plausible.\",\n        \"argument_for_lower\": \"Viewers might reject the scene outright because a butcher\u2019s blood-stained apron and meat tools clash starkly with a clean ice cream counter, making the mismatch feel as extreme as with a completely unrelated profession.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both the ice cream vendor and the butcher are food-service/food-retail professionals handling food products for customers.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both typically work behind shop counters with refrigerated display cases serving walk-up customers.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use specialized handheld metal tools to portion and serve food (scoops, tongs, knives, etc.), even though the specific tools differ.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act on bulk food items to be sold to customers (ice cream vs meat).\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform repetitive manual actions to portion, transfer, and package food for customers over a counter.\"\n        },\n        \"overlap_count\": 5,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb 'scooping', a butcher is still associated with a similar food-retail counter environment and food-portioning role as an ice cream vendor, so the association with the general scene remains.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A firefighter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Firefighters belong to emergency services, not food service; a firefighter in full turnout gear scooping ice cream behind an ice cream counter is immediately seen as out of place and unrelated to the activity.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a charity event where firefighters briefly serve ice cream, but this is an unusual, special-case scenario rather than a natural extension of their professional role.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Striped/branded shop uniform, paper hat/visor, apron, and ice cream display strongly signal an ice cream vendor.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Branded polo shirt with logo, matching cap/visor, name tag, and counter position clearly indicate a fast food worker.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"White or striped coat, heavy/blood-stained apron, and large knife or meat hook make the person clearly recognizable as a butcher.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Turnout gear with reflective stripes, fire helmet, and boots are iconic for a firefighter.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Ice cream vendor: light-colored or striped shop uniform, paper hat or visor, apron, possibly holding an ice cream scoop and standing behind a glass case of ice cream tubs.\",\n      \"plausible_hard\": \"Fast food worker: branded polo shirt and pants, company logo on shirt and cap or visor, name tag, standing at a fast food-style service counter.\",\n      \"implausible_hard\": \"Butcher: white or striped butcher\u2019s coat with a thick apron (possibly blood-stained), paper hat, and large knife or meat hook, typically near a meat display.\",\n      \"implausible_easy\": \"Firefighter: full firefighting turnout gear, including bulky jacket and pants with reflective stripes, heavy boots, and a fire helmet; may have gloves or other firefighting equipment.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Ice cream vendor\u2019s striped/ice-cream-themed attire and paper hat contrast with the branded polo-and-cap look of a fast food worker.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Vendor has light, clean uniform and ice cream scoop, whereas butcher has heavier coat/apron and meat tools like large knives or hooks.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Ice cream shop attire is completely different from bulky firefighting gear and helmet.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Fast food uniform with logo and cap is visually distinct from a butcher\u2019s coat, apron, and large meat-cutting tools.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Fast food worker\u2019s light branded uniform is clearly different from a firefighter\u2019s heavy protective gear.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A butcher\u2019s white coat/apron and meat tools look very different from a firefighter\u2019s turnout gear and helmet.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four conditions are judged CORRECT: an ice cream vendor is a clear prototype; a fast food worker is a plausible but non-core alternative; a butcher has strong multi-dimensional overlap but is wrong for an ice cream counter; and a firefighter is maximally unrelated. This shows the scene can support the full plausibility gradient, and alternative agents from similar domains (e.g., other food-service roles) could also be substituted if needed.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The scene is concrete and easily photographable, with a clear prototypical agent and an appropriate instrument. The food-retail context naturally supports graded plausibility distinctions between related and unrelated professions.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"All four agents satisfy the intended plausibility levels for scooping ice cream at an ice cream counter, with the ice cream vendor as a strong prototype and a clear gradient down to the unrelated firefighter. Each profession has a distinct, easily recognizable visual identity, and all pairs are visually distinguishable. The scene, instruments, and roles jointly support a robust, imageable plausibility gradient suitable for rapid judgment tasks.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met: four human professional roles, only the agent varies, and plausibility differences arise from role\u2013action mismatch rather than physical (in)ability."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "An ice cream vendor",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Serving and scooping ice cream at an ice cream counter is the core, prototypical duty of an ice cream vendor, and this is exactly the canonical setting for that role.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue this might be any generic shop employee rather than specifically an ice cream vendor, but the phrase and appearance clearly target the dedicated professional whose main job is scooping and serving ice cream."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Scooping and serving ice cream at a counter is the central, routine duty of an ice cream vendor.",
+          "removal_test": "YES: If the ice cream vendor were removed from the ice cream counter, the activity of scooping and serving ice cream there would normally stop because they are the primary person responsible for it."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A fast food worker",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Fast food workers often prepare and serve desserts, including ice cream, but scooping ice cream at a dedicated ice cream counter is not their core, defining duty, making the event plausible but less prototypical than with an ice cream vendor.",
+        "counter_arguments": {
+          "argument_for_higher": "In some fast food chains, employees routinely serve ice cream or sundaes, so one could argue that for those establishments scooping ice cream is a regular part of the job and thus highly plausible.",
+          "argument_for_lower": "The term 'ice cream counter' evokes a specialized ice cream parlor, and a branded fast food uniform might feel slightly out of place there, suggesting the role is somewhat mismatched to this specific setting and could verge on implausible_hard."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A butcher",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A butcher works in food retail behind refrigerated counters and portions food for customers, but they belong at a meat counter, not an ice cream counter, so the domain overlap is strong yet their presence here feels wrong.",
+        "counter_arguments": {
+          "argument_for_higher": "In a small grocery or market where staff cover multiple counters, a butcher might occasionally help at another food counter, so one could imagine a rare situation where they scoop ice cream, making the scene marginally plausible.",
+          "argument_for_lower": "Viewers might reject the scene outright because a butcher\u2019s blood-stained apron and meat tools clash starkly with a clean ice cream counter, making the mismatch feel as extreme as with a completely unrelated profession."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both the ice cream vendor and the butcher are food-service/food-retail professionals handling food products for customers."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both typically work behind shop counters with refrigerated display cases serving walk-up customers."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use specialized handheld metal tools to portion and serve food (scoops, tongs, knives, etc.), even though the specific tools differ."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act on bulk food items to be sold to customers (ice cream vs meat)."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform repetitive manual actions to portion, transfer, and package food for customers over a counter."
+          },
+          "overlap_count": 5,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb 'scooping', a butcher is still associated with a similar food-retail counter environment and food-portioning role as an ice cream vendor, so the association with the general scene remains."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A firefighter",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Firefighters belong to emergency services, not food service; a firefighter in full turnout gear scooping ice cream behind an ice cream counter is immediately seen as out of place and unrelated to the activity.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a charity event where firefighters briefly serve ice cream, but this is an unusual, special-case scenario rather than a natural extension of their professional role.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Striped/branded shop uniform, paper hat/visor, apron, and ice cream display strongly signal an ice cream vendor."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Branded polo shirt with logo, matching cap/visor, name tag, and counter position clearly indicate a fast food worker."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "White or striped coat, heavy/blood-stained apron, and large knife or meat hook make the person clearly recognizable as a butcher."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Turnout gear with reflective stripes, fire helmet, and boots are iconic for a firefighter."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Ice cream vendor: light-colored or striped shop uniform, paper hat or visor, apron, possibly holding an ice cream scoop and standing behind a glass case of ice cream tubs.",
+        "plausible_hard": "Fast food worker: branded polo shirt and pants, company logo on shirt and cap or visor, name tag, standing at a fast food-style service counter.",
+        "implausible_hard": "Butcher: white or striped butcher\u2019s coat with a thick apron (possibly blood-stained), paper hat, and large knife or meat hook, typically near a meat display.",
+        "implausible_easy": "Firefighter: full firefighting turnout gear, including bulky jacket and pants with reflective stripes, heavy boots, and a fire helmet; may have gloves or other firefighting equipment."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Ice cream vendor\u2019s striped/ice-cream-themed attire and paper hat contrast with the branded polo-and-cap look of a fast food worker."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Vendor has light, clean uniform and ice cream scoop, whereas butcher has heavier coat/apron and meat tools like large knives or hooks."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Ice cream shop attire is completely different from bulky firefighting gear and helmet."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Fast food uniform with logo and cap is visually distinct from a butcher\u2019s coat, apron, and large meat-cutting tools."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Fast food worker\u2019s light branded uniform is clearly different from a firefighter\u2019s heavy protective gear."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A butcher\u2019s white coat/apron and meat tools look very different from a firefighter\u2019s turnout gear and helmet."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four conditions are judged CORRECT: an ice cream vendor is a clear prototype; a fast food worker is a plausible but non-core alternative; a butcher has strong multi-dimensional overlap but is wrong for an ice cream counter; and a firefighter is maximally unrelated. This shows the scene can support the full plausibility gradient, and alternative agents from similar domains (e.g., other food-service roles) could also be substituted if needed.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The scene is concrete and easily photographable, with a clear prototypical agent and an appropriate instrument. The food-retail context naturally supports graded plausibility distinctions between related and unrelated professions."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "All four agents satisfy the intended plausibility levels for scooping ice cream at an ice cream counter, with the ice cream vendor as a strong prototype and a clear gradient down to the unrelated firefighter. Each profession has a distinct, easily recognizable visual identity, and all pairs are visually distinguishable. The scene, instruments, and roles jointly support a robust, imageable plausibility gradient suitable for rapid judgment tasks."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 5,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb 'scooping', a butcher is still associated with a similar food-retail counter environment and food-portioning role as an ice cream vendor, so the association with the general scene remains.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 101.85625190660357,
+  "token_info": {
+    "input_tokens": 5666,
+    "output_tokens": 6804,
+    "cached_tokens": 0
+  },
+  "success": true
+}

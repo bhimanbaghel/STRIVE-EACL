@@ -1,0 +1,200 @@
+{
+  "verb": "cut",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"A chef is the canonical professional for cutting a loaf of bread with a bread knife on a kitchen counter; this is routine food preparation squarely within their core duties and typical setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A (plausible_easy is the highest condition)\",\n        \"argument_for_lower\": \"In some contexts bread might be sliced by more junior kitchen staff or even front-of-house staff, so one could argue that the agent need not specifically be a chef to make the scene look normal, slightly weakening its uniqueness as the default.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A waiter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A waiter belongs to the restaurant/food-service domain and can plausibly be present near a kitchen counter and cut bread at a side station or in a pinch, but this is not their primary responsibility, making the event slightly atypical but acceptable.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In smaller restaurants or cafes, servers sometimes portion bread at a side station or even in an open kitchen, so viewers might readily accept a waiter cutting bread as part of service and treat it as fairly normal.\",\n        \"argument_for_lower\": \"Waiters are primarily front-of-house and usually do not perform knife-based food preparation on a kitchen counter, so one could argue that seeing a fully uniformed waiter doing this in the kitchen feels odd enough to merit an implausible_hard classification.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A butcher\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A butcher routinely cuts food with large knives on counters; although they typically work with meat rather than bread and usually in a butcher shop rather than a kitchen, the scene still feels quite plausible rather than something to reject, so this agent fits better as plausible_hard than implausible_hard.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Butchers are highly practiced at cutting food with knives on work surfaces, so many observers would quickly accept a butcher cutting bread as a natural extension of their skills, making the scene reasonably plausible as a non-core but unsurprising activity.\",\n        \"argument_for_lower\": \"Because butchers are strongly associated with raw meat and a specialized butcher-shop environment, seeing one in a kitchen cutting bread with a bread knife could be viewed as domain-inappropriate and visually jarring, leading some to judge it as clearly wrong, closer to implausible_easy.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both chefs and butchers are food-preparation professionals whose work centers on processing edible products.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both typically work in back-of-house food-preparation areas with counters, cutting surfaces, and refrigeration, even if one is a restaurant kitchen and the other a butcher shop.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely use large, sharp knives and related cutting tools as central instruments in their work.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both act on food items (meat, bread, other ingredients), even if butchers specialize in meat and chefs handle a wider range including bread.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both perform repetitive manual cutting, slicing, and chopping actions on food.\"\n          },\n          \"overlap_count\": 5,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the verb cut, a butcher in full work attire in a food-preparation space with edible items present is still strongly associated with this general scene, indicating that the connection is not solely via the verb.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A firefighter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A firefighter\u2019s role centers on emergency response and fire suppression, not calm food preparation in a kitchen; seeing a fully suited firefighter cutting bread on a kitchen counter is immediately incongruous and has virtually no natural role-based connection to the event.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Firefighters often cook and share meals in firehouse kitchens, so one could imagine an off-duty or on-shift firefighter in uniform preparing bread in that context, making the action physically and situationally possible.\",\n        \"argument_for_lower\": \"N/A (implausible_easy is the lowest condition)\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The agent assigned to implausible_hard (a butcher) actually fits plausibly in the scene and belongs with plausible_hard; this leaves the implausible_hard slot effectively unfilled.\",\n    \"collapsed_pairs\": \"The intended plausible_hard (waiter) and intended implausible_hard (butcher) are too similar in plausibility; both are realistically capable of performing the action in a food-preparation context.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A chef in a white double-breasted jacket and tall chef\u2019s hat is a highly standardized and widely recognized visual archetype.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A waiter in black trousers, white dress shirt, waistcoat, and carrying a service cloth is a common and recognizable hospitality uniform.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A butcher wearing a distinctive butcher\u2019s apron (often striped or stained) and possibly holding heavy meat-cutting tools is visually recognizable as a butcher.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A firefighter in turnout gear with helmet and reflective stripes is one of the most visually distinctive and easily recognized professions.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"White double-breasted chef\u2019s jacket, tall white chef\u2019s hat (toque), apron, possibly a kitchen towel over the shoulder and professional kitchen shoes.\",\n      \"plausible_hard\": \"Black trousers, white dress shirt, black vest or waistcoat, tie or bow tie, often holding or wearing a folded white service cloth over one arm.\",\n      \"implausible_hard\": \"Work shirt with a heavy white or striped butcher\u2019s apron (sometimes with visible stains), sturdy work boots, possibly a flat cap, and large meat-cutting knives or a cleaver at hand.\",\n      \"implausible_easy\": \"Heavy fire-resistant coat and pants with reflective stripes, large firefighter helmet, possibly gloves and an air tank harness.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef whites with tall hat are clearly different from a waiter\u2019s black-and-white vested service uniform.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef\u2019s tall hat and clean double-breasted jacket contrast with a butcher\u2019s striped or stained apron and heavier workwear.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef attire is entirely different from bulky firefighter turnout gear and helmet.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A waiter\u2019s dress clothes and vest differ markedly from a butcher\u2019s heavy apron and more rugged work clothing.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A slim, formal waiter uniform looks nothing like a firefighter\u2019s protective suit and helmet.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A butcher\u2019s apron and knives are visually distinct from firefighter turnout gear and equipment.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The bread knife is the correct instrument for cutting a loaf of bread, and a chef is a clear prototype for this kitchen-preparation event. The only misclassified condition is implausible_hard: a better choice would be a profession like a restaurant health inspector, who shares domain and setting with the chef (food/restaurant, present in kitchens) yet would not normally perform bread-cutting themselves, providing multi-dimensional overlap but a role-inappropriate action. This indicates the scene itself can support all four levels with more suitable agent selection.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The kitchen bread-cutting scene is concrete, easy to photograph, and has a strong prototypical agent. The current implausible_hard agent is too plausible given the shared culinary domain, but alternative agents exist that could fill this role without changing the underlying scene.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"Thematic fit is strong for the chef and reasonable for the waiter and firefighter, but the butcher is too thematically close to the chef to serve as an implausible_hard agent. Visually, all four professions are easily identifiable and clearly distinct, and the kitchen bread-cutting scene is simple and imageable. With a better-chosen implausible_hard agent from a related but non-prepping role (e.g., a restaurant health inspector), this scene could support a clean plausibility gradient.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A chef",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "A chef is the canonical professional for cutting a loaf of bread with a bread knife on a kitchen counter; this is routine food preparation squarely within their core duties and typical setting.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A (plausible_easy is the highest condition)",
+          "argument_for_lower": "In some contexts bread might be sliced by more junior kitchen staff or even front-of-house staff, so one could argue that the agent need not specifically be a chef to make the scene look normal, slightly weakening its uniqueness as the default."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A waiter",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A waiter belongs to the restaurant/food-service domain and can plausibly be present near a kitchen counter and cut bread at a side station or in a pinch, but this is not their primary responsibility, making the event slightly atypical but acceptable.",
+        "counter_arguments": {
+          "argument_for_higher": "In smaller restaurants or cafes, servers sometimes portion bread at a side station or even in an open kitchen, so viewers might readily accept a waiter cutting bread as part of service and treat it as fairly normal.",
+          "argument_for_lower": "Waiters are primarily front-of-house and usually do not perform knife-based food preparation on a kitchen counter, so one could argue that seeing a fully uniformed waiter doing this in the kitchen feels odd enough to merit an implausible_hard classification."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A butcher",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A butcher routinely cuts food with large knives on counters; although they typically work with meat rather than bread and usually in a butcher shop rather than a kitchen, the scene still feels quite plausible rather than something to reject, so this agent fits better as plausible_hard than implausible_hard.",
+        "counter_arguments": {
+          "argument_for_higher": "Butchers are highly practiced at cutting food with knives on work surfaces, so many observers would quickly accept a butcher cutting bread as a natural extension of their skills, making the scene reasonably plausible as a non-core but unsurprising activity.",
+          "argument_for_lower": "Because butchers are strongly associated with raw meat and a specialized butcher-shop environment, seeing one in a kitchen cutting bread with a bread knife could be viewed as domain-inappropriate and visually jarring, leading some to judge it as clearly wrong, closer to implausible_easy.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both chefs and butchers are food-preparation professionals whose work centers on processing edible products."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both typically work in back-of-house food-preparation areas with counters, cutting surfaces, and refrigeration, even if one is a restaurant kitchen and the other a butcher shop."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both routinely use large, sharp knives and related cutting tools as central instruments in their work."
+            },
+            "patient_object_type": {
+              "overlaps": true,
+              "reasoning": "Both act on food items (meat, bread, other ingredients), even if butchers specialize in meat and chefs handle a wider range including bread."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both perform repetitive manual cutting, slicing, and chopping actions on food."
+            },
+            "overlap_count": 5,
+            "sufficient": true,
+            "negative_test": "Even ignoring the verb cut, a butcher in full work attire in a food-preparation space with edible items present is still strongly associated with this general scene, indicating that the connection is not solely via the verb."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A firefighter",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A firefighter\u2019s role centers on emergency response and fire suppression, not calm food preparation in a kitchen; seeing a fully suited firefighter cutting bread on a kitchen counter is immediately incongruous and has virtually no natural role-based connection to the event.",
+        "counter_arguments": {
+          "argument_for_higher": "Firefighters often cook and share meals in firehouse kitchens, so one could imagine an off-duty or on-shift firefighter in uniform preparing bread in that context, making the action physically and situationally possible.",
+          "argument_for_lower": "N/A (implausible_easy is the lowest condition)"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The agent assigned to implausible_hard (a butcher) actually fits plausibly in the scene and belongs with plausible_hard; this leaves the implausible_hard slot effectively unfilled.",
+      "collapsed_pairs": "The intended plausible_hard (waiter) and intended implausible_hard (butcher) are too similar in plausibility; both are realistically capable of performing the action in a food-preparation context."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A chef in a white double-breasted jacket and tall chef\u2019s hat is a highly standardized and widely recognized visual archetype."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A waiter in black trousers, white dress shirt, waistcoat, and carrying a service cloth is a common and recognizable hospitality uniform."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A butcher wearing a distinctive butcher\u2019s apron (often striped or stained) and possibly holding heavy meat-cutting tools is visually recognizable as a butcher."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A firefighter in turnout gear with helmet and reflective stripes is one of the most visually distinctive and easily recognized professions."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "White double-breasted chef\u2019s jacket, tall white chef\u2019s hat (toque), apron, possibly a kitchen towel over the shoulder and professional kitchen shoes.",
+        "plausible_hard": "Black trousers, white dress shirt, black vest or waistcoat, tie or bow tie, often holding or wearing a folded white service cloth over one arm.",
+        "implausible_hard": "Work shirt with a heavy white or striped butcher\u2019s apron (sometimes with visible stains), sturdy work boots, possibly a flat cap, and large meat-cutting knives or a cleaver at hand.",
+        "implausible_easy": "Heavy fire-resistant coat and pants with reflective stripes, large firefighter helmet, possibly gloves and an air tank harness."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Chef whites with tall hat are clearly different from a waiter\u2019s black-and-white vested service uniform."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Chef\u2019s tall hat and clean double-breasted jacket contrast with a butcher\u2019s striped or stained apron and heavier workwear."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Chef attire is entirely different from bulky firefighter turnout gear and helmet."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "A waiter\u2019s dress clothes and vest differ markedly from a butcher\u2019s heavy apron and more rugged work clothing."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "A slim, formal waiter uniform looks nothing like a firefighter\u2019s protective suit and helmet."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A butcher\u2019s apron and knives are visually distinct from firefighter turnout gear and equipment."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The bread knife is the correct instrument for cutting a loaf of bread, and a chef is a clear prototype for this kitchen-preparation event. The only misclassified condition is implausible_hard: a better choice would be a profession like a restaurant health inspector, who shares domain and setting with the chef (food/restaurant, present in kitchens) yet would not normally perform bread-cutting themselves, providing multi-dimensional overlap but a role-inappropriate action. This indicates the scene itself can support all four levels with more suitable agent selection.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The kitchen bread-cutting scene is concrete, easy to photograph, and has a strong prototypical agent. The current implausible_hard agent is too plausible given the shared culinary domain, but alternative agents exist that could fill this role without changing the underlying scene."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "Thematic fit is strong for the chef and reasonable for the waiter and firefighter, but the butcher is too thematically close to the chef to serve as an implausible_hard agent. Visually, all four professions are easily identifiable and clearly distinct, and the kitchen bread-cutting scene is simple and imageable. With a better-chosen implausible_hard agent from a related but non-prepping role (e.g., a restaurant health inspector), this scene could support a clean plausibility gradient."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 0,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 137.59859968349338,
+  "token_info": {
+    "input_tokens": 5914,
+    "output_tokens": 12138
+  },
+  "success": true
+}

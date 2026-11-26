@@ -1,0 +1,12 @@
+gpt-5.1-2025-11-13_v4	results/intermediate/gpt-5.1-2025-11-13_v4	paint scoop touch
+gpt-5.1-2025-11-13_v6	results/intermediate/gpt-5.1-2025-11-13_v6	eat erase wash
+Ministral-3-14B-Instruct-2512_v4	results/intermediate/Ministral-3-14B-Instruct-2512_v4	paint
+Ministral-3-14B-Instruct-2512_v6	results/aat_inputs/Ministral-3-14B-Instruct-2512_v6	break dig shoot
+Qwen3-30B-A3B-Instruct-2507_v4	results/intermediate/Qwen3-30B-A3B-Instruct-2507_v4	touch
+Qwen3-30B-A3B-Instruct-2507_v6	results/aat_inputs/Qwen3-30B-A3B-Instruct-2507_v6	open
+Qwen3-4B-Instruct-2507_v4	results/intermediate/Qwen3-4B-Instruct-2507_v4	measure
+gpt-5.1-2025-11-13_iterative_v6	results/iterative/gpt-5.1-2025-11-13_iterative_v6/_finals	cut measure paint scoop stir touch write
+Qwen3-Next-80B-A3B-Instruct_iterative_v6	results/iterative/_vast_xli_bkb45_models_Qwen3-Next-80B-A3B-Instruct_iterative_v6/_finals	dig open paint wash
+Qwen3-30B-A3B-Instruct-2507_iterative_v6	results/iterative/_vast_xli_bkb45_models_Qwen3-30B-A3B-Instruct-2507_iterative_v6/_finals	touch write
+Ministral-3-14B-Instruct-2512_iterative_v6	results/iterative/_vast_xli_bkb45_models_Ministral-3-14B-Instruct-2512_iterative_v6/_finals	draw
+Qwen3-4B-Instruct-2507_iterative_v6	results/iterative/_scratch_slurm-1652497_Qwen3-4B-Instruct-2507_iterative_v6/_finals	cut dig draw

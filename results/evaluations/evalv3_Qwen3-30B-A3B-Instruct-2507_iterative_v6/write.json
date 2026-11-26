@@ -1,0 +1,202 @@
+{
+  "verb": "write",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A nurse\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Nurses routinely document patient care in hospitals, often by hand on charts, so a nurse writing a patient's medical note with a pen in a hospital is highly typical and immediately acceptable as normal.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that physicians are more prototypically associated with authoring 'medical notes,' making a nurse slightly less canonical and better treated as a strong but secondary agent for documentation.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A medical transcriptionist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Medical transcriptionists are responsible for producing written patient documentation and can work inside hospitals, but they are back\u2011office staff rather than frontline caregivers, so their presence is plausible though less expected than a nurse\u2019s.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Because creating written medical records is central to their job, one might claim they are actually the most prototypical 'writers' of patient notes, warranting placement in plausible_easy.\",\n        \"argument_for_lower\": \"Modern transcriptionists often work remotely and primarily type rather than write with a pen in clinical areas, so seeing one physically in a hospital writing a note by hand could feel odd enough to push them toward an implausible_hard classification.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A surgeon\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Surgeons, like other physicians, are required to write operative and progress notes on their patients in hospitals, so a surgeon writing a patient's medical note with a pen in a hospital is overall a plausible, not low\u2011fit, event.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Surgeons share the same hospital setting and patient population as nurses and are well known for authoring operative notes, so many viewers would regard this scene as just as normal as, or even more canonical than, the nurse case.\",\n        \"argument_for_lower\": \"If depicted in the middle of an operation in full sterile gear, one might feel it is odd or unsafe for the surgeon to break from surgery to write, but this oddity does not remove the clear professional connection to the task and setting and thus does not justify a maximally implausible classification.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both are licensed healthcare professionals delivering clinical care.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both primarily work in hospitals and similar clinical environments.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely use patient charts and pens alongside specialized medical tools, even though their surgical vs nursing instruments differ.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both work on human patients and their medical conditions.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both perform hands\u2011on patient care tasks and also engage in documentation activities as part of their roles.\"\n          },\n          \"overlap_count\": 5,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the shared action of 'writing,' surgeons are strongly associated with nurses via shared medical domain, hospital workplace, and human patients, so the association with this hospital\u2011documentation context clearly persists without relying on the verb.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A street performer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Street performers work in public outdoor spaces and have no professional role in hospitals or medical documentation, so seeing one write a patient's medical note in a hospital is an immediately rejected, maximally mismatched event.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a street performer visiting a hospital for a charity event and briefly helping with paperwork, but this requires a contrived backstory and does not create a natural professional link to medical note\u2011writing.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The implausible_hard surgeon is actually as plausible as the plausible_hard agent; surgeon belongs with the plausible agents rather than in a lower\u2011fit slot.\",\n    \"collapsed_pairs\": \"plausible_hard vs implausible_hard (medical transcriptionist vs surgeon) are not cleanly separable in plausibility since both are realistic writers of patient notes in a hospital.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Scrubs, stethoscope, and a hospital ID badge form a well\u2011known medical uniform typically interpreted as a nurse or similar clinical staff.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"UNIDENTIFIABLE\",\n        \"reasoning\": \"Business\u2011casual clothing with a headset and computer looks like a generic office or call\u2011center worker; nothing specifically signals 'medical transcriptionist' as a distinct profession.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Full surgical gown, mask, cap, and gloves in a medical context are strongly associated with surgeons or operating\u2011room doctors.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Exaggerated colorful costume, makeup, and performance props immediately signal an entertainer or street performer rather than an everyday civilian.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically wears solid\u2011color medical scrubs, comfortable shoes, possibly a scrub jacket, with a stethoscope draped around the neck and an ID badge.\",\n      \"plausible_hard\": \"Typically wears business\u2011casual clothing (shirt or blouse and slacks), seated at a desk with a computer, headset or headphones, and perhaps an ID badge, resembling generic office or call\u2011center staff.\",\n      \"implausible_hard\": \"Typically wears hospital scrubs covered by a sterile surgical gown, with a surgical cap, mask, and gloves, often shown in an operating\u2011room environment.\",\n      \"implausible_easy\": \"Typically wears distinctive performance attire such as bright or patterned clothing, hats, face paint or makeup, and carries props like juggling items, musical instruments, or a tip hat.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Nurse scrubs and stethoscope are visually distinct from office attire with headset and computer.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Standard scrubs with an uncovered face differ clearly from a fully gowned, masked, and capped surgeon.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Clinical uniform strongly contrasts with a flamboyant street\u2011performance costume.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Office clothes and computer workstation are very different from surgical gown, mask, and cap in an operating room.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Office attire is clearly distinct from colorful performance costume and props.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Medical surgical gear is visually very different from theatrical costume and makeup.\"\n      }\n    },\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"A medical transcriptionist\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The only thematically misclassified condition is implausible_hard (surgeon), and the plausible_hard agent (medical transcriptionist) lacks a strong visual identity; both issues can be resolved by replacing these agents with others (e.g., a clearly uniformed hospital administrative worker for plausible_hard and a related but non\u2011hospital clinician such as a veterinarian or dentist for implausible_hard) while keeping the same verb, patient, instrument, and location.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"Writing a patient's medical note with a pen in a hospital is a clear, photographable hospital\u2011documentation scenario with a strong prototype (nurse/doctor). The main problems are that the surgeon is too plausible to occupy an implausible_hard slot and the medical transcriptionist has a weak, non\u2011distinctive visual identity; both can be addressed by choosing better\u2011suited agents.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"summary\": \"Thematic fit is strong for the nurse, medical transcriptionist, and street performer, but the surgeon is too plausible to serve as an implausible_hard agent and collapses the gradient with the plausible conditions. Visually, nurse, surgeon, and street performer are clearly identifiable and distinct, whereas 'medical transcriptionist' lacks a unique visual signature and would appear as a generic office worker, which is problematic for the experiment. The underlying 'write a medical note in a hospital' scene is sound and can support the full plausibility gradient if the plausible_hard and implausible_hard roles are re\u2011selected to have clearer visual identities and better\u2011graded thematic fit.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A nurse",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Nurses routinely document patient care in hospitals, often by hand on charts, so a nurse writing a patient's medical note with a pen in a hospital is highly typical and immediately acceptable as normal.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that physicians are more prototypically associated with authoring 'medical notes,' making a nurse slightly less canonical and better treated as a strong but secondary agent for documentation."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A medical transcriptionist",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Medical transcriptionists are responsible for producing written patient documentation and can work inside hospitals, but they are back\u2011office staff rather than frontline caregivers, so their presence is plausible though less expected than a nurse\u2019s.",
+        "counter_arguments": {
+          "argument_for_higher": "Because creating written medical records is central to their job, one might claim they are actually the most prototypical 'writers' of patient notes, warranting placement in plausible_easy.",
+          "argument_for_lower": "Modern transcriptionists often work remotely and primarily type rather than write with a pen in clinical areas, so seeing one physically in a hospital writing a note by hand could feel odd enough to push them toward an implausible_hard classification."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A surgeon",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Surgeons, like other physicians, are required to write operative and progress notes on their patients in hospitals, so a surgeon writing a patient's medical note with a pen in a hospital is overall a plausible, not low\u2011fit, event.",
+        "counter_arguments": {
+          "argument_for_higher": "Surgeons share the same hospital setting and patient population as nurses and are well known for authoring operative notes, so many viewers would regard this scene as just as normal as, or even more canonical than, the nurse case.",
+          "argument_for_lower": "If depicted in the middle of an operation in full sterile gear, one might feel it is odd or unsafe for the surgeon to break from surgery to write, but this oddity does not remove the clear professional connection to the task and setting and thus does not justify a maximally implausible classification.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both are licensed healthcare professionals delivering clinical care."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both primarily work in hospitals and similar clinical environments."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both routinely use patient charts and pens alongside specialized medical tools, even though their surgical vs nursing instruments differ."
+            },
+            "patient_object_type": {
+              "overlaps": true,
+              "reasoning": "Both work on human patients and their medical conditions."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both perform hands\u2011on patient care tasks and also engage in documentation activities as part of their roles."
+            },
+            "overlap_count": 5,
+            "sufficient": true,
+            "negative_test": "Even ignoring the shared action of 'writing,' surgeons are strongly associated with nurses via shared medical domain, hospital workplace, and human patients, so the association with this hospital\u2011documentation context clearly persists without relying on the verb."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A street performer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Street performers work in public outdoor spaces and have no professional role in hospitals or medical documentation, so seeing one write a patient's medical note in a hospital is an immediately rejected, maximally mismatched event.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a street performer visiting a hospital for a charity event and briefly helping with paperwork, but this requires a contrived backstory and does not create a natural professional link to medical note\u2011writing.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The implausible_hard surgeon is actually as plausible as the plausible_hard agent; surgeon belongs with the plausible agents rather than in a lower\u2011fit slot.",
+      "collapsed_pairs": "plausible_hard vs implausible_hard (medical transcriptionist vs surgeon) are not cleanly separable in plausibility since both are realistic writers of patient notes in a hospital."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Scrubs, stethoscope, and a hospital ID badge form a well\u2011known medical uniform typically interpreted as a nurse or similar clinical staff."
+        },
+        "plausible_hard": {
+          "rating": "UNIDENTIFIABLE",
+          "reasoning": "Business\u2011casual clothing with a headset and computer looks like a generic office or call\u2011center worker; nothing specifically signals 'medical transcriptionist' as a distinct profession."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Full surgical gown, mask, cap, and gloves in a medical context are strongly associated with surgeons or operating\u2011room doctors."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Exaggerated colorful costume, makeup, and performance props immediately signal an entertainer or street performer rather than an everyday civilian."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically wears solid\u2011color medical scrubs, comfortable shoes, possibly a scrub jacket, with a stethoscope draped around the neck and an ID badge.",
+        "plausible_hard": "Typically wears business\u2011casual clothing (shirt or blouse and slacks), seated at a desk with a computer, headset or headphones, and perhaps an ID badge, resembling generic office or call\u2011center staff.",
+        "implausible_hard": "Typically wears hospital scrubs covered by a sterile surgical gown, with a surgical cap, mask, and gloves, often shown in an operating\u2011room environment.",
+        "implausible_easy": "Typically wears distinctive performance attire such as bright or patterned clothing, hats, face paint or makeup, and carries props like juggling items, musical instruments, or a tip hat."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Nurse scrubs and stethoscope are visually distinct from office attire with headset and computer."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Standard scrubs with an uncovered face differ clearly from a fully gowned, masked, and capped surgeon."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Clinical uniform strongly contrasts with a flamboyant street\u2011performance costume."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Office clothes and computer workstation are very different from surgical gown, mask, and cap in an operating room."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Office attire is clearly distinct from colorful performance costume and props."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Medical surgical gear is visually very different from theatrical costume and makeup."
+        }
+      },
+      "visual_verdict": "PROBLEMATIC",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "A medical transcriptionist"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The only thematically misclassified condition is implausible_hard (surgeon), and the plausible_hard agent (medical transcriptionist) lacks a strong visual identity; both issues can be resolved by replacing these agents with others (e.g., a clearly uniformed hospital administrative worker for plausible_hard and a related but non\u2011hospital clinician such as a veterinarian or dentist for implausible_hard) while keeping the same verb, patient, instrument, and location.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "Writing a patient's medical note with a pen in a hospital is a clear, photographable hospital\u2011documentation scenario with a strong prototype (nurse/doctor). The main problems are that the surgeon is too plausible to occupy an implausible_hard slot and the medical transcriptionist has a weak, non\u2011distinctive visual identity; both can be addressed by choosing better\u2011suited agents."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "PROBLEMATIC",
+      "summary": "Thematic fit is strong for the nurse, medical transcriptionist, and street performer, but the surgeon is too plausible to serve as an implausible_hard agent and collapses the gradient with the plausible conditions. Visually, nurse, surgeon, and street performer are clearly identifiable and distinct, whereas 'medical transcriptionist' lacks a unique visual signature and would appear as a generic office worker, which is problematic for the experiment. The underlying 'write a medical note in a hospital' scene is sound and can support the full plausibility gradient if the plausible_hard and implausible_hard roles are re\u2011selected to have clearer visual identities and better\u2011graded thematic fit."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 0,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "UNIDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": [
+      "plausible_hard"
+    ]
+  },
+  "elapsed": 139.73259334638715,
+  "token_info": {
+    "input_tokens": 6320,
+    "output_tokens": 13040
+  },
+  "success": true
+}

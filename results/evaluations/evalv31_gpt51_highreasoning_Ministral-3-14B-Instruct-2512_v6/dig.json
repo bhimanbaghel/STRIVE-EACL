@@ -1,0 +1,207 @@
+{
+  "verb": "dig",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A landscaper\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Landscapers routinely dig holes with shovels in residential yards as a core part of installing plants, irrigation, or landscape features. This is a highly typical professional for digging a hole in a backyard.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that landscapers are just one of several yard-related workers who might dig holes (along with gardeners or general laborers), so they may not be uniquely prototypical and could be treated as only moderately plausible (plausible_hard).\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Digging holes in yards for planting, irrigation lines, or landscape structures is a central and frequent part of a landscaper's job.\",\n        \"removal_test\": \"YES: In the context of professional backyard work, if landscapers were removed, most contracted digging of such holes would stop, leaving only homeowners or occasional specialists to do it.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A gardener\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Gardeners also routinely dig holes with shovels in backyards to plant and transplant, so this action is core to their job rather than a secondary or unusual one. Their thematic fit is essentially as strong as the landscaper\u2019s, collapsing the intended gradient.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Since digging planting holes in a backyard is a routine part of gardening, gardeners are as prototypical as landscapers for this event and thus belong in plausible_easy.\",\n        \"argument_for_lower\": \"One might argue that gardeners focus more on plant care and light cultivation, so a large structural hole could be somewhat outside their usual duties, nudging them toward implausible_hard, but the sentence does not specify such a specialized or non-gardening purpose.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"An archaeologist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Archaeologists do dig with shovels and trowels as a core part of their work, but typically at excavation sites rather than in a residential backyard. Their actions and tools overlap strongly with the landscaper\u2019s, yet the domestic backyard setting is wrong enough that most people would ultimately reject this as a normal scene.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Archaeologists might occasionally excavate in a private yard when historical artifacts are suspected or during a salvage dig before construction, so one could imagine this as an unusual but still plausible professional activity in a backyard (plausible_hard).\",\n        \"argument_for_lower\": \"If one focuses only on the everyday gardening/maintenance interpretation of a backyard, an archaeologist may seem completely out of place with no obvious reason to be there, making them look like a generic wrong profession closer to implausible_easy.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Landscaping is a construction/service trade, whereas archaeology is a scientific/historical research profession.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Landscapers typically work in maintained yards, gardens, and outdoor properties, while archaeologists usually work at formal dig sites, ruins, or undeveloped terrain rather than residential backyards.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both professions routinely use shovels, trowels, and other earth-moving hand tools.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act directly on soil/earth, even though archaeologists also target artifacts within that soil.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both regularly perform manual digging and earth-removal actions.\"\n        },\n        \"overlap_count\": 3,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb 'dig', archaeologists are associated with shovels, trowels, and excavated pits of earth, which still connects them conceptually to holes in the ground, though not specifically to a tidy backyard.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Chefs work in kitchens preparing food and have no professional reason to be digging holes in a backyard. There is essentially no domain connection between their role and this outdoor digging activity, so the event is an obvious and immediate mismatch.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a rare scenario where a chef helps prepare an outdoor barbecue pit or smoker and happens to dig a hole, but this treats the chef as a generic person rather than acting in their professional role, so it remains highly implausible.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"plausible_easy and plausible_hard are both core backyard yard-work professionals (landscaper and gardener) with very similar, very high plausibility.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"High-visibility safety vest, work boots, and a tool belt with gardening tools clearly indicate an outdoor yard/landscaping worker.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Apron with gardening tools, wide-brimmed hat, gloves, and knee pads form a recognizable gardener appearance.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"UNIDENTIFIABLE\",\n        \"reasoning\": \"Khaki field clothes, a hat, and small tools like a brush or trowel could be many outdoor roles (tourist, hiker, guide, geologist); 'archaeologist' would not be reliably guessed from a plain-background photo.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"White chef jacket, tall hat, and kitchen tools are iconic and strongly cue the chef profession.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"A landscaper typically wears durable work pants, high-visibility safety vest, steel-toe boots, possibly a cap, and carries larger yard tools or a tool belt.\",\n      \"plausible_hard\": \"A gardener typically wears casual outdoor clothing with an apron holding small tools, a wide-brimmed sun hat, gloves, and sometimes knee pads, often holding a trowel or pruners.\",\n      \"implausible_hard\": \"An archaeologist in the field usually wears khaki or rugged outdoor clothing, a wide-brimmed hat, sturdy boots, and may carry a small trowel or brush, clipboard, or similar field gear.\",\n      \"implausible_easy\": \"A chef typically wears a white double-breasted chef jacket, tall toque hat, apron, and may hold a knife, ladle, or spatula.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"High-visibility vest and larger tools of the landscaper contrast with the gardener\u2019s apron, small hand tools, and knee pads.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Bright safety gear and tool belt of the landscaper differ from the archaeologist\u2019s neutral khaki field clothes and fine excavation tools.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Outdoor workwear and shovel are clearly different from a white chef uniform and hat.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Gardener\u2019s apron and garden tools differ from archaeologist\u2019s khaki field outfit and excavation tools.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Gardening attire and tools contrast sharply with a chef\u2019s white jacket and toque.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Khaki field clothing with small excavation tools looks very different from a chef\u2019s kitchen uniform.\"\n      }\n    },\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"An archaeologist\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The only thematically incorrect condition is the gardener in plausible_hard, who is actually as prototypical as the landscaper. A better plausible_hard agent could be, for example, a plumber or an electrician in branded workwear digging in the backyard to access buried pipes or cables\u2014someone who plausibly might dig there but for whom digging holes is not the core job. The scene easily supports an implausible_hard agent (e.g., archaeologist or cemetery worker) and an implausible_easy agent like a chef; thus the gradient issues are due to agent choice, not the scene itself.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The scene 'digging a hole with a shovel in the backyard' is concrete, correctly specified, and has clear prototype professions (landscaper/gardener). The main semantic issue is that the gardener is too prototypical for plausible_hard; visually, the archaeologist is not reliably identifiable, but both problems can be addressed by swapping agents without changing the core scene.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"summary\": \"Semantically, the landscaper, archaeologist, and chef are correctly placed, but the gardener is too strongly associated with backyard digging to serve as a plausible_hard agent, collapsing the top of the gradient. Visually, all roles are distinct but the archaeologist is not reliably identifiable from appearance alone, making the visual set problematic. The underlying scene is sound and imageable, and with alternative agents for plausible_hard (and possibly a more visually iconic implausible_hard), it could cleanly support the full plausibility gradient.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A landscaper",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Landscapers routinely dig holes with shovels in residential yards as a core part of installing plants, irrigation, or landscape features. This is a highly typical professional for digging a hole in a backyard.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that landscapers are just one of several yard-related workers who might dig holes (along with gardeners or general laborers), so they may not be uniquely prototypical and could be treated as only moderately plausible (plausible_hard)."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Digging holes in yards for planting, irrigation lines, or landscape structures is a central and frequent part of a landscaper's job.",
+          "removal_test": "YES: In the context of professional backyard work, if landscapers were removed, most contracted digging of such holes would stop, leaving only homeowners or occasional specialists to do it."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A gardener",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Gardeners also routinely dig holes with shovels in backyards to plant and transplant, so this action is core to their job rather than a secondary or unusual one. Their thematic fit is essentially as strong as the landscaper\u2019s, collapsing the intended gradient.",
+        "counter_arguments": {
+          "argument_for_higher": "Since digging planting holes in a backyard is a routine part of gardening, gardeners are as prototypical as landscapers for this event and thus belong in plausible_easy.",
+          "argument_for_lower": "One might argue that gardeners focus more on plant care and light cultivation, so a large structural hole could be somewhat outside their usual duties, nudging them toward implausible_hard, but the sentence does not specify such a specialized or non-gardening purpose."
+        }
+      },
+      "implausible_hard": {
+        "agent": "An archaeologist",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Archaeologists do dig with shovels and trowels as a core part of their work, but typically at excavation sites rather than in a residential backyard. Their actions and tools overlap strongly with the landscaper\u2019s, yet the domestic backyard setting is wrong enough that most people would ultimately reject this as a normal scene.",
+        "counter_arguments": {
+          "argument_for_higher": "Archaeologists might occasionally excavate in a private yard when historical artifacts are suspected or during a salvage dig before construction, so one could imagine this as an unusual but still plausible professional activity in a backyard (plausible_hard).",
+          "argument_for_lower": "If one focuses only on the everyday gardening/maintenance interpretation of a backyard, an archaeologist may seem completely out of place with no obvious reason to be there, making them look like a generic wrong profession closer to implausible_easy."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": false,
+            "reasoning": "Landscaping is a construction/service trade, whereas archaeology is a scientific/historical research profession."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Landscapers typically work in maintained yards, gardens, and outdoor properties, while archaeologists usually work at formal dig sites, ruins, or undeveloped terrain rather than residential backyards."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both professions routinely use shovels, trowels, and other earth-moving hand tools."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act directly on soil/earth, even though archaeologists also target artifacts within that soil."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both regularly perform manual digging and earth-removal actions."
+          },
+          "overlap_count": 3,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb 'dig', archaeologists are associated with shovels, trowels, and excavated pits of earth, which still connects them conceptually to holes in the ground, though not specifically to a tidy backyard."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A chef",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Chefs work in kitchens preparing food and have no professional reason to be digging holes in a backyard. There is essentially no domain connection between their role and this outdoor digging activity, so the event is an obvious and immediate mismatch.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a rare scenario where a chef helps prepare an outdoor barbecue pit or smoker and happens to dig a hole, but this treats the chef as a generic person rather than acting in their professional role, so it remains highly implausible.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "plausible_easy and plausible_hard are both core backyard yard-work professionals (landscaper and gardener) with very similar, very high plausibility."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "High-visibility safety vest, work boots, and a tool belt with gardening tools clearly indicate an outdoor yard/landscaping worker."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Apron with gardening tools, wide-brimmed hat, gloves, and knee pads form a recognizable gardener appearance."
+        },
+        "implausible_hard": {
+          "rating": "UNIDENTIFIABLE",
+          "reasoning": "Khaki field clothes, a hat, and small tools like a brush or trowel could be many outdoor roles (tourist, hiker, guide, geologist); 'archaeologist' would not be reliably guessed from a plain-background photo."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "White chef jacket, tall hat, and kitchen tools are iconic and strongly cue the chef profession."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "A landscaper typically wears durable work pants, high-visibility safety vest, steel-toe boots, possibly a cap, and carries larger yard tools or a tool belt.",
+        "plausible_hard": "A gardener typically wears casual outdoor clothing with an apron holding small tools, a wide-brimmed sun hat, gloves, and sometimes knee pads, often holding a trowel or pruners.",
+        "implausible_hard": "An archaeologist in the field usually wears khaki or rugged outdoor clothing, a wide-brimmed hat, sturdy boots, and may carry a small trowel or brush, clipboard, or similar field gear.",
+        "implausible_easy": "A chef typically wears a white double-breasted chef jacket, tall toque hat, apron, and may hold a knife, ladle, or spatula."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "High-visibility vest and larger tools of the landscaper contrast with the gardener\u2019s apron, small hand tools, and knee pads."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Bright safety gear and tool belt of the landscaper differ from the archaeologist\u2019s neutral khaki field clothes and fine excavation tools."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Outdoor workwear and shovel are clearly different from a white chef uniform and hat."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Gardener\u2019s apron and garden tools differ from archaeologist\u2019s khaki field outfit and excavation tools."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Gardening attire and tools contrast sharply with a chef\u2019s white jacket and toque."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Khaki field clothing with small excavation tools looks very different from a chef\u2019s kitchen uniform."
+        }
+      },
+      "visual_verdict": "PROBLEMATIC",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "An archaeologist"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The only thematically incorrect condition is the gardener in plausible_hard, who is actually as prototypical as the landscaper. A better plausible_hard agent could be, for example, a plumber or an electrician in branded workwear digging in the backyard to access buried pipes or cables\u2014someone who plausibly might dig there but for whom digging holes is not the core job. The scene easily supports an implausible_hard agent (e.g., archaeologist or cemetery worker) and an implausible_easy agent like a chef; thus the gradient issues are due to agent choice, not the scene itself.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The scene 'digging a hole with a shovel in the backyard' is concrete, correctly specified, and has clear prototype professions (landscaper/gardener). The main semantic issue is that the gardener is too prototypical for plausible_hard; visually, the archaeologist is not reliably identifiable, but both problems can be addressed by swapping agents without changing the core scene."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "PROBLEMATIC",
+      "summary": "Semantically, the landscaper, archaeologist, and chef are correctly placed, but the gardener is too strongly associated with backyard digging to serve as a plausible_hard agent, collapsing the top of the gradient. Visually, all roles are distinct but the archaeologist is not reliably identifiable from appearance alone, making the visual set problematic. The underlying scene is sound and imageable, and with alternative agents for plausible_hard (and possibly a more visually iconic implausible_hard), it could cleanly support the full plausibility gradient."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 0,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.0,
+    "overlap_count": 3,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb 'dig', archaeologists are associated with shovels, trowels, and excavated pits of earth, which still connects them conceptually to holes in the ground, though not specifically to a tidy backyard.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "UNIDENTIFIABLE"
+    },
+    "unidentifiable_agents": [
+      "implausible_hard"
+    ]
+  },
+  "elapsed": 171.98248174786568,
+  "token_info": {
+    "input_tokens": 5632,
+    "output_tokens": 9097,
+    "cached_tokens": 0
+  },
+  "success": true
+}

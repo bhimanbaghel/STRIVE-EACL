@@ -1,0 +1,230 @@
+{
+  "verb": "stir",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met; only the agent role changes across sentences and all are human professions.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Stirring a pot of soup on a restaurant stove is a core cooking activity, and a chef is the prototypical professional responsible for this task in that setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that line cooks or kitchen assistants more often do the physical stirring, so a chef might sometimes supervise rather than personally stir, which could make the chef feel slightly more like a setting-typical figure than the literal default stirrer.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Preparing and cooking dishes, including stirring soups on the stove, is central to a chef\u2019s professional duties.\",\n        \"removal_test\": \"YES: Without a chef or equivalent cooking professional, the restaurant would not be able to consistently prepare soup on the stove; the action fundamentally depends on kitchen staff in that role.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A waiter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A waiter normally serves food rather than cooks it, but is naturally present in a restaurant and could plausibly help stir soup in some realistic scenarios (e.g., small or understaffed restaurants).\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In small caf\u00e9s or family-run restaurants, waitstaff may share cooking duties, so a waiter stirring soup might be relatively routine there, making the event feel closer to a typical role.\",\n        \"argument_for_lower\": \"In most professional restaurants, health and safety norms keep waiters out of the cooking line, so seeing a waiter at the stove could feel wrong enough to be categorized as low-fit (implausible_hard) rather than moderately plausible.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A butcher\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A butcher is a food professional who handles meat but usually works in a butcher shop or meat prep area, not at a restaurant stove stirring soup; the role overlaps strongly with a chef but is wrong for this specific cooking-on-the-stove scene.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In some large kitchens or meat-focused restaurants, a butcher might be integrated into the kitchen team and could occasionally assist with cooking tasks, making it conceivable (though unusual) for them to stir a pot of soup.\",\n        \"argument_for_lower\": \"A naive viewer might associate butchers exclusively with raw meat counters and not with restaurant kitchens at all, rejecting the scene as almost as odd as any unrelated profession and thus closer to implausible_easy.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both chef and butcher are food-preparation professionals working in the culinary domain.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": false,\n            \"reasoning\": \"Chefs typically work in restaurant or institutional kitchens, while butchers more typically work in butcher shops, supermarket meat counters, or dedicated meat prep rooms rather than at a restaurant stove.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely use knives, cutting boards, and aprons as part of food preparation.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both act on food items, especially meat and other edible ingredients.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both perform manual food-processing actions such as cutting, chopping, and handling ingredients; although stirring soup is more chef-typical, it is still a similar kind of manual food manipulation.\"\n          },\n          \"overlap_count\": 4,\n          \"sufficient\": true,\n          \"negative_test\": \"Even ignoring the verb 'stir', a butcher is still strongly associated with food preparation and aprons in kitchen-like spaces, so there remains a clear connection to the culinary scene beyond just the action.\"\n        }\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both chef and butcher are food-preparation professionals working in the culinary domain.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Chefs usually work in restaurant kitchens at stoves, whereas butchers are typically in butcher shops or meat prep rooms, not at a restaurant stove.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both regularly use knives, cutting boards, and aprons as core tools of their trade.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both work on food items, particularly meat and related ingredients.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both engage in hands-on manipulation of food, including cutting and handling ingredients; the motor patterns are similar even if stirring soup is chef-typical.\"\n        },\n        \"overlap_count\": 4,\n        \"sufficient\": true,\n        \"negative_test\": \"Without considering 'stirring', a butcher is still clearly linked to food preparation and kitchen-like environments, so there is a substantial association with the scene beyond the shared verb.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A construction worker\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A construction worker\u2019s domain is building and manual construction work, not cooking; seeing them in full work gear stirring soup on a restaurant stove is a clear and immediate mismatch.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a far-fetched scenario where a construction worker on a restaurant remodel informally helps in the kitchen, but this would almost certainly not involve wearing full construction gear at the stove.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Chef whites and a tall toque are iconic and strongly signal 'chef' even on a plain background.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A waiter\u2019s combination of dress shirt, vest, bow tie, and serving tray or order pad is a widely recognized restaurant-server look.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A white or striped butcher\u2019s coat with a blood-stained apron and cleaver is highly diagnostic of a butcher.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Hard hat, high-visibility vest, work boots, and tool belt clearly indicate a construction worker.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"White double-breasted chef\u2019s jacket, tall white chef\u2019s hat (toque), apron, possibly a neckerchief, often holding a cooking utensil like a spoon or ladle.\",\n      \"plausible_hard\": \"White dress shirt with black trousers, black vest or waistcoat, bow tie or necktie, often carrying a serving tray or order pad, possibly with a waist apron.\",\n      \"implausible_hard\": \"White or striped butcher\u2019s coat, heavy or blood-stained apron, possibly a flat cap, often holding a large knife or meat cleaver.\",\n      \"implausible_easy\": \"Bright hard hat, high-visibility safety vest over rugged work clothes, work boots, possibly a tool belt with tools such as a hammer or wrench.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef\u2019s tall hat and double-breasted jacket contrast with waiter\u2019s vest, bow tie, and serving tray.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef has a tall toque and clean cooking utensils, whereas the butcher has a lower cap or bare head, blood-stained apron, and cleaver.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef whites versus hard hat and hi-vis vest are visually very different.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Waiter\u2019s formal attire and tray differ from butcher\u2019s heavier, stained apron and meat tools.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Restaurant server outfit is clearly distinct from construction safety gear.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Butcher\u2019s coat and apron with meat tools are unlike construction worker\u2019s hard hat and hi-vis vest.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four agents are appropriately placed and yield a clear gradient from chef (core cooking role) through waiter (present in restaurant but not a cook) and butcher (related food professional but wrong setting) to construction worker (unrelated domain). No INCORRECT or BORDERLINE conditions require replacement.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The scene\u2014stirring a pot of soup with a wooden spoon on a restaurant stove\u2014is concrete, uses an appropriate instrument, has a clear prototypical agent (chef), and supports distinct plausible and implausible roles with strong visual differentiation.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"The set cleanly instantiates the intended plausibility gradient: chef as clear prototype, waiter as moderately plausible helper, butcher as related-but-wrong food professional, and construction worker as clearly unrelated. All professions are visually iconic and distinguishable in photographs, and the cooking scene itself is well-formed and imageable for rapid plausibility judgments.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met; only the agent role changes across sentences and all are human professions."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A chef",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Stirring a pot of soup on a restaurant stove is a core cooking activity, and a chef is the prototypical professional responsible for this task in that setting.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that line cooks or kitchen assistants more often do the physical stirring, so a chef might sometimes supervise rather than personally stir, which could make the chef feel slightly more like a setting-typical figure than the literal default stirrer."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Preparing and cooking dishes, including stirring soups on the stove, is central to a chef\u2019s professional duties.",
+          "removal_test": "YES: Without a chef or equivalent cooking professional, the restaurant would not be able to consistently prepare soup on the stove; the action fundamentally depends on kitchen staff in that role."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A waiter",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A waiter normally serves food rather than cooks it, but is naturally present in a restaurant and could plausibly help stir soup in some realistic scenarios (e.g., small or understaffed restaurants).",
+        "counter_arguments": {
+          "argument_for_higher": "In small caf\u00e9s or family-run restaurants, waitstaff may share cooking duties, so a waiter stirring soup might be relatively routine there, making the event feel closer to a typical role.",
+          "argument_for_lower": "In most professional restaurants, health and safety norms keep waiters out of the cooking line, so seeing a waiter at the stove could feel wrong enough to be categorized as low-fit (implausible_hard) rather than moderately plausible."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A butcher",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A butcher is a food professional who handles meat but usually works in a butcher shop or meat prep area, not at a restaurant stove stirring soup; the role overlaps strongly with a chef but is wrong for this specific cooking-on-the-stove scene.",
+        "counter_arguments": {
+          "argument_for_higher": "In some large kitchens or meat-focused restaurants, a butcher might be integrated into the kitchen team and could occasionally assist with cooking tasks, making it conceivable (though unusual) for them to stir a pot of soup.",
+          "argument_for_lower": "A naive viewer might associate butchers exclusively with raw meat counters and not with restaurant kitchens at all, rejecting the scene as almost as odd as any unrelated profession and thus closer to implausible_easy.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": true,
+              "reasoning": "Both chef and butcher are food-preparation professionals working in the culinary domain."
+            },
+            "typical_setting": {
+              "overlaps": false,
+              "reasoning": "Chefs typically work in restaurant or institutional kitchens, while butchers more typically work in butcher shops, supermarket meat counters, or dedicated meat prep rooms rather than at a restaurant stove."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both routinely use knives, cutting boards, and aprons as part of food preparation."
+            },
+            "patient_object_type": {
+              "overlaps": true,
+              "reasoning": "Both act on food items, especially meat and other edible ingredients."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both perform manual food-processing actions such as cutting, chopping, and handling ingredients; although stirring soup is more chef-typical, it is still a similar kind of manual food manipulation."
+            },
+            "overlap_count": 4,
+            "sufficient": true,
+            "negative_test": "Even ignoring the verb 'stir', a butcher is still strongly associated with food preparation and aprons in kitchen-like spaces, so there remains a clear connection to the culinary scene beyond just the action."
+          }
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both chef and butcher are food-preparation professionals working in the culinary domain."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Chefs usually work in restaurant kitchens at stoves, whereas butchers are typically in butcher shops or meat prep rooms, not at a restaurant stove."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both regularly use knives, cutting boards, and aprons as core tools of their trade."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both work on food items, particularly meat and related ingredients."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both engage in hands-on manipulation of food, including cutting and handling ingredients; the motor patterns are similar even if stirring soup is chef-typical."
+          },
+          "overlap_count": 4,
+          "sufficient": true,
+          "negative_test": "Without considering 'stirring', a butcher is still clearly linked to food preparation and kitchen-like environments, so there is a substantial association with the scene beyond the shared verb."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A construction worker",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A construction worker\u2019s domain is building and manual construction work, not cooking; seeing them in full work gear stirring soup on a restaurant stove is a clear and immediate mismatch.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a far-fetched scenario where a construction worker on a restaurant remodel informally helps in the kitchen, but this would almost certainly not involve wearing full construction gear at the stove.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Chef whites and a tall toque are iconic and strongly signal 'chef' even on a plain background."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A waiter\u2019s combination of dress shirt, vest, bow tie, and serving tray or order pad is a widely recognized restaurant-server look."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A white or striped butcher\u2019s coat with a blood-stained apron and cleaver is highly diagnostic of a butcher."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Hard hat, high-visibility vest, work boots, and tool belt clearly indicate a construction worker."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "White double-breasted chef\u2019s jacket, tall white chef\u2019s hat (toque), apron, possibly a neckerchief, often holding a cooking utensil like a spoon or ladle.",
+        "plausible_hard": "White dress shirt with black trousers, black vest or waistcoat, bow tie or necktie, often carrying a serving tray or order pad, possibly with a waist apron.",
+        "implausible_hard": "White or striped butcher\u2019s coat, heavy or blood-stained apron, possibly a flat cap, often holding a large knife or meat cleaver.",
+        "implausible_easy": "Bright hard hat, high-visibility safety vest over rugged work clothes, work boots, possibly a tool belt with tools such as a hammer or wrench."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Chef\u2019s tall hat and double-breasted jacket contrast with waiter\u2019s vest, bow tie, and serving tray."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Chef has a tall toque and clean cooking utensils, whereas the butcher has a lower cap or bare head, blood-stained apron, and cleaver."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Chef whites versus hard hat and hi-vis vest are visually very different."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Waiter\u2019s formal attire and tray differ from butcher\u2019s heavier, stained apron and meat tools."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Restaurant server outfit is clearly distinct from construction safety gear."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Butcher\u2019s coat and apron with meat tools are unlike construction worker\u2019s hard hat and hi-vis vest."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four agents are appropriately placed and yield a clear gradient from chef (core cooking role) through waiter (present in restaurant but not a cook) and butcher (related food professional but wrong setting) to construction worker (unrelated domain). No INCORRECT or BORDERLINE conditions require replacement.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The scene\u2014stirring a pot of soup with a wooden spoon on a restaurant stove\u2014is concrete, uses an appropriate instrument, has a clear prototypical agent (chef), and supports distinct plausible and implausible roles with strong visual differentiation."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "The set cleanly instantiates the intended plausibility gradient: chef as clear prototype, waiter as moderately plausible helper, butcher as related-but-wrong food professional, and construction worker as clearly unrelated. All professions are visually iconic and distinguishable in photographs, and the cooking scene itself is well-formed and imageable for rapid plausibility judgments."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 4,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Without considering 'stirring', a butcher is still clearly linked to food preparation and kitchen-like environments, so there is a substantial association with the scene beyond the shared verb.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 85.68708094209433,
+  "token_info": {
+    "input_tokens": 5677,
+    "output_tokens": 5754,
+    "cached_tokens": 0
+  },
+  "success": true
+}

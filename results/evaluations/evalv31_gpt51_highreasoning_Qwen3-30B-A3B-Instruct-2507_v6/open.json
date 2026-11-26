@@ -1,0 +1,205 @@
+{
+  "verb": "open",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professional roles; only the agent varies across sentences; plausibility differences come from role\u2013action mismatch, not physical ability.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A secretary\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Handling and opening incoming mail at an office desk is a classic administrative task and strongly associated with secretaries/administrative assistants. The location, instrument, and object all fit their core office role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"In some modern offices, individual employees or a central mailroom clerk open their own mail, so opening envelopes is not uniquely tied to secretaries and could be seen as a general office-worker task, which would push this toward plausible_hard.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Secretarial/administrative roles routinely include receiving, sorting, and opening mail as part of managing correspondence for others.\",\n        \"removal_test\": \"YES: In a prototypical executive office where the secretary handles incoming correspondence, removing the secretary would mean this specific mail-opening task (pre-opening and organizing others\u2019 mail) would no longer occur in the same way.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A receptionist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Receptionists often work at office desks, receive incoming mail and packages, and in many offices may open or triage mail, but this is secondary to greeting visitors and handling calls. Thus the action is plausible but not core to the role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In small offices the receptionist may be the main or only front-office staff member and can be primarily responsible for opening all incoming mail, making them feel almost as prototypical as a secretary.\",\n        \"argument_for_lower\": \"In some settings, receptionists only sign for and pass on sealed mail while others open it, and they typically work at a front counter rather than a standard office desk; under that view, having them use a letter opener at a desk could seem more like a category error and drift toward implausible_hard.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A mail carrier\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Mail carriers are strongly associated with letters and offices, but their professional role is to deliver sealed mail, not to sit at an office desk and open it with a letter opener, which would normally be inappropriate for their job. This creates a related-but-wrong, low-fit scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a mail carrier at their internal postal office desk opening official correspondence addressed to them or their department, which would make the action a somewhat plausible though non-core task in an office setting.\",\n        \"argument_for_lower\": \"Because postal workers are legally and normatively expected not to open mail they handle, some observers may treat this as an almost blatant violation of their role expectations and see it as more like a clear no, similar to an unrelated profession.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both secretaries and mail carriers are involved with handling written correspondence and mail in a broad communications/logistics domain.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Secretaries primarily work seated at desks inside offices, whereas mail carriers primarily work outdoors and in transit, only briefly entering buildings to deliver.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Secretaries use office tools like letter openers, staplers, and computers, while mail carriers use bags, scanners, and sorting equipment; shared contact with envelopes is better classified as shared patient than shared tools.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely handle letters and sealed envelopes as central objects in their work.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform manual handling and sorting of mail, placing envelopes into piles or locations; the main divergence is that secretaries open mail while carriers normally do not.\"\n        },\n        \"overlap_count\": 3,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb \u2018open\u2019, a mail carrier is still naturally associated with sealed envelopes and offices receiving mail, so there remains a clear connection to the scene independent of the specific action.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Chefs\u2019 work centers on food preparation in kitchens, not handling office mail at a desk; there is no strong semantic link between the chef role and opening envelopes in an office, making this a clear mismatch.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"A head chef or restaurant owner might occasionally handle invoices or correspondence in a back-office space while still in uniform, which could make opening an envelope at a desk marginally plausible.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A secretary in business attire with a notepad looks like a generic office worker; viewers may guess \u2018secretary\u2019 or \u2018office worker\u2019 but could easily confuse this with other white-collar roles.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A receptionist in professional clothing with a name badge and headset suggests a front-desk or customer-service role but could still be mistaken for other office or call-center staff.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A mail carrier\u2019s uniform, postal bag, and logoed cap are highly distinctive and readily signal a postal worker.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A white chef\u2019s coat and tall toque are iconic and strongly associated with chefs.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically a person in conservative business attire (blouse and skirt or slacks, blazer), neat hair (often up), possibly glasses, holding a notepad or paperwork and a pen.\",\n      \"plausible_hard\": \"Professional blouse or shirt with tailored skirt or trousers, often standing or sitting at a front desk, wearing a name badge and possibly a telephone headset.\",\n      \"implausible_hard\": \"Person in a standardized postal uniform with matching shirt and pants, postal service logos, a cap, and a shoulder mailbag or satchel.\",\n      \"implausible_easy\": \"Person in a white double-breasted chef\u2019s jacket, checkered or dark pants, apron, and a tall chef\u2019s hat (toque), possibly with kitchen utensils nearby.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Both wear business attire, but the receptionist\u2019s headset and name badge contrast with the secretary\u2019s notepad-focused office-worker look.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Generic office clothing versus a postal uniform with bag and cap are clearly different.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Business attire versus chef whites and a tall hat are visually very distinct.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Receptionist\u2019s business wear and headset differ markedly from the mail carrier\u2019s colored uniform and mailbag.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Front-desk business attire is clearly different from a chef\u2019s specialized kitchen uniform.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Postal uniform with bag and cap versus chef\u2019s coat and toque are easily differentiated.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None; secretary vs receptionist is the most similar pair but still visually separable via headset/badge vs notepad and slightly different desk context.\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four agents fit their intended plausibility levels with a clear prototype (secretary) for the mail-opening action. If needed, alternative agents could readily be substituted (e.g., mailroom clerk for plausible_easy, office manager for plausible_hard, or other mail-related but non-opening roles for implausible_hard), indicating that the scene itself comfortably supports the full gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The scene of opening a sealed envelope with a letter opener at an office desk is concrete, has a clear prototypical office role, and allows for a graded contrast with mail-related and non-mail-related professions. The main limitation is that office roles (secretary, receptionist) are somewhat less visually iconic than uniformed roles, but they remain workable.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematic-fit assignments form a coherent gradient from secretary (strongly prototypical) through receptionist to mail carrier (related-but-wrong) and chef (clearly unrelated). The main visual concern is that secretary and receptionist are only ambiguously identifiable compared to the highly iconic chef and mail carrier, but all pairs remain visually distinguishable. Overall, the scene is well-formed, imageable, and supports the desired plausibility gradient.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professional roles; only the agent varies across sentences; plausibility differences come from role\u2013action mismatch, not physical ability."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A secretary",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Handling and opening incoming mail at an office desk is a classic administrative task and strongly associated with secretaries/administrative assistants. The location, instrument, and object all fit their core office role.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "In some modern offices, individual employees or a central mailroom clerk open their own mail, so opening envelopes is not uniquely tied to secretaries and could be seen as a general office-worker task, which would push this toward plausible_hard."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Secretarial/administrative roles routinely include receiving, sorting, and opening mail as part of managing correspondence for others.",
+          "removal_test": "YES: In a prototypical executive office where the secretary handles incoming correspondence, removing the secretary would mean this specific mail-opening task (pre-opening and organizing others\u2019 mail) would no longer occur in the same way."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A receptionist",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Receptionists often work at office desks, receive incoming mail and packages, and in many offices may open or triage mail, but this is secondary to greeting visitors and handling calls. Thus the action is plausible but not core to the role.",
+        "counter_arguments": {
+          "argument_for_higher": "In small offices the receptionist may be the main or only front-office staff member and can be primarily responsible for opening all incoming mail, making them feel almost as prototypical as a secretary.",
+          "argument_for_lower": "In some settings, receptionists only sign for and pass on sealed mail while others open it, and they typically work at a front counter rather than a standard office desk; under that view, having them use a letter opener at a desk could seem more like a category error and drift toward implausible_hard."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A mail carrier",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Mail carriers are strongly associated with letters and offices, but their professional role is to deliver sealed mail, not to sit at an office desk and open it with a letter opener, which would normally be inappropriate for their job. This creates a related-but-wrong, low-fit scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a mail carrier at their internal postal office desk opening official correspondence addressed to them or their department, which would make the action a somewhat plausible though non-core task in an office setting.",
+          "argument_for_lower": "Because postal workers are legally and normatively expected not to open mail they handle, some observers may treat this as an almost blatant violation of their role expectations and see it as more like a clear no, similar to an unrelated profession."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both secretaries and mail carriers are involved with handling written correspondence and mail in a broad communications/logistics domain."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Secretaries primarily work seated at desks inside offices, whereas mail carriers primarily work outdoors and in transit, only briefly entering buildings to deliver."
+          },
+          "tools_instruments": {
+            "overlaps": false,
+            "reasoning": "Secretaries use office tools like letter openers, staplers, and computers, while mail carriers use bags, scanners, and sorting equipment; shared contact with envelopes is better classified as shared patient than shared tools."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both routinely handle letters and sealed envelopes as central objects in their work."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform manual handling and sorting of mail, placing envelopes into piles or locations; the main divergence is that secretaries open mail while carriers normally do not."
+          },
+          "overlap_count": 3,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb \u2018open\u2019, a mail carrier is still naturally associated with sealed envelopes and offices receiving mail, so there remains a clear connection to the scene independent of the specific action."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A chef",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Chefs\u2019 work centers on food preparation in kitchens, not handling office mail at a desk; there is no strong semantic link between the chef role and opening envelopes in an office, making this a clear mismatch.",
+        "counter_arguments": {
+          "argument_for_higher": "A head chef or restaurant owner might occasionally handle invoices or correspondence in a back-office space while still in uniform, which could make opening an envelope at a desk marginally plausible.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A secretary in business attire with a notepad looks like a generic office worker; viewers may guess \u2018secretary\u2019 or \u2018office worker\u2019 but could easily confuse this with other white-collar roles."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A receptionist in professional clothing with a name badge and headset suggests a front-desk or customer-service role but could still be mistaken for other office or call-center staff."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A mail carrier\u2019s uniform, postal bag, and logoed cap are highly distinctive and readily signal a postal worker."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A white chef\u2019s coat and tall toque are iconic and strongly associated with chefs."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically a person in conservative business attire (blouse and skirt or slacks, blazer), neat hair (often up), possibly glasses, holding a notepad or paperwork and a pen.",
+        "plausible_hard": "Professional blouse or shirt with tailored skirt or trousers, often standing or sitting at a front desk, wearing a name badge and possibly a telephone headset.",
+        "implausible_hard": "Person in a standardized postal uniform with matching shirt and pants, postal service logos, a cap, and a shoulder mailbag or satchel.",
+        "implausible_easy": "Person in a white double-breasted chef\u2019s jacket, checkered or dark pants, apron, and a tall chef\u2019s hat (toque), possibly with kitchen utensils nearby."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Both wear business attire, but the receptionist\u2019s headset and name badge contrast with the secretary\u2019s notepad-focused office-worker look."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Generic office clothing versus a postal uniform with bag and cap are clearly different."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Business attire versus chef whites and a tall hat are visually very distinct."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Receptionist\u2019s business wear and headset differ markedly from the mail carrier\u2019s colored uniform and mailbag."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Front-desk business attire is clearly different from a chef\u2019s specialized kitchen uniform."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Postal uniform with bag and cap versus chef\u2019s coat and toque are easily differentiated."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None; secretary vs receptionist is the most similar pair but still visually separable via headset/badge vs notepad and slightly different desk context.",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four agents fit their intended plausibility levels with a clear prototype (secretary) for the mail-opening action. If needed, alternative agents could readily be substituted (e.g., mailroom clerk for plausible_easy, office manager for plausible_hard, or other mail-related but non-opening roles for implausible_hard), indicating that the scene itself comfortably supports the full gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The scene of opening a sealed envelope with a letter opener at an office desk is concrete, has a clear prototypical office role, and allows for a graded contrast with mail-related and non-mail-related professions. The main limitation is that office roles (secretary, receptionist) are somewhat less visually iconic than uniformed roles, but they remain workable."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematic-fit assignments form a coherent gradient from secretary (strongly prototypical) through receptionist to mail carrier (related-but-wrong) and chef (clearly unrelated). The main visual concern is that secretary and receptionist are only ambiguously identifiable compared to the highly iconic chef and mail carrier, but all pairs remain visually distinguishable. Overall, the scene is well-formed, imageable, and supports the desired plausibility gradient."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 3,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb \u2018open\u2019, a mail carrier is still naturally associated with sealed envelopes and offices receiving mail, so there remains a clear connection to the scene independent of the specific action.",
+    "identifiability": {
+      "plausible_easy": "AMBIGUOUS",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 222.63838139548898,
+  "token_info": {
+    "input_tokens": 5663,
+    "output_tokens": 14156,
+    "cached_tokens": 0
+  },
+  "success": true
+}

@@ -1,0 +1,121 @@
+item_num,tier,model,source_run,source_type,verb,condition,agent,sentence,presentation_order
+1,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,measure,implausible_easy,A ballet dancer,A ballet dancer is measuring a man's blood pressure with a blood pressure cuff in a medical examination room.,1
+1,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,measure,plausible_easy,A nurse,A nurse is measuring a man's blood pressure with a blood pressure cuff in a medical examination room.,2
+1,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,measure,implausible_hard,A dentist,A dentist is measuring a man's blood pressure with a blood pressure cuff in a medical examination room.,3
+1,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,measure,plausible_hard,A paramedic,A paramedic is measuring a man's blood pressure with a blood pressure cuff in a medical examination room.,4
+2,FAIL,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,open,implausible_hard,A correctional officer,A correctional officer is opening a locked door with a key in a prison.,1
+2,FAIL,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,open,plausible_easy,A prison guard,A prison guard is opening a locked door with a key in a prison.,2
+2,FAIL,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,open,plausible_hard,A prison warden,A prison warden is opening a locked door with a key in a prison.,3
+2,FAIL,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,open,implausible_easy,A ballerina,A ballerina is opening a locked door with a key in a prison.,4
+3,SILVER,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,dig,implausible_easy,A ballet dancer,A ballet dancer is digging a garden bed with a shovel in the backyard.,1
+3,SILVER,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,dig,implausible_hard,A greenhouse technician,A greenhouse technician is digging a garden bed with a shovel in the backyard.,2
+3,SILVER,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,dig,plausible_hard,A landscape architect,A landscape architect is digging a garden bed with a shovel in the backyard.,3
+3,SILVER,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,dig,plausible_easy,A gardener,A gardener is digging a garden bed with a shovel in the backyard.,4
+4,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,write,plausible_hard,A nurse,A nurse is writing a prescription with a pen at the hospital desk.,1
+4,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,write,implausible_hard,A paramedic,A paramedic is writing a prescription with a pen at the hospital desk.,2
+4,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,write,implausible_easy,A firefighter,A firefighter is writing a prescription with a pen at the hospital desk.,3
+4,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,write,plausible_easy,A doctor,A doctor is writing a prescription with a pen at the hospital desk.,4
+5,GOLD,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_iterative_v6,iterative_v6,draw,plausible_hard,A street artist,A street artist draws a chalk outline of a crime scene with a piece of chalk on a city sidewalk.,1
+5,GOLD,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_iterative_v6,iterative_v6,draw,implausible_easy,A florist,A florist draws a chalk outline of a crime scene with a piece of chalk on a city sidewalk.,2
+5,GOLD,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_iterative_v6,iterative_v6,draw,implausible_hard,A construction surveyor,A construction surveyor draws a chalk outline of a crime scene with a piece of chalk on a city sidewalk.,3
+5,GOLD,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_iterative_v6,iterative_v6,draw,plausible_easy,A crime scene investigator,A crime scene investigator draws a chalk outline of a crime scene with a piece of chalk on a city sidewalk.,4
+6,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,cut,plausible_easy,A chef,A chef is cutting a loaf of bread with a bread knife on the kitchen counter.,1
+6,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,cut,implausible_easy,A firefighter,A firefighter is cutting a loaf of bread with a bread knife on the kitchen counter.,2
+6,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,cut,plausible_hard,A waiter,A waiter is cutting a loaf of bread with a bread knife on the kitchen counter.,3
+6,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,cut,implausible_hard,A butcher,A butcher is cutting a loaf of bread with a bread knife on the kitchen counter.,4
+7,SILVER,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,dig,implausible_easy,A ballet dancer,A ballet dancer is digging a hole with a shovel in the backyard.,1
+7,SILVER,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,dig,plausible_easy,A groundskeeper,A groundskeeper is digging a hole with a shovel in the backyard.,2
+7,SILVER,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,dig,implausible_hard,A miner,A miner is digging a hole with a shovel in the backyard.,3
+7,SILVER,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,dig,plausible_hard,A utility worker,A utility worker is digging a hole with a shovel in the backyard.,4
+8,GOLD,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,cut,implausible_easy,A ballet dancer,A ballet dancer is cutting a piece of flesh with surgical scissors in the operating room.,1
+8,GOLD,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,cut,plausible_easy,A surgeon,A surgeon is cutting a piece of flesh with surgical scissors in the operating room.,2
+8,GOLD,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,cut,implausible_hard,A dentist,A dentist is cutting a piece of flesh with surgical scissors in the operating room.,3
+8,GOLD,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,cut,plausible_hard,A nurse,A nurse is cutting a piece of flesh with surgical scissors in the operating room.,4
+9,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,touch,plausible_easy,A nurse,A nurse is touching a patient's shoulder with her hand in the hospital room.,1
+9,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,touch,implausible_easy,A ballet dancer,A ballet dancer is touching a patient's shoulder with her hand in the hospital room.,2
+9,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,touch,plausible_hard,A hospital chaplain,A hospital chaplain is touching a patient's shoulder with her hand in the hospital room.,3
+9,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,touch,implausible_hard,A firefighter,A firefighter is touching a patient's shoulder with her hand in the hospital room.,4
+10,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v4,v4,paint,plausible_easy,A carpenter,A carpenter is painting a wooden door with a brush in a workshop.,1
+10,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v4,v4,paint,implausible_hard,A plumber,A plumber is painting a wooden door with a brush in a workshop.,2
+10,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v4,v4,paint,plausible_hard,An electrician,An electrician is painting a wooden door with a brush in a workshop.,3
+10,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v4,v4,paint,implausible_easy,A librarian,A librarian is painting a wooden door with a brush in a workshop.,4
+11,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,paint,implausible_easy,A ballet dancer,A ballet dancer is painting a house wall with a paint roller on a suburban street.,1
+11,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,paint,implausible_hard,A firefighter,A firefighter is painting a house wall with a paint roller on a suburban street.,2
+11,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,paint,plausible_easy,A house painter,A house painter is painting a house wall with a paint roller on a suburban street.,3
+11,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,paint,plausible_hard,A construction worker,A construction worker is painting a house wall with a paint roller on a suburban street.,4
+12,FAIL,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,wash,implausible_hard,A paramedic,A paramedic is washing a hospital bed with a disinfectant cloth in the patient room.,1
+12,FAIL,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,wash,implausible_easy,A ballet dancer,A ballet dancer is washing a hospital bed with a disinfectant cloth in the patient room.,2
+12,FAIL,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,wash,plausible_easy,A housekeeper,A housekeeper is washing a hospital bed with a disinfectant cloth in the patient room.,3
+12,FAIL,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,wash,plausible_hard,A hospital orderly,A hospital orderly is washing a hospital bed with a disinfectant cloth in the patient room.,4
+13,FAIL,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,draw,plausible_hard,A nurse,A nurse is drawing a sketch with a pencil on a hospital ward wall.,1
+13,FAIL,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,draw,implausible_hard,A radiologist,A radiologist is drawing a sketch with a pencil on a hospital ward wall.,2
+13,FAIL,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,draw,plausible_easy,A surgeon,A surgeon is drawing a sketch with a pencil on a hospital ward wall.,3
+13,FAIL,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_iterative_v6,iterative_v6,draw,implausible_easy,A ballet dancer,A ballet dancer is drawing a sketch with a pencil on a hospital ward wall.,4
+14,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,touch,plausible_hard,A medical student,A medical student is touching a patient’s abdomen with her gloved hand in the examination room.,1
+14,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,touch,plausible_easy,A family doctor,A family doctor is touching a patient’s abdomen with her gloved hand in the examination room.,2
+14,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,touch,implausible_easy,A wedding photographer,A wedding photographer is touching a patient’s abdomen with her gloved hand in the examination room.,3
+14,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,touch,implausible_hard,A dentist,A dentist is touching a patient’s abdomen with her gloved hand in the examination room.,4
+15,SILVER,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,break,plausible_hard,A carpenter,A carpenter breaks a wooden chair with an axe in a forest clearing.,1
+15,SILVER,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,break,implausible_hard,A blacksmith,A blacksmith breaks a wooden chair with an axe in a forest clearing.,2
+15,SILVER,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,break,implausible_easy,A ballerina,A ballerina breaks a wooden chair with an axe in a forest clearing.,3
+15,SILVER,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,break,plausible_easy,A lumberjack,A lumberjack breaks a wooden chair with an axe in a forest clearing.,4
+16,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,scoop,implausible_hard,A butcher,A butcher is scooping ice cream with a metal scoop at the ice cream counter.,1
+16,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,scoop,implausible_easy,A firefighter,A firefighter is scooping ice cream with a metal scoop at the ice cream counter.,2
+16,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,scoop,plausible_easy,An ice cream vendor,An ice cream vendor is scooping ice cream with a metal scoop at the ice cream counter.,3
+16,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,scoop,plausible_hard,A fast food worker,A fast food worker is scooping ice cream with a metal scoop at the ice cream counter.,4
+17,SILVER,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,paint,implausible_easy,A chef,A chef is painting a large canvas with a paintbrush in a studio.,1
+17,SILVER,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,paint,plausible_easy,An artist,An artist is painting a large canvas with a paintbrush in a studio.,2
+17,SILVER,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,paint,implausible_hard,An architect,An architect is painting a large canvas with a paintbrush in a studio.,3
+17,SILVER,Qwen3-Next-80B,evalv3_Qwen3-Next-80B-A3B-Instruct_iterative_v6,iterative_v6,paint,plausible_hard,An art teacher,An art teacher is painting a large canvas with a paintbrush in a studio.,4
+18,FAIL,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_v4,v4,measure,implausible_hard,A botanist,A botanist is measuring the height of a tree with a tape measure in a forest.,1
+18,FAIL,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_v4,v4,measure,plausible_easy,A forester,A forester is measuring the height of a tree with a tape measure in a forest.,2
+18,FAIL,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_v4,v4,measure,implausible_easy,A magician,A magician is measuring the height of a tree with a tape measure in a forest.,3
+18,FAIL,Qwen3-4B,evalv3_Qwen3-4B-Instruct-2507_v4,v4,measure,plausible_hard,A hiker,A hiker is measuring the height of a tree with a tape measure in a forest.,4
+19,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,wash,implausible_hard,A street cleaner,A street cleaner is washing a car with a high-pressure hose at a car wash station.,1
+19,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,wash,implausible_easy,A ballet dancer,A ballet dancer is washing a car with a high-pressure hose at a car wash station.,2
+19,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,wash,plausible_hard,A mechanic,A mechanic is washing a car with a high-pressure hose at a car wash station.,3
+19,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,wash,plausible_easy,A car wash worker,A car wash worker is washing a car with a high-pressure hose at a car wash station.,4
+20,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,shoot,implausible_hard,A sniper,A sniper shoots a target with a rifle at the shooting range.,1
+20,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,shoot,plausible_hard,A police officer,A police officer shoots a target with a rifle at the shooting range.,2
+20,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,shoot,plausible_easy,A competitive marksman,A competitive marksman shoots a target with a rifle at the shooting range.,3
+20,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,shoot,implausible_easy,A florist,A florist shoots a target with a rifle at the shooting range.,4
+21,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,stir,plausible_easy,A chef,A chef is stirring a pot of soup with a wooden spoon on the restaurant stove.,1
+21,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,stir,implausible_easy,A construction worker,A construction worker is stirring a pot of soup with a wooden spoon on the restaurant stove.,2
+21,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,stir,implausible_hard,A butcher,A butcher is stirring a pot of soup with a wooden spoon on the restaurant stove.,3
+21,GOLD,gpt-5.1,evalv3_gpt-5.1-2025-11-13_iterative_v6,iterative_v6,stir,plausible_hard,A waiter,A waiter is stirring a pot of soup with a wooden spoon on the restaurant stove.,4
+22,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,dig,plausible_easy,A landscaper,A landscaper is digging a hole with a shovel in the backyard.,1
+22,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,dig,implausible_hard,An archaeologist,An archaeologist is digging a hole with a shovel in the backyard.,2
+22,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,dig,implausible_easy,A chef,A chef is digging a hole with a shovel in the backyard.,3
+22,FAIL,Ministral-14B,evalv3_Ministral-3-14B-Instruct-2512_v6,v6,dig,plausible_hard,A gardener,A gardener is digging a hole with a shovel in the backyard.,4
+23,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,erase,implausible_easy,A firefighter,A firefighter is erasing a math equation on the chalkboard with a felt eraser in the classroom.,1
+23,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,erase,plausible_easy,A schoolteacher,A schoolteacher is erasing a math equation on the chalkboard with a felt eraser in the classroom.,2
+23,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,erase,plausible_hard,A school janitor,A school janitor is erasing a math equation on the chalkboard with a felt eraser in the classroom.,3
+23,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,erase,implausible_hard,A university professor,A university professor is erasing a math equation on the chalkboard with a felt eraser in the classroom.,4
+24,FAIL,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_iterative_v6,iterative_v6,write,implausible_easy,A street performer,A street performer is writing a patient's medical note with a pen in a hospital.,1
+24,FAIL,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_iterative_v6,iterative_v6,write,implausible_hard,A surgeon,A surgeon is writing a patient's medical note with a pen in a hospital.,2
+24,FAIL,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_iterative_v6,iterative_v6,write,plausible_hard,A medical transcriptionist,A medical transcriptionist is writing a patient's medical note with a pen in a hospital.,3
+24,FAIL,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_iterative_v6,iterative_v6,write,plausible_easy,A nurse,A nurse is writing a patient's medical note with a pen in a hospital.,4
+25,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,eat,plausible_hard,A chef,A chef is eating a plate of pasta with a fork at a restaurant table.,1
+25,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,eat,implausible_hard,A fast-food worker,A fast-food worker is eating a plate of pasta with a fork at a restaurant table.,2
+25,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,eat,implausible_easy,A firefighter,A firefighter is eating a plate of pasta with a fork at a restaurant table.,3
+25,FAIL,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v6,v6,eat,plausible_easy,A waiter,A waiter is eating a plate of pasta with a fork at a restaurant table.,4
+26,SILVER,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_v6,v6,open,implausible_hard,A mail carrier,A mail carrier is opening a sealed envelope with a letter opener on a wooden desk in an office.,1
+26,SILVER,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_v6,v6,open,plausible_hard,A receptionist,A receptionist is opening a sealed envelope with a letter opener on a wooden desk in an office.,2
+26,SILVER,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_v6,v6,open,plausible_easy,A secretary,A secretary is opening a sealed envelope with a letter opener on a wooden desk in an office.,3
+26,SILVER,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_v6,v6,open,implausible_easy,A chef,A chef is opening a sealed envelope with a letter opener on a wooden desk in an office.,4
+27,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,paint,implausible_easy,An airline pilot,An airline pilot is painting a portrait with a fine brush in an art studio.,1
+27,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,paint,plausible_hard,A photography teacher,A photography teacher is painting a portrait with a fine brush in an art studio.,2
+27,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,paint,implausible_hard,A makeup artist,A makeup artist is painting a portrait with a fine brush in an art studio.,3
+27,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,paint,plausible_easy,An artist,An artist is painting a portrait with a fine brush in an art studio.,4
+28,FAIL,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_v4,v4,touch,implausible_hard,A construction worker,A construction worker is touching a newborn baby's forehead with her fingertips in the neonatal intensive care unit.,1
+28,FAIL,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_v4,v4,touch,plausible_hard,A pediatrician,A pediatrician is touching a newborn baby's forehead with her fingertips in the neonatal intensive care unit.,2
+28,FAIL,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_v4,v4,touch,plausible_easy,A neonatal nurse,A neonatal nurse is touching a newborn baby's forehead with her fingertips in the neonatal intensive care unit.,3
+28,FAIL,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_v4,v4,touch,implausible_easy,A professional wrestler,A professional wrestler is touching a newborn baby's forehead with her fingertips in the neonatal intensive care unit.,4
+29,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,scoop,plausible_hard,A cashier,A cashier is scooping ice cream with a metal scoop at the ice cream shop counter.,1
+29,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,scoop,plausible_easy,An ice cream server,An ice cream server is scooping ice cream with a metal scoop at the ice cream shop counter.,2
+29,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,scoop,implausible_hard,A pastry chef,A pastry chef is scooping ice cream with a metal scoop at the ice cream shop counter.,3
+29,SILVER,gpt-5.1,evalv3_gpt-5.1-2025-11-13_v4,v4,scoop,implausible_easy,A court judge,A court judge is scooping ice cream with a metal scoop at the ice cream shop counter.,4
+30,SILVER,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_iterative_v6,iterative_v6,touch,plausible_hard,A hospital porter,A hospital porter is touching a patient's forehead with her fingertips in a hospital room.,1
+30,SILVER,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_iterative_v6,iterative_v6,touch,plausible_easy,A nurse,A nurse is touching a patient's forehead with her fingertips in a hospital room.,2
+30,SILVER,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_iterative_v6,iterative_v6,touch,implausible_hard,A hairdresser,A hairdresser is touching a patient's forehead with her fingertips in a hospital room.,3
+30,SILVER,Qwen3-30B,evalv3_Qwen3-30B-A3B-Instruct-2507_iterative_v6,iterative_v6,touch,implausible_easy,A street musician,A street musician is touching a patient's forehead with her fingertips in a hospital room.,4

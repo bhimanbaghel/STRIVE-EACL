@@ -1,0 +1,205 @@
+{
+  "verb": "cut",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professions; verb form, patient, instrument, and location are identical across sentences; plausibility differences come from role-action mismatch, not physical incapacity.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Cutting a loaf of bread with a bread knife on a kitchen counter is a routine food-preparation task squarely within a chef\u2019s core duties in a kitchen setting, making this a prototypical match.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that cutting bread is a basic kitchen task that any cook, assistant, or even home resident might do, so it is not uniquely tied to chefs and thus might be only moderately typical rather than maximally prototypical.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Preparing and slicing bread for service (e.g., bread baskets, sandwiches, plating) is a standard part of many chefs\u2019 food-preparation responsibilities.\",\n        \"removal_test\": \"YES: In a professional kitchen, if there were no chef or equivalent cook in charge of food preparation, systematic tasks like cutting bread for service would typically not occur as part of normal meal production.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A waiter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Waiters primarily serve food but often operate in or adjacent to restaurant kitchens, and in many realistic scenarios may slice bread for bread baskets or table-side service, making this action plausible but not central to their role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In smaller or informal restaurants, waiters may regularly prepare bread baskets or slice bread in the kitchen, which could suggest that cutting bread is a routine part of their shift and thus more typical than \u2018hard\u2019 plausibility implies.\",\n        \"argument_for_lower\": \"In many establishments, food preparation and service are strictly separated, with waiters rarely using kitchen counters or knives, so some observers might feel that a waiter handling a bread knife in the kitchen is somewhat out of role and closer to an implausible-hard mismatch.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A butcher\",\n      \"verdict\": \"BORDERLINE\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A butcher strongly overlaps with a chef in working with food and knives, but butchers usually cut meat at a butcher\u2019s block rather than slicing bread on a kitchen counter; this makes the scene somewhat odd, yet many viewers may still find it reasonably plausible for a food professional.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Butchers are experts in cutting food with knives and could plausibly slice bread in a butcher shop that also sells bread or in a restaurant prep area, so some people may see this as a reasonable extension of their role and thus only \u2018plausible_hard\u2019.\",\n        \"argument_for_lower\": \"Because butchers are stereotypically associated with raw meat and a butcher shop, not loaves of bread and a kitchen counter, some viewers might regard this as clearly the wrong kind of food worker for the scene and classify it closer to a clear \u2018no\u2019 than to a borderline case.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both chef and butcher are food-preparation professionals who process raw food items.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both typically work in back-of-house food-prep spaces with counters, cutting areas, and similar work surfaces, even if the butcher\u2019s setting is usually a meat shop rather than a kitchen.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use large, sharp knives and cutting boards as primary tools of their trade.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act on edible food items (meat for butchers; a wider range including bread for chefs), so the broad category of object is similar even if the specific item (bread) is atypical for a butcher.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform repetitive cutting, slicing, and chopping motions as central components of their work.\"\n        },\n        \"overlap_count\": 5,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the specific act of \u2018cutting\u2019, a butcher is still strongly associated with food-preparation environments, knives, and working on raw food at a counter, so the profession remains semantically linked to this general kitchen-counter food-prep scene; the mismatch is mostly in the specific item (bread) and exact workplace type.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A firefighter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Firefighters, especially in full turnout gear, are associated with emergency response, not routine food preparation in a kitchen; seeing one in full gear cutting bread on a kitchen counter would be instantly judged as out of place, despite being physically possible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Firefighters often cook for themselves at firehouses, and one could imagine a firefighter cutting bread in a station kitchen, so a viewer might reason that this is a rare but real situation if they overlook the heavy duty gear.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"The plausible_hard (waiter) and implausible_hard (butcher) conditions are too close in plausibility; many viewers may find a butcher nearly as plausible as a waiter for cutting bread in a kitchen, weakening the intended gradient.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Chef whites and a tall toque are a classic, easily recognized uniform.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A black-and-white waiter uniform with vest, tie, and service cloth is a well-known visual for a waiter in many cultures.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A striped or stained butcher\u2019s apron with meat-cutting tools is visually distinctive and strongly suggests a butcher/meat cutter.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Turnout gear with helmet, reflective stripes, and possibly an oxygen tank is iconic firefighter attire.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"White chef\u2019s jacket, tall white chef\u2019s hat (toque), white or dark apron, possibly a kitchen towel over the shoulder, working in a clean kitchen environment.\",\n      \"plausible_hard\": \"Black trousers, white dress shirt, black vest or waistcoat, bow tie or tie, possibly holding a tray or folded service cloth, with a polished front-of-house look.\",\n      \"implausible_hard\": \"White or striped butcher\u2019s apron, often with visible stains, sturdy work shirt underneath, possibly a flat cap or hairnet, with heavy-duty knives or a cleaver on a belt or nearby block.\",\n      \"implausible_easy\": \"Heavy fire-resistant coat and pants with reflective stripes, large firefighter helmet, possibly gloves and an oxygen tank or breathing apparatus, looking ready for emergency response.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef\u2019s whites and tall hat contrast with waiter\u2019s dark vest, tie, and front-of-house styling.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef\u2019s clean white jacket and toque differ from a butcher\u2019s striped or stained apron and meat-cutting gear.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef attire and firefighter turnout gear are radically different in color, bulk, and accessories.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Waiter\u2019s dressy black-and-white outfit with tie/vest contrasts with a butcher\u2019s work apron and more rugged appearance.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A slim formal waiter uniform is clearly distinct from bulky firefighting gear.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A butcher\u2019s apron and knives differ markedly from a firefighter\u2019s helmet and turnout coat.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The only problematic placement is the butcher in implausible_hard, whose plausibility is borderline; however, the scene itself (cutting a loaf of bread with a bread knife on a kitchen counter) clearly supports a prototypical agent (chef) and allows for more clearly wrong-yet-related agents (e.g., a fishmonger, a surgeon in scrubs, or a carpenter with tool belt) that share multiple dimensions of overlap (tools/physical actions or broad work environment) but do not belong in a kitchen bread-cutting scene. This indicates the gradient can be fixed by adjusting agents rather than redesigning the action/instrument/location.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The action and setting are concrete, visually clear, and have a strong prototype (chef) and a very unrelated agent (firefighter). The butcher, however, is almost as plausible as the waiter for cutting bread, so the middle of the gradient needs refinement, but the underlying scene is sound.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 1,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"The chef, waiter, and firefighter are placed in appropriate plausibility conditions and are all visually distinct and easily identifiable. The butcher shares many dimensions with the chef and would likely be judged as fairly plausible for cutting bread, making its assignment to implausible_hard borderline and collapsing the middle of the gradient. The scene itself is well-formed and imageable, and the plausibility gradient can be restored by revising the intermediate agent choices.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professions; verb form, patient, instrument, and location are identical across sentences; plausibility differences come from role-action mismatch, not physical incapacity."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A chef",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Cutting a loaf of bread with a bread knife on a kitchen counter is a routine food-preparation task squarely within a chef\u2019s core duties in a kitchen setting, making this a prototypical match.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that cutting bread is a basic kitchen task that any cook, assistant, or even home resident might do, so it is not uniquely tied to chefs and thus might be only moderately typical rather than maximally prototypical."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Preparing and slicing bread for service (e.g., bread baskets, sandwiches, plating) is a standard part of many chefs\u2019 food-preparation responsibilities.",
+          "removal_test": "YES: In a professional kitchen, if there were no chef or equivalent cook in charge of food preparation, systematic tasks like cutting bread for service would typically not occur as part of normal meal production."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A waiter",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Waiters primarily serve food but often operate in or adjacent to restaurant kitchens, and in many realistic scenarios may slice bread for bread baskets or table-side service, making this action plausible but not central to their role.",
+        "counter_arguments": {
+          "argument_for_higher": "In smaller or informal restaurants, waiters may regularly prepare bread baskets or slice bread in the kitchen, which could suggest that cutting bread is a routine part of their shift and thus more typical than \u2018hard\u2019 plausibility implies.",
+          "argument_for_lower": "In many establishments, food preparation and service are strictly separated, with waiters rarely using kitchen counters or knives, so some observers might feel that a waiter handling a bread knife in the kitchen is somewhat out of role and closer to an implausible-hard mismatch."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A butcher",
+        "verdict": "BORDERLINE",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A butcher strongly overlaps with a chef in working with food and knives, but butchers usually cut meat at a butcher\u2019s block rather than slicing bread on a kitchen counter; this makes the scene somewhat odd, yet many viewers may still find it reasonably plausible for a food professional.",
+        "counter_arguments": {
+          "argument_for_higher": "Butchers are experts in cutting food with knives and could plausibly slice bread in a butcher shop that also sells bread or in a restaurant prep area, so some people may see this as a reasonable extension of their role and thus only \u2018plausible_hard\u2019.",
+          "argument_for_lower": "Because butchers are stereotypically associated with raw meat and a butcher shop, not loaves of bread and a kitchen counter, some viewers might regard this as clearly the wrong kind of food worker for the scene and classify it closer to a clear \u2018no\u2019 than to a borderline case."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both chef and butcher are food-preparation professionals who process raw food items."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both typically work in back-of-house food-prep spaces with counters, cutting areas, and similar work surfaces, even if the butcher\u2019s setting is usually a meat shop rather than a kitchen."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use large, sharp knives and cutting boards as primary tools of their trade."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act on edible food items (meat for butchers; a wider range including bread for chefs), so the broad category of object is similar even if the specific item (bread) is atypical for a butcher."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform repetitive cutting, slicing, and chopping motions as central components of their work."
+          },
+          "overlap_count": 5,
+          "sufficient": true,
+          "negative_test": "Even ignoring the specific act of \u2018cutting\u2019, a butcher is still strongly associated with food-preparation environments, knives, and working on raw food at a counter, so the profession remains semantically linked to this general kitchen-counter food-prep scene; the mismatch is mostly in the specific item (bread) and exact workplace type."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A firefighter",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Firefighters, especially in full turnout gear, are associated with emergency response, not routine food preparation in a kitchen; seeing one in full gear cutting bread on a kitchen counter would be instantly judged as out of place, despite being physically possible.",
+        "counter_arguments": {
+          "argument_for_higher": "Firefighters often cook for themselves at firehouses, and one could imagine a firefighter cutting bread in a station kitchen, so a viewer might reason that this is a rare but real situation if they overlook the heavy duty gear.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "The plausible_hard (waiter) and implausible_hard (butcher) conditions are too close in plausibility; many viewers may find a butcher nearly as plausible as a waiter for cutting bread in a kitchen, weakening the intended gradient."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Chef whites and a tall toque are a classic, easily recognized uniform."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A black-and-white waiter uniform with vest, tie, and service cloth is a well-known visual for a waiter in many cultures."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A striped or stained butcher\u2019s apron with meat-cutting tools is visually distinctive and strongly suggests a butcher/meat cutter."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Turnout gear with helmet, reflective stripes, and possibly an oxygen tank is iconic firefighter attire."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "White chef\u2019s jacket, tall white chef\u2019s hat (toque), white or dark apron, possibly a kitchen towel over the shoulder, working in a clean kitchen environment.",
+        "plausible_hard": "Black trousers, white dress shirt, black vest or waistcoat, bow tie or tie, possibly holding a tray or folded service cloth, with a polished front-of-house look.",
+        "implausible_hard": "White or striped butcher\u2019s apron, often with visible stains, sturdy work shirt underneath, possibly a flat cap or hairnet, with heavy-duty knives or a cleaver on a belt or nearby block.",
+        "implausible_easy": "Heavy fire-resistant coat and pants with reflective stripes, large firefighter helmet, possibly gloves and an oxygen tank or breathing apparatus, looking ready for emergency response."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Chef\u2019s whites and tall hat contrast with waiter\u2019s dark vest, tie, and front-of-house styling."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Chef\u2019s clean white jacket and toque differ from a butcher\u2019s striped or stained apron and meat-cutting gear."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Chef attire and firefighter turnout gear are radically different in color, bulk, and accessories."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Waiter\u2019s dressy black-and-white outfit with tie/vest contrasts with a butcher\u2019s work apron and more rugged appearance."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "A slim formal waiter uniform is clearly distinct from bulky firefighting gear."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A butcher\u2019s apron and knives differ markedly from a firefighter\u2019s helmet and turnout coat."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The only problematic placement is the butcher in implausible_hard, whose plausibility is borderline; however, the scene itself (cutting a loaf of bread with a bread knife on a kitchen counter) clearly supports a prototypical agent (chef) and allows for more clearly wrong-yet-related agents (e.g., a fishmonger, a surgeon in scrubs, or a carpenter with tool belt) that share multiple dimensions of overlap (tools/physical actions or broad work environment) but do not belong in a kitchen bread-cutting scene. This indicates the gradient can be fixed by adjusting agents rather than redesigning the action/instrument/location.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The action and setting are concrete, visually clear, and have a strong prototype (chef) and a very unrelated agent (firefighter). The butcher, however, is almost as plausible as the waiter for cutting bread, so the middle of the gradient needs refinement, but the underlying scene is sound."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 1,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "The chef, waiter, and firefighter are placed in appropriate plausibility conditions and are all visually distinct and easily identifiable. The butcher shares many dimensions with the chef and would likely be judged as fairly plausible for cutting bread, making its assignment to implausible_hard borderline and collapsing the middle of the gradient. The scene itself is well-formed and imageable, and the plausibility gradient can be restored by revising the intermediate agent choices."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 1,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "BORDERLINE",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.5,
+    "overlap_count": 5,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the specific act of \u2018cutting\u2019, a butcher is still strongly associated with food-preparation environments, knives, and working on raw food at a counter, so the profession remains semantically linked to this general kitchen-counter food-prep scene; the mismatch is mostly in the specific item (bread) and exact workplace type.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 167.45416598394513,
+  "token_info": {
+    "input_tokens": 5643,
+    "output_tokens": 11560,
+    "cached_tokens": 0
+  },
+  "success": true
+}

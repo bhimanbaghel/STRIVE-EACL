@@ -1,0 +1,207 @@
+{
+  "verb": "open",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met; all agents are human roles, and only the agent varies across sentences.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A prison guard\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Opening locked doors with keys in a prison is a core, routine duty of prison guards and they are the prototypical agents for this action in this setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"Other correctional staff (e.g., correctional officers, supervisors) can also open doors, so one might argue the action is more generally tied to prison staff rather than exclusively to guards, which could weaken their status as uniquely prototypical.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Guarding inmates and locking/unlocking doors in a prison is a central part of a prison guard's job.\",\n        \"removal_test\": \"YES: If there were no prison guards (no line security staff), the routine opening of secured prison doors for inmate movement would largely stop or require a redefinition of roles; they are the default doers of this action.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A prison warden\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A prison warden is naturally present in a prison and can plausibly open a locked door with a key, but this is not their primary duty; their role is chiefly administrative and supervisory.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Wardens have ultimate authority over the facility and may occasionally open high-security doors themselves, so one could argue they are also strongly associated with controlling access.\",\n        \"argument_for_lower\": \"In practice, wardens rarely carry or use keys and typically delegate door operations to guards, so seeing a warden personally unlocking a door may feel somewhat odd and could be judged closer to implausible_hard by some viewers.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A correctional officer\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"In real usage, 'correctional officer' is essentially synonymous with 'prison guard'; opening locked doors with keys in a prison is equally a core duty for them, so the event is fully plausible, not low-plausible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"A correctional officer is standard line security staff in a prison or jail; they routinely unlock and lock secure doors, making this a prototypical action for the role.\",\n        \"argument_for_lower\": \"One might claim that because their equipment is described as more tactical and they carry less obvious key gear, perhaps they focus on response teams rather than routine door control, but this is a stretch and not strongly supported by the profession itself.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both prison guards and correctional officers work in corrections/security supervising inmates.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both typically work inside prisons, jails, or detention facilities.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both use keys, radios, handcuffs, and security gear as part of their job.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both act on inmates and secure infrastructure such as cell doors and gates.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely patrol, supervise, restrain, and lock/unlock doors.\"\n        },\n        \"overlap_count\": 5,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb 'open', correctional officers are still directly associated with prisons and secure doors in exactly the same way as prison guards; they are not a 'wrong' agent for this scene but essentially the same prototype.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballerina\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballerina has no natural professional connection to prisons or to opening secure doors; they would almost never be in this setting performing this action, making the event clearly implausible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a special outreach performance in a prison where the ballerina temporarily passes through a locked door, perhaps handed a key by staff, but this is a contrived, exceptional scenario.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The implausible_hard agent (correctional officer) actually belongs with the plausible_easy condition, collapsing with the prison guard.\",\n    \"collapsed_pairs\": \"Plausible_easy and implausible_hard effectively collapse into the same high-plausibility class, both being standard prison security staff.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Uniform with badge, radio, and key ring clearly marks a security/corrections officer-type role distinct from civilians.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"UNIDENTIFIABLE\",\n        \"reasoning\": \"A prison warden in a suit with a clipboard looks like any business professional or administrator; nothing in their attire uniquely signals 'prison warden' on a plain background.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A correctional officer\u2019s tactical uniform, badge, and duty belt clearly indicate a law-enforcement/security role.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Classical ballet attire (leotard, tights, tutu or similar, pointe shoes, hair in bun) makes 'ballerina' immediately recognizable.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Dark corrections-style uniform with badge, visible keys on a ring, handcuffs and radio on a duty belt, possibly labeled as prison security.\",\n      \"plausible_hard\": \"Formal business suit and tie with a light jacket, carrying a clipboard or tablet, perhaps a small badge on the belt or lapel but otherwise like a generic administrator.\",\n      \"implausible_hard\": \"Similar dark law-enforcement uniform to a prison guard, with a duty belt holding a Taser or pepper spray, radio, and badge, but no obvious key ring.\",\n      \"implausible_easy\": \"Pink leotard and tights (possibly with tutu), pointe shoes, hair in a tight bun, light warm-up wrap or dance bag as accessory.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Guard wears a clear security uniform with gear, while the warden is in business attire with a clipboard.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": false,\n        \"note\": \"Both wear very similar dark law-enforcement uniforms with badges and duty belts; differences in key ring vs Taser are too subtle for reliable visual distinction.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Security uniform versus ballet attire are maximally different.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Business-suited administrator versus tactical uniformed officer are visually distinct categories.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Business suit versus ballet costume are very different visually.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Law-enforcement uniform versus ballet attire are clearly distinct.\"\n      }\n    },\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"indistinguishable_pairs\": \"plausible_easy vs implausible_hard\",\n    \"unidentifiable_agents\": \"A prison warden\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The implausible_hard condition is misfilled, but can be repaired by choosing a related yet wrong agent, e.g., a police officer in standard street-uniform or a mall security guard: both share law-enforcement/security domain, tools, and some physical actions with a prison guard but are not the typical agents opening locked doors inside a prison. The plausible_hard agent could also be replaced with a more visually distinctive but still moderately plausible role (e.g., a janitor or maintenance worker in work overalls with keys) to fix identifiability issues while maintaining the gradient. Thus, the problem lies in agent choices, not in the scene itself.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The prison-door-with-key scene is concrete, has an appropriate instrument, and a clear prototype (line corrections staff). The main issues are the use of a near-synonymous role for implausible_hard and the warden\u2019s weak visual identifiability; with alternative agents, the scene can support a clean four-level gradient.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"summary\": \"Thematically, the prison guard (plausible_easy), warden (plausible_hard), and ballerina (implausible_easy) are appropriately placed, but the correctional officer is just as prototypical as the guard and does not fit implausible_hard. Visually, the warden is not identifiable from attire alone and the prison guard and correctional officer are effectively indistinguishable, making the current agent set unsuitable for the image-based experiment. The underlying scene is sound, but alternative agents are needed to realize a clear plausibility gradient with distinct, visually identifiable roles.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met; all agents are human roles, and only the agent varies across sentences."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A prison guard",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Opening locked doors with keys in a prison is a core, routine duty of prison guards and they are the prototypical agents for this action in this setting.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "Other correctional staff (e.g., correctional officers, supervisors) can also open doors, so one might argue the action is more generally tied to prison staff rather than exclusively to guards, which could weaken their status as uniquely prototypical."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Guarding inmates and locking/unlocking doors in a prison is a central part of a prison guard's job.",
+          "removal_test": "YES: If there were no prison guards (no line security staff), the routine opening of secured prison doors for inmate movement would largely stop or require a redefinition of roles; they are the default doers of this action."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A prison warden",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A prison warden is naturally present in a prison and can plausibly open a locked door with a key, but this is not their primary duty; their role is chiefly administrative and supervisory.",
+        "counter_arguments": {
+          "argument_for_higher": "Wardens have ultimate authority over the facility and may occasionally open high-security doors themselves, so one could argue they are also strongly associated with controlling access.",
+          "argument_for_lower": "In practice, wardens rarely carry or use keys and typically delegate door operations to guards, so seeing a warden personally unlocking a door may feel somewhat odd and could be judged closer to implausible_hard by some viewers."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A correctional officer",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "In real usage, 'correctional officer' is essentially synonymous with 'prison guard'; opening locked doors with keys in a prison is equally a core duty for them, so the event is fully plausible, not low-plausible.",
+        "counter_arguments": {
+          "argument_for_higher": "A correctional officer is standard line security staff in a prison or jail; they routinely unlock and lock secure doors, making this a prototypical action for the role.",
+          "argument_for_lower": "One might claim that because their equipment is described as more tactical and they carry less obvious key gear, perhaps they focus on response teams rather than routine door control, but this is a stretch and not strongly supported by the profession itself."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both prison guards and correctional officers work in corrections/security supervising inmates."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both typically work inside prisons, jails, or detention facilities."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both use keys, radios, handcuffs, and security gear as part of their job."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both act on inmates and secure infrastructure such as cell doors and gates."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both routinely patrol, supervise, restrain, and lock/unlock doors."
+          },
+          "overlap_count": 5,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb 'open', correctional officers are still directly associated with prisons and secure doors in exactly the same way as prison guards; they are not a 'wrong' agent for this scene but essentially the same prototype."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballerina",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballerina has no natural professional connection to prisons or to opening secure doors; they would almost never be in this setting performing this action, making the event clearly implausible.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a special outreach performance in a prison where the ballerina temporarily passes through a locked door, perhaps handed a key by staff, but this is a contrived, exceptional scenario.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The implausible_hard agent (correctional officer) actually belongs with the plausible_easy condition, collapsing with the prison guard.",
+      "collapsed_pairs": "Plausible_easy and implausible_hard effectively collapse into the same high-plausibility class, both being standard prison security staff."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Uniform with badge, radio, and key ring clearly marks a security/corrections officer-type role distinct from civilians."
+        },
+        "plausible_hard": {
+          "rating": "UNIDENTIFIABLE",
+          "reasoning": "A prison warden in a suit with a clipboard looks like any business professional or administrator; nothing in their attire uniquely signals 'prison warden' on a plain background."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A correctional officer\u2019s tactical uniform, badge, and duty belt clearly indicate a law-enforcement/security role."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Classical ballet attire (leotard, tights, tutu or similar, pointe shoes, hair in bun) makes 'ballerina' immediately recognizable."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Dark corrections-style uniform with badge, visible keys on a ring, handcuffs and radio on a duty belt, possibly labeled as prison security.",
+        "plausible_hard": "Formal business suit and tie with a light jacket, carrying a clipboard or tablet, perhaps a small badge on the belt or lapel but otherwise like a generic administrator.",
+        "implausible_hard": "Similar dark law-enforcement uniform to a prison guard, with a duty belt holding a Taser or pepper spray, radio, and badge, but no obvious key ring.",
+        "implausible_easy": "Pink leotard and tights (possibly with tutu), pointe shoes, hair in a tight bun, light warm-up wrap or dance bag as accessory."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Guard wears a clear security uniform with gear, while the warden is in business attire with a clipboard."
+        },
+        "pe_vs_ih": {
+          "distinguishable": false,
+          "note": "Both wear very similar dark law-enforcement uniforms with badges and duty belts; differences in key ring vs Taser are too subtle for reliable visual distinction."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Security uniform versus ballet attire are maximally different."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Business-suited administrator versus tactical uniformed officer are visually distinct categories."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Business suit versus ballet costume are very different visually."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Law-enforcement uniform versus ballet attire are clearly distinct."
+        }
+      },
+      "visual_verdict": "PROBLEMATIC",
+      "indistinguishable_pairs": "plausible_easy vs implausible_hard",
+      "unidentifiable_agents": "A prison warden"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The implausible_hard condition is misfilled, but can be repaired by choosing a related yet wrong agent, e.g., a police officer in standard street-uniform or a mall security guard: both share law-enforcement/security domain, tools, and some physical actions with a prison guard but are not the typical agents opening locked doors inside a prison. The plausible_hard agent could also be replaced with a more visually distinctive but still moderately plausible role (e.g., a janitor or maintenance worker in work overalls with keys) to fix identifiability issues while maintaining the gradient. Thus, the problem lies in agent choices, not in the scene itself.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The prison-door-with-key scene is concrete, has an appropriate instrument, and a clear prototype (line corrections staff). The main issues are the use of a near-synonymous role for implausible_hard and the warden\u2019s weak visual identifiability; with alternative agents, the scene can support a clean four-level gradient."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "PROBLEMATIC",
+      "summary": "Thematically, the prison guard (plausible_easy), warden (plausible_hard), and ballerina (implausible_easy) are appropriately placed, but the correctional officer is just as prototypical as the guard and does not fit implausible_hard. Visually, the warden is not identifiable from attire alone and the prison guard and correctional officer are effectively indistinguishable, making the current agent set unsuitable for the image-based experiment. The underlying scene is sound, but alternative agents are needed to realize a clear plausibility gradient with distinct, visually identifiable roles."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 0,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_easy"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.0,
+    "overlap_count": 5,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb 'open', correctional officers are still directly associated with prisons and secure doors in exactly the same way as prison guards; they are not a 'wrong' agent for this scene but essentially the same prototype.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "UNIDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": [
+      "plausible_hard"
+    ]
+  },
+  "elapsed": 138.20491383969784,
+  "token_info": {
+    "input_tokens": 5684,
+    "output_tokens": 7366,
+    "cached_tokens": 0
+  },
+  "success": true
+}

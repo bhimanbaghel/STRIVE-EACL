@@ -1,0 +1,15 @@
+break
+cut
+dig
+draw
+eat
+erase
+measure
+open
+paint
+scoop
+shoot
+stir
+touch
+wash
+write

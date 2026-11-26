@@ -1,0 +1,200 @@
+{
+  "verb": "draw",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professional or social roles; only the agent varies across sentences; physical ability is not the source of implausibility.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A crime scene investigator\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"A crime scene investigator is the canonical professional associated with marking crime scenes on sidewalks, including stereotypical chalk outlines, and naturally belongs at a crime scene on a city sidewalk using chalk. This is the default role most people would expect for this event.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue it should be only plausible_hard because real forensic practice rarely uses literal chalk body outlines today and other law-enforcement roles (e.g., uniformed police officers) might also be expected; however, in common imagery and lay understanding, the CSI/forensics specialist is still the prototypical agent for this kind of marking task.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A street artist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Street artists frequently draw with chalk on city sidewalks, so the action, instrument, and location fit well, but the specific content\u2014a crime scene outline\u2014is atypical for their professional role. This yields a plausible but clearly non-prototypical scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Because the action (drawing), medium (chalk), and location (city sidewalk) are all core to a street artist\u2019s work, one could claim that drawing a crime-scene-style outline is just another artistic subject and therefore highly expected for them, especially as social commentary art.\",\n        \"argument_for_lower\": \"Conversely, one could argue it should be implausible_hard because the phrase 'outline of a crime scene' strongly implies official forensic work at an active or reconstructed crime scene, where a street artist would normally be excluded and have no institutional reason to participate, making their presence feel wrong rather than just unusual.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A construction surveyor\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"Construction surveyors work on city streets/sidewalks and use marking tools (chalk, paint) while bending down to mark the ground, so they share several features with a CSI in this scene. However, they do not investigate crimes or draw crime-scene outlines, making the scenario feel related but wrong, fitting a hesitating 'no'.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might argue it belongs in plausible_hard because surveyors are legitimate professionals who mark pavements with chalk lines and could conceivably be involved in post-crime reconstruction or measuring the scene, so a layperson might accept them as somehow 'helping' at a crime scene.\",\n        \"argument_for_lower\": \"Alternatively, one could claim it should be implausible_easy because their domain is construction and land measurement, not law enforcement, and they have no explicit role in crime scenes, so the mention of a 'crime scene' makes them feel entirely out of place to some viewers.\",\n        \"overlap_audit\": {\n          \"occupational_domain\": {\n            \"overlaps\": false,\n            \"reasoning\": \"Crime scene investigators work in law enforcement/forensics, while construction surveyors belong to construction/engineering; these are distinct broad domains.\"\n          },\n          \"typical_setting\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both can commonly be found working outdoors on streets and sidewalks in urban environments.\"\n          },\n          \"tools_instruments\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both use marking and measuring tools on the ground (chalk, paints/markers, measuring devices), even if the specific models differ.\"\n          },\n          \"patient_object_type\": {\n            \"overlaps\": false,\n            \"reasoning\": \"CSIs act on crime scenes and evidence (often bodies or trace evidence), whereas surveyors act on property boundaries and construction sites; they do not typically act on the same type of 'object' despite both interacting with the built environment.\"\n          },\n          \"physical_actions\": {\n            \"overlaps\": true,\n            \"reasoning\": \"Both routinely bend or kneel to mark lines on the ground and take precise positional measurements.\"\n          },\n          \"overlap_count\": 3,\n          \"sufficient\": true,\n          \"negative_test\": \"Ignoring the verb 'draws', a construction surveyor is still naturally associated with marking and measuring city sidewalks using chalk or paint, though not with crime scenes or body outlines; thus, there remains a non-verb-based association via setting and tools, but it is clearly the wrong domain for the specific 'crime scene outline'.\"\n        }\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A florist\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"Florists work with flowers in shops or markets and do not use chalk or draw on sidewalks, nor are they professionally involved in crime scenes, so the event is immediately implausible and from a clearly unrelated domain. Any connection to crime scenes (e.g., delivering flowers) does not involve this kind of marking activity.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine an unusual memorial artwork where a florist decorates a chalk outline with flowers outside their shop, giving a narrative route to seeing them as a commemorative participant rather than purely unrelated; however, this requires substantial extra storytelling beyond the sentence.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Crime scene investigators typically wear dark law-enforcement style gear with gloves and often clearly labeled 'CSI' or forensic markings, making them look like specialized police personnel.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A street artist can be depicted with paint- or chalk-splattered clothing, a cap or beret, and carrying visible art supplies like chalks and spray cans, which strongly cues an artist/urban artist role.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A construction surveyor wearing a hard hat, high-visibility vest, and standing with a tripod-mounted instrument is a well-recognized construction/surveying professional figure.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A florist in an apron, holding bouquets or floral tools and surrounded by flowers is readily interpreted as a flower-shop worker/florist.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Dark tactical or utility clothing, possibly a jacket labeled 'CSI' or 'Forensics', latex or nitrile gloves, utility belt or evidence kit, and a serious, methodical posture (e.g., kneeling by the ground).\",\n      \"plausible_hard\": \"Casual or colorful clothing with visible paint or chalk stains, perhaps a beret or beanie, carrying a box or bucket of chalks and other art supplies, looking like an urban muralist or pavement artist.\",\n      \"implausible_hard\": \"High-visibility safety vest over work clothes, hard hat, sturdy work boots, and a tripod with a theodolite/laser level or measuring rod, often holding a clipboard or tablet.\",\n      \"implausible_easy\": \"Person in a shop-style apron with floral patterns or plain fabric, holding a bouquet, scissors, or floral wire, often near buckets of flowers or a flower cart.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"CSI wears dark, official-looking forensic gear and gloves, while the street artist is in colorful, paint-splattered casual clothes with art supplies.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"CSI has police/forensic styling without a hard hat, whereas the surveyor has a hard hat, hi-vis vest, and surveying tripod, typical of construction.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Forensic gear and gloves versus an apron and visible flowers create a clear visual contrast.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Street artist\u2019s casual, colorful, paint-stained outfit contrasts with the surveyor\u2019s standardized safety gear (hard hat, hi-vis vest) and tripod equipment.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Art supplies and paint-stained clothing differ clearly from a florist\u2019s apron and bouquets or floral tools.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Construction surveyor\u2019s hard hat and hi-vis vest are visually very different from a florist\u2019s apron and flowers.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four agents are placed in conditions that match their thematic fit, and it is easy to imagine alternative professions for each level (e.g., police officer for plausible_easy, journalist for plausible_hard, road maintenance worker for implausible_hard, chef for implausible_easy), indicating the scene itself readily supports the full plausibility gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The scene of drawing a chalk outline of a crime scene on a city sidewalk is concrete, photographable, and has a clear forensic prototype. It naturally allows for related outdoor/chalk-marking roles for intermediate plausibility and unrelated indoor service roles for clear implausibility.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"All four agents satisfy role constraints and are correctly placed along the plausibility gradient, with a strong prototype (crime scene investigator) and clear distance to the florist. The professions are visually distinct and identifiable, and the event (drawing a chalk crime-scene outline on a city sidewalk with chalk) is concrete and easily depictable. The scene robustly supports the intended plausibility manipulation for image-based judgments.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professional or social roles; only the agent varies across sentences; physical ability is not the source of implausibility."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A crime scene investigator",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "A crime scene investigator is the canonical professional associated with marking crime scenes on sidewalks, including stereotypical chalk outlines, and naturally belongs at a crime scene on a city sidewalk using chalk. This is the default role most people would expect for this event.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue it should be only plausible_hard because real forensic practice rarely uses literal chalk body outlines today and other law-enforcement roles (e.g., uniformed police officers) might also be expected; however, in common imagery and lay understanding, the CSI/forensics specialist is still the prototypical agent for this kind of marking task."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A street artist",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Street artists frequently draw with chalk on city sidewalks, so the action, instrument, and location fit well, but the specific content\u2014a crime scene outline\u2014is atypical for their professional role. This yields a plausible but clearly non-prototypical scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "Because the action (drawing), medium (chalk), and location (city sidewalk) are all core to a street artist\u2019s work, one could claim that drawing a crime-scene-style outline is just another artistic subject and therefore highly expected for them, especially as social commentary art.",
+          "argument_for_lower": "Conversely, one could argue it should be implausible_hard because the phrase 'outline of a crime scene' strongly implies official forensic work at an active or reconstructed crime scene, where a street artist would normally be excluded and have no institutional reason to participate, making their presence feel wrong rather than just unusual."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A construction surveyor",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "Construction surveyors work on city streets/sidewalks and use marking tools (chalk, paint) while bending down to mark the ground, so they share several features with a CSI in this scene. However, they do not investigate crimes or draw crime-scene outlines, making the scenario feel related but wrong, fitting a hesitating 'no'.",
+        "counter_arguments": {
+          "argument_for_higher": "One might argue it belongs in plausible_hard because surveyors are legitimate professionals who mark pavements with chalk lines and could conceivably be involved in post-crime reconstruction or measuring the scene, so a layperson might accept them as somehow 'helping' at a crime scene.",
+          "argument_for_lower": "Alternatively, one could claim it should be implausible_easy because their domain is construction and land measurement, not law enforcement, and they have no explicit role in crime scenes, so the mention of a 'crime scene' makes them feel entirely out of place to some viewers.",
+          "overlap_audit": {
+            "occupational_domain": {
+              "overlaps": false,
+              "reasoning": "Crime scene investigators work in law enforcement/forensics, while construction surveyors belong to construction/engineering; these are distinct broad domains."
+            },
+            "typical_setting": {
+              "overlaps": true,
+              "reasoning": "Both can commonly be found working outdoors on streets and sidewalks in urban environments."
+            },
+            "tools_instruments": {
+              "overlaps": true,
+              "reasoning": "Both use marking and measuring tools on the ground (chalk, paints/markers, measuring devices), even if the specific models differ."
+            },
+            "patient_object_type": {
+              "overlaps": false,
+              "reasoning": "CSIs act on crime scenes and evidence (often bodies or trace evidence), whereas surveyors act on property boundaries and construction sites; they do not typically act on the same type of 'object' despite both interacting with the built environment."
+            },
+            "physical_actions": {
+              "overlaps": true,
+              "reasoning": "Both routinely bend or kneel to mark lines on the ground and take precise positional measurements."
+            },
+            "overlap_count": 3,
+            "sufficient": true,
+            "negative_test": "Ignoring the verb 'draws', a construction surveyor is still naturally associated with marking and measuring city sidewalks using chalk or paint, though not with crime scenes or body outlines; thus, there remains a non-verb-based association via setting and tools, but it is clearly the wrong domain for the specific 'crime scene outline'."
+          }
+        }
+      },
+      "implausible_easy": {
+        "agent": "A florist",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "Florists work with flowers in shops or markets and do not use chalk or draw on sidewalks, nor are they professionally involved in crime scenes, so the event is immediately implausible and from a clearly unrelated domain. Any connection to crime scenes (e.g., delivering flowers) does not involve this kind of marking activity.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine an unusual memorial artwork where a florist decorates a chalk outline with flowers outside their shop, giving a narrative route to seeing them as a commemorative participant rather than purely unrelated; however, this requires substantial extra storytelling beyond the sentence.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Crime scene investigators typically wear dark law-enforcement style gear with gloves and often clearly labeled 'CSI' or forensic markings, making them look like specialized police personnel."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A street artist can be depicted with paint- or chalk-splattered clothing, a cap or beret, and carrying visible art supplies like chalks and spray cans, which strongly cues an artist/urban artist role."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A construction surveyor wearing a hard hat, high-visibility vest, and standing with a tripod-mounted instrument is a well-recognized construction/surveying professional figure."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A florist in an apron, holding bouquets or floral tools and surrounded by flowers is readily interpreted as a flower-shop worker/florist."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Dark tactical or utility clothing, possibly a jacket labeled 'CSI' or 'Forensics', latex or nitrile gloves, utility belt or evidence kit, and a serious, methodical posture (e.g., kneeling by the ground).",
+        "plausible_hard": "Casual or colorful clothing with visible paint or chalk stains, perhaps a beret or beanie, carrying a box or bucket of chalks and other art supplies, looking like an urban muralist or pavement artist.",
+        "implausible_hard": "High-visibility safety vest over work clothes, hard hat, sturdy work boots, and a tripod with a theodolite/laser level or measuring rod, often holding a clipboard or tablet.",
+        "implausible_easy": "Person in a shop-style apron with floral patterns or plain fabric, holding a bouquet, scissors, or floral wire, often near buckets of flowers or a flower cart."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "CSI wears dark, official-looking forensic gear and gloves, while the street artist is in colorful, paint-splattered casual clothes with art supplies."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "CSI has police/forensic styling without a hard hat, whereas the surveyor has a hard hat, hi-vis vest, and surveying tripod, typical of construction."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Forensic gear and gloves versus an apron and visible flowers create a clear visual contrast."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Street artist\u2019s casual, colorful, paint-stained outfit contrasts with the surveyor\u2019s standardized safety gear (hard hat, hi-vis vest) and tripod equipment."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Art supplies and paint-stained clothing differ clearly from a florist\u2019s apron and bouquets or floral tools."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Construction surveyor\u2019s hard hat and hi-vis vest are visually very different from a florist\u2019s apron and flowers."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four agents are placed in conditions that match their thematic fit, and it is easy to imagine alternative professions for each level (e.g., police officer for plausible_easy, journalist for plausible_hard, road maintenance worker for implausible_hard, chef for implausible_easy), indicating the scene itself readily supports the full plausibility gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The scene of drawing a chalk outline of a crime scene on a city sidewalk is concrete, photographable, and has a clear forensic prototype. It naturally allows for related outdoor/chalk-marking roles for intermediate plausibility and unrelated indoor service roles for clear implausibility."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "All four agents satisfy role constraints and are correctly placed along the plausibility gradient, with a strong prototype (crime scene investigator) and clear distance to the florist. The professions are visually distinct and identifiable, and the event (drawing a chalk crime-scene outline on a city sidewalk with chalk) is concrete and easily depictable. The scene robustly supports the intended plausibility manipulation for image-based judgments."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": null,
+    "overlap_sufficient": null,
+    "overlap_negative_test": null,
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 141.54393802583218,
+  "token_info": {
+    "input_tokens": 6104,
+    "output_tokens": 9927
+  },
+  "success": true
+}

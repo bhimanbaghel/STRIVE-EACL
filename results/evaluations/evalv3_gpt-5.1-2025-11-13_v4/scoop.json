@@ -1,0 +1,200 @@
+{
+  "verb": "scoop",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"An ice cream server\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"An ice cream server is the prototypical worker who stands at an ice cream shop counter and routinely scoops ice cream with a metal scoop for customers; this is core to the role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One might argue that in many small shops all front-of-house staff both take payment and scoop ice cream, so an \u201cice cream server\u201d is not sharply distinguished from a generic cashier, making the fit feel closer to other service roles rather than uniquely prototypical.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A cashier\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A cashier is naturally present at an ice cream shop counter and in many real shops will sometimes scoop ice cream during busy periods, but scooping is secondary to the primary duty of handling payments.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In many quick-service ice cream outlets, the person referred to as the \u201ccashier\u201d both rings up orders and routinely scoops ice cream, so this role could be seen as the default worker at the counter and thus belong in plausible_easy.\",\n        \"argument_for_lower\": \"If \u201ccashier\u201d is interpreted as a generic retail cashier whose sole job is processing payments and not handling food, one could argue they rarely if ever scoop ice cream, making their involvement feel wrong enough for an implausible_hard placement.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A pastry chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A pastry chef works with desserts and may use scoops, but typically operates in a back-of-house kitchen rather than at a retail ice cream shop counter serving customers, creating strong domain overlap but a clear setting/role mismatch.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In some artisan gelato or dessert shops, a pastry chef might occasionally appear at the counter to serve or showcase their creations, so seeing them scoop ice cream could be interpreted as an unusual but still plausible event, pushing toward plausible_hard.\",\n        \"argument_for_lower\": \"For many people, \u201cpastry chef\u201d suggests a fine-dining or bakery kitchen with no mental link to a standalone ice cream parlor, so placing one at an ice cream shop counter may feel as arbitrary and surprising as any unrelated profession, suggesting implausible_easy.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both the ice cream server and pastry chef are food-service/dessert professionals.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both usually work in commercial food establishments (restaurants, bakeries, ice cream shops), even though one is front-of-house and the other back-of-house.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use kitchen tools including scoops, spatulas, and similar utensils for portioning desserts.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both primarily act on desserts such as ice cream, cakes, or pastries.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform manual food-handling actions like scooping, portioning, and plating.\"\n        },\n        \"overlap_count\": 5,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the specific action of scooping, a pastry chef is still strongly associated with preparing and handling desserts, including ice cream, but not with manning a retail ice cream counter; thus the association to the dessert domain persists while the specific scene remains mismatched.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A court judge\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A court judge belongs to the legal domain and normally works in a courtroom, with no connection to ice cream shops or food service, so seeing a robed judge scooping ice cream at a shop counter would be instantly rejected as absurd.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a contrived charity or publicity event where a local judge volunteers to scoop ice cream, showing that it is physically possible, but such scenarios are exceptional and require special explanation beyond the normal role.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None; plausible_easy and plausible_hard are relatively close but still differ in how central scooping is to the role.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"An ice cream server wears a generic food-service uniform (apron, branded T-shirt/cap) and could be taken as a generic counter worker or fast-food employee, though an ice-cream scoop prop can cue the role.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"A cashier typically wears a store uniform shirt and name tag, which looks like generic retail staff and is not uniquely distinctive of \u201ccashier\u201d without context.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A pastry chef in chef whites, apron, and a chef\u2019s hat is readily recognized as a chef-type professional.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A long black robe (optionally with a gavel) is iconic and strongly associated with a judge.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically a young or middle-aged person in a branded T-shirt or polo, apron, and possibly a baseball cap or visor, often holding an ice cream scoop.\",\n      \"plausible_hard\": \"Person in a store or QSR uniform (polo or shirt with logo) and name tag, sometimes with a small headset, looking like front-of-house retail or checkout staff.\",\n      \"implausible_hard\": \"Person wearing a white double-breasted chef\u2019s jacket, apron, possibly checked chef trousers and a chef\u2019s hat or skullcap, sometimes holding a whisk or piping bag.\",\n      \"implausible_easy\": \"Person wearing a black judicial robe over formal clothes, possibly holding a gavel or law book, with a serious demeanor.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"The ice cream server can be shown in a casual branded shirt and apron with a scoop, while the cashier wears a more generic store uniform and no apron; somewhat similar but still visually separable.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Casual server uniform versus formal chef whites and hat are clearly different.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Food-service attire contrasts strongly with a black judicial robe.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Retail-style cashier clothing differs markedly from a chef\u2019s jacket and hat.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Generic cashier uniform versus a judge\u2019s robe are visually distinct.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef whites and a judicial robe are very different outfits.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four agents were judged CORRECT for their assigned conditions, and the domain (ice cream shop service) readily supports alternative choices if needed (e.g., shop manager for plausible_hard, line cook or baker for implausible_hard), so the scene is not inherently too narrow or too broad.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"Scooping ice cream with a metal scoop at a shop counter is a concrete, easily photographed action with a clear prototypical agent and available related but mismatched roles to populate the full plausibility gradient.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematically, all four agents are appropriately placed, yielding a clear plausibility gradient anchored by the ice cream server and the court judge. Visually, the pastry chef and judge are strongly identifiable, while the ice cream server and cashier are more generic but still distinguishable and not unidentifiable. The scene itself is concrete, uses the correct instrument, and robustly supports the intended plausibility contrasts.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "An ice cream server",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "An ice cream server is the prototypical worker who stands at an ice cream shop counter and routinely scoops ice cream with a metal scoop for customers; this is core to the role.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One might argue that in many small shops all front-of-house staff both take payment and scoop ice cream, so an \u201cice cream server\u201d is not sharply distinguished from a generic cashier, making the fit feel closer to other service roles rather than uniquely prototypical."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A cashier",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A cashier is naturally present at an ice cream shop counter and in many real shops will sometimes scoop ice cream during busy periods, but scooping is secondary to the primary duty of handling payments.",
+        "counter_arguments": {
+          "argument_for_higher": "In many quick-service ice cream outlets, the person referred to as the \u201ccashier\u201d both rings up orders and routinely scoops ice cream, so this role could be seen as the default worker at the counter and thus belong in plausible_easy.",
+          "argument_for_lower": "If \u201ccashier\u201d is interpreted as a generic retail cashier whose sole job is processing payments and not handling food, one could argue they rarely if ever scoop ice cream, making their involvement feel wrong enough for an implausible_hard placement."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A pastry chef",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A pastry chef works with desserts and may use scoops, but typically operates in a back-of-house kitchen rather than at a retail ice cream shop counter serving customers, creating strong domain overlap but a clear setting/role mismatch.",
+        "counter_arguments": {
+          "argument_for_higher": "In some artisan gelato or dessert shops, a pastry chef might occasionally appear at the counter to serve or showcase their creations, so seeing them scoop ice cream could be interpreted as an unusual but still plausible event, pushing toward plausible_hard.",
+          "argument_for_lower": "For many people, \u201cpastry chef\u201d suggests a fine-dining or bakery kitchen with no mental link to a standalone ice cream parlor, so placing one at an ice cream shop counter may feel as arbitrary and surprising as any unrelated profession, suggesting implausible_easy."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both the ice cream server and pastry chef are food-service/dessert professionals."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both usually work in commercial food establishments (restaurants, bakeries, ice cream shops), even though one is front-of-house and the other back-of-house."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use kitchen tools including scoops, spatulas, and similar utensils for portioning desserts."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both primarily act on desserts such as ice cream, cakes, or pastries."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform manual food-handling actions like scooping, portioning, and plating."
+          },
+          "overlap_count": 5,
+          "sufficient": true,
+          "negative_test": "Even ignoring the specific action of scooping, a pastry chef is still strongly associated with preparing and handling desserts, including ice cream, but not with manning a retail ice cream counter; thus the association to the dessert domain persists while the specific scene remains mismatched."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A court judge",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A court judge belongs to the legal domain and normally works in a courtroom, with no connection to ice cream shops or food service, so seeing a robed judge scooping ice cream at a shop counter would be instantly rejected as absurd.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a contrived charity or publicity event where a local judge volunteers to scoop ice cream, showing that it is physically possible, but such scenarios are exceptional and require special explanation beyond the normal role.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None; plausible_easy and plausible_hard are relatively close but still differ in how central scooping is to the role."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "An ice cream server wears a generic food-service uniform (apron, branded T-shirt/cap) and could be taken as a generic counter worker or fast-food employee, though an ice-cream scoop prop can cue the role."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "A cashier typically wears a store uniform shirt and name tag, which looks like generic retail staff and is not uniquely distinctive of \u201ccashier\u201d without context."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A pastry chef in chef whites, apron, and a chef\u2019s hat is readily recognized as a chef-type professional."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A long black robe (optionally with a gavel) is iconic and strongly associated with a judge."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically a young or middle-aged person in a branded T-shirt or polo, apron, and possibly a baseball cap or visor, often holding an ice cream scoop.",
+        "plausible_hard": "Person in a store or QSR uniform (polo or shirt with logo) and name tag, sometimes with a small headset, looking like front-of-house retail or checkout staff.",
+        "implausible_hard": "Person wearing a white double-breasted chef\u2019s jacket, apron, possibly checked chef trousers and a chef\u2019s hat or skullcap, sometimes holding a whisk or piping bag.",
+        "implausible_easy": "Person wearing a black judicial robe over formal clothes, possibly holding a gavel or law book, with a serious demeanor."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "The ice cream server can be shown in a casual branded shirt and apron with a scoop, while the cashier wears a more generic store uniform and no apron; somewhat similar but still visually separable."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Casual server uniform versus formal chef whites and hat are clearly different."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Food-service attire contrasts strongly with a black judicial robe."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Retail-style cashier clothing differs markedly from a chef\u2019s jacket and hat."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Generic cashier uniform versus a judge\u2019s robe are visually distinct."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Chef whites and a judicial robe are very different outfits."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four agents were judged CORRECT for their assigned conditions, and the domain (ice cream shop service) readily supports alternative choices if needed (e.g., shop manager for plausible_hard, line cook or baker for implausible_hard), so the scene is not inherently too narrow or too broad.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "Scooping ice cream with a metal scoop at a shop counter is a concrete, easily photographed action with a clear prototypical agent and available related but mismatched roles to populate the full plausibility gradient."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematically, all four agents are appropriately placed, yielding a clear plausibility gradient anchored by the ice cream server and the court judge. Visually, the pastry chef and judge are strongly identifiable, while the ice cream server and cashier are more generic but still distinguishable and not unidentifiable. The scene itself is concrete, uses the correct instrument, and robustly supports the intended plausibility contrasts."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 5,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the specific action of scooping, a pastry chef is still strongly associated with preparing and handling desserts, including ice cream, but not with manning a retail ice cream counter; thus the association to the dessert domain persists while the specific scene remains mismatched.",
+    "identifiability": {
+      "plausible_easy": "AMBIGUOUS",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 129.54808930307627,
+  "token_info": {
+    "input_tokens": 5832,
+    "output_tokens": 10652
+  },
+  "success": true
+}

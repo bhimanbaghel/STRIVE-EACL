@@ -1,0 +1,200 @@
+{
+  "verb": "stir",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met: all agents are human professional roles, only the agent varies, and plausibility hinges on role-action mismatch rather than physical capability.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A chef\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"A chef is the canonical professional for cooking tasks in a restaurant kitchen, and stirring a pot of soup on a restaurant stove is a core, routine part of that role. Viewers will instantly accept this as the default, highly plausible scenario.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level.\",\n        \"argument_for_lower\": \"In many larger kitchens, routine stirring might be done more often by line cooks or sous-chefs than by a head chef, so one could argue that the label 'chef' is slightly less specific to this exact manual task and belongs in a somewhat less prototypical position.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A waiter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"A waiter normally serves food in the dining area, not cook at the stove, but is naturally present in a restaurant and can realistically step into the kitchen and briefly stir a pot in a busy or small establishment. This makes the event moderately plausible but clearly less prototypical than a chef doing the same action.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In small family-run restaurants or diners, the person who waits tables may also take on cooking duties, so a waiter stirring soup on the stove could be seen as fully normal in that setting, arguing for placement in plausible_easy.\",\n        \"argument_for_lower\": \"In many formal restaurants, waiters are strictly front-of-house and are not allowed to operate stoves for safety and role reasons, so one could argue that a waiter at the stove is sufficiently role-incongruent to belong in an implausible_hard position.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A butcher\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A butcher is a food professional who works with meat and uses similar tools and manual skills as a chef, but typically in a butcher shop or meat room rather than cooking soup on a restaurant stove. This yields clear domain overlap with the chef yet makes the depicted restaurant-stove cooking task feel mismatched and rejectable rather than naturally plausible.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Some modern eateries or butcher-bistros combine butchery and cooking in one space, where a butcher might also prepare soups or hot dishes, so viewers could interpret the scene as such a hybrid role and accept it as plausibly part of the butcher\u2019s job, pushing it toward plausible_hard.\",\n        \"argument_for_lower\": \"Because butchers are strongly associated with raw meat counters and carcass cutting rather than restaurant kitchens, some viewers might see almost no fit between a clearly dressed butcher and a restaurant soup pot, treating it as a straightforwardly absurd pairing on par with other unrelated jobs and assigning it to implausible_easy.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both chef and butcher are food-preparation professionals who handle edible products as their primary occupational domain.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"A chef typically works in a restaurant kitchen, whereas a butcher\u2019s canonical setting is a butcher shop or supermarket meat department rather than a restaurant stove area.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use large knives, cutting boards, and other food-prep tools, even if the butcher\u2019s tools are heavier and more specialized.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both primarily act on food items, especially meat, as their central objects of work.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both roles involve intensive manual food handling actions such as cutting, chopping, portioning, and moving ingredients.\"\n        },\n        \"overlap_count\": 4,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb 'stir,' a butcher is still closely associated with handling and preparing meat using knives in a food-preparation space, which is conceptually close to a chef\u2019s culinary role, so the association with the chef\u2019s domain persists beyond the shared action.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A construction worker\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A construction worker\u2019s professional domain, tools, and typical settings are entirely unrelated to restaurant kitchens or cooking tasks, so seeing a fully equipped construction worker stirring soup on a restaurant stove is an immediate, clear mismatch. Viewers will very quickly reject this as not belonging to the construction worker role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine an off-duty construction worker helping in a family restaurant kitchen, but in that case they would not be in construction gear or acting in the construction-worker role, so the plausibility here depends on stripping away the professional identity implied by the attire.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level.\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A chef\u2019s tall white hat and double-breasted chef\u2019s jacket with apron form a very distinctive and widely recognized uniform.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A waiter in classic serving attire (white shirt, black vest, black trousers, bow tie, holding a tray) is commonly recognized as restaurant waiting staff.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A butcher\u2019s white or striped coat, heavy or blood-stained apron, and association with large meat knives or a cleaver create a strong, distinctive visual identity.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A construction worker wearing a hard hat, high-visibility vest, work boots, and possibly a tool belt is very clearly identifiable as a construction worker.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"White double-breasted chef\u2019s jacket, tall white chef\u2019s hat (toque), white or dark apron, possibly a neckerchief, generally clean attire associated with a professional kitchen chef.\",\n      \"plausible_hard\": \"Black trousers, white dress shirt, black vest or waistcoat, bow tie or necktie, often carrying a serving tray or order pad, conveying front-of-house restaurant staff.\",\n      \"implausible_hard\": \"White or striped butcher\u2019s coat, thick and possibly blood-stained apron, sturdy shoes, perhaps a flat cap, typically seen with large knives or a meat cleaver, giving a meat-counter/butchery appearance.\",\n      \"implausible_easy\": \"Bright high-visibility safety vest over rugged work clothes, hard hat, work boots, possibly gloves and a tool belt with construction tools, characteristic of a construction site worker.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef\u2019s tall hat and kitchen whites contrast clearly with the waiter\u2019s black-and-white serving uniform and tray.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef attire is clean kitchen whites with a toque, whereas the butcher has a heavier, often stained apron, different headgear or none, and a butchery look.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Chef\u2019s kitchen uniform is entirely different from the construction worker\u2019s hard hat and high-visibility gear.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Waiter\u2019s formal black-and-white serving clothes with tray differ markedly from a butcher\u2019s coat and stained apron.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Waiter\u2019s formal attire contrasts strongly with the construction worker\u2019s protective workwear and hard hat.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Butcher\u2019s coat and apron look very different from a construction worker\u2019s hi-vis vest, hard hat, and tool belt.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four conditions are well-placed, and the domain of cooking soup on a restaurant stove has a clear prototype (chef) plus many conceivable alternative agents (e.g., line cook, restaurant manager, baker, fishmonger, etc.) that could fill different plausibility levels if needed, indicating the scene robustly supports the full gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The cooking-on-restaurant-stove scene is concrete, easily depicted in a single image, and centered on a prototypical professional (chef). It supports a clear plausibility gradient with related and unrelated food and non-food professions, without relying on subtle reasoning.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"The chef\u2013soup\u2013stove scene yields a strong and intuitive plausibility gradient: chef (clear yes), waiter (hesitant but acceptable), butcher (related food professional but wrong setting, hesitant no), and construction worker (clear no). All four professions are visually identifiable with distinctive uniforms or gear and are clearly distinguishable from one another in images. The scene is concrete, imageable, and well-suited for the intended plausibility/implausibility judgments.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met: all agents are human professional roles, only the agent varies, and plausibility hinges on role-action mismatch rather than physical capability."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A chef",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "A chef is the canonical professional for cooking tasks in a restaurant kitchen, and stirring a pot of soup on a restaurant stove is a core, routine part of that role. Viewers will instantly accept this as the default, highly plausible scenario.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level.",
+          "argument_for_lower": "In many larger kitchens, routine stirring might be done more often by line cooks or sous-chefs than by a head chef, so one could argue that the label 'chef' is slightly less specific to this exact manual task and belongs in a somewhat less prototypical position."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A waiter",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "A waiter normally serves food in the dining area, not cook at the stove, but is naturally present in a restaurant and can realistically step into the kitchen and briefly stir a pot in a busy or small establishment. This makes the event moderately plausible but clearly less prototypical than a chef doing the same action.",
+        "counter_arguments": {
+          "argument_for_higher": "In small family-run restaurants or diners, the person who waits tables may also take on cooking duties, so a waiter stirring soup on the stove could be seen as fully normal in that setting, arguing for placement in plausible_easy.",
+          "argument_for_lower": "In many formal restaurants, waiters are strictly front-of-house and are not allowed to operate stoves for safety and role reasons, so one could argue that a waiter at the stove is sufficiently role-incongruent to belong in an implausible_hard position."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A butcher",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A butcher is a food professional who works with meat and uses similar tools and manual skills as a chef, but typically in a butcher shop or meat room rather than cooking soup on a restaurant stove. This yields clear domain overlap with the chef yet makes the depicted restaurant-stove cooking task feel mismatched and rejectable rather than naturally plausible.",
+        "counter_arguments": {
+          "argument_for_higher": "Some modern eateries or butcher-bistros combine butchery and cooking in one space, where a butcher might also prepare soups or hot dishes, so viewers could interpret the scene as such a hybrid role and accept it as plausibly part of the butcher\u2019s job, pushing it toward plausible_hard.",
+          "argument_for_lower": "Because butchers are strongly associated with raw meat counters and carcass cutting rather than restaurant kitchens, some viewers might see almost no fit between a clearly dressed butcher and a restaurant soup pot, treating it as a straightforwardly absurd pairing on par with other unrelated jobs and assigning it to implausible_easy."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both chef and butcher are food-preparation professionals who handle edible products as their primary occupational domain."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "A chef typically works in a restaurant kitchen, whereas a butcher\u2019s canonical setting is a butcher shop or supermarket meat department rather than a restaurant stove area."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use large knives, cutting boards, and other food-prep tools, even if the butcher\u2019s tools are heavier and more specialized."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both primarily act on food items, especially meat, as their central objects of work."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both roles involve intensive manual food handling actions such as cutting, chopping, portioning, and moving ingredients."
+          },
+          "overlap_count": 4,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb 'stir,' a butcher is still closely associated with handling and preparing meat using knives in a food-preparation space, which is conceptually close to a chef\u2019s culinary role, so the association with the chef\u2019s domain persists beyond the shared action."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A construction worker",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A construction worker\u2019s professional domain, tools, and typical settings are entirely unrelated to restaurant kitchens or cooking tasks, so seeing a fully equipped construction worker stirring soup on a restaurant stove is an immediate, clear mismatch. Viewers will very quickly reject this as not belonging to the construction worker role.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine an off-duty construction worker helping in a family restaurant kitchen, but in that case they would not be in construction gear or acting in the construction-worker role, so the plausibility here depends on stripping away the professional identity implied by the attire.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level."
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A chef\u2019s tall white hat and double-breasted chef\u2019s jacket with apron form a very distinctive and widely recognized uniform."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A waiter in classic serving attire (white shirt, black vest, black trousers, bow tie, holding a tray) is commonly recognized as restaurant waiting staff."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A butcher\u2019s white or striped coat, heavy or blood-stained apron, and association with large meat knives or a cleaver create a strong, distinctive visual identity."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A construction worker wearing a hard hat, high-visibility vest, work boots, and possibly a tool belt is very clearly identifiable as a construction worker."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "White double-breasted chef\u2019s jacket, tall white chef\u2019s hat (toque), white or dark apron, possibly a neckerchief, generally clean attire associated with a professional kitchen chef.",
+        "plausible_hard": "Black trousers, white dress shirt, black vest or waistcoat, bow tie or necktie, often carrying a serving tray or order pad, conveying front-of-house restaurant staff.",
+        "implausible_hard": "White or striped butcher\u2019s coat, thick and possibly blood-stained apron, sturdy shoes, perhaps a flat cap, typically seen with large knives or a meat cleaver, giving a meat-counter/butchery appearance.",
+        "implausible_easy": "Bright high-visibility safety vest over rugged work clothes, hard hat, work boots, possibly gloves and a tool belt with construction tools, characteristic of a construction site worker."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Chef\u2019s tall hat and kitchen whites contrast clearly with the waiter\u2019s black-and-white serving uniform and tray."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Chef attire is clean kitchen whites with a toque, whereas the butcher has a heavier, often stained apron, different headgear or none, and a butchery look."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Chef\u2019s kitchen uniform is entirely different from the construction worker\u2019s hard hat and high-visibility gear."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Waiter\u2019s formal black-and-white serving clothes with tray differ markedly from a butcher\u2019s coat and stained apron."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Waiter\u2019s formal attire contrasts strongly with the construction worker\u2019s protective workwear and hard hat."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Butcher\u2019s coat and apron look very different from a construction worker\u2019s hi-vis vest, hard hat, and tool belt."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four conditions are well-placed, and the domain of cooking soup on a restaurant stove has a clear prototype (chef) plus many conceivable alternative agents (e.g., line cook, restaurant manager, baker, fishmonger, etc.) that could fill different plausibility levels if needed, indicating the scene robustly supports the full gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The cooking-on-restaurant-stove scene is concrete, easily depicted in a single image, and centered on a prototypical professional (chef). It supports a clear plausibility gradient with related and unrelated food and non-food professions, without relying on subtle reasoning."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "The chef\u2013soup\u2013stove scene yields a strong and intuitive plausibility gradient: chef (clear yes), waiter (hesitant but acceptable), butcher (related food professional but wrong setting, hesitant no), and construction worker (clear no). All four professions are visually identifiable with distinctive uniforms or gear and are clearly distinguishable from one another in images. The scene is concrete, imageable, and well-suited for the intended plausibility/implausibility judgments."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 4,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb 'stir,' a butcher is still closely associated with handling and preparing meat using knives in a food-preparation space, which is conceptually close to a chef\u2019s culinary role, so the association with the chef\u2019s domain persists beyond the shared action.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 79.82635916024446,
+  "token_info": {
+    "input_tokens": 6087,
+    "output_tokens": 9215
+  },
+  "success": true
+}

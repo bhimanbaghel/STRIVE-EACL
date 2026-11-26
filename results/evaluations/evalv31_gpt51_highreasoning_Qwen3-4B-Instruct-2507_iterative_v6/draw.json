@@ -1,0 +1,207 @@
+{
+  "verb": "draw",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professional/social roles and the sentences differ only in the agent. Note: the ballet dancer\u2019s visual description mentions a mirror (dance studio) rather than a hospital ward wall, but the sentences themselves are consistent.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A surgeon\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Surgeons do sometimes draw sketches to explain procedures, and they naturally belong in a hospital ward, but drawing a sketch on a ward wall is not part of their core professional duties and may even violate hospital norms. This fits better as a secondary, somewhat unusual but still plausible activity.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"Drawing directly on a ward wall is not standard practice for surgeons, whose primary duties center on performing operations, not making wall sketches; this makes the event feel like an ad\u2011hoc explanation or even mild vandalism, so the fit is more like a non-core but conceivable behavior (plausible_hard) rather than a prototypical action.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"NO: A surgeon\u2019s primary job is performing surgery and related clinical decision making; drawing sketches is occasional explanatory work, and drawing on a ward wall is even less central than sketching on a chart or whiteboard.\",\n        \"removal_test\": \"NO: If surgeons never entered the ward, sketches on the walls could still be made by nurses, other doctors, artists, or decorators, so surgeons are not the necessary or default doers of this action.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A nurse\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Nurses are constantly present on hospital wards and could plausibly draw a sketch on a wall/whiteboard for communication or to decorate a pediatric ward, but this is not a core nursing duty. The scenario requires a small imaginative step yet remains quite believable.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Nurses maintain many ward-facing boards and sometimes create simple drawings (e.g., for children or to illustrate instructions), so one might argue that, among hospital staff regularly on the ward, they are a natural choice for drawing sketches there.\",\n        \"argument_for_lower\": \"Hospitals typically discourage staff from drawing directly on painted walls, and nurses would more commonly use charts or whiteboards, so one could argue that a nurse doing this on the wall itself is odd enough to be rejected as implausible in a strict reading.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A radiologist\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Radiologists are medical doctors who may be present on wards for consultations, and they can certainly draw explanatory sketches, so the event is overall plausible, though not typical. They are too close in role and setting to the surgeon and nurse to function as a low-fit implausible_hard agent.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"As a hospital specialist physician, a radiologist explaining imaging results to a patient or team by drawing a simple sketch on a ward wall/whiteboard is entirely conceivable, so they could reasonably be grouped with other hospital staff in the plausible range.\",\n        \"argument_for_lower\": \"Radiologists usually work in imaging suites and reading rooms rather than on general wards, and their work centers on interpreting images rather than making wall sketches, so one might argue that seeing them drawing on a ward wall feels odd enough to count as implausible compared to ward-based staff.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both radiologists and surgeons are physician specialists in the medical domain.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both work primarily in hospitals and can be involved with inpatients on wards, even if radiologists are more often in radiology suites.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Surgeons rely on operative instruments, while radiologists rely on imaging equipment; beyond generic items like pens/computers, their core toolsets differ.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both treat and make decisions about human patients in clinical contexts.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both examine medical data, write notes, and explain findings to others, even though only surgeons perform operative procedures.\"\n        },\n        \"overlap_count\": 4,\n        \"sufficient\": true,\n        \"negative_test\": \"Even if we ignore the verb 'draw', a radiologist is still strongly associated with the same hospital/medical setting, patient population, and physician role as a surgeon; this makes them semantically very close and thus too plausible for an implausible_hard placement in this particular scene.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballet dancer\u2019s professional domain is the performing arts, typically in studios or theaters, with no natural reason to be drawing a sketch on a hospital ward wall. The role is maximally distant from hospital wall drawing, yielding an immediate sense of implausibility.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a special outreach performance at a hospital where a visiting ballet dancer informally doodles on a ward wall or whiteboard for a patient, but this requires a contrived backstory and is not connected to the dancer\u2019s professional duties.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The radiologist is too plausible to sit below the nurse as implausible_hard; semantically, surgeon, nurse, and radiologist all cluster in the plausible_hard range.\",\n    \"collapsed_pairs\": \"The plausible_easy, plausible_hard, and implausible_hard conditions collapse into a single moderate-plausibility cluster of hospital staff drawing on a ward wall, leaving only the ballet dancer as clearly distinct.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A surgeon in surgical scrubs with cap/mask and possibly surgical tools is visually recognizable as an operating-room doctor.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A nurse in colored hospital scrubs with an ID badge and clipboard is generally recognizable as nursing staff.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"UNIDENTIFIABLE\",\n        \"reasoning\": \"A radiologist in a generic white lab coat with a chart would look like an undifferentiated 'doctor' or lab worker; viewers could not reliably identify the specific role 'radiologist' from attire alone.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A ballet dancer in a tutu, pointe shoes, and hair in a bun is strongly stereotyped and immediately recognizable.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Typically wears surgical scrubs or a sterile surgical gown, often with a cap, mask, and possibly gloves; may have a stethoscope or surgical instruments nearby, conveying an operating-room doctor.\",\n      \"plausible_hard\": \"Wears colored hospital scrubs (top and pants), comfortable closed shoes, an ID badge, possibly a simple watch and a stethoscope or clipboard, matching the standard nurse stereotype.\",\n      \"implausible_hard\": \"Wears a white lab coat over business-casual clothing, with an ID badge; may hold medical charts or look at imaging films or reports, visually similar to a generic hospital doctor.\",\n      \"implausible_easy\": \"Wears a leotard with a tutu, tights, and pointe shoes, with hair neatly in a bun, possibly in a graceful pose characteristic of ballet practice or performance.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"A surgeon in full surgical gown/cap/mask can be made visually distinct from a nurse in standard ward scrubs without cap or mask.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Surgical scrubs/gown versus a white lab coat create a clear visual contrast between surgeon and radiologist/doctor-in-coat.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Surgical attire and a ballet costume are drastically different.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Nursing scrubs contrasted with a white lab coat allow differentiation between nurse and radiologist/doctor, assuming standard depictions.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Nursing scrubs versus a tutu and pointe shoes are clearly distinct.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A white-coated medical doctor and a ballet dancer in costume are visually very different.\"\n      }\n    },\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"A radiologist\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The current surgeon (plausible_easy) and radiologist (implausible_hard) are mis-assigned, but the scene itself can support a full gradient with different agents. For a core prototype, a mural painter or wall artist contracted to decorate a hospital ward could be a clear plausible_easy agent. A nurse or other ward-based staff member drawing occasionally on a wall/whiteboard could serve as plausible_hard. An implausible_hard agent could be a related but wrong type of wall artist (e.g., a street graffiti artist) who shares wall-art, tools, and physical actions but is inappropriate for a hospital ward, and an unrelated role like a ballet dancer remains suitable for implausible_easy. Thus the problems lie in agent selection and specificity, not in the verb\u2013instrument\u2013location combination.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"Drawing a sketch with a pencil on a hospital ward wall is physically and conceptually coherent and can be photographed clearly. However, the chosen medical agents cluster in plausibility and one specialty (radiologist) is not visually distinctive, so the current instantiation does not yield a strong gradient, though the scene could be repaired with better-chosen roles.\"\n  },\n  \"overall\": {\n    \"score\": \"2/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"PROBLEMATIC\",\n    \"summary\": \"Only the nurse (plausible_hard) and ballet dancer (implausible_easy) are correctly placed; the surgeon is too non-typical for plausible_easy, and the radiologist is too plausible for implausible_hard. Visually, three medical roles can be distinguished, but the radiologist\u2019s specific profession is not identifiable, and the plausibility gradient among the medical agents largely collapses. The underlying scene could support a proper gradient with different, more prototypical and visually distinctive agents, but the current configuration is not suitable for the experiment.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professional/social roles and the sentences differ only in the agent. Note: the ballet dancer\u2019s visual description mentions a mirror (dance studio) rather than a hospital ward wall, but the sentences themselves are consistent."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A surgeon",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Surgeons do sometimes draw sketches to explain procedures, and they naturally belong in a hospital ward, but drawing a sketch on a ward wall is not part of their core professional duties and may even violate hospital norms. This fits better as a secondary, somewhat unusual but still plausible activity.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "Drawing directly on a ward wall is not standard practice for surgeons, whose primary duties center on performing operations, not making wall sketches; this makes the event feel like an ad\u2011hoc explanation or even mild vandalism, so the fit is more like a non-core but conceivable behavior (plausible_hard) rather than a prototypical action."
+        },
+        "typicality_audit": {
+          "core_job_test": "NO: A surgeon\u2019s primary job is performing surgery and related clinical decision making; drawing sketches is occasional explanatory work, and drawing on a ward wall is even less central than sketching on a chart or whiteboard.",
+          "removal_test": "NO: If surgeons never entered the ward, sketches on the walls could still be made by nurses, other doctors, artists, or decorators, so surgeons are not the necessary or default doers of this action."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A nurse",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Nurses are constantly present on hospital wards and could plausibly draw a sketch on a wall/whiteboard for communication or to decorate a pediatric ward, but this is not a core nursing duty. The scenario requires a small imaginative step yet remains quite believable.",
+        "counter_arguments": {
+          "argument_for_higher": "Nurses maintain many ward-facing boards and sometimes create simple drawings (e.g., for children or to illustrate instructions), so one might argue that, among hospital staff regularly on the ward, they are a natural choice for drawing sketches there.",
+          "argument_for_lower": "Hospitals typically discourage staff from drawing directly on painted walls, and nurses would more commonly use charts or whiteboards, so one could argue that a nurse doing this on the wall itself is odd enough to be rejected as implausible in a strict reading."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A radiologist",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Radiologists are medical doctors who may be present on wards for consultations, and they can certainly draw explanatory sketches, so the event is overall plausible, though not typical. They are too close in role and setting to the surgeon and nurse to function as a low-fit implausible_hard agent.",
+        "counter_arguments": {
+          "argument_for_higher": "As a hospital specialist physician, a radiologist explaining imaging results to a patient or team by drawing a simple sketch on a ward wall/whiteboard is entirely conceivable, so they could reasonably be grouped with other hospital staff in the plausible range.",
+          "argument_for_lower": "Radiologists usually work in imaging suites and reading rooms rather than on general wards, and their work centers on interpreting images rather than making wall sketches, so one might argue that seeing them drawing on a ward wall feels odd enough to count as implausible compared to ward-based staff."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both radiologists and surgeons are physician specialists in the medical domain."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both work primarily in hospitals and can be involved with inpatients on wards, even if radiologists are more often in radiology suites."
+          },
+          "tools_instruments": {
+            "overlaps": false,
+            "reasoning": "Surgeons rely on operative instruments, while radiologists rely on imaging equipment; beyond generic items like pens/computers, their core toolsets differ."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both treat and make decisions about human patients in clinical contexts."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both examine medical data, write notes, and explain findings to others, even though only surgeons perform operative procedures."
+          },
+          "overlap_count": 4,
+          "sufficient": true,
+          "negative_test": "Even if we ignore the verb 'draw', a radiologist is still strongly associated with the same hospital/medical setting, patient population, and physician role as a surgeon; this makes them semantically very close and thus too plausible for an implausible_hard placement in this particular scene."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballet dancer\u2019s professional domain is the performing arts, typically in studios or theaters, with no natural reason to be drawing a sketch on a hospital ward wall. The role is maximally distant from hospital wall drawing, yielding an immediate sense of implausibility.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a special outreach performance at a hospital where a visiting ballet dancer informally doodles on a ward wall or whiteboard for a patient, but this requires a contrived backstory and is not connected to the dancer\u2019s professional duties.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The radiologist is too plausible to sit below the nurse as implausible_hard; semantically, surgeon, nurse, and radiologist all cluster in the plausible_hard range.",
+      "collapsed_pairs": "The plausible_easy, plausible_hard, and implausible_hard conditions collapse into a single moderate-plausibility cluster of hospital staff drawing on a ward wall, leaving only the ballet dancer as clearly distinct."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A surgeon in surgical scrubs with cap/mask and possibly surgical tools is visually recognizable as an operating-room doctor."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A nurse in colored hospital scrubs with an ID badge and clipboard is generally recognizable as nursing staff."
+        },
+        "implausible_hard": {
+          "rating": "UNIDENTIFIABLE",
+          "reasoning": "A radiologist in a generic white lab coat with a chart would look like an undifferentiated 'doctor' or lab worker; viewers could not reliably identify the specific role 'radiologist' from attire alone."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A ballet dancer in a tutu, pointe shoes, and hair in a bun is strongly stereotyped and immediately recognizable."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Typically wears surgical scrubs or a sterile surgical gown, often with a cap, mask, and possibly gloves; may have a stethoscope or surgical instruments nearby, conveying an operating-room doctor.",
+        "plausible_hard": "Wears colored hospital scrubs (top and pants), comfortable closed shoes, an ID badge, possibly a simple watch and a stethoscope or clipboard, matching the standard nurse stereotype.",
+        "implausible_hard": "Wears a white lab coat over business-casual clothing, with an ID badge; may hold medical charts or look at imaging films or reports, visually similar to a generic hospital doctor.",
+        "implausible_easy": "Wears a leotard with a tutu, tights, and pointe shoes, with hair neatly in a bun, possibly in a graceful pose characteristic of ballet practice or performance."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "A surgeon in full surgical gown/cap/mask can be made visually distinct from a nurse in standard ward scrubs without cap or mask."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Surgical scrubs/gown versus a white lab coat create a clear visual contrast between surgeon and radiologist/doctor-in-coat."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Surgical attire and a ballet costume are drastically different."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Nursing scrubs contrasted with a white lab coat allow differentiation between nurse and radiologist/doctor, assuming standard depictions."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Nursing scrubs versus a tutu and pointe shoes are clearly distinct."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A white-coated medical doctor and a ballet dancer in costume are visually very different."
+        }
+      },
+      "visual_verdict": "PROBLEMATIC",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "A radiologist"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The current surgeon (plausible_easy) and radiologist (implausible_hard) are mis-assigned, but the scene itself can support a full gradient with different agents. For a core prototype, a mural painter or wall artist contracted to decorate a hospital ward could be a clear plausible_easy agent. A nurse or other ward-based staff member drawing occasionally on a wall/whiteboard could serve as plausible_hard. An implausible_hard agent could be a related but wrong type of wall artist (e.g., a street graffiti artist) who shares wall-art, tools, and physical actions but is inappropriate for a hospital ward, and an unrelated role like a ballet dancer remains suitable for implausible_easy. Thus the problems lie in agent selection and specificity, not in the verb\u2013instrument\u2013location combination.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "Drawing a sketch with a pencil on a hospital ward wall is physically and conceptually coherent and can be photographed clearly. However, the chosen medical agents cluster in plausibility and one specialty (radiologist) is not visually distinctive, so the current instantiation does not yield a strong gradient, though the scene could be repaired with better-chosen roles."
+    },
+    "overall": {
+      "score": "2/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "PROBLEMATIC",
+      "summary": "Only the nurse (plausible_hard) and ballet dancer (implausible_easy) are correctly placed; the surgeon is too non-typical for plausible_easy, and the radiologist is too plausible for implausible_hard. Visually, three medical roles can be distinguished, but the radiologist\u2019s specific profession is not identifiable, and the plausibility gradient among the medical agents largely collapses. The underlying scene could support a proper gradient with different, more prototypical and visually distinctive agents, but the current configuration is not suitable for the experiment."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 2,
+    "borderline_count": 0,
+    "incorrect_count": 2,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard"
+      }
+    },
+    "score_strict": 2,
+    "score_lenient": 2.0,
+    "overlap_count": 4,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even if we ignore the verb 'draw', a radiologist is still strongly associated with the same hospital/medical setting, patient population, and physician role as a surgeon; this makes them semantically very close and thus too plausible for an implausible_hard placement in this particular scene.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "UNIDENTIFIABLE"
+    },
+    "unidentifiable_agents": [
+      "implausible_hard"
+    ]
+  },
+  "elapsed": 246.74666035920382,
+  "token_info": {
+    "input_tokens": 5698,
+    "output_tokens": 16375,
+    "cached_tokens": 0
+  },
+  "success": true
+}

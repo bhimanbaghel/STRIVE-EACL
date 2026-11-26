@@ -1,0 +1,200 @@
+{
+  "verb": "wash",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A car wash worker\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"A car wash worker washing a car with a high-pressure hose at a car wash station is the prototypical scenario for this scene; it is the default, routine task for this role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that other car-related workers (e.g., mechanics, gas station attendants) also frequently wash cars, so the car wash worker might be seen as just one of several plausible agents rather than uniquely prototypical.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A mechanic\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Mechanics primarily repair and service cars in a garage but can reasonably be involved in washing a car with a high-pressure hose near a workshop or service center, making the event plausible though not core to their role.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"In many small garages, the mechanic also takes responsibility for washing customers\u2019 cars, so for some viewers a mechanic washing a car could feel nearly as expected as a dedicated car wash worker.\",\n        \"argument_for_lower\": \"One could argue that mechanics usually work inside workshops, not at dedicated car wash stations, so a mechanic in full work uniform washing a car at a commercial car wash could feel somewhat out of place and be relegated to an implausible_hard interpretation.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A street cleaner\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A street cleaner works in outdoor cleaning using water and sometimes pressure washers, but they typically clean streets and pavements, not individual cars at a commercial car wash station. The domain and tools overlap, yet the specific role\u2013location pairing is wrong, yielding low but non-zero plausibility.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"Since street cleaners use similar high-pressure equipment and work around roads and parked vehicles, one could imagine a municipal worker washing a city-owned car or cleaning in a car wash bay, making the event feel somewhat plausible as an unusual assignment.\",\n        \"argument_for_lower\": \"Viewers might focus on the fact that street cleaners are employed to clean public spaces, not private vehicles, and that they would almost never be on duty inside a commercial car wash, leading to an immediate rejection on the grounds that this is simply not their job, closer to implausible_easy.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both car wash workers and street cleaners are in the cleaning/maintenance domain, focused on cleaning outdoor surfaces and objects.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both typically work outdoors in utilitarian service environments near roads, vehicles, and water run-off areas.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both roles commonly use hoses or pressure washers and other cleaning equipment.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Car wash workers focus on vehicles, whereas street cleaners focus on streets, sidewalks, and public ground surfaces; cars are not their typical primary target.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both involve manual spraying of water and scrubbing motions to remove dirt from hard outdoor surfaces.\"\n        },\n        \"overlap_count\": 4,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb 'wash', a street cleaner in high-visibility workwear holding or operating a pressure washer near a car wash station remains strongly associated with outdoor cleaning and similar tools/settings to a car wash worker, so the association persists beyond the shared verb.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballet dancer belongs to the performing arts domain and has no natural professional connection to car washing, car wash stations, or high-pressure hoses; in full ballet attire at a car wash this would be instantly perceived as absurd.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could imagine a contrived scenario such as a commercial or photo shoot where a ballet dancer performs at a car wash, introducing a very weak narrative bridge, but this requires substantial story-building beyond an immediate visual judgment.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"Car wash workers typically wear generic waterproof work clothing and could be mistaken for other cleaning or manual labor roles without strong, standardized uniform cues.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Mechanics in dark or navy coveralls with name patches and greasy work clothes, sometimes with small tools, are widely recognized as auto mechanics.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Street cleaners usually wear high-visibility municipal uniforms and carry cleaning gear, which clearly marks them as public sanitation or street cleaning workers.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A ballet dancer in a tutu or leotard, tights, and ballet slippers with hair in a bun is a classic, easily recognized visual stereotype.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Waterproof overalls or work pants, rubber boots, possibly a waterproof apron, a branded T-shirt or jacket, and protective gloves, holding a high-pressure spray wand.\",\n      \"plausible_hard\": \"Dark or navy coveralls with a name patch, slightly greasy or oil-stained, sturdy work boots, possibly with a small tool or rag in a pocket and a shop-logo cap.\",\n      \"implausible_hard\": \"High-visibility jacket or vest with reflective strips, work trousers, sturdy work boots, possibly a hard hat or cap, and near municipal cleaning equipment such as brooms or a pressure washer.\",\n      \"implausible_easy\": \"Fitted leotard or tutu, tights, ballet slippers or pointe shoes, hair in a neat bun, with an upright, graceful posture.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": false,\n        \"note\": \"Both would appear as blue-collar car-related workers in coveralls holding the same high-pressure hose; without strong, contrasting uniform features they could look nearly identical.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"The street cleaner\u2019s high-visibility uniform and reflective vest contrast with the car wash worker\u2019s more generic waterproof workwear.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A worker in waterproof gear versus a person in ballet costume are visually very different.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"The mechanic\u2019s dark, greasy coveralls differ clearly from the street cleaner\u2019s bright high-visibility municipal uniform.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A mechanic in coveralls looks clearly different from a ballet dancer in tutu or leotard.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"A high-visibility street-cleaning uniform is visually distinct from ballet attire.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"pe_vs_ph\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four conditions are thematically well-placed with a clear prototype (car wash worker) and a related-but-wrong domain agent (street cleaner). If replacements were needed, the scene could easily accommodate other plausible_hard agents (e.g., gas station attendant) or implausible_hard agents (e.g., janitor using a pressure washer), indicating the scene itself robustly supports the full plausibility gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The car wash station with a high-pressure hose and a car is a concrete, easily photographed scene with an obvious core profession. The domain of vehicle and outdoor surface cleaning supports a clean gradient from clearly appropriate to clearly inappropriate agents.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematic fit across the four agents forms a clear plausibility gradient, with each condition correctly assigned and supported by multi-dimensional overlap where required. Professions are generally visually identifiable, though the car wash worker is somewhat ambiguous and visually similar to the mechanic, leading to one problematic pair. The underlying scene is well-designed and fully supports the intended plausibility manipulation.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A car wash worker",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "A car wash worker washing a car with a high-pressure hose at a car wash station is the prototypical scenario for this scene; it is the default, routine task for this role.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that other car-related workers (e.g., mechanics, gas station attendants) also frequently wash cars, so the car wash worker might be seen as just one of several plausible agents rather than uniquely prototypical."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A mechanic",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Mechanics primarily repair and service cars in a garage but can reasonably be involved in washing a car with a high-pressure hose near a workshop or service center, making the event plausible though not core to their role.",
+        "counter_arguments": {
+          "argument_for_higher": "In many small garages, the mechanic also takes responsibility for washing customers\u2019 cars, so for some viewers a mechanic washing a car could feel nearly as expected as a dedicated car wash worker.",
+          "argument_for_lower": "One could argue that mechanics usually work inside workshops, not at dedicated car wash stations, so a mechanic in full work uniform washing a car at a commercial car wash could feel somewhat out of place and be relegated to an implausible_hard interpretation."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A street cleaner",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A street cleaner works in outdoor cleaning using water and sometimes pressure washers, but they typically clean streets and pavements, not individual cars at a commercial car wash station. The domain and tools overlap, yet the specific role\u2013location pairing is wrong, yielding low but non-zero plausibility.",
+        "counter_arguments": {
+          "argument_for_higher": "Since street cleaners use similar high-pressure equipment and work around roads and parked vehicles, one could imagine a municipal worker washing a city-owned car or cleaning in a car wash bay, making the event feel somewhat plausible as an unusual assignment.",
+          "argument_for_lower": "Viewers might focus on the fact that street cleaners are employed to clean public spaces, not private vehicles, and that they would almost never be on duty inside a commercial car wash, leading to an immediate rejection on the grounds that this is simply not their job, closer to implausible_easy."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both car wash workers and street cleaners are in the cleaning/maintenance domain, focused on cleaning outdoor surfaces and objects."
+          },
+          "typical_setting": {
+            "overlaps": true,
+            "reasoning": "Both typically work outdoors in utilitarian service environments near roads, vehicles, and water run-off areas."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both roles commonly use hoses or pressure washers and other cleaning equipment."
+          },
+          "patient_object_type": {
+            "overlaps": false,
+            "reasoning": "Car wash workers focus on vehicles, whereas street cleaners focus on streets, sidewalks, and public ground surfaces; cars are not their typical primary target."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both involve manual spraying of water and scrubbing motions to remove dirt from hard outdoor surfaces."
+          },
+          "overlap_count": 4,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb 'wash', a street cleaner in high-visibility workwear holding or operating a pressure washer near a car wash station remains strongly associated with outdoor cleaning and similar tools/settings to a car wash worker, so the association persists beyond the shared verb."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballet dancer belongs to the performing arts domain and has no natural professional connection to car washing, car wash stations, or high-pressure hoses; in full ballet attire at a car wash this would be instantly perceived as absurd.",
+        "counter_arguments": {
+          "argument_for_higher": "One could imagine a contrived scenario such as a commercial or photo shoot where a ballet dancer performs at a car wash, introducing a very weak narrative bridge, but this requires substantial story-building beyond an immediate visual judgment.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "Car wash workers typically wear generic waterproof work clothing and could be mistaken for other cleaning or manual labor roles without strong, standardized uniform cues."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Mechanics in dark or navy coveralls with name patches and greasy work clothes, sometimes with small tools, are widely recognized as auto mechanics."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Street cleaners usually wear high-visibility municipal uniforms and carry cleaning gear, which clearly marks them as public sanitation or street cleaning workers."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A ballet dancer in a tutu or leotard, tights, and ballet slippers with hair in a bun is a classic, easily recognized visual stereotype."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Waterproof overalls or work pants, rubber boots, possibly a waterproof apron, a branded T-shirt or jacket, and protective gloves, holding a high-pressure spray wand.",
+        "plausible_hard": "Dark or navy coveralls with a name patch, slightly greasy or oil-stained, sturdy work boots, possibly with a small tool or rag in a pocket and a shop-logo cap.",
+        "implausible_hard": "High-visibility jacket or vest with reflective strips, work trousers, sturdy work boots, possibly a hard hat or cap, and near municipal cleaning equipment such as brooms or a pressure washer.",
+        "implausible_easy": "Fitted leotard or tutu, tights, ballet slippers or pointe shoes, hair in a neat bun, with an upright, graceful posture."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": false,
+          "note": "Both would appear as blue-collar car-related workers in coveralls holding the same high-pressure hose; without strong, contrasting uniform features they could look nearly identical."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "The street cleaner\u2019s high-visibility uniform and reflective vest contrast with the car wash worker\u2019s more generic waterproof workwear."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "A worker in waterproof gear versus a person in ballet costume are visually very different."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "The mechanic\u2019s dark, greasy coveralls differ clearly from the street cleaner\u2019s bright high-visibility municipal uniform."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "A mechanic in coveralls looks clearly different from a ballet dancer in tutu or leotard."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "A high-visibility street-cleaning uniform is visually distinct from ballet attire."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "pe_vs_ph",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four conditions are thematically well-placed with a clear prototype (car wash worker) and a related-but-wrong domain agent (street cleaner). If replacements were needed, the scene could easily accommodate other plausible_hard agents (e.g., gas station attendant) or implausible_hard agents (e.g., janitor using a pressure washer), indicating the scene itself robustly supports the full plausibility gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The car wash station with a high-pressure hose and a car is a concrete, easily photographed scene with an obvious core profession. The domain of vehicle and outdoor surface cleaning supports a clean gradient from clearly appropriate to clearly inappropriate agents."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematic fit across the four agents forms a clear plausibility gradient, with each condition correctly assigned and supported by multi-dimensional overlap where required. Professions are generally visually identifiable, though the car wash worker is somewhat ambiguous and visually similar to the mechanic, leading to one problematic pair. The underlying scene is well-designed and fully supports the intended plausibility manipulation."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 4,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb 'wash', a street cleaner in high-visibility workwear holding or operating a pressure washer near a car wash station remains strongly associated with outdoor cleaning and similar tools/settings to a car wash worker, so the association persists beyond the shared verb.",
+    "identifiability": {
+      "plausible_easy": "AMBIGUOUS",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 105.10414579883218,
+  "token_info": {
+    "input_tokens": 6005,
+    "output_tokens": 8430
+  },
+  "success": true
+}

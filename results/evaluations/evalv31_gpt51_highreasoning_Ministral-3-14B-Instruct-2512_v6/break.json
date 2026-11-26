@@ -1,0 +1,205 @@
+{
+  "verb": "break",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All constraints met\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A lumberjack\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"A lumberjack is the prototypical professional for using an axe on wood in a forest; breaking a wooden chair as scrap wood with an axe in a forest clearing fits their core wood-chopping role and setting.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue this belongs in plausible_hard because lumberjacks normally fell trees and split logs rather than specifically breaking furniture like chairs, so the particular patient is atypical for the job.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Lumberjacks are paid to cut and break wooden objects with axes in forested areas; treating the chair as just another piece of wood keeps this within their primary wood-chopping duties.\",\n        \"removal_test\": \"YES: In forest clearings, professional axe-based breaking of wood would essentially not occur without lumberjacks or equivalent logging workers, making them the default doers of this action in this setting.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A carpenter\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Carpenters work professionally with wooden furniture such as chairs, so destroying a chair is conceivable, but they usually build or repair rather than break furniture, and they typically work on sites or in workshops, not in forest clearings with an axe.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might place this in plausible_easy because carpenters are the default professionals associated with wooden chairs, so breaking a defective or unwanted chair could be seen as part of managing wooden furniture.\",\n        \"argument_for_lower\": \"One could argue for implausible_hard because carpenters generally do not use axes or work in forest clearings, so their only strong link is to the wooden chair, making their presence and method somewhat unnatural for the scene.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A blacksmith\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_hard\",\n      \"reasoning\": \"A blacksmith is a skilled manual tradesperson who uses heavy striking tools on materials, so there is domain and action overlap with a lumberjack, but blacksmiths usually work with metal in a forge, not chopping wooden chairs with axes in forests, making this related but wrong for the scene.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"It could be argued as plausible_hard because a blacksmith is strong, familiar with heavy tools, and might plausibly handle an axe and break wood even if the forest location and wooden chair are atypical for their usual work.\",\n        \"argument_for_lower\": \"One might push this to implausible_easy by emphasizing that blacksmithing is about forging metal in a workshop, with no ordinary reason to be in a forest clearing or to destroy wooden furniture, so some observers might quickly reject the fit as clearly wrong.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both lumberjacks and blacksmiths are skilled manual trades in blue-collar, physically demanding work transforming raw materials.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Lumberjacks work in forests and logging sites, whereas blacksmiths work in forges or workshops, not similar environments.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both routinely use heavy metal striking tools (axes or saws vs hammers and chisels) and protective gear like gloves and aprons.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Lumberjacks primarily act on wood, while blacksmiths primarily act on metal objects; their usual materials differ.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform repetitive, forceful swinging and striking actions to cut, shape, or break materials.\"\n        },\n        \"overlap_count\": 3,\n        \"sufficient\": true,\n        \"negative_test\": \"Even ignoring the verb break, a blacksmith is still associated with heavy manual tool use and may produce or work on axes used by lumberjacks, but is out of place in a forest clearing with a wooden chair, so there is clear relatedness yet wrongness beyond the shared verb.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballerina\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballerina belongs to the performing arts domain, typically works on stages or in studios, and does not use axes, break furniture, or work in forests, making this a clear and immediate role-scene mismatch.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could weakly argue for implausible_hard by noting that stage performances sometimes use props or dramatic destruction, but ballerinas specifically are almost never associated with axes or chopping wood.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": true,\n    \"swapped_pairs\": \"None\",\n    \"collapsed_pairs\": \"None\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Flannel shirt, suspenders, boots, and an axe create a strong, iconic lumberjack/logger image.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"AMBIGUOUS\",\n        \"reasoning\": \"Tool belt, work apron, safety glasses, and boots clearly signal a construction-trade worker but could be taken as a generic builder, handyman, or contractor rather than specifically a carpenter.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Leather apron, heavy gloves, soot-stained face, and a hammer or tongs are distinctive for a blacksmith or metalworker.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Tutu, pointe shoes, and hair in a tight bun are highly recognizable as a ballet dancer.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Plaid flannel shirt, suspenders, rugged work pants, heavy work boots, maybe a beanie, holding an axe and looking like an outdoor logger.\",\n      \"plausible_hard\": \"Work trousers, sturdy boots, a tool belt with hammer, tape measure, and other tools, possibly a work apron and safety glasses, in generic construction attire.\",\n      \"implausible_hard\": \"Dark or leather clothing covered by a thick leather apron, heavy gloves, soot or grime on face and arms, holding a large hammer or tongs.\",\n      \"implausible_easy\": \"Classical ballet outfit with a tutu, fitted bodice, pale tights, pointe shoes, and hair styled in a neat bun.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Lumberjack has flannel and a single large axe, whereas the carpenter has a tool belt and construction-style gear.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Lumberjack wears outdoor flannel and logging gear; blacksmith wears a leather apron, gloves, and appears sooty.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Rugged outdoor worker versus delicate dancer in a tutu are visually opposite.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Carpenter has a tool belt and clean construction clothes; blacksmith has a heavy apron and soot-stained appearance with forge tools.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Construction attire with tool belt is clearly different from ballet costume with tutu and pointe shoes.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Blacksmith\u2019s dark, heavy, dirty workwear is entirely distinct from a ballerina\u2019s light, elegant dancewear.\"\n      }\n    },\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"All four conditions were judged CORRECT, and the combination of an axe, wooden object, and forest clearing naturally supports a clear prototype (lumberjack) plus related wood trades and unrelated roles, so no replacement agents are required to realize the gradient.\",\n    \"scene_verdict\": \"GOOD\",\n    \"scene_notes\": \"The axe-on-wood in a forest clearing scene is concrete, visually clear, and supports a strong prototypical agent and a full plausibility gradient with related and unrelated professions.\"\n  },\n  \"overall\": {\n    \"score\": \"4/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"GOOD\",\n    \"visual_verdict\": \"MOSTLY_DISTINCT\",\n    \"summary\": \"Thematic fit is well-structured: the lumberjack is a strong prototype, the carpenter is a plausible but secondary wood professional, the blacksmith is a related yet wrong manual trade, and the ballerina is clearly unrelated. All roles are visually distinct and recognizable, with only the carpenter somewhat generic as a construction worker. The scene itself is concrete, imageable, and robustly supports the intended plausibility gradient.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All constraints met"
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A lumberjack",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "A lumberjack is the prototypical professional for using an axe on wood in a forest; breaking a wooden chair as scrap wood with an axe in a forest clearing fits their core wood-chopping role and setting.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue this belongs in plausible_hard because lumberjacks normally fell trees and split logs rather than specifically breaking furniture like chairs, so the particular patient is atypical for the job."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Lumberjacks are paid to cut and break wooden objects with axes in forested areas; treating the chair as just another piece of wood keeps this within their primary wood-chopping duties.",
+          "removal_test": "YES: In forest clearings, professional axe-based breaking of wood would essentially not occur without lumberjacks or equivalent logging workers, making them the default doers of this action in this setting."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A carpenter",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Carpenters work professionally with wooden furniture such as chairs, so destroying a chair is conceivable, but they usually build or repair rather than break furniture, and they typically work on sites or in workshops, not in forest clearings with an axe.",
+        "counter_arguments": {
+          "argument_for_higher": "One might place this in plausible_easy because carpenters are the default professionals associated with wooden chairs, so breaking a defective or unwanted chair could be seen as part of managing wooden furniture.",
+          "argument_for_lower": "One could argue for implausible_hard because carpenters generally do not use axes or work in forest clearings, so their only strong link is to the wooden chair, making their presence and method somewhat unnatural for the scene."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A blacksmith",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard",
+        "reasoning": "A blacksmith is a skilled manual tradesperson who uses heavy striking tools on materials, so there is domain and action overlap with a lumberjack, but blacksmiths usually work with metal in a forge, not chopping wooden chairs with axes in forests, making this related but wrong for the scene.",
+        "counter_arguments": {
+          "argument_for_higher": "It could be argued as plausible_hard because a blacksmith is strong, familiar with heavy tools, and might plausibly handle an axe and break wood even if the forest location and wooden chair are atypical for their usual work.",
+          "argument_for_lower": "One might push this to implausible_easy by emphasizing that blacksmithing is about forging metal in a workshop, with no ordinary reason to be in a forest clearing or to destroy wooden furniture, so some observers might quickly reject the fit as clearly wrong."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both lumberjacks and blacksmiths are skilled manual trades in blue-collar, physically demanding work transforming raw materials."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Lumberjacks work in forests and logging sites, whereas blacksmiths work in forges or workshops, not similar environments."
+          },
+          "tools_instruments": {
+            "overlaps": true,
+            "reasoning": "Both routinely use heavy metal striking tools (axes or saws vs hammers and chisels) and protective gear like gloves and aprons."
+          },
+          "patient_object_type": {
+            "overlaps": false,
+            "reasoning": "Lumberjacks primarily act on wood, while blacksmiths primarily act on metal objects; their usual materials differ."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform repetitive, forceful swinging and striking actions to cut, shape, or break materials."
+          },
+          "overlap_count": 3,
+          "sufficient": true,
+          "negative_test": "Even ignoring the verb break, a blacksmith is still associated with heavy manual tool use and may produce or work on axes used by lumberjacks, but is out of place in a forest clearing with a wooden chair, so there is clear relatedness yet wrongness beyond the shared verb."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballerina",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballerina belongs to the performing arts domain, typically works on stages or in studios, and does not use axes, break furniture, or work in forests, making this a clear and immediate role-scene mismatch.",
+        "counter_arguments": {
+          "argument_for_higher": "One could weakly argue for implausible_hard by noting that stage performances sometimes use props or dramatic destruction, but ballerinas specifically are almost never associated with axes or chopping wood.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": true,
+      "swapped_pairs": "None",
+      "collapsed_pairs": "None"
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Flannel shirt, suspenders, boots, and an axe create a strong, iconic lumberjack/logger image."
+        },
+        "plausible_hard": {
+          "rating": "AMBIGUOUS",
+          "reasoning": "Tool belt, work apron, safety glasses, and boots clearly signal a construction-trade worker but could be taken as a generic builder, handyman, or contractor rather than specifically a carpenter."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Leather apron, heavy gloves, soot-stained face, and a hammer or tongs are distinctive for a blacksmith or metalworker."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Tutu, pointe shoes, and hair in a tight bun are highly recognizable as a ballet dancer."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Plaid flannel shirt, suspenders, rugged work pants, heavy work boots, maybe a beanie, holding an axe and looking like an outdoor logger.",
+        "plausible_hard": "Work trousers, sturdy boots, a tool belt with hammer, tape measure, and other tools, possibly a work apron and safety glasses, in generic construction attire.",
+        "implausible_hard": "Dark or leather clothing covered by a thick leather apron, heavy gloves, soot or grime on face and arms, holding a large hammer or tongs.",
+        "implausible_easy": "Classical ballet outfit with a tutu, fitted bodice, pale tights, pointe shoes, and hair styled in a neat bun."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Lumberjack has flannel and a single large axe, whereas the carpenter has a tool belt and construction-style gear."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Lumberjack wears outdoor flannel and logging gear; blacksmith wears a leather apron, gloves, and appears sooty."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Rugged outdoor worker versus delicate dancer in a tutu are visually opposite."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "Carpenter has a tool belt and clean construction clothes; blacksmith has a heavy apron and soot-stained appearance with forge tools."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Construction attire with tool belt is clearly different from ballet costume with tutu and pointe shoes."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Blacksmith\u2019s dark, heavy, dirty workwear is entirely distinct from a ballerina\u2019s light, elegant dancewear."
+        }
+      },
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "All four conditions were judged CORRECT, and the combination of an axe, wooden object, and forest clearing naturally supports a clear prototype (lumberjack) plus related wood trades and unrelated roles, so no replacement agents are required to realize the gradient.",
+      "scene_verdict": "GOOD",
+      "scene_notes": "The axe-on-wood in a forest clearing scene is concrete, visually clear, and supports a strong prototypical agent and a full plausibility gradient with related and unrelated professions."
+    },
+    "overall": {
+      "score": "4/4",
+      "borderline_count": 0,
+      "scene_verdict": "GOOD",
+      "visual_verdict": "MOSTLY_DISTINCT",
+      "summary": "Thematic fit is well-structured: the lumberjack is a strong prototype, the carpenter is a plausible but secondary wood professional, the blacksmith is a related yet wrong manual trade, and the ballerina is clearly unrelated. All roles are visually distinct and recognizable, with only the carpenter somewhat generic as a construction worker. The scene itself is concrete, imageable, and robustly supports the intended plausibility gradient."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 4,
+    "borderline_count": 0,
+    "incorrect_count": 0,
+    "has_scene_error": false,
+    "scene_verdict": "GOOD",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_hard"
+      }
+    },
+    "score_strict": 4,
+    "score_lenient": 4.0,
+    "overlap_count": 3,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even ignoring the verb break, a blacksmith is still associated with heavy manual tool use and may produce or work on axes used by lumberjacks, but is out of place in a forest clearing with a wooden chair, so there is clear relatedness yet wrongness beyond the shared verb.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "AMBIGUOUS",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 187.64045722782612,
+  "token_info": {
+    "input_tokens": 5610,
+    "output_tokens": 9830,
+    "cached_tokens": 0
+  },
+  "success": true
+}

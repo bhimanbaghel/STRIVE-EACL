@@ -1,0 +1,205 @@
+{
+  "verb": "touch",
+  "raw_response": "{\n  \"constraint_checks\": {\n    \"all_human_professionals\": true,\n    \"consistency_maintained\": true,\n    \"role_action_mismatch_valid\": true,\n    \"constraint_notes\": \"All agents are human professions; only the agent varies across otherwise identical sentences; plausibility differences are role-based, not due to physical incapacity.\"\n  },\n  \"condition_evaluations\": {\n    \"plausible_easy\": {\n      \"agent\": \"A nurse\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_easy\",\n      \"reasoning\": \"Nurses routinely provide bedside care in hospital rooms and frequently touch patients\u2019 shoulders both for examination and comfort, making them the prototypical agent for this event. Among common hospital roles, the nurse is the default person one expects to see physically interacting with a patient in this way.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"N/A for plausible_easy since it is the highest level\",\n        \"argument_for_lower\": \"One could argue that touching a patient\u2019s shoulder is a generic comforting gesture that could be equally typical for doctors, chaplains, or family members, so the nurse might be seen as just one of many plausible roles and thus better placed in plausible_hard.\"\n      },\n      \"typicality_audit\": {\n        \"core_job_test\": \"YES: Direct physical contact with patients, including touching the shoulder for exams, repositioning, and reassurance, is a core component of nursing care.\",\n        \"removal_test\": \"YES: If nurses were removed from the hospital, routine bedside touching and physical care of patients (including shoulder contact) would largely cease as part of structured care, occurring only sporadically from other roles, so nurses are central to this action.\"\n      }\n    },\n    \"plausible_hard\": {\n      \"agent\": \"A hospital chaplain\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Hospital chaplains are naturally present in hospital rooms and often provide emotional and spiritual support; gently touching a patient\u2019s shoulder is a plausible but not essential part of their role. The action is reasonable yet less central and less frequent than for a nurse, fitting a moderate plausibility level.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might argue that providing comfort is a core duty of chaplains and that physical touch, such as a hand on the shoulder during prayer or consolation, is a very natural expression of that role, making them nearly as prototypical as a nurse for this specific gesture.\",\n        \"argument_for_lower\": \"Conversely, one could say chaplains primarily offer verbal and spiritual support and may avoid physical touch for boundary or consent reasons, so shoulder-touching might be relatively rare and could be seen as somewhat unexpected, pushing them toward implausible_hard.\"\n      }\n    },\n    \"implausible_hard\": {\n      \"agent\": \"A firefighter\",\n      \"verdict\": \"INCORRECT\",\n      \"actual_condition\": \"plausible_hard\",\n      \"reasoning\": \"Firefighters do sometimes enter hospitals in emergencies and may physically touch or reassure patients during rescue or evacuation, so the event is realistically possible rather than something a person would ultimately reject. This makes their thematic fit closer to a rare-but-plausible scenario (plausible_hard) than to an 'unsure no' implausible_hard case.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One could argue for plausible_hard or higher by noting that firefighters are trained first responders who routinely handle victims and may comforting-touch patients in various settings, and that a hospital room during an emergency is a natural extension of their work environment.\",\n        \"argument_for_lower\": \"To push them toward implausible_easy, one might claim that full turnout gear in a calm-looking hospital room with only gentle shoulder-touching is so incongruous with their usual firefighting activities that viewers would see the scene as obviously wrong rather than borderline.\"\n      },\n      \"overlap_audit\": {\n        \"occupational_domain\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both nurses and firefighters are part of the broader emergency/health and safety domain and are involved in responding to medical or crisis situations.\"\n        },\n        \"typical_setting\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Nurses typically work inside hospital rooms, whereas firefighters usually operate at fire scenes, accident sites, or outdoors; hospitals are only occasional, not typical, work settings for firefighters.\"\n        },\n        \"tools_instruments\": {\n          \"overlaps\": false,\n          \"reasoning\": \"Nurses use medical tools such as stethoscopes and blood pressure cuffs, while firefighters use hoses, axes, and breathing apparatus; any overlap (e.g., gloves, basic first-aid kits) is incidental rather than core.\"\n        },\n        \"patient_object_type\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both professions act on injured or ill human beings in need of assistance or rescue.\"\n        },\n        \"physical_actions\": {\n          \"overlaps\": true,\n          \"reasoning\": \"Both perform physically hands-on actions such as lifting, supporting, moving, and sometimes comforting people in distress.\"\n        },\n        \"overlap_count\": 3,\n        \"sufficient\": true,\n        \"negative_test\": \"Even without considering the specific verb 'touching,' a firefighter interacting with a hospital patient is still conceptually linked through emergency response and rescue in buildings (including hospitals), so there remains a meaningful association beyond the shared verb.\"\n      }\n    },\n    \"implausible_easy\": {\n      \"agent\": \"A ballet dancer\",\n      \"verdict\": \"CORRECT\",\n      \"actual_condition\": \"implausible_easy\",\n      \"reasoning\": \"A ballet dancer in performance attire has no natural professional role inside a hospital room or in physically caring for patients, making this scenario clearly outside their domain. Any explanation would rely on a contrived visiting or performance story, so the role-event fit is very low.\",\n      \"counter_arguments\": {\n        \"argument_for_higher\": \"One might imagine a special performance in a hospital where a dancer in costume briefly visits a patient afterward and touches their shoulder in greeting or encouragement, which could make the event barely plausible in a very specific narrative.\",\n        \"argument_for_lower\": \"N/A for implausible_easy since it is the lowest level\"\n      }\n    }\n  },\n  \"gradient_ordering\": {\n    \"correctly_ordered\": false,\n    \"swapped_pairs\": \"The assigned implausible_hard agent (firefighter) actually belongs in plausible_hard, collapsing the intended plausible_hard vs. implausible_hard distinction.\",\n    \"collapsed_pairs\": \"The plausible_hard and implausible_hard conditions are effectively collapsed because both agents (chaplain and firefighter) are realistically plausible in the scene.\"\n  },\n  \"visual_evaluation\": {\n    \"identifiability\": {\n      \"plausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Scrubs, ID badge, and stethoscope make a nurse immediately recognizable.\"\n      },\n      \"plausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"A clerical collar, dark suit, and religious symbols clearly signal a chaplain/priest-like clergy role.\"\n      },\n      \"implausible_hard\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Full turnout gear with helmet and reflective stripes is iconic firefighter attire.\"\n      },\n      \"implausible_easy\": {\n        \"rating\": \"IDENTIFIABLE\",\n        \"reasoning\": \"Tutu or leotard with tights and ballet slippers, plus a tight bun, make a ballet dancer visually obvious.\"\n      }\n    },\n    \"agent_appearances\": {\n      \"plausible_easy\": \"Wearing colored medical scrubs, possibly with a hospital logo, an ID badge on a lanyard, a stethoscope around the neck, and practical medical shoes.\",\n      \"plausible_hard\": \"Dressed in a dark suit or clergy attire with a white clerical collar, perhaps a small cross necklace or holding a prayer book, conveying a religious professional.\",\n      \"implausible_hard\": \"In heavy firefighter turnout gear with reflective stripes, a fire helmet, sturdy boots, and possibly gloves or other firefighting equipment visible.\",\n      \"implausible_easy\": \"In a ballet costume such as a tutu or fitted leotard with tights, ballet slippers or pointe shoes, and hair styled in a tight bun.\"\n    },\n    \"pairwise_checks\": {\n      \"pe_vs_ph\": {\n        \"distinguishable\": true,\n        \"note\": \"Scrubs and medical gear versus a suit with clerical collar are clearly different.\"\n      },\n      \"pe_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"Light medical scrubs contrast sharply with bulky turnout gear and helmet.\"\n      },\n      \"pe_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Nurse scrubs are easily distinguished from a tutu or leotard and ballet slippers.\"\n      },\n      \"ph_vs_ih\": {\n        \"distinguishable\": true,\n        \"note\": \"A suited clergy figure with collar looks very different from a firefighter in full gear.\"\n      },\n      \"ph_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Clergy attire differs strongly from a ballet costume in color, cut, and accessories.\"\n      },\n      \"ih_vs_ie\": {\n        \"distinguishable\": true,\n        \"note\": \"Firefighter gear and ballet attire are visually opposite in form and function.\"\n      }\n    },\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"indistinguishable_pairs\": \"None\",\n    \"unidentifiable_agents\": \"None\"\n  },\n  \"scene_assessment\": {\n    \"instrument_correct\": true,\n    \"has_clear_prototype\": true,\n    \"imageable\": true,\n    \"gradient_supportable\": true,\n    \"gradient_support_reasoning\": \"The only incorrect condition is implausible_hard: a better choice could be a hospital administrator or hospital pharmacist in business attire in the patient\u2019s room touching the shoulder, which would share hospital domain and setting (and human patient) but still feel wrong for hands-on patient contact. This shows the scene itself can support all four levels; the issue is the specific agent choice for implausible_hard.\",\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"scene_notes\": \"The hospital-room scene with a professional touching a patient\u2019s shoulder is clear, concrete, and has a strong prototype (nurse). The instrument and location are well matched to the verb, and multiple plausible and implausible roles can be found; only the firefighter is mis-placed along the plausibility gradient.\"\n  },\n  \"overall\": {\n    \"score\": \"3/4\",\n    \"borderline_count\": 0,\n    \"scene_verdict\": \"AGENT_FIXABLE\",\n    \"visual_verdict\": \"ALL_DISTINCT\",\n    \"summary\": \"Thematic fit is strong for the nurse and chaplain, and clearly low for the ballet dancer, but the firefighter is too plausibly a first responder in a hospital emergency to serve as an implausible_hard agent. Visually, all four professions are highly identifiable and distinct. The scene itself is well-designed and imageable; substituting a different related-but-wrong hospital professional for the firefighter would yield a robust plausibility gradient.\"\n  }\n}",
+  "evaluation": {
+    "constraint_checks": {
+      "all_human_professionals": true,
+      "consistency_maintained": true,
+      "role_action_mismatch_valid": true,
+      "constraint_notes": "All agents are human professions; only the agent varies across otherwise identical sentences; plausibility differences are role-based, not due to physical incapacity."
+    },
+    "condition_evaluations": {
+      "plausible_easy": {
+        "agent": "A nurse",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy",
+        "reasoning": "Nurses routinely provide bedside care in hospital rooms and frequently touch patients\u2019 shoulders both for examination and comfort, making them the prototypical agent for this event. Among common hospital roles, the nurse is the default person one expects to see physically interacting with a patient in this way.",
+        "counter_arguments": {
+          "argument_for_higher": "N/A for plausible_easy since it is the highest level",
+          "argument_for_lower": "One could argue that touching a patient\u2019s shoulder is a generic comforting gesture that could be equally typical for doctors, chaplains, or family members, so the nurse might be seen as just one of many plausible roles and thus better placed in plausible_hard."
+        },
+        "typicality_audit": {
+          "core_job_test": "YES: Direct physical contact with patients, including touching the shoulder for exams, repositioning, and reassurance, is a core component of nursing care.",
+          "removal_test": "YES: If nurses were removed from the hospital, routine bedside touching and physical care of patients (including shoulder contact) would largely cease as part of structured care, occurring only sporadically from other roles, so nurses are central to this action."
+        }
+      },
+      "plausible_hard": {
+        "agent": "A hospital chaplain",
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Hospital chaplains are naturally present in hospital rooms and often provide emotional and spiritual support; gently touching a patient\u2019s shoulder is a plausible but not essential part of their role. The action is reasonable yet less central and less frequent than for a nurse, fitting a moderate plausibility level.",
+        "counter_arguments": {
+          "argument_for_higher": "One might argue that providing comfort is a core duty of chaplains and that physical touch, such as a hand on the shoulder during prayer or consolation, is a very natural expression of that role, making them nearly as prototypical as a nurse for this specific gesture.",
+          "argument_for_lower": "Conversely, one could say chaplains primarily offer verbal and spiritual support and may avoid physical touch for boundary or consent reasons, so shoulder-touching might be relatively rare and could be seen as somewhat unexpected, pushing them toward implausible_hard."
+        }
+      },
+      "implausible_hard": {
+        "agent": "A firefighter",
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard",
+        "reasoning": "Firefighters do sometimes enter hospitals in emergencies and may physically touch or reassure patients during rescue or evacuation, so the event is realistically possible rather than something a person would ultimately reject. This makes their thematic fit closer to a rare-but-plausible scenario (plausible_hard) than to an 'unsure no' implausible_hard case.",
+        "counter_arguments": {
+          "argument_for_higher": "One could argue for plausible_hard or higher by noting that firefighters are trained first responders who routinely handle victims and may comforting-touch patients in various settings, and that a hospital room during an emergency is a natural extension of their work environment.",
+          "argument_for_lower": "To push them toward implausible_easy, one might claim that full turnout gear in a calm-looking hospital room with only gentle shoulder-touching is so incongruous with their usual firefighting activities that viewers would see the scene as obviously wrong rather than borderline."
+        },
+        "overlap_audit": {
+          "occupational_domain": {
+            "overlaps": true,
+            "reasoning": "Both nurses and firefighters are part of the broader emergency/health and safety domain and are involved in responding to medical or crisis situations."
+          },
+          "typical_setting": {
+            "overlaps": false,
+            "reasoning": "Nurses typically work inside hospital rooms, whereas firefighters usually operate at fire scenes, accident sites, or outdoors; hospitals are only occasional, not typical, work settings for firefighters."
+          },
+          "tools_instruments": {
+            "overlaps": false,
+            "reasoning": "Nurses use medical tools such as stethoscopes and blood pressure cuffs, while firefighters use hoses, axes, and breathing apparatus; any overlap (e.g., gloves, basic first-aid kits) is incidental rather than core."
+          },
+          "patient_object_type": {
+            "overlaps": true,
+            "reasoning": "Both professions act on injured or ill human beings in need of assistance or rescue."
+          },
+          "physical_actions": {
+            "overlaps": true,
+            "reasoning": "Both perform physically hands-on actions such as lifting, supporting, moving, and sometimes comforting people in distress."
+          },
+          "overlap_count": 3,
+          "sufficient": true,
+          "negative_test": "Even without considering the specific verb 'touching,' a firefighter interacting with a hospital patient is still conceptually linked through emergency response and rescue in buildings (including hospitals), so there remains a meaningful association beyond the shared verb."
+        }
+      },
+      "implausible_easy": {
+        "agent": "A ballet dancer",
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy",
+        "reasoning": "A ballet dancer in performance attire has no natural professional role inside a hospital room or in physically caring for patients, making this scenario clearly outside their domain. Any explanation would rely on a contrived visiting or performance story, so the role-event fit is very low.",
+        "counter_arguments": {
+          "argument_for_higher": "One might imagine a special performance in a hospital where a dancer in costume briefly visits a patient afterward and touches their shoulder in greeting or encouragement, which could make the event barely plausible in a very specific narrative.",
+          "argument_for_lower": "N/A for implausible_easy since it is the lowest level"
+        }
+      }
+    },
+    "gradient_ordering": {
+      "correctly_ordered": false,
+      "swapped_pairs": "The assigned implausible_hard agent (firefighter) actually belongs in plausible_hard, collapsing the intended plausible_hard vs. implausible_hard distinction.",
+      "collapsed_pairs": "The plausible_hard and implausible_hard conditions are effectively collapsed because both agents (chaplain and firefighter) are realistically plausible in the scene."
+    },
+    "visual_evaluation": {
+      "identifiability": {
+        "plausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Scrubs, ID badge, and stethoscope make a nurse immediately recognizable."
+        },
+        "plausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "A clerical collar, dark suit, and religious symbols clearly signal a chaplain/priest-like clergy role."
+        },
+        "implausible_hard": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Full turnout gear with helmet and reflective stripes is iconic firefighter attire."
+        },
+        "implausible_easy": {
+          "rating": "IDENTIFIABLE",
+          "reasoning": "Tutu or leotard with tights and ballet slippers, plus a tight bun, make a ballet dancer visually obvious."
+        }
+      },
+      "agent_appearances": {
+        "plausible_easy": "Wearing colored medical scrubs, possibly with a hospital logo, an ID badge on a lanyard, a stethoscope around the neck, and practical medical shoes.",
+        "plausible_hard": "Dressed in a dark suit or clergy attire with a white clerical collar, perhaps a small cross necklace or holding a prayer book, conveying a religious professional.",
+        "implausible_hard": "In heavy firefighter turnout gear with reflective stripes, a fire helmet, sturdy boots, and possibly gloves or other firefighting equipment visible.",
+        "implausible_easy": "In a ballet costume such as a tutu or fitted leotard with tights, ballet slippers or pointe shoes, and hair styled in a tight bun."
+      },
+      "pairwise_checks": {
+        "pe_vs_ph": {
+          "distinguishable": true,
+          "note": "Scrubs and medical gear versus a suit with clerical collar are clearly different."
+        },
+        "pe_vs_ih": {
+          "distinguishable": true,
+          "note": "Light medical scrubs contrast sharply with bulky turnout gear and helmet."
+        },
+        "pe_vs_ie": {
+          "distinguishable": true,
+          "note": "Nurse scrubs are easily distinguished from a tutu or leotard and ballet slippers."
+        },
+        "ph_vs_ih": {
+          "distinguishable": true,
+          "note": "A suited clergy figure with collar looks very different from a firefighter in full gear."
+        },
+        "ph_vs_ie": {
+          "distinguishable": true,
+          "note": "Clergy attire differs strongly from a ballet costume in color, cut, and accessories."
+        },
+        "ih_vs_ie": {
+          "distinguishable": true,
+          "note": "Firefighter gear and ballet attire are visually opposite in form and function."
+        }
+      },
+      "visual_verdict": "ALL_DISTINCT",
+      "indistinguishable_pairs": "None",
+      "unidentifiable_agents": "None"
+    },
+    "scene_assessment": {
+      "instrument_correct": true,
+      "has_clear_prototype": true,
+      "imageable": true,
+      "gradient_supportable": true,
+      "gradient_support_reasoning": "The only incorrect condition is implausible_hard: a better choice could be a hospital administrator or hospital pharmacist in business attire in the patient\u2019s room touching the shoulder, which would share hospital domain and setting (and human patient) but still feel wrong for hands-on patient contact. This shows the scene itself can support all four levels; the issue is the specific agent choice for implausible_hard.",
+      "scene_verdict": "AGENT_FIXABLE",
+      "scene_notes": "The hospital-room scene with a professional touching a patient\u2019s shoulder is clear, concrete, and has a strong prototype (nurse). The instrument and location are well matched to the verb, and multiple plausible and implausible roles can be found; only the firefighter is mis-placed along the plausibility gradient."
+    },
+    "overall": {
+      "score": "3/4",
+      "borderline_count": 0,
+      "scene_verdict": "AGENT_FIXABLE",
+      "visual_verdict": "ALL_DISTINCT",
+      "summary": "Thematic fit is strong for the nurse and chaplain, and clearly low for the ballet dancer, but the firefighter is too plausibly a first responder in a hospital emergency to serve as an implausible_hard agent. Visually, all four professions are highly identifiable and distinct. The scene itself is well-designed and imageable; substituting a different related-but-wrong hospital professional for the firefighter would yield a robust plausibility gradient."
+    }
+  },
+  "validation_errors": [],
+  "scores": {
+    "correct_count": 3,
+    "borderline_count": 0,
+    "incorrect_count": 1,
+    "has_scene_error": false,
+    "scene_verdict": "AGENT_FIXABLE",
+    "gradient_supportable": true,
+    "conditions": {
+      "plausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_easy"
+      },
+      "plausible_hard": {
+        "verdict": "CORRECT",
+        "actual_condition": "plausible_hard"
+      },
+      "implausible_easy": {
+        "verdict": "CORRECT",
+        "actual_condition": "implausible_easy"
+      },
+      "implausible_hard": {
+        "verdict": "INCORRECT",
+        "actual_condition": "plausible_hard"
+      }
+    },
+    "score_strict": 3,
+    "score_lenient": 3.0,
+    "overlap_count": 3,
+    "overlap_sufficient": true,
+    "overlap_negative_test": "Even without considering the specific verb 'touching,' a firefighter interacting with a hospital patient is still conceptually linked through emergency response and rescue in buildings (including hospitals), so there remains a meaningful association beyond the shared verb.",
+    "identifiability": {
+      "plausible_easy": "IDENTIFIABLE",
+      "plausible_hard": "IDENTIFIABLE",
+      "implausible_easy": "IDENTIFIABLE",
+      "implausible_hard": "IDENTIFIABLE"
+    },
+    "unidentifiable_agents": null
+  },
+  "elapsed": 142.9096172079444,
+  "token_info": {
+    "input_tokens": 5631,
+    "output_tokens": 8708,
+    "cached_tokens": 0
+  },
+  "success": true
+}
